@@ -64,29 +64,12 @@ $(document).ready(function() {
 		$('#menu li li').not('.active').has('ul').children('ul').addClass('collapse');
 	}
 
+    startPage();
+
 	// Menu button
 	$('#button-menu').on('click', function() {
 		// Checks if the left column is active or not.
-		if ($('#column-left').hasClass('active')) {
-			localStorage.setItem('column-left', '');
-
-			$('#button-menu i').replaceWith('<i class="fa fa-indent fa-lg"></i>');
-
-			$('#column-left').removeClass('active');
-
-			$('#menu > li > ul').removeClass('in collapse');
-			$('#menu > li > ul').removeAttr('style');
-		} else {
-			localStorage.setItem('column-left', 'active');
-
-			$('#button-menu i').replaceWith('<i class="fa fa-dedent fa-lg"></i>');
-			
-			$('#column-left').addClass('active');
-
-			// Add the slide down to open menu items
-			$('#menu li.open').has('ul').children('ul').addClass('collapse in');
-			$('#menu li').not('.open').has('ul').children('ul').addClass('collapse');
-		}
+		startPage();
 	});
 
 	// Menu
@@ -206,6 +189,41 @@ $(document).ready(function() {
 		$(this).tooltip('destroy');
 	});	
 });
+
+function startPage(){
+    if ($('#column-left').hasClass('active')) {
+        localStorage.setItem('column-left', '');
+
+        $('.hidden-li').hide();
+        $('.badge').css('padding', '3px');
+        $('.footer').css('width', '95%');
+        $('.hidden-span').hide();
+        $('#button-menu i').replaceWith('<i class="fa fa-indent fa-lg"></i>');
+
+        $('#column-left').removeClass('active');
+
+        $('#menu > li > ul').removeClass('in collapse');
+        $('#menu > li > ul').removeAttr('style');
+    } else {
+        localStorage.setItem('column-left', 'active');
+
+        $('#button-menu i').replaceWith('<i class="fa fa-dedent fa-lg"></i>');
+
+        $('.hidden-li').show();
+        setTimeout(function(){
+            $('.hidden-span').show();
+        }, 200);
+
+        $('.badge').css('padding', '3px');
+        $('.footer').css('width', '85%');
+
+        $('#column-left').addClass('active');
+
+        // Add the slide down to open menu items
+        $('#menu li.open').has('ul').children('ul').addClass('collapse in');
+        $('#menu li').not('.open').has('ul').children('ul').addClass('collapse');
+    }
+}
 
 // Autocomplete */
 (function($) {

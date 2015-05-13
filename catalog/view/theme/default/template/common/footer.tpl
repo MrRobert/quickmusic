@@ -1,6 +1,70 @@
-<footer id="footer">
-    Quick music © 2014-2015 All Rights Reserved.<br>
-    Version 1.0
+<footer id="footer" class="footer bg-dark">
+    <div id="jp_container_N" class="jp-video-270p">
+        <div class="jp-type-playlist">
+            <div class="jp-jplayer hide" id="jplayer_N" style="width: 480px; height: 270px;">
+                <img id="jp_poster_0" style="width: 480px; height: 270px; display: inline;" src="images/m0.jpg">
+                <audio id="jp_audio_0" preload="metadata" src="http://flatfull.com/themes/assets/musics/Miaow-07-Bubble.ogg" title="Bubble"></audio>
+                <video id="jp_video_0" preload="metadata" style="width: 0px; height: 0px;" title="Bubble"></video>
+            </div>
+            <div class="jp-gui">
+                <div class="jp-video-play hide" style="display: none;">
+                    <a class="jp-video-play-icon">play</a>
+                </div>
+                <div class="jp-interface">
+                    <div class="jp-controls">
+                        <div class="pre-controls">
+                            <a class="jp-previous"><i class="fa fa-backward fa-2x"></i></i></a>
+                        </div>
+                        <div class="pre-controls">
+                            <a class="jp-play" style="display: inline-block;"><i class="fa fa-play fa-2x"></i></a>
+                            <a class="jp-pause hid" style="display: none;"><i class="fa fa-pause fa-2x"></i></a>
+                        </div class="pre-controls">
+                        <div class="pre-controls">
+                            <a class="jp-next"><i class="fa fa-forward fa-2x"></i></a>
+                        </div>
+                        <div class="pre-controls">
+                            <a data-target="#playlist" data-toggle="dropdown" class=""><i class="fa fa-list-ul fa-2x"></i></a>
+                        </div>
+                        <div class="jp-progress hidden-xs">
+                            <div class="jp-seek-bar" style="width: 100%;">
+                                <div class="jp-play-bar bg-info" style="width: 0.195231%;"> </div>
+                                <div class="jp-title text-lt" style="display: none;">Bubble</div>
+                            </div>
+                        </div>
+                        <div class="pre-controls hidden-xs hidden-sm jp-current-time text-xs text-muted">00:00</div>
+                        <div class="pre-controls hidden-xs hidden-sm jp-duration text-xs text-muted">03:29</div>
+                        <div class="pre-controls hidden-xs hidden-sm">
+                            <a title="mute" class="jp-mute"><i class="fa fa-volume-up fa-2x"></i></a>
+                            <a title="unmute" class="jp-unmute hid" style="display: none;"><i class="fa fa-volume-off fa-2x"></i></a>
+                        </div>
+                        <div class="pre-controls hidden-xs hidden-sm jp-volume">
+                            <div class="jp-volume-bar" style="background-color: #4d5d6e">
+                                <div class="jp-volume-bar-value" style="background-color: #778490; width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="pre-controls">
+                            <a title="shuffle" class="jp-shuffle"><i class="fa fa-random fa-2x"></i></a>
+                            <a title="shuffle off" class="jp-shuffle-off hid" style="display: none;"><i class="icon-shuffle text-lt"></i></a>
+                        </div>
+                        <div class="pre-controls">
+                            <a title="repeat" class="jp-repeat"><i class="fa fa-repeat fa-2x text-muted"></i></a>
+                            <a title="repeat off" class="jp-repeat-off hid" style="display: none;"><i class="icon-loop text-lt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="playlist" class="jp-playlist dropup">
+                <ul class="dropdown-menu aside-xl dker" style="display: block;">
+                    <li class="jp-playlist-current"><div><a class="jp-playlist-item-remove" href="javascript:;">×</a><a tabindex="1" class="jp-playlist-item jp-playlist-current" href="javascript:;">Bubble <span class="jp-artist">by Miaow</span></a></div></li>
+                    <li><div><a class="jp-playlist-item-remove" href="javascript:;">×</a><a tabindex="1" class="jp-playlist-item" href="javascript:;">Lentement <span class="jp-artist">by Miaow</span></a></div></li>
+                    <li><div><a class="jp-playlist-item-remove" href="javascript:;">×</a><a tabindex="1" class="jp-playlist-item" href="javascript:;">Partir <span class="jp-artist">by Miaow</span></a></div></li>
+                </ul>
+            </div>
+            <div class="jp-no-solution hide" style="display: none;"> <span>Update Required</span> To play the media you will need to either update your browser to a recent version or update your
+                <a target="_blank" href="http://get.adobe.com/flashplayer/">Flash plugin</a>.
+            </div>
+        </div>
+    </div>
 </footer>
 </div>
 </body></html>

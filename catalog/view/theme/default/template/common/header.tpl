@@ -15,29 +15,42 @@
     <script src="<?php echo STATIC_PATH ?>js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
     <link href="<?php echo STATIC_PATH ?>css/bootstrap-datetimepicker.min.css" type="text/css" rel="stylesheet" media="screen" />
     <link type="text/css" href="<?php echo STATIC_PATH ?>css/stylesheet.css" rel="stylesheet" media="screen" />
+    <link type="text/css" href="<?php echo STATIC_PATH ?>css/jplayer.flat.css" rel="stylesheet" media="screen" />
+    <script src="<?php echo STATIC_PATH ?>js/jquery.jplayer.min.js" type="text/javascript"></script>
+    <script src="<?php echo STATIC_PATH ?>js/jplayer.playlist.min.js" type="text/javascript"></script>
+    <script src="<?php echo STATIC_PATH ?>js/demo.js" type="text/javascript"></script>
     <script src="<?php echo STATIC_PATH ?>js/common.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="container">
     <header id="header" class="navbar navbar-static-top">
         <div class="navbar-header">
-            <a type="button" id="button-menu" class="pull-left">
+            <i class="fa fa-headphones pull-left" style="font-size: 46px; padding: 5px 0 0 11px"></i>
+            <span class="pull-left" style="padding: 19px 0px 0px; font-size: 20px;">MUSIC</span>
+            <a type="button" id="button-menu" class="">
                 <i class="fa fa-indent fa-lg"></i>
             </a>
-            <img src="<?php echo STATIC_PATH ?>image/logo.png" alt="" title="Logo" />
+
+            <form role="search" class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs">
+                <div class="form-group" style="padding-top: 10px;">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-sm bg-white" type="submit" style="background-color: #ffffff; border-radius: 7px;"><i class="fa fa-search"></i></button> </span>
+                            <input type="text" placeholder="Search songs, albums..." class="form-control input-sm" style="border-radius: 0px 7px 7px 0px;">
+                    </div>
+                </div>
+            </form>
         </div>
         <ul class="nav pull-right">
             <li class="dropdown">
                 <a title="Send invitation">
                     <i class="fa fa-paper-plane"></i>
-                    <span>Send invitation</span>
                 </a>
             </li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown">
                     <span class="label label-danger pull-left">5</span>
                     <i class="fa fa-bell fa-lg"></i>
-                    <span>Notifications</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right alerts-dropdown">
                     <li class="dropdown-header">text_order</li>
@@ -57,6 +70,19 @@
                     <li><a href=""><span class="label label-danger pull-right">affiliate_total</span>text_approval</a></li>
                 </ul>
             </li>
-            <li><a href="/"><span class="hidden-xs hidden-sm hidden-md">Back to homepage</span> <i class="fa fa-sign-out fa-lg"></i></a></li>
+            <li>
+                <a data-toggle="dropdown" class="dropdown-toggle bg clear" href="#">
+                    <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                        <img style="height: 47px; width: 50px;" alt="John.Smith" class="img-circle" src="http://flatfull.com/themes/musik/images/a0.png">
+                    </span> John.Smith
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right alerts-dropdown">
+                    <li><a href="" style="display: block; overflow: auto;">Setting</a></li>
+                    <li><a href="">Profile</a></li>
+                    <li><a href="">Notifications</a></li>
+                    <li class="divider"></li>
+                    <li><a href="">Logout</a></li>
+                </ul>
+            </li>
         </ul>
     </header>

@@ -98,21 +98,20 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 }
 #header .nav > li > a {
 	padding: 3px 16px;
-	line-height: 38px;
+	line-height: 53px;
 	cursor: pointer;
 	color: #6D6D6D;
-	border-left: 1px solid #E1E1E1;
 }
 #header .nav > li > a > .label {
 	text-shadow: none;
-	padding: 1px 4px;
+	padding: 2px 5px;
 	position: absolute;
 	top: 8px;
 	left: 6px;
 }
 #button-menu {
 	padding: 10px 17px 9px 17px;
-	line-height: 25px;
+	line-height: 38px;
 	float: left;
 	display: inline-block;
 	cursor: pointer;
@@ -144,12 +143,12 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 	margin-bottom: 0;
 }
 #column-left {
-	width: 50px;
+	width: 60px;
 	height: 100%;
-	background-color: #515151;
+	background-color: #232c32;
 	position: absolute;
 	top: 0px;
-	padding-top: 50px;
+	padding-top: 68px;
 	z-index: 10;
 	transition: all 0.3s;
 }
@@ -191,25 +190,24 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 }
 #menu > li {
 	position: relative;
+    line-height: 2.2;
 }
 #menu li a {
 	text-decoration: none;
 	display: block;
 	padding: 10px;
 	cursor: pointer;
-	border-bottom: 1px solid #515151;
 }
 #menu li a i {
 	/*font-size: 16px;*/
 }
 #menu > li > a {
 	color: #C4C4C4;
-	font-size: 14px;	
+	font-size: 15px;
 	padding-left: 13px;
-	border-bottom: 1px solid #585858;
 }
 #menu > li > a:hover {
-	background-color: #444444;
+	background-color: #788188;
 }
 #menu > li > a > span {
 	display: none;
@@ -308,22 +306,22 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
     min-height: 700px;
 }
 #column-left.active + #content + #footer {
-	margin-left: 235px;
+	margin-left: 180px;
 }
 }
 /* Mobile */
 @media (max-width: 767px) {
 #column-left.active + #content {
 	position: relative;
-	left: 235px;
+	left: 180px;
 }
 #column-left.active + #content + #footer {
 	position: relative;
-	left: 235px;
+	left: 180px;
 }
 }
 #column-left.active {
-	width: 235px;
+	width: 180px;
 }
 #column-left.active #menu li i {
 	/*font-size: 14px;*/
@@ -339,9 +337,22 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 	visibility: visible;
 }
 /* footer */
-#footer {
-	height: 100px;
-	text-align: center;
+.footer {
+    bottom: 0;
+    width: 85%;
+    position: absolute;
+}
+
+nav .footer{
+    bottom: 0;
+    position: absolute;
+}
+
+.bg-dark{
+    background-color: #5a6a7a;
+    color: #c9d0d7;
+    min-height: 58px;
+    padding: 0 5px;
 }
 
 
@@ -820,4 +831,29 @@ input[type="checkbox"]:checked::after, .checkbox input[type="checkbox"]:checked:
 #chat_mini{
     position: fixed;
     bottom: 0px;
+}
+
+.jp-controls > .pre-controls {
+    width: 60px !important;
+}
+
+.pos-relative{
+    position: relative;
+}
+.item .bottom {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+.r2{
+    border-radius: 4px;
+}
+.img-full{
+    width: 100%;
+}
+
+img{
+    vertical-align: middle;
+    border: 0 none;
 }
