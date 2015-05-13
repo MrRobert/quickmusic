@@ -1,10 +1,12 @@
 <footer id="footer" class="footer bg-dark">
+    <div id="jp_second" class="hide">
+        <div class="jp-type-playlist">
+            <div class="jp-jplayer hide" id="second-jplayer"></div>
+        </div>
+    </div>
     <div id="jp_container_N" class="jp-video-270p">
         <div class="jp-type-playlist">
             <div class="jp-jplayer hide" id="jplayer_N" style="width: 480px; height: 270px;">
-                <img id="jp_poster_0" style="width: 480px; height: 270px; display: inline;" src="images/m0.jpg">
-                <audio id="jp_audio_0" preload="metadata" src="http://flatfull.com/themes/assets/musics/Miaow-07-Bubble.ogg" title="Bubble"></audio>
-                <video id="jp_video_0" preload="metadata" style="width: 0px; height: 0px;" title="Bubble"></video>
             </div>
             <div class="jp-gui">
                 <div class="jp-video-play hide" style="display: none;">

@@ -21,14 +21,14 @@
         <div class="hidden-xs">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <span class="thumb-sm avatar pull-left m-l-xs">
-                    <img style="height: 47px; width: 50px;" alt="John.Smith" class="img-circle" src="http://flatfull.com/themes/musik/images/a0.png">
+                    <img style="height: 47px; width: 50px;" alt="John.Smith" class="img-circle" src="https://graph.facebook.com/819276394825557/picture?width=47">
                     <i class="on b-black"></i>
                 </span>
                 <span class="hidden-span clear">
                     <span>
-                        <strong class="font-bold text-lt">John.Smith</strong>
+                        <strong class="font-bold text-lt">Robert Duy</strong>
                     </span><br>
-                    <span class="text-muted text-xs">Art Director</span>
+                    <span class="text-muted text-xs">Developer</span>
                 </span>
             </a>
         </div>

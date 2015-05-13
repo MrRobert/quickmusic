@@ -834,7 +834,7 @@ input[type="checkbox"]:checked::after, .checkbox input[type="checkbox"]:checked:
 }
 
 .jp-controls > .pre-controls {
-    width: 60px !important;
+    width: 50px !important;
 }
 
 .pos-relative{
@@ -846,14 +846,69 @@ input[type="checkbox"]:checked::after, .checkbox input[type="checkbox"]:checked:
     position: absolute;
     right: 0;
 }
-.r2{
+.item .opacity {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.item-overlay {
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.r-2x {
     border-radius: 4px;
 }
 .img-full{
     width: 100%;
 }
-
+.m-b-sm {
+    margin-bottom: 10px;
+}
+.m-l-sm {
+    margin-left: 10px;
+}
 img{
     vertical-align: middle;
     border: 0 none;
+}
+.m-t-sm {
+    margin-top: 10px;
+}
+.m-t-n {
+    margin-top: -15px;
+}
+.padder {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.text-sm {
+    font-size: 13px;
+}
+.text-info {
+    color: #4cb6cb;
+}
+.text-xs {
+    font-size: 12px;
+}
+.item .center {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+.item-overlay.active, .item:hover .item-overlay{
+    display: block;
+}
+.padder-v {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.text-ellipsis {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

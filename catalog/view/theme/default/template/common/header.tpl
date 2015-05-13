@@ -42,12 +42,12 @@
             </form>
         </div>
         <ul class="nav pull-right">
-            <li class="dropdown">
+            <li class="dropdown hidden-xs">
                 <a title="Send invitation">
                     <i class="fa fa-paper-plane"></i>
                 </a>
             </li>
-            <li class="dropdown">
+            <li class="dropdown hidden-xs">
                 <a class="dropdown-toggle" data-toggle="dropdown">
                     <span class="label label-danger pull-left">5</span>
                     <i class="fa fa-bell fa-lg"></i>
@@ -73,8 +73,8 @@
             <li>
                 <a data-toggle="dropdown" class="dropdown-toggle bg clear" href="#">
                     <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-                        <img style="height: 47px; width: 50px;" alt="John.Smith" class="img-circle" src="http://flatfull.com/themes/musik/images/a0.png">
-                    </span> John.Smith
+                        <img style="height: 47px; width: 50px;" alt="John.Smith" class="img-circle" src="https://graph.facebook.com/819276394825557/picture?width=47">
+                    </span> Robert Duy &nbsp;
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right alerts-dropdown">
                     <li><a href="" style="display: block; overflow: auto;">Setting</a></li>
