@@ -4,10 +4,11 @@
             <div class="jp-jplayer hide" id="second-jplayer"></div>
         </div>
     </div>
+
+    <!-- Main Playlist -->
     <div id="jp_container_N" class="jp-video-270p">
         <div class="jp-type-playlist">
-            <div class="jp-jplayer hide" id="jplayer_N" style="width: 480px; height: 270px;">
-            </div>
+            <div class="jp-jplayer hide" id="jplayer_N"></div>
             <div class="jp-gui">
                 <div class="jp-video-play hide" style="display: none;">
                     <a class="jp-video-play-icon">play</a>

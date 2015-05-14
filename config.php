@@ -2,11 +2,12 @@
 // HTTP
 define('APP_NAME' , 'quickmusic');
 define('DIR_APP' , '/var/www/html/' . APP_NAME);
+define('DOMAIN', 'localhost');
 
-define('HTTP_SERVER', 'http://localhost/'. APP_NAME . '/');
+define('HTTP_SERVER', 'http://'. DOMAIN .'/'. APP_NAME . '/');
 define('STATIC_PATH' , HTTP_SERVER . 'catalog/view/theme/default/');
 // HTTPS
-define('HTTPS_SERVER', 'http://localhost/'. APP_NAME .'/');
+define('HTTPS_SERVER', 'http://'. DOMAIN .'/'. APP_NAME .'/');
 
 // DIR
 define('DIR_APPLICATION', DIR_APP . '/catalog/');

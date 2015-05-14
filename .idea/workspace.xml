@@ -2,13 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eac47c3f-6fa3-4609-a68c-2c021e15b7cf" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/controller/app/music.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/app/music.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/controller/app/video.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/app/video.tpl" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/controller/product/category.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/controller/product/compare.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/controller/product/manufacturer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/controller/product/product.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/controller/product/search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/controller/product/special.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/product/category.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/product/compare.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/product/manufacturer_info.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/product/manufacturer_list.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/product/product.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/product/review.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/product/search.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/product/special.tpl" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/js/demo.js" afterPath="$PROJECT_DIR$/catalog/view/theme/default/js/demo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/error.log" afterPath="$PROJECT_DIR$/system/logs/error.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/common/header.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/common/header.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/common/home.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/common/home.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/css/stylesheet.css" afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/stylesheet.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="quickmusic.iws" />
@@ -32,10 +50,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="header.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/header.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="35" selection-start="1513" selection-end="1513" vertical-scroll-proportion="-12.0" vertical-offset="36" max-vertical-offset="1764">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="home.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/home.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="77" selection-start="2354" selection-end="2363" vertical-scroll-proportion="-14.384615" vertical-offset="204" max-vertical-offset="8721">
+            <state line="59" column="55" selection-start="4473" selection-end="4473" vertical-scroll-proportion="-8.444445" vertical-offset="834" max-vertical-offset="9234">
               <folding>
                 <element signature="n#style#0;n#span#0;n#h2#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -55,43 +82,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.tpl">
+      <file leaf-file-name="music.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/music.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="44" selection-start="1299" selection-end="1299" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="1309">
+            <state line="656" column="53" selection-start="40126" selection-end="40126" vertical-scroll-proportion="-4.4444447" vertical-offset="11688" max-vertical-offset="12672">
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#7;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#8;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#9;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#10;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#2;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h2#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#9;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#10;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#12;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#13;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#15;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#16;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h2#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#9;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#10;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#12;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#13;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#15;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#16;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/demo.js">
+      <file leaf-file-name="video.tpl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/video.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="0" selection-start="3648" selection-end="3648" vertical-scroll-proportion="0.31762654" vertical-offset="1722" max-vertical-offset="2686">
-              <folding />
+            <state line="664" column="89" selection-start="40478" selection-end="40478" vertical-scroll-proportion="0.23021583" vertical-offset="11760" max-vertical-offset="12672">
+              <folding>
+                <element signature="n#style#0;n#span#0;n#h2#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#9;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#10;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#12;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#13;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#15;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#16;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h2#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#9;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#10;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#12;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#13;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#15;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stylesheet.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/stylesheet.css">
+      <file leaf-file-name="demo.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/demo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="888" column="1" selection-start="16929" selection-end="16929" vertical-scroll-proportion="0.09803922" vertical-offset="15101" max-vertical-offset="15623">
+            <state line="166" column="64" selection-start="5614" selection-end="5614" vertical-scroll-proportion="0.0" vertical-offset="2988" max-vertical-offset="3564">
               <folding />
             </state>
           </provider>
@@ -121,25 +186,38 @@
         <option value="$PROJECT_DIR$/catalog/controller/common/header.php" />
         <option value="$PROJECT_DIR$/catalog/controller/common/footer.php" />
         <option value="$PROJECT_DIR$/catalog/controller/common/column_left.php" />
-        <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/css/font-awesome.min.css" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/js/common.js" />
         <option value="$PROJECT_DIR$/admin/view/stylesheet/stylesheet.css" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/header.tpl" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/css/stylesheet.css" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.tpl" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/home.tpl" />
+        <option value="$PROJECT_DIR$/config.php" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/music/music.tpl" />
+        <option value="$PROJECT_DIR$/catalog/controller/music/music.php" />
+        <option value="$PROJECT_DIR$/catalog/controller/video/video.php" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/video/video.tpl" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.tpl" />
+        <option value="$PROJECT_DIR$/catalog/controller/apptheme/music.php" />
+        <option value="$PROJECT_DIR$/catalog/controller/apptheme/video.php" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/apptheme/music.tpl" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/apptheme/video.tpl" />
+        <option value="$PROJECT_DIR$/catalog/controller/app/music.php" />
+        <option value="$PROJECT_DIR$/catalog/controller/app/video.php" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/js/app_2.js" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/header.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/js/demo.js" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/home.tpl" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/app/music.tpl" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/app/video.tpl" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1215" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -155,7 +233,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -166,7 +244,203 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="LayoutCode.rearrangeEntriesSmarty" value="false" />
@@ -177,10 +451,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/catalog/view/theme/default/template/apptheme" />
+      <recent name="$PROJECT_DIR$/catalog/controller/apptheme" />
       <recent name="$PROJECT_DIR$/catalog/view/theme/default/js" />
       <recent name="$PROJECT_DIR$/catalog/view/theme/default/css" />
       <recent name="$PROJECT_DIR$/catalog/view/theme/default/fonts" />
-      <recent name="$PROJECT_DIR$/db" />
     </key>
   </component>
   <component name="RunManager">
@@ -209,7 +484,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="65" y="-4" width="1215" height="1028" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -217,7 +492,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3071001" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18135159" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -236,8 +511,8 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -248,8 +523,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3071001" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -269,16 +544,63 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config.php">
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/header.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="167" selection-end="178" vertical-scroll-proportion="0.12750885" vertical-offset="0" max-vertical-offset="847" />
+        <state line="9" column="41" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="1764">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="166" column="64" selection-start="5614" selection-end="5614" vertical-scroll-proportion="0.0" vertical-offset="2988" max-vertical-offset="3564">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/home.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="77" selection-start="2354" selection-end="2363" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="9234">
+          <folding>
+            <element signature="n#style#0;n#span#0;n#h2#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#9;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#10;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#12;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#13;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#15;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#16;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="44" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1386" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="0" selection-start="3648" selection-end="3648" vertical-scroll-proportion="0.0" vertical-offset="2016" max-vertical-offset="2844">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="888" column="1" selection-start="16929" selection-end="16929" vertical-scroll-proportion="0.0" vertical-offset="15984" max-vertical-offset="16542">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/bootstrap-datetimepicker.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="861">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="861" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/bootstrap.min.js">
@@ -300,85 +622,98 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/jplayer.flat.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3618">
-          <folding />
-        </state>
+        <state line="17" column="16" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3618" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/jquery.jplayer.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2016">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2016" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/jplayer.playlist.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="861">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="861" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/view/stylesheet/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="619" column="0" selection-start="11823" selection-end="11823" vertical-scroll-proportion="0.0" vertical-offset="10371" max-vertical-offset="11250">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="164" selection-start="5116" selection-end="5175" vertical-scroll-proportion="-9.769231" vertical-offset="1021" max-vertical-offset="1581">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="31" selection-start="955" selection-end="955" vertical-scroll-proportion="-8.807693" vertical-offset="111" max-vertical-offset="697">
-          <folding />
-        </state>
+        <state line="619" column="0" selection-start="11823" selection-end="11823" vertical-scroll-proportion="0.0" vertical-offset="10371" max-vertical-offset="11250" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="25" selection-start="309" selection-end="309" vertical-scroll-proportion="0.47469458" vertical-offset="0" max-vertical-offset="6103">
-          <folding />
-        </state>
+        <state line="16" column="25" selection-start="309" selection-end="309" vertical-scroll-proportion="0.47469458" vertical-offset="0" max-vertical-offset="6103" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="888" column="1" selection-start="16929" selection-end="16929" vertical-scroll-proportion="0.09803922" vertical-offset="15101" max-vertical-offset="15623">
+        <state line="888" column="1" selection-start="16929" selection-end="16929" vertical-scroll-proportion="0.0" vertical-offset="15984" max-vertical-offset="16542">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="44" selection-start="1299" selection-end="1299" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="1309">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#7;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#8;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#9;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#10;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#2;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="21" column="82" selection-start="984" selection-end="984" vertical-scroll-proportion="-13.333333" vertical-offset="18" max-vertical-offset="1404" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="54" selection-start="746" selection-end="746" vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="666" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/common/maintenance.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/common/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="8" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.8299882" vertical-offset="215" max-vertical-offset="1062" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="20" selection-start="381" selection-end="381" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="738" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/common/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="32" selection-start="661" selection-end="661" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="414" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/app/music.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="29" selection-start="508" selection-end="508" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/app/video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="1" selection-start="582" selection-end="582" vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/view/javascript/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="4" selection-start="3920" selection-end="3920" vertical-scroll-proportion="0.5644599" vertical-offset="1728" max-vertical-offset="6138" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="166" column="64" selection-start="5614" selection-end="5614" vertical-scroll-proportion="0.0" vertical-offset="2667" max-vertical-offset="3564">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="35" selection-start="1513" selection-end="1513" vertical-scroll-proportion="-12.0" vertical-offset="36" max-vertical-offset="1764">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/home.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="77" selection-start="2354" selection-end="2363" vertical-scroll-proportion="-14.384615" vertical-offset="204" max-vertical-offset="8721">
+        <state line="59" column="55" selection-start="4473" selection-end="4473" vertical-scroll-proportion="-8.444445" vertical-offset="834" max-vertical-offset="9234">
           <folding>
             <element signature="n#style#0;n#span#0;n#h2#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -397,10 +732,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/demo.js">
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/music.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="0" selection-start="3648" selection-end="3648" vertical-scroll-proportion="0.31762654" vertical-offset="1722" max-vertical-offset="2686">
-          <folding />
+        <state line="656" column="53" selection-start="40126" selection-end="40126" vertical-scroll-proportion="-4.4444447" vertical-offset="11688" max-vertical-offset="12672">
+          <folding>
+            <element signature="n#style#0;n#span#0;n#h2#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#9;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#10;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#12;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#13;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#15;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#16;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h2#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#9;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#10;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#12;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#13;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#15;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#16;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/video.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="664" column="89" selection-start="40478" selection-end="40478" vertical-scroll-proportion="0.23021583" vertical-offset="11760" max-vertical-offset="12672">
+          <folding>
+            <element signature="n#style#0;n#span#0;n#h2#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#9;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#10;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#12;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#13;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#15;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#16;n#div#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h2#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#7;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#9;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#10;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#12;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#13;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#15;n#div#0;n#section#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

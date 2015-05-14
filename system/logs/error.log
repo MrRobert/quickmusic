@@ -1,3 +1,42 @@
 2015-05-12 10:11:00 - PHP Notice:  Error: Could not load model /var/www/html/quickmusic/catalog/model/design/layout.php! in /var/www/html/quickmusic/system/engine/loader.php on line 24
 2015-05-12 10:11:01 - PHP Notice:  Error: Could not load model /var/www/html/quickmusic/catalog/model/design/layout.php! in /var/www/html/quickmusic/system/engine/loader.php on line 24
 2015-05-12 10:11:02 - PHP Notice:  Error: Could not load model /var/www/html/quickmusic/catalog/model/design/layout.php! in /var/www/html/quickmusic/system/engine/loader.php on line 24
+2015-05-14 10:05:37 - PHP Notice:  Undefined variable: header in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 1
+2015-05-14 10:05:37 - PHP Notice:  Undefined variable: column_left in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 2
+2015-05-14 10:05:37 - PHP Notice:  Undefined variable: footer in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 699
+2015-05-14 10:05:47 - PHP Notice:  Undefined variable: header in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 1
+2015-05-14 10:05:47 - PHP Notice:  Undefined variable: column_left in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 2
+2015-05-14 10:05:47 - PHP Notice:  Undefined variable: footer in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 699
+2015-05-14 10:06:28 - PHP Notice:  Undefined variable: header in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 1
+2015-05-14 10:06:28 - PHP Notice:  Undefined variable: column_left in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 2
+2015-05-14 10:06:28 - PHP Notice:  Undefined variable: footer in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 699
+2015-05-14 10:06:30 - PHP Notice:  Undefined variable: header in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 1
+2015-05-14 10:06:30 - PHP Notice:  Undefined variable: column_left in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 2
+2015-05-14 10:06:30 - PHP Notice:  Undefined variable: footer in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 699
+2015-05-14 10:06:33 - PHP Notice:  Undefined variable: header in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 1
+2015-05-14 10:06:33 - PHP Notice:  Undefined variable: column_left in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 2
+2015-05-14 10:06:33 - PHP Notice:  Undefined variable: footer in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 699
+2015-05-14 10:06:35 - PHP Notice:  Undefined variable: header in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 1
+2015-05-14 10:06:35 - PHP Notice:  Undefined variable: column_left in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 2
+2015-05-14 10:06:35 - PHP Notice:  Undefined variable: footer in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 699
+2015-05-14 10:06:35 - PHP Notice:  Undefined variable: header in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 1
+2015-05-14 10:06:35 - PHP Notice:  Undefined variable: column_left in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 2
+2015-05-14 10:06:35 - PHP Notice:  Undefined variable: footer in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 699
+2015-05-14 10:06:36 - PHP Notice:  Undefined variable: header in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 1
+2015-05-14 10:06:36 - PHP Notice:  Undefined variable: column_left in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 2
+2015-05-14 10:06:36 - PHP Notice:  Undefined variable: footer in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 699
+2015-05-14 10:06:37 - PHP Notice:  Undefined variable: header in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 1
+2015-05-14 10:06:37 - PHP Notice:  Undefined variable: column_left in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 2
+2015-05-14 10:06:37 - PHP Notice:  Undefined variable: footer in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 699
+2015-05-14 10:06:53 - PHP Notice:  Undefined variable: header in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 1
+2015-05-14 10:06:53 - PHP Notice:  Undefined variable: column_left in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 2
+2015-05-14 10:06:53 - PHP Notice:  Undefined variable: footer in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 699
+2015-05-14 10:06:54 - PHP Notice:  Undefined variable: header in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 1
+2015-05-14 10:06:54 - PHP Notice:  Undefined variable: column_left in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 2
+2015-05-14 10:06:54 - PHP Notice:  Undefined variable: footer in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 699
+2015-05-14 10:06:54 - PHP Notice:  Undefined variable: header in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 1
+2015-05-14 10:06:54 - PHP Notice:  Undefined variable: column_left in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 2
+2015-05-14 10:06:54 - PHP Notice:  Undefined variable: footer in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/music.tpl on line 699
+2015-05-14 10:07:28 - PHP Notice:  Undefined variable: header in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 1
+2015-05-14 10:07:28 - PHP Notice:  Undefined variable: column_left in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 2
+2015-05-14 10:07:28 - PHP Notice:  Undefined variable: footer in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 699

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <title>QuickMusic</title>
     <meta name="description" content="descriptions" />
     <meta name="keywords" content="keyword" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
@@ -18,6 +18,9 @@
     <link type="text/css" href="<?php echo STATIC_PATH ?>css/jplayer.flat.css" rel="stylesheet" media="screen" />
     <script src="<?php echo STATIC_PATH ?>js/jquery.jplayer.min.js" type="text/javascript"></script>
     <script src="<?php echo STATIC_PATH ?>js/jplayer.playlist.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var mainPlayList = null;
+    </script>
     <script src="<?php echo STATIC_PATH ?>js/demo.js" type="text/javascript"></script>
     <script src="<?php echo STATIC_PATH ?>js/common.js" type="text/javascript"></script>
 </head>
@@ -25,8 +28,10 @@
 <div id="container">
     <header id="header" class="navbar navbar-static-top">
         <div class="navbar-header">
-            <i class="fa fa-headphones pull-left" style="font-size: 46px; padding: 5px 0 0 11px"></i>
-            <span class="pull-left" style="padding: 19px 0px 0px; font-size: 20px;">MUSIC</span>
+            <a href="index.php" style="">
+                <i class="fa fa-headphones pull-left" style="font-size: 46px; padding: 5px 0 0 11px"></i>
+                <span class="pull-left" style="padding: 19px 0px 0px; font-size: 20px;">MUSIC</span>
+            </a>
             <a type="button" id="button-menu" class="">
                 <i class="fa fa-indent fa-lg"></i>
             </a>
