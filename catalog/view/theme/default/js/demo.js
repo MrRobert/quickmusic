@@ -6,8 +6,13 @@ $(document).ready(function(){
         $('.jp-play-me').parent('li').removeClass('active');
     });
 
-    $(document).on($.jPlayer.event.play, mainPlayList.cssSelector.jPlayer,  function(){
+    $(document).on($.jPlayer.event.play, mainPlayList.cssSelector.jPlayer,  function(e){
         $('.musicbar').addClass('animate');
+        var index = mainPlayList.current;
+        if(index != null && index >= 0){
+            var song = mainPlayList.playlist[index];
+            notifyMusic(song.title, song.artist);
+        }
     });
 
     $(document).on('click', '.jp-play-me', function(e){
@@ -75,26 +80,20 @@ function initMyPlayList(){
     }, [
         {
             title:"Feeling Good",
-            artist:"Avicii",
-            mp3: decodeURIComponent("http%3A%2F%2Fdata.chiasenhac.com%2Fdownloads%2F1491%2F4%2F1490424-d717712a%2F320%2FFeeling%2520Good%2520-%2520Avicii.mp3"),
+            artist:"Michael Bublé",
+            mp3: decodeURIComponent("http%3A%2F%2Fdata5.chiasenhac.com%2Fdownloads%2F1003%2F4%2F1002843-a3bdbb9a%2F128%2FFeeling%2520Good%2520-%2520Michael%2520Buble.mp3"),
             poster: "http://data.chiasenhac.com/data/cover/3/2088.jpg"
         },
         {
-            title:"24h phép",
-            artist:"Đan Nguyên",
-            mp3: decodeURIComponent("http%3A%2F%2Fdata22.chiasenhac.com%2Fdownloads%2F1187%2F4%2F1186716-45e8644c%2F320%2F24%2520Gio%2520Phep%2520-%2520Dan%2520Nguyen.mp3"),
+            title:"Home",
+            artist:"Michael Bublé",
+            mp3: decodeURIComponent("http%3A%2F%2Fdata5.chiasenhac.com%2Fdownloads%2F1003%2F4%2F1002845-08e27a72%2F128%2FHome%2520-%2520Michael%2520Buble.mp3"),
             poster: "http://data.chiasenhac.com/data/cover/14/13733.jpg"
-        },
-        {
-            title:"Uptown Funk",
-            artist:"Bruno Mars",
-            mp3: decodeURIComponent("http%3A%2F%2Fdata2.chiasenhac.com%2Fdownloads%2F1442%2F3%2F1441969-5b93278b%2F128%2FUptown%2520Funk%2520-%2520Mark%2520Ronson_%2520Bruno%2520Mars.mp3"),
-            poster: "http://data.chiasenhac.com/data/artist/88/87614.jpg"
         },
         {
             title:"Hoạ Mi Hót Trong Mưa",
             artist:"Hồng Nhung",
-            mp3: decodeURIComponent("http%3A%2F%2Fdata5.chiasenhac.com%2Fdownloads%2F1003%2F3%2F1002284-f423cf9e%2F128%2FHoa%2520Mi%2520Hot%2520Trong%2520Mua%2520-%2520Hong%2520Nhung.mp3"),
+            mp3: decodeURIComponent("http://dl7.mp3.zdn.vn/fsdd1131lwwjA/cec91defca43a6a4d13df2662ea109d4/5554c680/2015/03/16/3/c/3c2cbf9dc1863f4edbcb98ac59a3cc80.mp3"),
             poster: "http://data.chiasenhac.com/data/cover/3/2142.jpg"
         }
     ], {
@@ -188,5 +187,53 @@ function bindCommonAction(){
             mainPlayList.add(song_CamGiacBenAnh);
         }
     });
+}
 
+window.addEventListener('load', function () {
+    // At first, let's check if we have permission for notification
+    // If not, let's ask for it
+    if (window.Notification && Notification.permission !== "granted") {
+        Notification.requestPermission(function (status) {
+            if (Notification.permission !== status) {
+                Notification.permission = status;
+            }
+        });
+    }
+});
+
+function notifyMusic(title, artist){
+    if (window.Notification && Notification.permission === "granted") {
+        var n = new Notification("QuickMusic",{
+            body : title + ' by ' + artist,
+            icon : 'https://graph.facebook.com/819276394825557/picture?width=30'
+        });
+    }
+    // If the user hasn't told if he wants to be notified or not
+    // Note: because of Chrome, we are not sure the permission property
+    // is set, therefore it's unsafe to check for the "default" value.
+    else if (window.Notification && Notification.permission !== "denied") {
+        Notification.requestPermission(function (status) {
+            if (Notification.permission !== status) {
+                Notification.permission = status;
+            }
+
+            // If the user said okay
+            if (status === "granted") {
+                var n = new Notification("QuickMusic",{
+                    body : title + ' by ' + artist
+                });
+            }
+
+            // Otherwise, we can fallback to a regular modal alert
+            else {
+                alert("Hi!");
+            }
+        });
+    }
+
+    // If the user refuses to get notified
+    else {
+        // We can fallback to a regular modal alert
+        alert("Hi!");
+    }
 }

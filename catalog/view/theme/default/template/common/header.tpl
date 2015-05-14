@@ -30,7 +30,7 @@
         <div class="navbar-header">
             <a href="index.php" style="">
                 <i class="fa fa-headphones pull-left" style="font-size: 46px; padding: 5px 0 0 11px"></i>
-                <span class="pull-left" style="padding: 19px 0px 0px; font-size: 20px;">MUSIC</span>
+                <span class="pull-left hidden-xs" style="padding: 19px 0px 0px; font-size: 20px;">MUSIC</span>
             </a>
             <a type="button" id="button-menu" class="">
                 <i class="fa fa-indent fa-lg"></i>
