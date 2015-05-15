@@ -81,7 +81,7 @@ function initMyPlayList(){
         {
             title:"Feeling Good",
             artist:"Michael Bublé",
-            mp3: decodeURIComponent("http%3A%2F%2Fdata5.chiasenhac.com%2Fdownloads%2F1003%2F4%2F1002843-a3bdbb9a%2F128%2FFeeling%2520Good%2520-%2520Michael%2520Buble.mp3"),
+            mp3: decodeURIComponent("http%3A%2F%2Fdata18.chiasenhac.com%2Fdownloads%2F1062%2F5%2F1061057-3f99fbeb%2F320%2FNocturne%2520Da%2520Khuc_%2520-%2520Chau%2520Kiet%2520Luan.mp3"),
             poster: "http://data.chiasenhac.com/data/cover/3/2088.jpg"
         },
         {
@@ -201,12 +201,18 @@ window.addEventListener('load', function () {
     }
 });
 
+var notification = null;
 function notifyMusic(title, artist){
     if (window.Notification && Notification.permission === "granted") {
-        var n = new Notification("QuickMusic",{
+        notification = new Notification("QuickMusic",{
             body : title + ' by ' + artist,
             icon : 'https://graph.facebook.com/819276394825557/picture?width=30'
         });
+        notification.onshow = function(){
+            setTimeout(function(){
+                notification.close();
+            }, 3000)
+        }
     }
     // If the user hasn't told if he wants to be notified or not
     // Note: because of Chrome, we are not sure the permission property
@@ -219,9 +225,14 @@ function notifyMusic(title, artist){
 
             // If the user said okay
             if (status === "granted") {
-                var n = new Notification("QuickMusic",{
+                notification = new Notification("QuickMusic",{
                     body : title + ' by ' + artist
                 });
+                notification.onshow = function(){
+                    setTimeout(function(){
+                        notification.close();
+                    }, 3000)
+                }
             }
 
             // Otherwise, we can fallback to a regular modal alert
