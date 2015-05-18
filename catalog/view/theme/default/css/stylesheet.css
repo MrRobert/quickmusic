@@ -85,11 +85,16 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 }
 /* Mobile */
 @media (max-width: 767px) {
-#header .navbar-header {
-	margin-right: 0px;
-	margin-left: 0px;
-	float: left;
-}
+    #header .navbar-header {
+        margin-right: 0px;
+        margin-left: 0px;
+        float: left;
+    }
+
+    #bjax-target .img-full{
+        height: 147px;
+    }
+
 }
 #header #button-menu + .navbar-brand {
 	padding: 10px 10px 10px 10px;
