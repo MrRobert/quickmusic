@@ -36,15 +36,22 @@
                 <i class="fa fa-indent fa-lg"></i>
             </a>
 
-            <form role="search" class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs">
+            <div id="searchForm" class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs">
                 <div class="form-group" style="padding-top: 10px;">
                     <div class="input-group">
                         <span class="input-group-btn">
-                            <button class="btn btn-sm bg-white" type="submit" style="background-color: #ffffff; border-radius: 7px;"><i class="fa fa-search"></i></button> </span>
-                            <input type="text" placeholder="Search songs, albums..." class="form-control input-sm" style="border-radius: 0px 7px 7px 0px;">
+                            <button onclick="searchSubmit();" class="btn btn-sm bg-white" style="background-color: #ffffff; border-radius: 7px;"><i class="fa fa-search"></i></button> </span>
+                            <input name="search_name" type="text" placeholder="Search songs, albums..." class="form-control input-sm" style="border-radius: 0px 7px 7px 0px;">
                     </div>
                 </div>
-            </form>
+            </div>
+            <script type="text/javascript">
+                $("input[name='search_name']").keypress(function(e){
+                    if(e.keyCode == 13){
+                        searchSubmit();
+                    }
+                });
+            </script>
         </div>
         <ul class="nav pull-right">
             <li class="dropdown hidden-xs">

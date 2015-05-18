@@ -40,3 +40,17 @@
 2015-05-14 10:07:28 - PHP Notice:  Undefined variable: header in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 1
 2015-05-14 10:07:28 - PHP Notice:  Undefined variable: column_left in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 2
 2015-05-14 10:07:28 - PHP Notice:  Undefined variable: footer in /var/www/html/quickmusic/catalog/view/theme/default/template/apptheme/video.tpl on line 699
+2015-05-18 8:08:10 - PHP Warning:  require_once(/var/www/html/quickmusic/system/helper/quickTool): failed to open stream: No such file or directory in /var/www/html/quickmusic/catalog/controller/app/search.php on line 2
+2015-05-18 8:08:37 - PHP Warning:  require_once(/var/www/html/quickmusic/system/helper/quickTool): failed to open stream: No such file or directory in /var/www/html/quickmusic/catalog/controller/app/search.php on line 2
+2015-05-18 8:09:05 - PHP Warning:  require_once(/var/www/html/quickmusic/system/helper/quickTool): failed to open stream: No such file or directory in /var/www/html/quickmusic/catalog/controller/app/search.php on line 2
+2015-05-18 8:10:26 - PHP Warning:  require_once(/var/www/html/quickmusic/system/helper/quickTool): failed to open stream: No such file or directory in /var/www/html/quickmusic/catalog/controller/app/search.php on line 2
+2015-05-18 8:55:40 - PHP Unknown:  Argument 1 passed to DOMXPath::__construct() must be an instance of DOMDocument, instance of DOMElement given, called in /var/www/html/quickmusic/system/helper/quickTool.php on line 98 and defined in /var/www/html/quickmusic/system/helper/quickTool.php on line 55
+2015-05-18 9:21:56 - PHP Warning:  DOMXPath::query(): xmlXPathCompOpEval: function first not found in /var/www/html/quickmusic/system/helper/quickTool.php on line 60
+2015-05-18 9:21:56 - PHP Warning:  DOMXPath::query(): Unregistered function in /var/www/html/quickmusic/system/helper/quickTool.php on line 60
+2015-05-18 9:21:56 - PHP Warning:  DOMXPath::query(): Invalid expression in /var/www/html/quickmusic/system/helper/quickTool.php on line 60
+2015-05-18 9:21:56 - PHP Warning:  DOMXPath::query(): Stack usage errror in /var/www/html/quickmusic/system/helper/quickTool.php on line 60
+2015-05-18 9:22:48 - PHP Warning:  DOMXPath::query(): xmlXPathCompOpEval: function first not found in /var/www/html/quickmusic/system/helper/quickTool.php on line 60
+2015-05-18 9:22:48 - PHP Warning:  DOMXPath::query(): Unregistered function in /var/www/html/quickmusic/system/helper/quickTool.php on line 60
+2015-05-18 9:22:48 - PHP Warning:  DOMXPath::query(): Invalid expression in /var/www/html/quickmusic/system/helper/quickTool.php on line 60
+2015-05-18 9:22:48 - PHP Warning:  DOMXPath::query(): Stack usage errror in /var/www/html/quickmusic/system/helper/quickTool.php on line 60
+2015-05-18 11:11:07 - PHP Notice:  Undefined variable: musicDomain in /var/www/html/quickmusic/system/helper/quickTool.php on line 52

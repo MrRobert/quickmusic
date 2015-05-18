@@ -58,7 +58,7 @@ $(document).ready(function(){
     });
 
     if (location.hash.replace("#", "").length > 0){
-        fetchDATA(location.hash.replace("#", ""), $('#content'));
+        fetchDATA(location.hash.replace("#", ""), $('#content'), []);
     }
 
     // One page application
@@ -113,11 +113,18 @@ function initMyPlayList(){
     return myPlaylist;
 }
 
-function fetchDATA(controllerPath, divTagert){
+function searchSubmit(){
+    var data = {
+      'search_name': $("input[name='search_name']").val().trim()
+    };
+    fetchDATA('search', $('#content'), data);
+}
+
+function fetchDATA(controllerPath, divTagert, data){
     $.ajax({
         url: 'index.php?route=app/'+ controllerPath,
         type: 'get',
-        data: '',
+        data: data,
         dataType: 'html',
         beforeSend: function() {
             // TODO : before sending
