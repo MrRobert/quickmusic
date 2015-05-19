@@ -196,7 +196,7 @@ function startPage(){
 
         $('.hidden-li').hide();
         $('.badge').css('padding', '3px');
-        $('.footer').css('width', '95%');
+        $('.footer').css('width', '100%');
         $('.hidden-span').hide();
         $('#button-menu i').replaceWith('<i class="fa fa-indent fa-lg"></i>');
 
@@ -215,7 +215,7 @@ function startPage(){
         }, 200);
 
         $('.badge').css('padding', '3px');
-        $('.footer').css('width', '85%');
+        $('.footer').css('width', '86%');
 
         $('#column-left').addClass('active');
 

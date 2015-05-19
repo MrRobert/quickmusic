@@ -58,16 +58,17 @@
             </div>
             <div id="playlist" class="jp-playlist dropup">
                 <ul class="dropdown-menu aside-xl dker" style="display: block;">
-                    <li class="jp-playlist-current"><div><a class="jp-playlist-item-remove" href="javascript:;">×</a><a tabindex="1" class="jp-playlist-item jp-playlist-current" href="javascript:;">Bubble <span class="jp-artist">by Miaow</span></a></div></li>
-                    <li><div><a class="jp-playlist-item-remove" href="javascript:;">×</a><a tabindex="1" class="jp-playlist-item" href="javascript:;">Lentement <span class="jp-artist">by Miaow</span></a></div></li>
-                    <li><div><a class="jp-playlist-item-remove" href="javascript:;">×</a><a tabindex="1" class="jp-playlist-item" href="javascript:;">Partir <span class="jp-artist">by Miaow</span></a></div></li>
                 </ul>
-            </div>
-            <div class="jp-no-solution hide" style="display: none;"> <span>Update Required</span> To play the media you will need to either update your browser to a recent version or update your
-                <a target="_blank" href="http://get.adobe.com/flashplayer/">Flash plugin</a>.
             </div>
         </div>
     </div>
 </footer>
 </div>
-</body></html>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.ui-loader').hide();
+    });
+</script>
+
+</html>
