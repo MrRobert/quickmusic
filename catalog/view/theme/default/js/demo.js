@@ -1,5 +1,7 @@
 $(document).ready(function(){
+    secondPlaylist = initSecondPlayList();
     mainPlayList  = initMyPlayList();
+
     $(document).on($.jPlayer.event.pause, mainPlayList.cssSelector.jPlayer,  function(){
         $('.musicbar').removeClass('animate');
         $('.jp-play-me').removeClass('active');
@@ -74,28 +76,17 @@ $(document).ready(function(){
 });
 
 function initMyPlayList(){
+    var song_CamGiacBenAnh = {
+        title:"Cảm Giác Bên Anh",
+        artist:"Hải Băng",
+        mp3: decodeURIComponent("http%3A%2F%2Fdata16.chiasenhac.com%2Fdownloads%2F1007%2F2%2F1006440-f14c07f8%2F320%2FDa%2520Khuc%2520-%2520Le%2520Quyen.mp3")
+    };
+
     var myPlaylist = new jPlayerPlaylist({
         jPlayer: "#jplayer_N",
         cssSelectorAncestor: "#jp_container_N"
-    }, [
-        {
-            title:"Feeling Good",
-            artist:"Michael Bublé",
-            mp3: decodeURIComponent("http%3A%2F%2Fdata18.chiasenhac.com%2Fdownloads%2F1062%2F5%2F1061057-3f99fbeb%2F320%2FNocturne%2520Da%2520Khuc_%2520-%2520Chau%2520Kiet%2520Luan.mp3"),
-            poster: "http://data.chiasenhac.com/data/cover/3/2088.jpg"
-        },
-        {
-            title:"Home",
-            artist:"Michael Bublé",
-            mp3: decodeURIComponent("http%3A%2F%2Fdata5.chiasenhac.com%2Fdownloads%2F1003%2F4%2F1002845-08e27a72%2F128%2FHome%2520-%2520Michael%2520Buble.mp3"),
-            poster: "http://data.chiasenhac.com/data/cover/14/13733.jpg"
-        },
-        {
-            title:"Hoạ Mi Hót Trong Mưa",
-            artist:"Hồng Nhung",
-            mp3: decodeURIComponent("http://dl7.mp3.zdn.vn/fsdd1131lwwjA/cec91defca43a6a4d13df2662ea109d4/5554c680/2015/03/16/3/c/3c2cbf9dc1863f4edbcb98ac59a3cc80.mp3"),
-            poster: "http://data.chiasenhac.com/data/cover/3/2142.jpg"
-        }
+    },[
+        song_CamGiacBenAnh
     ], {
         playlistOptions: {
             enableRemoveControls: true,
@@ -113,39 +104,7 @@ function initMyPlayList(){
     return myPlaylist;
 }
 
-function searchSubmit(){
-    var data = {
-      'search_name': $("input[name='search_name']").val().trim()
-    };
-    fetchDATA('search', $('#content'), data);
-}
-
-function fetchDATA(controllerPath, divTagert, data){
-    $.ajax({
-        url: 'index.php?route=app/'+ controllerPath,
-        type: 'get',
-        data: data,
-        dataType: 'html',
-        beforeSend: function() {
-            // TODO : before sending
-        },
-        complete: function() {
-            // TODO : completed
-        },
-        success: function(html) {
-            $(divTagert).html(html);
-        }
-    });
-}
-
-function isExisted(playlist, song){
-    if( playlist.playlist.indexOf(song) < 0){
-        return false;
-    }
-    return true;
-}
-
-function bindCommonAction(){
+function initSecondPlayList(){
     var secondPlaylist = new jPlayerPlaylist({
         jPlayer: "#jp_second",
         cssSelectorAncestor: "#second-jplayer"
@@ -161,6 +120,92 @@ function bindCommonAction(){
         audioFullScreen: false
     });
 
+    return secondPlaylist;
+}
+
+function searchSubmit(){
+    $('#searchIndicator').show();
+    var data = {
+      'search_name': $("input[name='search_name']").val().trim()
+    };
+    fetchDATA('search', $('#content'), data);
+}
+
+function fetchDATA(controllerPath, divTagert, data){
+    $('#LoadingDiv').show();
+    $('#main-content').css('opacity', '0.6');
+    $.ajax({
+        url: 'index.php?route=app/'+ controllerPath,
+        type: 'get',
+        data: data,
+        dataType: 'html',
+        beforeSend: function() {
+            // TODO : before sending
+        },
+        complete: function() {
+            // TODO : completed
+        },
+        success: function(html) {
+            $('#searchIndicator').hide();
+            $(divTagert).html(html);
+        }
+    });
+}
+
+function playSong(link, divSong){
+    var data = {
+        'link' : link
+    };
+    $.ajax({
+        url: 'index.php?route=app/search/getsong',
+        type: 'get',
+        data: data,
+        dataType: 'json',
+        success: function(json) {
+            var mp3file = json.song.link.substring("decodeURIComponent(".length + 1 , json.song.link.lastIndexOf(")") -1);
+            var song = {
+                title: "",
+                artist: "",
+                mp3: decodeURIComponent(mp3file)
+            };
+            secondPlaylist.add(song);
+            secondPlaylist.play(0);
+            bindCommonPlaySong(link, divSong);
+        }
+    });
+}
+
+function bindCommonPlaySong(link, divSong){
+    mainPlayList.pause();
+    $('.play-icon-a').closest('.item-overlay').removeClass('active');
+    $('.play-icon-a').children('.fa-play').addClass('fa-play');
+    $('.play-icon-a').children('.fa-play').removeClass('fa-pause');
+
+    // this
+    $(divSong).closest('.item-overlay').addClass('active');
+    $(divSong).children('.fa-play').addClass('fa-pause');
+    $(divSong).children('.fa-play').removeClass('fa-play');
+
+    $(divSong).bind('click', function(){
+        $(divSong).closest('.item-overlay').removeClass('active');
+        $(divSong).children('.fa-play').removeClass('fa-pause');
+        $(divSong).children('.fa-play').addClass('fa-play');
+        secondPlaylist.pause();
+
+        $(divSong).bind('click', function(){
+            playSong(link, divSong);
+        });
+    });
+}
+
+function isExisted(playlist, song){
+    if( playlist.playlist.indexOf(song) < 0){
+        return false;
+    }
+    return true;
+}
+
+function bindCommonAction(song){
     var song_CamGiacBenAnh = {
         title:"Cảm Giác Bên Anh",
         artist:"Hải Băng",

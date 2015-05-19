@@ -54,12 +54,53 @@ class QuickTool {
             );
         }
 
+        $nodeAlbums = $finder->query("//div[@class='bod']//span[@class='genmed']//a");
+        $albumIndex = 0;
+        foreach($nodeAlbums as $nodeAlbum){
+            $href = $nodeAlbum->getAttribute('href');
+            $imgObject = $nodeAlbum->getElementsByTagName('img')->item(0);
+            $imgSrc = $imgObject->getAttribute('src');
+
+            $titleObject = $finder->query("//div[@class='bod']//span[@class='gen']//a")->item($albumIndex);
+            $title = $titleObject->getAttribute('title');
+            $result['lstAlbums'][] = array(
+              'title'  => $title,
+              'href' => $href,
+              'imgSrc' => $imgSrc
+            );
+            $albumIndex ++;
+        }
+
         $this->searchArray = $result;
         return $result;
     }
 
-    function crawl_single_song(){
+    function crawl_single_song($link){
+        $href = $this->musicDomain . "/" . $link;
 
+        $dom = new DOMDocument('1.0');
+        @$dom->loadHTMLFile($href);
+        $finder = new DomXPath($dom);
+        $nodeScript = $finder->query("//div[contains(@class,'pl-cl')]//script");
+        $textScript = null;
+        foreach($nodeScript as $script){
+            $attr = $script->getAttribute('src');
+            if(isset($attr) || empty($attr)){
+                $textScript = $script->nodeValue;
+            }
+        }
+        $link = null;
+        if($textScript != null){
+            $index1 = strpos($textScript, 'decodeURIComponent');
+            $index2 = strpos($textScript, '"provider":') - 1;
+            $link = substr($textScript, $index1, $index2 - $index1);
+            $lastComma = strrpos($link, ",");
+            $link = substr($link, 0, $lastComma);
+        }
+        $result['song'] = array(
+            'link' => $link
+        );
+        return $result;
     }
 
     function crawl_song_album($search_name){

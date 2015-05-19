@@ -1,8 +1,10 @@
 <?php echo $header;?>
 <?php echo $column_left;?>
+
 <div id="content">
     <div class="page-header">
-        <div class="container-fluid">
+        <div id="LoadingDiv" style="display:none;"></div>
+        <div class="container-fluid" id="main-content">
             <section id="bjax-target" class="scrollable padder-lg w-f-md">
                 <a data-toggle="class:fa-spin" class="pull-right text-muted m-t-lg" href="#">
                     <i id="refresh" class="icon-refresh i-lg inline"></i>

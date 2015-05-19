@@ -20,6 +20,7 @@
     <script src="<?php echo STATIC_PATH ?>js/jplayer.playlist.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         var mainPlayList = null;
+        var secondPlaylist = null;
     </script>
     <script src="<?php echo STATIC_PATH ?>js/demo.js" type="text/javascript"></script>
     <script src="<?php echo STATIC_PATH ?>js/common.js" type="text/javascript"></script>
@@ -43,6 +44,7 @@
                             <button onclick="searchSubmit();" class="btn btn-sm bg-white" style="background-color: #ffffff; border-radius: 7px;"><i class="fa fa-search"></i></button> </span>
                             <input name="search_name" type="text" placeholder="Search songs, albums..." class="form-control input-sm" style="border-radius: 0px 7px 7px 0px;">
                     </div>
+                    <i id="searchIndicator" style="display: none;" class="fa fa-spinner fa-spin"></i>
                 </div>
             </div>
             <script type="text/javascript">
