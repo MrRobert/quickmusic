@@ -31,7 +31,7 @@
                         <div class="jp-progress hidden-xs">
                             <div class="jp-seek-bar" style="width: 100%;">
                                 <div class="jp-play-bar bg-info" style="width: 0.195231%;"> </div>
-                                <div class="jp-title text-lt" style="display: none;">Bubble</div>
+                                <div class="jp-title text-lt" style="display: none;"></div>
                             </div>
                         </div>
                         <div class="pre-controls hidden-xs hidden-sm jp-current-time text-xs text-muted">00:00</div>

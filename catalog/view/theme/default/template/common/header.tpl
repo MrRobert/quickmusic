@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
     <script type="text/javascript" src="<?php echo STATIC_PATH ?>js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="<?php echo STATIC_PATH ?>js/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="<?php echo STATIC_PATH ?>js/bootstrap.min.js"></script>
     <link href="<?php echo STATIC_PATH ?>css/opencart.css" type="text/css" rel="stylesheet" />
     <link href="<?php echo STATIC_PATH ?>css/font-awesome.min.css" type="text/css" rel="stylesheet" />
@@ -22,6 +21,7 @@
     <script type="text/javascript">
         var mainPlayList = null;
         var secondPlaylist = null;
+        var playingIndex = false;
     </script>
     <script src="<?php echo STATIC_PATH ?>js/demo.js" type="text/javascript"></script>
     <script src="<?php echo STATIC_PATH ?>js/common.js" type="text/javascript"></script>

@@ -13,7 +13,11 @@ $(document).ready(function(){
         var index = mainPlayList.current;
         if(index != null && index >= 0){
             var song = mainPlayList.playlist[index];
-            notifyMusic(song.title, song.artist);
+            if(playingIndex == false){
+                notifyMusic(song.title, song.artist);
+                loadSongForMainPlaylist(song, index);
+            }
+            playingIndex = false;
         }
     });
 
@@ -28,10 +32,10 @@ $(document).ready(function(){
         $this.toggleClass('active');
         $this.parent('li').toggleClass('active');
         if( !$this.hasClass('active') ){
-            myPlaylist.pause();
+            mainPlayList.pause();
         }else{
             var i = Math.floor(Math.random() * (1 + 7 - 1));
-            myPlaylist.play(i);
+            mainPlayList.play(i);
         }
 
     });
@@ -64,7 +68,7 @@ $(document).ready(function(){
     }
 
     // One page application
-    $(window).bind('hashchange', function(){
+    $(window).on('hashchange', function(){
         var hash = location.hash;
         hash = hash.replace("#", "");
         if (hash.length > 0){
@@ -153,6 +157,10 @@ function fetchDATA(controllerPath, divTagert, data){
 }
 
 function playSong(link, divSong){
+    if(link.indexOf('video') > 0){
+        alert('Handle video link');
+        return;
+    }
     var data = {
         'link' : link
     };
@@ -168,6 +176,7 @@ function playSong(link, divSong){
                 artist: "",
                 mp3: decodeURIComponent(mp3file)
             };
+            secondPlaylist.playlist=[];
             secondPlaylist.add(song);
             secondPlaylist.play(0);
             bindCommonPlaySong(link, divSong);
@@ -175,11 +184,30 @@ function playSong(link, divSong){
     });
 }
 
+function loadSongForMainPlaylist(link, index){
+    var data = {
+        'link' : link
+    };
+    $.ajax({
+        url: 'index.php?route=app/search/getsong',
+        type: 'get',
+        data: data,
+        dataType: 'json',
+        success: function(json) {
+            var mp3file = json.song.link.substring("decodeURIComponent(".length + 1 , json.song.link.lastIndexOf(")") -1);
+            mainPlayList.playlist[index].mp3 = decodeURIComponent(mp3file);
+            playingIndex = true;
+            mainPlayList.play(index);
+        }
+    });
+}
+
+
 function bindCommonPlaySong(link, divSong){
     mainPlayList.pause();
     $('.play-icon-a').closest('.item-overlay').removeClass('active');
-    $('.play-icon-a').children('.fa-play').addClass('fa-play');
-    $('.play-icon-a').children('.fa-play').removeClass('fa-pause');
+    $('.play-icon-a').children('.fa-pause').addClass('fa-play');
+    $('.play-icon-a').children('.fa-pause').removeClass('fa-pause');
 
     // this
     $(divSong).closest('.item-overlay').addClass('active');
@@ -198,20 +226,17 @@ function bindCommonPlaySong(link, divSong){
     });
 }
 
-function isExisted(playlist, song){
-    if( playlist.playlist.indexOf(song) < 0){
-        return false;
+function isExisted(playlist, link){
+    if(playlist.playlist.length <= 0) return true;
+    for(var i=0; i< playlist.playlist.length; i++){
+        if(playlist.playlist[i].mp3 == link){
+            return true;
+        }
     }
-    return true;
+    return false;
 }
 
-function bindCommonAction(song){
-    var song_CamGiacBenAnh = {
-        title:"Cảm Giác Bên Anh",
-        artist:"Hải Băng",
-        mp3: decodeURIComponent("http%3A%2F%2Fdata.yeucahat.com%2Fdownloads%2F105%2F4%2Fb978bc6ae05ad665213e1a3f89162c9d%2FCam%2520Giac%2520Ben%2520Anh%2520-%2520Hai%2520Bang%2520%2528www.YeuCaHat.com%2529.mp3")
-    };
-
+function bindCommonAction(){
     function bindSendCondPlaylist(){
         $('.play-icon-a').bind('click', function(){
             mainPlayList.pause();
@@ -225,22 +250,25 @@ function bindCommonAction(song){
                 secondPlaylist.pause();
                 bindSendCondPlaylist();
             });
-            secondPlaylist.setPlaylist([
-                song_CamGiacBenAnh
-            ]);
+            secondPlaylist.setPlaylist([]);
             secondPlaylist.play(0);
         });
     }
 
     bindSendCondPlaylist();
-
-    $('.plus-song').bind('click', function(){
-        if(!isExisted(mainPlayList, song_CamGiacBenAnh)){
-            mainPlayList.add(song_CamGiacBenAnh);
-        }
-    });
 }
-
+function plusSong(link, title, artist, index){
+    if(!isExisted(mainPlayList, link)){
+        var song = {
+            title: title,
+            artist: artist,
+            mp3: link
+        }
+        mainPlayList.add(song);
+        $('#plused_'+ index).removeClass("hidden");
+        $('#plus_'+ index).hide();
+    }
+}
 window.addEventListener('load', function () {
     // At first, let's check if we have permission for notification
     // If not, let's ask for it

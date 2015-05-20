@@ -19,7 +19,14 @@ class ControllerAppSearch extends Controller {
         $link = '';
         if(isset($this->request->get['link'])){
             $link = $this->request->get['link'];
+            if(is_array($link)){
+                $link = $link['mp3'];
+                if(strpos($link, HTTP_SERVER) >= 0){
+                    $link = substr($link, strpos($link, HTTP_SERVER) + strlen(HTTP_SERVER));
+                }
+            }
         }
+        $link = base64_decode($link);
         $this->quickTool = new QuickTool();
         $result = $this->quickTool->crawl_single_song($link);
         header('Content-Type: application/json');
