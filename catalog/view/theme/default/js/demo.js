@@ -84,6 +84,8 @@ function listenCommonRequest(hash){
         data.search_name = temp[2];
         hash = temp[0];
         if(hash == 'search'){
+            $("#header input[name='search_name']").val(temp[2].split('+').join(' ').toString());
+            $("#header input[name='search_name']").focus();
             $('#searchIndicator').show();
         }
     }
