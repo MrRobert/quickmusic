@@ -63,21 +63,34 @@ $(document).ready(function(){
         keyEnabled: true
     });
 
-    if (location.hash.replace("#", "").length > 0){
-        fetchDATA(location.hash.replace("#", ""), $('#content'), []);
+    var currentHash = location.hash.replace("#", "");
+    if (currentHash.length > 0){
+        listenCommonRequest(currentHash);
     }
-
     // One page application
     $(window).on('hashchange', function(){
         var hash = location.hash;
-        hash = hash.replace("#", "");
-        if (hash.length > 0){
-            fetchDATA(hash, $('#content'));
-        }
+        listenCommonRequest(hash);
     });
 
     bindCommonAction();
 });
+
+function listenCommonRequest(hash){
+    hash = hash.replace("#", "");
+    var temp = hash.split('/');
+    var data = {};
+    if(temp.length > 2){
+        data.search_name = temp[2];
+        hash = temp[0];
+        if(hash == 'search'){
+            $('#searchIndicator').show();
+        }
+    }
+    if (hash.length > 0){
+        fetchDATA(hash, $('#content'), data);
+    }
+}
 
 function initMyPlayList(){
     var song_CamGiacBenAnh = {
@@ -128,11 +141,15 @@ function initSecondPlayList(){
 }
 
 function searchSubmit(){
+    var searchName = $("input[name='search_name']").val().trim();
+    window.location.hash = "#search/singer/" + searchName.split(' ').join('+').toString();
     $('#searchIndicator').show();
+    /*
     var data = {
-      'search_name': $("input[name='search_name']").val().trim()
+      'search_name': searchName
     };
     fetchDATA('search', $('#content'), data);
+    */
 }
 
 function fetchDATA(controllerPath, divTagert, data){
