@@ -34,13 +34,18 @@
                             <div class="center text-center m-t-n">
                                 <a onclick="playSong('<?php echo base64_encode($song['href'])?>', $(this));" href="javascript:void(0);" class="play-icon-a"><i class="fa fa-play fa-2x"></i></a>
                             </div>
+                            <div class="bottom_2 padder m-b-sm">
+                                <a href="javascript:void(0);" style="color: #9badb9;" id="plus_<?=$index;?>" onclick="plusSong('<?= base64_encode($song['href'])?>','<?= $song['title']?>', '<?= $song['artis']?>', <?= $index ?>)" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
+                                <a href="javascript:void(0);" style="color: #9badb9;" id="plused_<?=$index;?>" class="hidden pull-right"><i class="fa fa-check"></i></a>
+                            </div>
                             <div class="bottom padder m-b-sm">
                                 <a class="pull-right" href="#" id="favorite_<?=$index;?>"> <i class="fa fa-heart-o"></i> </a>
-                                <a href="javascript:void(0);" style="color: #9badb9;" id="plus_<?=$index;?>" onclick="plusSong('<?= base64_encode($song['href'])?>','<?= $song['title']?>', '<?= $song['artis']?>', <?= $index ?>)" class="plus-song"> <i class="fa fa-plus-circle"></i> </a>
-                                <a href="javascript:void(0);" style="color: #9badb9;" id="plused_<?=$index;?>" class="hidden"><i class="fa fa-check"></i></a>
                             </div>
                         </div>
-                        <a href="javascript:void(0);"><img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($song['img_src']));?>"></a>
+                        <a href="javascript:void(0);">
+                            <img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($song['img_src']));?>">
+                            <img class="looseless-img" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents(STATIC_PATH. 'image/looseless.jpg'));?>">
+                        </a>
                         <input type="hidden" id="song_<?php echo $index;?>" value="<?php echo $index; ?>">
                     </div>
                     <div class="padder-v"><a class="text-ellipsis" href="#"><?php echo $song['title']; ?></a>
@@ -93,7 +98,10 @@
                                 <a class="pull-right" href="#"> <i class="fa fa-heart-o"></i> </a>
                             </div>
                         </div>
-                        <a href="javascript:void(0);"><img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($album['imgSrc']));?>"></a>
+                        <a href="javascript:void(0);">
+                            <img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($album['imgSrc']));?>">
+                            <img class="looseless-img" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents(STATIC_PATH. 'image/looseless.jpg'));?>">
+                        </a>
                     </div>
                     <div class="padder-v"><a class="text-ellipsis" href="#"><?php echo $album['title'];?></a></div>
                 </div>

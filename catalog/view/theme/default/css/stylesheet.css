@@ -312,6 +312,14 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
     #column-left.active + #content + #footer {
         margin-left: 180px;
     }
+    .looseless-img{
+        position: absolute;
+        bottom: 0px;
+        left: -1px;
+        width: 55px;
+        height: 20px;
+        border-radius: 2px;
+    }
 }
 /* Mobile */
 @media (max-width: 767px) {
@@ -325,6 +333,15 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
     }
     #column-left.active {
         width: 119px;
+    }
+
+    .looseless-img{
+        position: absolute;
+        bottom: 0px;
+        left: -1px;
+        width: 39px;
+        height: 15px;
+        border-radius: 2px;
     }
 }
 
@@ -847,6 +864,12 @@ input[type="checkbox"]:checked::after, .checkbox input[type="checkbox"]:checked:
 }
 .item .bottom {
     bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+.item .bottom_2 {
+    bottom: 20px;
     left: 0;
     position: absolute;
     right: 0;
