@@ -62,6 +62,7 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 	width: 100%;
 	position: relative;
 }
+
 .container-fluid {
 	padding-left: 20px;
 	padding-right: 20px;
@@ -306,7 +307,7 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
         overflow: auto;
     }
     #column-left.active + #content {
-        margin-left: 200px;
+        margin-left: 179px;
         min-height: 700px;
     }
     #column-left.active + #content + #footer {
@@ -951,4 +952,139 @@ img{
     padding-left:50px;
     width:100%;
     clear:none;
+}
+
+/* Album CSS */
+.vbox {
+    border-spacing: 0;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.vbox > div.w-f-md {
+    bottom: 60px;
+}
+.vbox > div, .vbox > footer {
+    position: absolute;
+}
+.hbox.stretch {
+    height: 100%;
+}
+.bg-black {
+    background-color: #0d1215;
+}
+
+.hbox > aside, .hbox > div {
+    display: table-cell;
+    float: none;
+    height: 100%;
+    vertical-align: top;
+}
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+.animated {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+.scrollable {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.m-t-n-xxs {
+    margin-top: -1px;
+}
+.item .top {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.item .bottom {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+.item .gd {
+    background-color: transparent;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25) 20%, rgba(0, 0, 0, 0.75));
+    background-repeat: no-repeat;
+}
+.font-thin {
+    font-weight: 300;
+}
+.bg-black.auto .list-group-item, .bg-black .auto .list-group-item {
+    background-color: transparent;
+    border-color: #191f23 !important;
+}
+.list-group.no-bg .list-group-item {
+    background-color: transparent;
+}
+.list-group.no-border .list-group-item {
+    border-width: 1px 0;
+}
+.list-group.no-radius .list-group-item {
+    border-radius: 0 !important;
+}
+.list-group-lg .list-group-item {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.list-group-item:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.list-group-item {
+    border-color: #eaeef1;
+    padding-right: 15px;
+}
+.list-group-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: block;
+    margin-bottom: -1px;
+    padding: 10px 15px;
+    position: relative;
+}
+.m-l {
+    margin-left: 15px;
+}
+.m-r-sm {
+    margin-right: 10px;
+}
+.scrollable.hover {
+    overflow-y: hidden;
+}
+.vbox > div, .vbox > footer {
+    position: absolute;
+}
+.list-group {
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+.list-group {
+    border-radius: 2px;
+}
+.font-bold {
+    font-weight: 700;
+}
+.text-info {
+    color: #4cb6cb;
+}
+.wrapper-md {
+    padding: 20px;
+}
+.pos-rlt {
+    position: relative;
+}
+.hbox.stretch {
+    height: 100%;
+}
+.hbox {
+    border-spacing: 0;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
 }

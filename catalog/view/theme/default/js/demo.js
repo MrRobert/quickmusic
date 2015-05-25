@@ -15,7 +15,9 @@ $(document).ready(function(){
             var song = mainPlayList.playlist[index];
             if(playingIndex == false){
                 notifyMusic(song.title, song.artist);
-                loadSongForMainPlaylist(song, index);
+                if(song.isFirstPlaying != undefined && song.isFirstPlaying){
+                    loadSongForMainPlaylist(song, index);
+                }
             }
             playingIndex = false;
         }
@@ -189,11 +191,11 @@ function playSong(link, divSong){
         data: data,
         dataType: 'json',
         success: function(json) {
-            var mp3file = json.song.link.substring("decodeURIComponent(".length + 1 , json.song.link.lastIndexOf(")") -1);
+            var mp3file = json[0].linkSong; //already encode
             var song = {
-                title: "",
-                artist: "",
-                mp3: decodeURIComponent(mp3file)
+             title: "",
+             artist: "",
+             mp3: "index.php?route=app/search/playsong&src=" + mp3file
             };
             secondPlaylist.playlist=[];
             secondPlaylist.add(song);
@@ -203,9 +205,9 @@ function playSong(link, divSong){
     });
 }
 
-function loadSongForMainPlaylist(link, index){
+function loadSongForMainPlaylist(song, index){
     var data = {
-        'link' : link
+        'link' : song.mp3
     };
     $.ajax({
         url: 'index.php?route=app/search/getsong',
@@ -213,8 +215,9 @@ function loadSongForMainPlaylist(link, index){
         data: data,
         dataType: 'json',
         success: function(json) {
-            var mp3file = json.song.link.substring("decodeURIComponent(".length + 1 , json.song.link.lastIndexOf(")") -1);
-            mainPlayList.playlist[index].mp3 = decodeURIComponent(mp3file);
+            var mp3file = json[0].linkSong;
+            mainPlayList.playlist[index].mp3 = "index.php?route=app/search/playsong&src=" + mp3file;
+            mainPlayList.playlist[index].isFirstPlaying = false;
             playingIndex = true;
             mainPlayList.play(index);
         }
@@ -281,7 +284,8 @@ function plusSong(link, title, artist, index){
         var song = {
             title: title,
             artist: artist,
-            mp3: link
+            mp3: link,
+            isFirstPlaying : true
         }
         mainPlayList.add(song);
         $('#plused_'+ index).removeClass("hidden");

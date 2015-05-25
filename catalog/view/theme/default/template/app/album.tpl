@@ -1,14 +1,14 @@
 <?php echo $header;?>
 <?php echo $column_left;?>
 
-<div id="content">
-<section class="vbox">
-<section class="w-f-md">
-<section class="hbox stretch bg-black dker">
+<div id="content" style="padding-top: 60px;" class="album-content">
+<div class="vbox">
+<div class="w-f-md">
+<div class="hbox stretch bg-black dker">
 <!-- side content -->
 <aside class="col-sm-5 no-padder" id="sidebar">
-    <section class="vbox animated fadeInUp">
-        <section class="scrollable">
+    <div class="vbox animated fadeInUp">
+        <div class="scrollable" style="width: 100%">
             <div class="m-t-n-xxs item pos-rlt">
                 <div class="top text-right">
                                 <span class="musicbar animate bg-success bg-empty inline m-r-lg m-t" style="width:25px;height:30px">
@@ -20,10 +20,10 @@
                                 </span>
                 </div>
                 <div class="bottom gd bg-info wrapper-lg">
-                    <span class="pull-right text-sm">101,400 <br>Followers</span>
-                    <span class="h2 font-thin">Soph Ashe</span>
+                    <span class="pull-right text-sm" style="margin: 15px; color: #ffffff">101,400 <br>Followers</span>
+                    <span class="h2 font-thin" style="margin: 15px; color: #ffffff">Soph Ashe</span>
                 </div>
-                <img class="img-full" src="images/m43.jpg" alt="...">
+                <img class="img-full" src="http://flatfull.com/themes/musik/images/m43.jpg" alt="..." style="height: 265px;">
             </div>
             <ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">
                 <li class="list-group-item active">
@@ -128,13 +128,13 @@
                     </div>
                 </li>
             </ul>
-        </section>
-    </section>
+        </div>
+    </div>
 </aside>
 <!-- / side content -->
-<section class="col-sm-4 no-padder bg">
-    <section class="vbox">
-        <section class="scrollable hover">
+<div class="col-sm-4 no-padder bg">
+    <div class="vbox">
+        <div class="scrollable hover" style="width: 100%">
             <ul class="list-group list-group-lg no-bg auto m-b-none m-t-n-xxs">
                 <li class="list-group-item clearfix">
                     <a href="#" class="jp-play-me pull-right m-t-sm m-l text-md">
@@ -190,53 +190,57 @@
                     </a>
                 </li>
             </ul>
-        </section>
-    </section>
-</section>
-<section class="col-sm-3 no-padder lt">
-    <section class="vbox">
-        <section class="scrollable hover">
+        </div>
+    </div>
+</div>
+<div class="col-sm-3 no-padder lt">
+    <div class="vbox">
+        <div class="scrollable hover" style="width: 100%">
             <div class="m-t-n-xxs">
                 <div class="item pos-rlt"><a href="#"
                                              class="item-overlay active opacity wrapper-md font-xs"> <span
                                 class="block h3 font-bold text-info">Find</span> <span class="text-muted">Search the music you like</span>
                                     <span class="bottom wrapper-md block">- <i
                                                 class="icon-arrow-right i-lg pull-right"></i></span> </a> <a href="#">
-                        <img class="img-full" src="images/m40.jpg" alt="..."> </a></div>
+                        <img class="img-full" src="http://flatfull.com/themes/musik/images/m40.jpg" alt="..."> </a></div>
                 <div class="item pos-rlt"><a href="#"
                                              class="item-overlay active opacity wrapper-md font-xs text-right">
                         <span class="block h3 font-bold text-warning text-u-c">Listen</span> <span
                                 class="text-muted">Find the peace in your heart</span> <span
                                 class="bottom wrapper-md block"><i
                                     class="icon-arrow-right i-lg pull-left"></i> -</span> </a> <a href="#">
-                        <img class="img-full" src="images/m41.jpg" alt="..."> </a></div>
+                        <img class="img-full" src="http://flatfull.com/themes/musik/images/m41.jpg" alt="..."> </a></div>
                 <div class="item pos-rlt"><a href="#"
                                              class="item-overlay active opacity wrapper-md font-xs"> <span
                                 class="block h3 font-bold text-success text-u-c">Share</span> <span
                                 class="text-muted">Share the good songs with your loves</span> <span
                                 class="bottom wrapper-md block">- <i
                                     class="icon-arrow-right i-lg pull-right"></i></span> </a> <a href="#">
-                        <img class="img-full" src="images/m42.jpg" alt="..."> </a></div>
+                        <img class="img-full" src="http://flatfull.com/themes/musik/images/m42.jpg" alt="..."> </a></div>
                 <div class="item pos-rlt"><a href="#"
                                              class="item-overlay active opacity wrapper-md font-xs text-right">
                         <span class="block h3 font-bold text-white text-u-c">2014</span> <span
                                 class="text-muted">Find, Listen &amp; Share</span> <span
                                 class="bottom wrapper-md block"><i
                                     class="icon-arrow-right i-lg pull-left"></i> -</span> </a> <a href="#">
-                        <img class="img-full" src="images/m44.jpg" alt="..."> </a></div>
+                        <img class="img-full" src="http://flatfull.com/themes/musik/images/m44.jpg" alt="..."> </a></div>
                 <div class="item pos-rlt"><a href="#"
                                              class="item-overlay active opacity wrapper-md font-xs"> <span
                                 class="block h3 font-bold text-danger-lter text-u-c">Top10</span> <span
                                 class="text-muted">Selected songs</span> <span
                                 class="bottom wrapper-md block">- <i
                                     class="icon-arrow-right i-lg pull-right"></i></span> </a> <a href="#">
-                        <img class="img-full" src="images/m45.jpg" alt="..."> </a></div>
+                        <img class="img-full" src="http://flatfull.com/themes/musik/images/m45.jpg" alt="..."> </a></div>
             </div>
-        </section>
-    </section>
-</section>
-</section>
-</section>
-</section>
+        </div>
+    </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+    $('#container').css('background-color', '#0d1215');
+</script>
+
 <?php echo $footer;?>

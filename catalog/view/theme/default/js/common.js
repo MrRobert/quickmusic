@@ -197,6 +197,10 @@ function startPage(){
         $('.hidden-li').hide();
         $('.badge').css('padding', '3px');
         $('.footer').css('width', '95%');
+        if($('#content').hasClass('album-content')){
+            $('.footer').css('margin-left', '4%');
+        }
+
         $('.hidden-span').hide();
         $('#button-menu i').replaceWith('<i class="fa fa-indent fa-lg"></i>');
 
@@ -216,9 +220,12 @@ function startPage(){
 
         $('.badge').css('padding', '3px');
         $('.footer').css('width', '85%');
+        if($('#content').hasClass('album-content')){
+            $('.footer').css('margin-left', '13%');
+            $('.footer').css('width', '86%');
+        }
 
         $('#column-left').addClass('active');
-
         // Add the slide down to open menu items
         $('#menu li.open').has('ul').children('ul').addClass('collapse in');
         $('#menu li').not('.open').has('ul').children('ul').addClass('collapse');
