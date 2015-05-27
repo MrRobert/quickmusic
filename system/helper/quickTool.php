@@ -155,20 +155,17 @@ class QuickTool {
         $dom = new DOMDocument('1.0');
         @$dom->loadHTMLFile($this->hotSongVN);
         $finder = new DomXPath($dom);
-        $classname = "h-main4:first";
-        $nodes = $finder->query("//div[@class='$classname']//div[@class='text2x']");
-
+        $nodes = $finder->query("//div[@class='h-main4']//div[@class='text2 text2x']");
         foreach($nodes as $node){
-            $index = 0;
             $nodeA = $node->getElementsByTagName('a')->item(0);
             $nodeP = $node->getElementsByTagName('p')->item(0);
 
-            $title = $nodeA->nodeValue;
+            $title = mb_convert_encoding($nodeA->nodeValue, 'html-entities', 'utf-8');
             $href = $nodeA->getAttribute('href');
-            $artis = $nodeP->nodeValue;
+            $artis = mb_convert_encoding($nodeP->nodeValue, 'html-entities', 'utf-8');
 
             if(strrpos($href, "/")){
-               $href = $this->hotSongVNPreDomain . substr($href, strrpos($href, "/"));
+                $href = $this->hotSongVNPreDomain . substr($href, strrpos($href, "/"));
             }
             // fetch images ...
             $img_url = $href;
@@ -191,22 +188,18 @@ class QuickTool {
                 'img_src' => $imgSrc
             );
         }
-
         // get hot songs UK =======================================================
         $dom = new DOMDocument('1.0');
         @$dom->loadHTMLFile($this->hotSongUK);
         $finder = new DomXPath($dom);
-        $classname = "h-main4:first";
-        $nodes = $finder->query("//div[@class='$classname']//div[@class='text2x']");
-
+        $nodes = $finder->query("//div[@class='h-main4']//div[@class='text2 text2x']");
         foreach($nodes as $node){
-            $index = 0;
             $nodeA = $node->getElementsByTagName('a')->item(0);
             $nodeP = $node->getElementsByTagName('p')->item(0);
 
-            $title = $nodeA->nodeValue;
+            $title = mb_convert_encoding($nodeA->nodeValue, 'html-entities', 'utf-8');
             $href = $nodeA->getAttribute('href');
-            $artis = $nodeP->nodeValue;
+            $artis = mb_convert_encoding($nodeP->nodeValue, 'html-entities', 'utf-8');
 
             if(strrpos($href, "/")){
                 $href = $this->hotSongUKPreDomain . substr($href, strrpos($href, "/"));
@@ -218,7 +211,6 @@ class QuickTool {
             $img_finder = new DOMXPath($img_dom);
             $lyric_Object = $img_finder->query("//div[@id='fulllyric']//img");
             $imgSrc = STATIC_PATH . '/image/default-song.jpg';
-
             foreach($lyric_Object as $lyric){
                 if($lyric->getAttribute('align') == 'right'){
                     $imgSrc = $lyric->getAttribute('src');
@@ -239,89 +231,91 @@ class QuickTool {
         @$dom->loadHTMLFile($this->hotSongVN);
         $finder = new DomXPath($dom);
         $nodes = $finder->query("//div[@class='bod']//table[@class='tbtable']//tr");
-
+        $index = 0;
         foreach($nodes as $node){
-            $title1 = ''; $href1 = ''; $artis1 = ''; $imgSrc1 = '';
-            $title2 = ''; $href2 = ''; $artis2 = ''; $imgSrc2 = '';
-            $firstTd = $node->getElementsByTagName('td')->item(0);
-            if($firstTd->getAttribute('valign') == 'top'){ // second line ==========
-                $nodeA1 = $node->getElementsByTagName('a')->item(0);
-                $nodeA2 = $node->getElementsByTagName('a')->item(1);
+            $title1 = ''; $href1 = ''; $artis1 = ''; $imgSrc1 = STATIC_PATH . '/image/default-song.jpg';
+            $title2 = ''; $href2 = ''; $artis2 = ''; $imgSrc2 = STATIC_PATH . '/image/default-song.jpg';
+            if($index > 0){
+                $firstTd = $node->getElementsByTagName('td')->item(0);
+                if(isset($firstTd) && !empty($firstTd) && $firstTd->getAttribute('valign') == 'top'){ // second line ==========
+                    $nodeA1 = $node->getElementsByTagName('a')->item(0);
+                    $nodeA2 = $node->getElementsByTagName('a')->item(1);
+                    $title1 = mb_convert_encoding($nodeA1->nodeValue, 'html-entities', 'utf-8');
+                    $artis1 = '';
+                    $title2 = mb_convert_encoding($nodeA2->nodeValue, 'html-entities', 'utf-8');
+                    $artis2 = '';
+                }else{ // first line ====================
+                    $nodeA1 = $node->getElementsByTagName('a')->item(0);
+                    $nodeA2 = $node->getElementsByTagName('a')->item(1);
 
-                $title1 = $nodeA1->nodeValue;
-                $artis1 = '';
-                $title2 = $nodeA2->nodeValue;
-                $artis2 = '';
-            }else{ // first line ====================
-                $nodeA1 = $node->getElementsByTagName('a')->item(0);
-                $nodeA2 = $node->getElementsByTagName('a')->item(1);
+                    $href1 = $nodeA1->getAttribute('href');
+                    $nodeImgSrc1 = $nodeA1->getElementsByTagName('img')->item(0);
+                    $imgSrc1 = $nodeImgSrc1->getAttribute('src');
 
-                $href1 = $nodeA1->getAttribute('href');
-                $nodeImgSrc1 = $nodeA1->getElementsByTagName('img')->item(0);
-                $imgSrc1 = $nodeImgSrc1->getAttribute('src');
-
-                $href2 = $nodeA2->getAttribute('href');
-                $nodeImgSrc2 = $nodeA2->getElementsByTagName('img')->item(0);
-                $imgSrc2 = $nodeImgSrc2->getAttribute('src');
+                    $href2 = $nodeA2->getAttribute('href');
+                    $nodeImgSrc2 = $nodeA2->getElementsByTagName('img')->item(0);
+                    $imgSrc2 = $nodeImgSrc2->getAttribute('src');
+                }
+                $result['albumVNs'][] = array(
+                    'title' => $title1,
+                    'artis' => $artis1,
+                    'href'=> $href1,
+                    'img_src' => $imgSrc1
+                );
+                $result['albumVNs'][] = array(
+                    'title' => $title2,
+                    'artis' => $artis2,
+                    'href'=> $href2,
+                    'img_src' => $imgSrc2
+                );
             }
-
-            array_push($result, "albumVNs" , array(
-               'title' => $title1,
-               'artis' => $artis1,
-               'href'=> $href1,
-               'img_src' => $imgSrc1
-            ));
-
-            array_push($result, "albumVNs" , array(
-                'title' => $title2,
-                'artis' => $artis2,
-                'href'=> $href2,
-                'img_src' => $imgSrc2
-            ));
+            $index++;
         }
 
-        // Album collection VN
+        // Album collection UK
         $dom = new DOMDocument('1.0');
         @$dom->loadHTMLFile($this->hotSongUK);
         $finder = new DomXPath($dom);
         $nodes = $finder->query("//div[@class='bod']//table[@class='tbtable']//tr");
-
+        $index = 0;
         foreach($nodes as $node){
-            $title1 = ''; $href1 = ''; $artis1 = ''; $imgSrc1 = '';
-            $title2 = ''; $href2 = ''; $artis2 = ''; $imgSrc2 = '';
+            $title1 = ''; $href1 = ''; $artis1 = ''; $imgSrc1 = STATIC_PATH . '/image/default-song.jpg';
+            $title2 = ''; $href2 = ''; $artis2 = ''; $imgSrc2 = STATIC_PATH . '/image/default-song.jpg';
             $firstTd = $node->getElementsByTagName('td')->item(0);
-            if($firstTd->getAttribute('valign') == 'top'){ // second line ==========
-                $nodeA1 = $node->getElementsByTagName('a')->item(0);
-                $nodeA2 = $node->getElementsByTagName('a')->item(1);
+            if($index > 0){
+                if(isset($firstTd) && !empty($firstTd) &&  $firstTd->getAttribute('valign') == 'top'){ // second line ==========
+                    $nodeA1 = $node->getElementsByTagName('a')->item(0);
+                    $nodeA2 = $node->getElementsByTagName('a')->item(1);
+                    $title1 = mb_convert_encoding($nodeA1->nodeValue, 'html-entities', 'utf-8');
+                    $artis1 = '';
+                    $title2 = mb_convert_encoding($nodeA2->nodeValue, 'html-entities', 'utf-8');
+                    $artis2 = '';
+                }else{ // first line ====================
+                    $nodeA1 = $node->getElementsByTagName('a')->item(0);
+                    $nodeA2 = $node->getElementsByTagName('a')->item(1);
 
-                $title1 = $nodeA1->nodeValue;
-                $artis1 = '';
-                $title2 = $nodeA2->nodeValue;
-                $artis2 = '';
-            }else{ // first line ====================
-                $nodeA1 = $node->getElementsByTagName('a')->item(0);
-                $nodeA2 = $node->getElementsByTagName('a')->item(1);
+                    $href1 = $nodeA1->getAttribute('href');
+                    $nodeImgSrc1 = $nodeA1->getElementsByTagName('img')->item(0);
+                    $imgSrc1 = $nodeImgSrc1->getAttribute('src');
 
-                $href1 = $nodeA1->getAttribute('href');
-                $nodeImgSrc1 = $nodeA1->getElementsByTagName('img')->item(0);
-                $imgSrc1 = $nodeImgSrc1->getAttribute('src');
-
-                $href2 = $nodeA2->getAttribute('href');
-                $nodeImgSrc2 = $nodeA2->getElementsByTagName('img')->item(0);
-                $imgSrc2 = $nodeImgSrc2->getAttribute('src');
+                    $href2 = $nodeA2->getAttribute('href');
+                    $nodeImgSrc2 = $nodeA2->getElementsByTagName('img')->item(0);
+                    $imgSrc2 = $nodeImgSrc2->getAttribute('src');
+                }
+                $result['albumUKs'][] = array(
+                    'title' => $title1,
+                    'artis' => $artis1,
+                    'href'=> $href1,
+                    'img_src' => $imgSrc1
+                );
+                $result['albumUKs'][] = array(
+                    'title' => $title2,
+                    'artis' => $artis2,
+                    'href'=> $href2,
+                    'img_src' => $imgSrc2
+                );
             }
-            array_push($result, "albumUKs" , array(
-                'title' => $title1,
-                'artis' => $artis1,
-                'href'=> $href1,
-                'img_src' => $imgSrc1
-            ));
-            array_push($result, "albumUKs" , array(
-                'title' => $title2,
-                'artis' => $artis2,
-                'href'=> $href2,
-                'img_src' => $imgSrc2
-            ));
+            $index++;
         }
 
         $file = DIR_TEMPLATE . 'default/template/app/home.tpl';

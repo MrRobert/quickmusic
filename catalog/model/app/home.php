@@ -12,6 +12,11 @@ class ModelAppHome extends Model {
         return $query->row['total'];
     }
 
+    public function getHomeContent(){
+        $query = $this->db->query("SELECT content FROM " . DB_PREFIX . "home WHERE home_id > 0");
+        return $query->row['content'];
+    }
+
     public function insertOrUpdate($data){
         if($this->count() > 0){
             $this->update($data);

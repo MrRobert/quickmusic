@@ -12,6 +12,11 @@ class ControllerCommonHome extends Controller {
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
 
+        $this->load->model('app/home');
+        $data['main'] = html_entity_decode($this->model_app_home->getHomeContent());
+        if(!isset($data['main']) || empty($data['main'])){
+            $data['main'] = "Review your model !!!";
+        }
         $this->response->setOutput($this->load->view('default/template/common/home.tpl', $data));
 	}
 }

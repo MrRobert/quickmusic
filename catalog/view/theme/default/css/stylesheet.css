@@ -1088,3 +1088,6 @@ img{
     table-layout: fixed;
     width: 100%;
 }
+.img-with-small{
+    width: 46px;
+}

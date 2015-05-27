@@ -22,7 +22,6 @@
         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
             <div class="item">
                 <div class="pos-relative">
-                    <div class="bottom"><span class="badge m-l-sm m-b-sm" style="background-color: #4cb6cb; color: #eaf6f9">03:20</span></div>
                     <div class="item-overlay opacity r r-2x bg-black">
                         <div class="text-info padder m-t-sm text-sm">
                             <a href="javascript:void(0);"><i class="fa fa-star"></i></a>
@@ -44,8 +43,8 @@
                         <img class="looseless-img" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents(STATIC_PATH. 'image/looseless.jpg'));?>">
                     </a>
                 </div>
-                <div class="padder-v"><a class="text-ellipsis" href="#"><?=$songVN['title']?</a>
-                    <a class="text-ellipsis text-xs text-muted" href="#"><?=$songVN['artis']?</a>
+                <div class="padder-v"><a class="text-ellipsis" href="#"><?=$songVN['title']?></a>
+                    <a class="text-ellipsis text-xs text-muted" href="#"><?=$songVN['artis']?></a>
                 </div>
             </div>
         </div>
@@ -70,7 +69,7 @@
                             </a>
                         </div>
                         <div class="padder-v"><a class="text-ellipsis" href="#"><?=$albumUK['title']?></a>
-                            <a class="text-ellipsis text-xs text-muted" href="#"><?=$albumUK['artis']></a>
+                            <a class="text-ellipsis text-xs text-muted" href="#"><?=$albumUK['artis']?></a>
                         </div>
                     </div>
                 </div>
@@ -79,17 +78,20 @@
     </div>
     <div class="col-md-5"><h3 class="font-thin">Top Songs UK</h3>
         <div class="list-group bg-white list-group-lg no-bg auto">
+            <?php $index = 0;?>
             <?php foreach($hotSongUK as $songUK){ ?>
-                <a class="list-group-item clearfix" href="#">
-                    <span class="pull-right h2 text-muted m-l">1</span>
-                    <span class="pull-left thumb-sm avatar m-r">
-                        <img alt="" class="img-circle" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($songUK['img_src']));?>">
-                    </span>
-                    <span class="clear"><span><?=$song['title']?></span>
-                        <small class="text-muted clear text-ellipsis"><?=$song['artis']?></small>
-                    </span>
-                </a>
-            <?php } ?>
+                <?php if($index < 7){ ?>
+                    <a class="list-group-item clearfix" href="#">
+                        <span class="pull-right h2 text-muted m-l"><?php echo $index+1;?></span>
+                            <span class="pull-left thumb-sm avatar m-r">
+                                <img alt="" class="img-circle img-with-small" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($songUK['img_src']));?>">
+                            </span>
+                            <span class="clear"><span><?=$songUK['title']?></span>
+                                <small class="text-muted clear text-ellipsis"><?=$songUK['artis']?></small>
+                            </span>
+                    </a>
+                <?php } ?>
+            <?php $index++; } ?>
         </div>
     </div>
 </div>
