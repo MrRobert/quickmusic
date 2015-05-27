@@ -2,6 +2,12 @@
 class QuickTool {
     private $musicSources = "http://search.chiasenhac.com/search.php?s=";
     private $musicDomain = "http://chiasenhac.com";
+    private $hotSongVN = "http://chiasenhac.com/mp3/vietnam/";
+    private $hotSongUK = "http://chiasenhac.com/mp3/us-uk/";
+
+    private $hotSongVNPreDomain = "http://chiasenhac.com/mp3/vietnam/v-pop";
+    private $hotSongUKPreDomain = "http://chiasenhac.com/mp3/us-uk/u-pop";
+
     private $searchArray = array();
 
     function crawler($url){
@@ -141,5 +147,194 @@ class QuickTool {
 
     function getCurrentSearchResult(){
         return $this->searchArray;
+    }
+
+    function constructHomePage(){
+        $result = array();
+        // get hot song VN ======================================================
+        $dom = new DOMDocument('1.0');
+        @$dom->loadHTMLFile($this->hotSongVN);
+        $finder = new DomXPath($dom);
+        $classname = "h-main4:first";
+        $nodes = $finder->query("//div[@class='$classname']//div[@class='text2x']");
+
+        foreach($nodes as $node){
+            $index = 0;
+            $nodeA = $node->getElementsByTagName('a')->item(0);
+            $nodeP = $node->getElementsByTagName('p')->item(0);
+
+            $title = $nodeA->nodeValue;
+            $href = $nodeA->getAttribute('href');
+            $artis = $nodeP->nodeValue;
+
+            if(strrpos($href, "/")){
+               $href = $this->hotSongVNPreDomain . substr($href, strrpos($href, "/"));
+            }
+            // fetch images ...
+            $img_url = $href;
+            $img_dom = new DOMDocument('1.0');
+            @$img_dom->loadHTMLFile($img_url);
+            $img_finder = new DOMXPath($img_dom);
+            $lyric_Object = $img_finder->query("//div[@id='fulllyric']//img");
+            $imgSrc = STATIC_PATH . '/image/default-song.jpg';
+
+            foreach($lyric_Object as $lyric){
+                if($lyric->getAttribute('align') == 'right'){
+                    $imgSrc = $lyric->getAttribute('src');
+                }
+                break;
+            }
+            $result['hotSongVN'][] = array(
+                'title' => $title,
+                'artis' => $artis,
+                'href' => $href,
+                'img_src' => $imgSrc
+            );
+        }
+
+        // get hot songs UK =======================================================
+        $dom = new DOMDocument('1.0');
+        @$dom->loadHTMLFile($this->hotSongUK);
+        $finder = new DomXPath($dom);
+        $classname = "h-main4:first";
+        $nodes = $finder->query("//div[@class='$classname']//div[@class='text2x']");
+
+        foreach($nodes as $node){
+            $index = 0;
+            $nodeA = $node->getElementsByTagName('a')->item(0);
+            $nodeP = $node->getElementsByTagName('p')->item(0);
+
+            $title = $nodeA->nodeValue;
+            $href = $nodeA->getAttribute('href');
+            $artis = $nodeP->nodeValue;
+
+            if(strrpos($href, "/")){
+                $href = $this->hotSongUKPreDomain . substr($href, strrpos($href, "/"));
+            }
+            // fetch images ...
+            $img_url = $href;
+            $img_dom = new DOMDocument('1.0');
+            @$img_dom->loadHTMLFile($img_url);
+            $img_finder = new DOMXPath($img_dom);
+            $lyric_Object = $img_finder->query("//div[@id='fulllyric']//img");
+            $imgSrc = STATIC_PATH . '/image/default-song.jpg';
+
+            foreach($lyric_Object as $lyric){
+                if($lyric->getAttribute('align') == 'right'){
+                    $imgSrc = $lyric->getAttribute('src');
+                }
+                break;
+            }
+            $result['hotSongUK'][] = array(
+                'title' => $title,
+                'artis' => $artis,
+                'href' => $href,
+                'img_src' => $imgSrc
+            );
+        }
+
+        // Construct Album collection ================================================
+        // Album collection VN
+        $dom = new DOMDocument('1.0');
+        @$dom->loadHTMLFile($this->hotSongVN);
+        $finder = new DomXPath($dom);
+        $nodes = $finder->query("//div[@class='bod']//table[@class='tbtable']//tr");
+
+        foreach($nodes as $node){
+            $title1 = ''; $href1 = ''; $artis1 = ''; $imgSrc1 = '';
+            $title2 = ''; $href2 = ''; $artis2 = ''; $imgSrc2 = '';
+            $firstTd = $node->getElementsByTagName('td')->item(0);
+            if($firstTd->getAttribute('valign') == 'top'){ // second line ==========
+                $nodeA1 = $node->getElementsByTagName('a')->item(0);
+                $nodeA2 = $node->getElementsByTagName('a')->item(1);
+
+                $title1 = $nodeA1->nodeValue;
+                $artis1 = '';
+                $title2 = $nodeA2->nodeValue;
+                $artis2 = '';
+            }else{ // first line ====================
+                $nodeA1 = $node->getElementsByTagName('a')->item(0);
+                $nodeA2 = $node->getElementsByTagName('a')->item(1);
+
+                $href1 = $nodeA1->getAttribute('href');
+                $nodeImgSrc1 = $nodeA1->getElementsByTagName('img')->item(0);
+                $imgSrc1 = $nodeImgSrc1->getAttribute('src');
+
+                $href2 = $nodeA2->getAttribute('href');
+                $nodeImgSrc2 = $nodeA2->getElementsByTagName('img')->item(0);
+                $imgSrc2 = $nodeImgSrc2->getAttribute('src');
+            }
+
+            array_push($result, "albumVNs" , array(
+               'title' => $title1,
+               'artis' => $artis1,
+               'href'=> $href1,
+               'img_src' => $imgSrc1
+            ));
+
+            array_push($result, "albumVNs" , array(
+                'title' => $title2,
+                'artis' => $artis2,
+                'href'=> $href2,
+                'img_src' => $imgSrc2
+            ));
+        }
+
+        // Album collection VN
+        $dom = new DOMDocument('1.0');
+        @$dom->loadHTMLFile($this->hotSongUK);
+        $finder = new DomXPath($dom);
+        $nodes = $finder->query("//div[@class='bod']//table[@class='tbtable']//tr");
+
+        foreach($nodes as $node){
+            $title1 = ''; $href1 = ''; $artis1 = ''; $imgSrc1 = '';
+            $title2 = ''; $href2 = ''; $artis2 = ''; $imgSrc2 = '';
+            $firstTd = $node->getElementsByTagName('td')->item(0);
+            if($firstTd->getAttribute('valign') == 'top'){ // second line ==========
+                $nodeA1 = $node->getElementsByTagName('a')->item(0);
+                $nodeA2 = $node->getElementsByTagName('a')->item(1);
+
+                $title1 = $nodeA1->nodeValue;
+                $artis1 = '';
+                $title2 = $nodeA2->nodeValue;
+                $artis2 = '';
+            }else{ // first line ====================
+                $nodeA1 = $node->getElementsByTagName('a')->item(0);
+                $nodeA2 = $node->getElementsByTagName('a')->item(1);
+
+                $href1 = $nodeA1->getAttribute('href');
+                $nodeImgSrc1 = $nodeA1->getElementsByTagName('img')->item(0);
+                $imgSrc1 = $nodeImgSrc1->getAttribute('src');
+
+                $href2 = $nodeA2->getAttribute('href');
+                $nodeImgSrc2 = $nodeA2->getElementsByTagName('img')->item(0);
+                $imgSrc2 = $nodeImgSrc2->getAttribute('src');
+            }
+            array_push($result, "albumUKs" , array(
+                'title' => $title1,
+                'artis' => $artis1,
+                'href'=> $href1,
+                'img_src' => $imgSrc1
+            ));
+            array_push($result, "albumUKs" , array(
+                'title' => $title2,
+                'artis' => $artis2,
+                'href'=> $href2,
+                'img_src' => $imgSrc2
+            ));
+        }
+
+        $file = DIR_TEMPLATE . 'default/template/app/home.tpl';
+        if (file_exists($file)) {
+            extract($result);
+            ob_start();
+            require($file);
+            $output = ob_get_contents();
+            ob_end_clean();
+            return $output;
+        } else {
+            trigger_error('Error: Could not load template ' . $file . '!');
+            exit();
+        }
     }
 }
