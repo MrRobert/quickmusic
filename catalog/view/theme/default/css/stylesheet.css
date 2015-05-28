@@ -863,19 +863,19 @@ input[type="checkbox"]:checked::after, .checkbox input[type="checkbox"]:checked:
 .pos-relative{
     position: relative;
 }
-.item .bottom {
+.item-song .bottom {
     bottom: 0;
     left: 0;
     position: absolute;
     right: 0;
 }
-.item .bottom_2 {
+.item-song .bottom_2 {
     bottom: 20px;
     left: 0;
     position: absolute;
     right: 0;
 }
-.item .opacity {
+.item-song .opacity {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -923,13 +923,13 @@ img{
 .text-xs {
     font-size: 12px;
 }
-.item .center {
+.item-song .center {
     left: 0;
     position: absolute;
     right: 0;
     top: 50%;
 }
-.item-overlay.active, .item:hover .item-overlay{
+.item-overlay.active, .item-song:hover .item-overlay{
     display: block;
 }
 .padder-v {
@@ -995,19 +995,19 @@ img{
 .m-t-n-xxs {
     margin-top: -1px;
 }
-.item .top {
+.item-song .top {
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
 }
-.item .bottom {
+.item-song .bottom {
     bottom: 0;
     left: 0;
     position: absolute;
     right: 0;
 }
-.item .gd {
+.item-song .gd {
     background-color: transparent;
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25) 20%, rgba(0, 0, 0, 0.75));
     background-repeat: no-repeat;
@@ -1090,4 +1090,7 @@ img{
 }
 .img-with-small{
     width: 46px;
+}
+.uk-top-song a.inline{
+    display: inline;
 }

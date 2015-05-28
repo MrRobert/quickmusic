@@ -76,6 +76,18 @@ $(document).ready(function(){
     });
 
     bindCommonAction();
+
+    $('#albumCarousel').bind('slide.bs.carousel', function (e) {
+        if($('#albumTitle').html() == 'Hot Albums UK'){
+            $('#albumTitle').html('Hot Albums VN');
+        }else{
+            $('#albumTitle').html('Hot Albums UK');
+        }
+    });
+
+    $('#albumCarousel').carousel({
+        interval: 10000
+    });
 });
 
 function listenCommonRequest(hash){

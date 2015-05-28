@@ -20,7 +20,7 @@
         <div class="clearfix visible-xs"></div>
     <?php }else{ ?>
         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-            <div class="item">
+            <div class="item-song">
                 <div class="pos-relative">
                     <div class="item-overlay opacity r r-2x bg-black">
                         <div class="text-info padder m-t-sm text-sm">
@@ -52,46 +52,137 @@
 <?php $index ++; }?>
 </div>
 <div class="row">
-    <div class="col-md-7"><h3 class="font-thin">Hot Albums</h3>
-        <div class="row row-sm">
-            <?php foreach($albumUKs as $albumUK){ ?>
-                <div class="col-xs-6 col-sm-3">
-                    <div class="item">
-                        <div class="pos-relative">
-                            <div class="item-overlay opacity r r-2x bg-black">
-                                <div class="center text-center m-t-n">
-                                    <a href="javascript:void(0);"><i class="fa fa-play-circle fa-2x"></i></a>
+    <div class="col-md-7">
+        <h3 class="font-thin"><span id="albumTitle">Hot Albums UK</span>
+            <a class="pull-right" href="#albumCarousel" role="button" data-slide="next" style="padding-left: 8%; color: #666666"><i class="fa fa-angle-right"></i></a>
+            <a class="pull-right" href="#albumCarousel" role="button" data-slide="prev" style="color: #666666"><i class="fa fa-angle-left"></i></a>
+        </h3>
+        <div id="albumCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#albumCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#albumCarousel" data-slide-to="1"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="row row-sm">
+                        <?php foreach($albumUKs as $albumUK){ ?>
+                        <div class="col-xs-6 col-sm-3">
+                            <div class="item-song">
+                                <div class="pos-relative">
+                                    <div class="item-overlay opacity r r-2x bg-black">
+                                        <div class="center text-center m-t-n">
+                                            <a href="javascript:void(0);"><i class="fa fa-play-circle fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:void(0);">
+                                        <img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($albumUK['img_src']));?>">
+                                        <img class="looseless-img" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents(STATIC_PATH. 'image/looseless.jpg'));?>">
+                                    </a>
+                                </div>
+                                <div class="padder-v"><a class="text-ellipsis" href="#"><?=$albumUK['title']?></a>
+                                    <a class="text-ellipsis text-xs text-muted" href="#"><?=$albumUK['artis']?></a>
                                 </div>
                             </div>
-                            <a href="javascript:void(0);">
-                                <img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($albumUK['img_src']));?>">
-                                <img class="looseless-img" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents(STATIC_PATH. 'image/looseless.jpg'));?>">
-                            </a>
                         </div>
-                        <div class="padder-v"><a class="text-ellipsis" href="#"><?=$albumUK['title']?></a>
-                            <a class="text-ellipsis text-xs text-muted" href="#"><?=$albumUK['artis']?></a>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
-            <?php } ?>
+                <div class="item">
+                    <div class="row row-sm">
+                        <?php foreach($albumVNs as $albumVN){ ?>
+                        <div class="col-xs-6 col-sm-3">
+                            <div class="item-song">
+                                <div class="pos-relative">
+                                    <div class="item-overlay opacity r r-2x bg-black">
+                                        <div class="center text-center m-t-n">
+                                            <a href="javascript:void(0);"><i class="fa fa-play-circle fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:void(0);">
+                                        <img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($albumVN['img_src']));?>">
+                                        <img class="looseless-img" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents(STATIC_PATH. 'image/looseless.jpg'));?>">
+                                    </a>
+                                </div>
+                                <div class="padder-v"><a class="text-ellipsis" href="#"><?=$albumVN['title']?></a>
+                                    <a class="text-ellipsis text-xs text-muted" href="#"><?=$albumVN['artis']?></a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-md-5"><h3 class="font-thin">Top Songs UK</h3>
-        <div class="list-group bg-white list-group-lg no-bg auto">
-            <?php $index = 0;?>
-            <?php foreach($hotSongUK as $songUK){ ?>
-                <?php if($index < 7){ ?>
-                    <a class="list-group-item clearfix" href="#">
-                        <span class="pull-right h2 text-muted m-l"><?php echo $index+1;?></span>
+    <div class="col-md-5">
+        <h3 class="font-thin">Top Songs UK
+            <a class="pull-right" href="#myCarousel" role="button" data-slide="next" style="padding-left: 8%; color: #666666"><i class="fa fa-angle-right"></i></a>
+            <a class="pull-right" href="#myCarousel" role="button" data-slide="prev" style="color: #666666"><i class="fa fa-angle-left"></i></a>
+        </h3>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="list-group bg-white list-group-lg no-bg auto">
+                        <?php $index = 0;?>
+                        <?php foreach($hotSongUK as $songUK){ ?>
+                        <?php if($index < 7){ ?>
+                        <a class="list-group-item clearfix" href="#">
+                            <span class="pull-right h2 text-muted m-l"><?php echo $index+1;?></span>
                             <span class="pull-left thumb-sm avatar m-r">
                                 <img alt="" class="img-circle img-with-small" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($songUK['img_src']));?>">
                             </span>
                             <span class="clear"><span><?=$songUK['title']?></span>
                                 <small class="text-muted clear text-ellipsis"><?=$songUK['artis']?></small>
                             </span>
-                    </a>
-                <?php } ?>
-            <?php $index++; } ?>
+                        </a>
+                        <?php } ?>
+                        <?php $index++; } ?>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="list-group bg-white list-group-lg no-bg auto">
+                        <?php $index = 0;?>
+                        <?php foreach($hotSongUK as $songUK){ ?>
+                        <?php if($index >= 7 && $index < 14){ ?>
+                        <a class="list-group-item clearfix" href="#">
+                            <span class="pull-right h2 text-muted m-l"><?php echo $index+1;?></span>
+                            <span class="pull-left thumb-sm avatar m-r">
+                                <img alt="" class="img-circle img-with-small" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($songUK['img_src']));?>">
+                            </span>
+                            <span class="clear"><span><?=$songUK['title']?></span>
+                                <small class="text-muted clear text-ellipsis"><?=$songUK['artis']?></small>
+                            </span>
+                        </a>
+                        <?php } ?>
+                        <?php $index++; } ?>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="list-group bg-white list-group-lg no-bg auto">
+                        <?php $index = 0;?>
+                        <?php foreach($hotSongUK as $songUK){ ?>
+                        <?php if($index >= 14 && $index < 21){ ?>
+                        <a class="list-group-item clearfix" href="#">
+                            <span class="pull-right h2 text-muted m-l"><?php echo $index+1;?></span>
+                            <span class="pull-left thumb-sm avatar m-r">
+                                <img alt="" class="img-circle img-with-small" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($songUK['img_src']));?>">
+                            </span>
+                            <span class="clear"><span><?=$songUK['title']?></span>
+                                <small class="text-muted clear text-ellipsis"><?=$songUK['artis']?></small>
+                            </span>
+                        </a>
+                        <?php } ?>
+                        <?php $index++; } ?>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

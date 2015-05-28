@@ -2,1404 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eac47c3f-6fa3-4609-a68c-2c021e15b7cf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/config.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/catalog/attribute.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/catalog/attribute_group.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/catalog/category.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/catalog/download.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/catalog/filter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/catalog/information.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/catalog/manufacturer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/catalog/option.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/catalog/product.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/catalog/recurring.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/catalog/review.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/common/column_left.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/common/dashboard.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/common/filemanager.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/common/footer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/common/forgotten.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/common/header.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/common/login.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/common/logout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/common/menu.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/common/profile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/common/reset.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/common/stats.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/dashboard/activity.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/dashboard/chart.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/dashboard/customer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/dashboard/map.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/dashboard/online.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/dashboard/order.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/dashboard/recent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/dashboard/sale.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/design/banner.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/design/layout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/error/not_found.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/error/permission.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/extension/feed.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/extension/installer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/extension/modification.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/extension/module.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/extension/openbay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/extension/payment.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/extension/shipping.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/extension/total.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/feed/google_base.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/feed/google_sitemap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/feed/openbaypro.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/country.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/currency.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/geo_zone.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/language.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/length_class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/location.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/order_status.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/return_action.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/return_reason.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/return_status.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/stock_status.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/tax_class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/tax_rate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/weight_class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/localisation/zone.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/marketing/affiliate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/marketing/contact.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/marketing/coupon.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/marketing/marketing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/account.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/affiliate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/amazon_button.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/amazon_login.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/amazon_pay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/banner.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/bestseller.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/carousel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/category.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/ebay_listing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/featured.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/filter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/google_hangouts.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/html.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/information.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/latest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/pp_button.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/pp_login.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/slideshow.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/special.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/module/store.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/openbay/amazon.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/openbay/amazon_listing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/openbay/amazon_product.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/openbay/amazonus.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/openbay/amazonus_listing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/openbay/amazonus_product.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/openbay/ebay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/openbay/ebay_profile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/openbay/ebay_template.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/openbay/etsy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/openbay/etsy_product.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/openbay/etsy_shipping.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/openbay/etsy_shop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/amazon_checkout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/amazon_login_pay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/authorizenet_aim.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/authorizenet_sim.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/bank_transfer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/bluepay_hosted.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/bluepay_redirect.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/cheque.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/cod.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/firstdata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/firstdata_remote.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/free_checkout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/globalpay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/globalpay_remote.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/klarna_account.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/klarna_invoice.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/liqpay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/nochex.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/paymate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/paypoint.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/payza.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/perpetual_payments.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/pp_express.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/pp_payflow.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/pp_payflow_iframe.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/pp_pro.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/pp_pro_iframe.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/pp_standard.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/realex.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/realex_remote.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/sagepay_direct.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/sagepay_server.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/sagepay_us.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/securetrading_pp.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/securetrading_ws.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/skrill.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/twocheckout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/web_payment_software.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/payment/worldpay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/affiliate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/affiliate_activity.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/affiliate_login.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/customer_activity.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/customer_credit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/customer_login.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/customer_online.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/customer_order.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/customer_reward.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/marketing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/product_purchased.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/product_viewed.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/sale_coupon.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/sale_order.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/sale_return.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/sale_shipping.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/report/sale_tax.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/sale/custom_field.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/sale/customer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/sale/customer_ban_ip.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/sale/customer_group.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/sale/order.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/sale/recurring.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/sale/return.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/sale/voucher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/sale/voucher_theme.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/setting/setting.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/setting/store.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/shipping/auspost.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/shipping/citylink.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/shipping/fedex.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/shipping/flat.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/shipping/free.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/shipping/item.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/shipping/parcelforce_48.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/shipping/pickup.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/shipping/royal_mail.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/shipping/ups.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/shipping/usps.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/shipping/weight.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/tool/backup.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/tool/error_log.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/tool/upload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/total/coupon.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/total/credit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/total/handling.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/total/klarna_fee.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/total/low_order_fee.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/total/reward.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/total/shipping.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/total/sub_total.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/total/tax.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/total/total.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/total/voucher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/user/api.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/user/user.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/user/user_permission.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/catalog/attribute.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/catalog/attribute_group.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/catalog/category.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/catalog/download.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/catalog/filter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/catalog/information.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/catalog/manufacturer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/catalog/option.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/catalog/product.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/catalog/recurring.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/catalog/review.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/common/dashboard.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/common/filemanager.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/common/footer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/common/forgotten.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/common/header.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/common/login.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/common/menu.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/common/reset.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/common/stats.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/dashboard/activity.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/dashboard/chart.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/dashboard/customer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/dashboard/map.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/dashboard/online.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/dashboard/order.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/dashboard/recent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/dashboard/sale.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/design/banner.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/design/layout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/english.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/error/not_found.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/error/permission.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/extension/feed.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/extension/installer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/extension/modification.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/extension/module.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/extension/openbay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/extension/payment.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/extension/shipping.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/extension/total.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/feed/google_base.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/feed/google_sitemap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/feed/openbaypro.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/country.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/currency.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/geo_zone.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/language.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/length_class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/location.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/order_status.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/return_action.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/return_reason.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/return_status.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/stock_status.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/tax_class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/tax_rate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/weight_class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/localisation/zone.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/mail/affiliate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/mail/customer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/mail/forgotten.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/mail/return.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/mail/voucher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/marketing/affiliate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/marketing/contact.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/marketing/coupon.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/marketing/marketing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/account.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/affiliate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/amazon_button.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/amazon_login.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/amazon_pay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/banner.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/bestseller.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/carousel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/category.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/ebay_listing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/featured.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/filter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/google_hangouts.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/html.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/information.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/latest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/pp_button.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/pp_login.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/slideshow.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/special.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/module/store.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazon.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazon_bulk_linking.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazon_bulk_listing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazon_links.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazon_listing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazon_listingsaved.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazon_settings.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazon_stockupdates.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazon_subscription.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazonus.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazonus_bulk_linking.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazonus_bulk_listing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazonus_links.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazonus_listing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazonus_listingsaved.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazonus_settings.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazonus_stockupdates.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/amazonus_subscription.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/ebay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/ebay_edit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/ebay_import.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/ebay_links.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/ebay_new.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/ebay_newbulk.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/ebay_orders.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/ebay_profile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/ebay_settings.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/ebay_subscription.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/ebay_summary.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/ebay_syncronise.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/ebay_template.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/ebay_usage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/etsy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/etsy_create.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/etsy_edit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/etsy_links.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/etsy_listings.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/etsy_settings.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/openbay_itemlist.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/openbay/openbay_order.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/amazon_checkout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/amazon_login_pay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/authorizenet_aim.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/authorizenet_sim.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/bank_transfer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/bluepay_hosted.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/bluepay_redirect.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/cheque.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/cod.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/firstdata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/firstdata_remote.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/free_checkout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/globalpay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/globalpay_remote.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/klarna_account.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/klarna_invoice.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/liqpay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/nochex.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/paymate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/paypoint.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/payza.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/perpetual_payments.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/pp_express.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/pp_express_order.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/pp_express_refund.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/pp_express_search.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/pp_express_view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/pp_payflow.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/pp_payflow_iframe.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/pp_pro.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/pp_pro_iframe.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/pp_standard.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/realex.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/realex_remote.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/sagepay_direct.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/sagepay_server.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/sagepay_us.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/securetrading_pp.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/securetrading_ws.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/skrill.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/twocheckout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/web_payment_software.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/payment/worldpay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/affiliate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/affiliate_activity.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/customer_activity.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/customer_credit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/customer_online.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/customer_order.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/customer_reward.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/marketing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/product_purchased.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/product_viewed.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/sale_coupon.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/sale_order.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/sale_return.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/sale_shipping.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/report/sale_tax.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/sale/custom_field.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/sale/customer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/sale/customer_ban_ip.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/sale/customer_group.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/sale/order.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/sale/recurring.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/sale/return.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/sale/voucher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/sale/voucher_theme.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/setting/setting.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/setting/store.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/shipping/auspost.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/shipping/citylink.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/shipping/fedex.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/shipping/flat.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/shipping/free.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/shipping/item.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/shipping/parcelforce_48.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/shipping/pickup.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/shipping/royal_mail.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/shipping/ups.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/shipping/usps.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/shipping/weight.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/tool/backup.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/tool/error_log.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/tool/upload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/total/coupon.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/total/credit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/total/handling.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/total/klarna_fee.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/total/low_order_fee.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/total/reward.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/total/shipping.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/total/sub_total.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/total/tax.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/total/total.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/total/voucher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/user/api.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/user/user.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/user/user_group.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/catalog/attribute.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/catalog/attribute_group.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/catalog/category.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/catalog/download.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/catalog/filter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/catalog/information.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/catalog/manufacturer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/catalog/option.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/catalog/product.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/catalog/recurring.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/catalog/review.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/catalog/url_alias.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/design/banner.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/design/layout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/extension/event.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/extension/extension.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/extension/modification.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/extension/module.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/country.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/currency.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/geo_zone.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/language.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/length_class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/location.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/order_status.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/return_action.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/return_reason.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/return_status.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/stock_status.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/tax_class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/tax_rate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/weight_class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/localisation/zone.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/marketing/affiliate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/marketing/coupon.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/marketing/marketing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/openbay/amazon.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/openbay/amazon_listing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/openbay/amazonus.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/openbay/amazonus_listing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/openbay/ebay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/openbay/ebay_product.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/openbay/ebay_profile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/openbay/ebay_template.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/openbay/etsy.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/openbay/etsy_product.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/openbay/openbay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/openbay/order.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/openbay/version.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/amazon_checkout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/amazon_login_pay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/bluepay_hosted.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/bluepay_redirect.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/firstdata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/firstdata_remote.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/globalpay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/globalpay_remote.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/pp_express.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/pp_payflow_iframe.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/pp_pro_iframe.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/realex.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/realex_remote.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/sagepay_direct.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/sagepay_server.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/securetrading_pp.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/securetrading_ws.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/payment/worldpay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/report/activity.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/report/affiliate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/report/coupon.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/report/customer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/report/marketing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/report/product.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/report/return.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/report/sale.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/sale/custom_field.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/sale/customer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/sale/customer_ban_ip.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/sale/customer_group.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/sale/fraud.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/sale/order.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/sale/recurring.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/sale/return.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/sale/voucher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/sale/voucher_theme.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/setting/setting.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/setting/store.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/tool/backup.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/tool/image.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/tool/upload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/user/api.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/user/user.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/model/user/user_group.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/php.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/checkmark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ae.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/af.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ag.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ai.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/al.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/am.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/an.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ao.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/as.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/at.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/au.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/aw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ax.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/az.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ba.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/be.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/br.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/by.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/bz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ca.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/cc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/cd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/cf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/cg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ch.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ci.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ck.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/cl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/cm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/cn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/co.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/cr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/cs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/cu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/cv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/cx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/cy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/cz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/de.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/dj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/dk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/dm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/do.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/dz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ec.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ee.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/eg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/eh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/england.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/er.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/es.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/et.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/fam.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/fi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/fj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/fk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/fm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/fo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/fr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ga.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ge.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/gy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/hk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/hn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/hr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ht.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/hu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/id.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ie.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/il.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/in.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/io.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/iq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ir.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/is.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/it.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/jm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/jo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/jp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ke.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/kg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/kh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ki.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/km.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/kn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/kp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/kr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/kw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ky.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/kz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/la.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/lb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/lc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/li.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/lk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/lr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ls.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/lt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/lu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/lv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ly.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ma.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/md.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ml.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ms.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/my.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/mz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/na.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/nc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ne.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/nf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ng.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ni.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/nl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/no.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/np.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/nr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/nu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/nz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/om.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/pa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/pe.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/pf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/pg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ph.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/pk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/pl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/pm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/pn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/pr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ps.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/pt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/pw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/py.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/qa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ro.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ru.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/rw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/sa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/sb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/sc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/scotland.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/sd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/se.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/sg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/sh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/si.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/sk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/sl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/sm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/sn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/so.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/sr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/st.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/sv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/sy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/sz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/tc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/td.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/tf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/tg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/th.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/tj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/tk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/tl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/tm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/tn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/to.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/tr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/tt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/tv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/tw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/tz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ua.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ug.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/um.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/us.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/uy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/uz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/va.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/vc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ve.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/vg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/vi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/vn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/vu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/wales.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/wf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ws.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/ye.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/yt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/za.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/zm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/flags/zw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/2checkout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/amazon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/authorizenet.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/bluepay.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/firstdata.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/globalpay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/klarna_banner.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/liqpay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/moneybookers.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/nochex.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/paymate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/paypal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/paypoint.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/realex.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/sagepay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/secure_trading.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/worldpay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/image/payment/wps-logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/media.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/alerts.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/background-variant.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/border-radius.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/buttons.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/center-block.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/clearfix.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/forms.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/gradients.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/grid-framework.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/grid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/hide-text.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/image.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/labels.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/list-group.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/nav-divider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/nav-vertical-align.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/opacity.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/pagination.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/panels.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/progress-bar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/reset-filter.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/resize.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/responsive-visibility.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/size.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/tab-focus.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/table-row.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/text-emphasis.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/text-overflow.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/mixins/vendor-prefixes.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/normalize.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/print.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/responsive-embed.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/css/variables.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/.csscomb.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/.csslintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/alerts.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/badges.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/bootstrap.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/breadcrumbs.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/button-groups.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/carousel.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/close.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/code.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/component-animations.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/dropdowns.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/forms.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/glyphicons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/input-groups.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/jumbotron.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/labels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/list-group.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/media.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/alerts.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/background-variant.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/border-radius.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/center-block.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/clearfix.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/forms.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/gradients.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/grid-framework.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/hide-text.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/image.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/labels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/list-group.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/nav-divider.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/nav-vertical-align.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/opacity.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/panels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/progress-bar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/reset-filter.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/resize.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/responsive-visibility.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/size.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/tab-focus.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/table-row.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/text-emphasis.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/text-overflow.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/mixins/vendor-prefixes.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/modals.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/navbar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/navs.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/normalize.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/pager.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/panels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/popovers.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/print.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/progress-bars.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/responsive-embed.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/responsive-utilities.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/scaffolding.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/tables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/theme.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/thumbnails.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/tooltip.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/type.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/utilities.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/less/wells.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/opencart/opencart.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/opencart/opencart.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/bootstrap/opencart/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/common.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/less/bordered-pulled.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/less/core.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/less/fixed-width.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/less/font-awesome.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/less/icons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/less/larger.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/less/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/less/path.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/less/rotated-flipped.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/less/spinning.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/less/stacked.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/scss/_bordered-pulled.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/scss/_core.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/scss/_fixed-width.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/scss/_icons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/scss/_larger.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/scss/_list.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/scss/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/scss/_path.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/scss/_rotated-flipped.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/scss/_spinning.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/scss/_stacked.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/scss/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/font-awesome/scss/font-awesome.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/datetimepicker/moment.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/API.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/FAQ.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/NEWS.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/PLUGINS.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/build.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/ajax/data-eu-gdp-growth-1.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/ajax/data-eu-gdp-growth-2.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/ajax/data-eu-gdp-growth-3.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/ajax/data-eu-gdp-growth-4.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/ajax/data-eu-gdp-growth-5.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/ajax/data-eu-gdp-growth.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/ajax/data-japan-gdp-growth.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/ajax/data-usa-gdp-growth.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/ajax/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/annotating/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-interacting/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-multiple/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/date.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/africa" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/antarctica" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/asia" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/australasia" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/backward" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/etcetera" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/europe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/factory" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/iso3166.tab" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/leapseconds" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/northamerica" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/pacificnew" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/solar87" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/solar88" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/solar89" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/southamerica" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/systemv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/yearistype.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time-zones/tz/zone.tab" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/axes-time/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/basic-options/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/basic-usage/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/canvas/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/categories/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/examples.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/image/hs-2004-27-a-large-web.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/image/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/interacting/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/navigate/arrow-down.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/navigate/arrow-left.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/navigate/arrow-right.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/navigate/arrow-up.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/navigate/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/percentiles/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/realtime/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/resize/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/selection/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/series-errorbars/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/series-pie/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/series-toggle/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/series-types/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/shared/jquery-ui/jquery-ui.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/shared/jquery-ui/jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/stacking/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/symbols/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/threshold/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/tracking/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/visitors/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/examples/zooming/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/excanvas.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/excanvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.colorhelpers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.colorhelpers.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.canvas.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.canvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.categories.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.categories.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.crosshair.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.crosshair.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.errorbars.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.errorbars.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.fillbetween.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.fillbetween.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.image.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.image.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.navigate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.navigate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.pie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.pie.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.resize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.resize.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.selection.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.selection.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.stack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.stack.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.symbol.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.symbol.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.threshold.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.threshold.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.time.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.flot.time.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/flot/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jquery-2.1.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jquery-2.1.1.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/data/jquery.vmap.sampledata.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/jquery.vmap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/jquery.vmap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/jquery.vmap.packed.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/jqvmap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/continents/jquery.vmap.africa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/continents/jquery.vmap.asia.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/continents/jquery.vmap.australia.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/continents/jquery.vmap.europe.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/continents/jquery.vmap.north-america.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/continents/jquery.vmap.south-america.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/continents/readme.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/jquery.vmap.algeria.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/jquery.vmap.brazil.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/jquery.vmap.europe.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/jquery.vmap.france.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/jquery.vmap.germany.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/jquery.vmap.russia.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/jquery.vmap.usa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/jquery/jqvmap/maps/jquery.vmap.world.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/openbay/css/codemirror.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/openbay/js/codemirror.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/openbay/js/faq.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/openbay/js/openbay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/summernote/summernote-bs2.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/summernote/summernote-bs3.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/summernote/summernote.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/summernote/summernote.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/javascript/summernote/summernote.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/stylesheet/stylesheet.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/attribute_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/attribute_group_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/attribute_group_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/attribute_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/category_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/category_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/download_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/download_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/filter_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/filter_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/information_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/information_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/manufacturer_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/manufacturer_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/option_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/option_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/product_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/product_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/recurring_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/recurring_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/review_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/catalog/review_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/common/column_left.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/common/dashboard.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/common/filemanager.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/common/footer.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/common/forgotten.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/common/header.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/common/login.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/common/menu.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/common/profile.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/common/reset.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/common/stats.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/dashboard/activity.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/dashboard/chart.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/dashboard/customer.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/dashboard/map.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/dashboard/online.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/dashboard/order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/dashboard/recent.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/dashboard/sale.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/design/banner_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/design/banner_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/design/layout_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/design/layout_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/error/not_found.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/error/permission.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/extension/feed.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/extension/installer.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/extension/modification.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/extension/module.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/extension/openbay.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/extension/payment.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/extension/shipping.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/extension/total.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/feed/google_base.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/feed/google_sitemap.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/feed/openbaypro.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/country_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/country_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/currency_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/currency_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/geo_zone_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/geo_zone_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/language_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/language_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/length_class_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/length_class_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/location_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/location_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/order_status_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/order_status_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/return_action_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/return_action_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/return_reason_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/return_reason_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/return_status_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/return_status_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/stock_status_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/stock_status_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/tax_class_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/tax_class_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/tax_rate_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/tax_rate_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/weight_class_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/weight_class_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/zone_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/localisation/zone_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/mail/voucher.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/marketing/affiliate_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/marketing/affiliate_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/marketing/affiliate_transaction.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/marketing/contact.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/marketing/coupon_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/marketing/coupon_history.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/marketing/coupon_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/marketing/marketing_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/marketing/marketing_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/account.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/affiliate.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/amazon_button.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/amazon_login.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/amazon_pay.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/banner.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/bestseller.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/carousel.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/category.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/ebay_listing.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/featured.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/filter.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/google_hangouts.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/html.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/information.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/latest.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/pp_button.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/pp_login.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/slideshow.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/special.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/module/store.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazon.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazon_ajax_shippinginfo.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazon_bulk_linking.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazon_bulk_listing.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazon_item_links.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazon_listing.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazon_listing_advanced.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazon_listing_edit.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazon_saved_listings.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazon_settings.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazon_stock_updates.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazon_subscription.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazonus.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazonus_ajax_shippinginfo.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazonus_bulk_linking.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazonus_bulk_listing.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazonus_item_links.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazonus_listing.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazonus_listing_advanced.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazonus_listing_edit.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazonus_saved_listings.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazonus_settings.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazonus_stock_updates.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/amazonus_subscription.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_ajax_shippinginfo.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_edit.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_item_import.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_item_link.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_new.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_new_bulk.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_order_import.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_profile_form_generic.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_profile_form_returns.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_profile_form_shipping.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_profile_form_template.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_profile_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_profile_shipping_international_calculated.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_profile_shipping_international_flat.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_profile_shipping_national_calculated.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_profile_shipping_national_flat.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_settings.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_subscription.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_summary.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_syncronise.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_template_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_template_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/ebay_usage.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/etsy.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/etsy_create.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/etsy_edit.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/etsy_links.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/etsy_listings.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/etsy_settings.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/openbay_itemlist.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/openbay_manage.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/openbay_orderlist.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/openbay/openbay_orderlist_confirm.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/amazon_checkout.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/amazon_checkout_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/amazon_login_pay.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/amazon_login_pay_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/authorizenet_aim.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/authorizenet_sim.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/bank_transfer.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/bluepay_hosted.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/bluepay_hosted_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/bluepay_redirect.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/bluepay_redirect_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/buttons.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/cheque.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/cod.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/firstdata.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/firstdata_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/firstdata_remote.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/firstdata_remote_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/free_checkout.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/globalpay.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/globalpay_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/globalpay_remote.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/globalpay_remote_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/klarna_account.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/klarna_invoice.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/liqpay.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/nochex.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/paymate.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/paypoint.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/payza.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/perpetual_payments.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_express.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_express_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_express_refund.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_express_search.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_express_view.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_payflow.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_payflow_iframe.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_payflow_iframe_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_payflow_iframe_refund.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_pro.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_pro_iframe.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_pro_iframe_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_pro_iframe_refund.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_pro_iframe_transaction.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/pp_standard.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/realex.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/realex_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/realex_remote.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/realex_remote_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/sagepay_direct.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/sagepay_direct_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/sagepay_server.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/sagepay_server_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/sagepay_us.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/securetrading_pp.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/securetrading_pp_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/securetrading_ws.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/securetrading_ws_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/securetrading_ws_transactions.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/skrill.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/twocheckout.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/web_payment_software.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/worldpay.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/payment/worldpay_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/affiliate.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/affiliate_activity.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/customer_activity.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/customer_credit.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/customer_online.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/customer_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/customer_reward.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/marketing.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/product_purchased.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/product_viewed.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/sale_coupon.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/sale_order.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/sale_return.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/sale_shipping.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/report/sale_tax.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/custom_field_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/custom_field_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/customer_ban_ip_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/customer_ban_ip_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/customer_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/customer_group_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/customer_group_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/customer_history.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/customer_ip.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/customer_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/customer_reward.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/customer_transaction.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/order_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/order_history.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/order_info.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/order_invoice.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/order_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/order_shipping.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/recurring_info.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/recurring_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/return_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/return_history.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/return_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/voucher_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/voucher_history.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/voucher_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/voucher_theme_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/sale/voucher_theme_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/setting/setting.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/setting/store_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/setting/store_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/shipping/auspost.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/shipping/citylink.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/shipping/fedex.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/shipping/flat.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/shipping/free.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/shipping/item.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/shipping/parcelforce_48.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/shipping/pickup.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/shipping/royal_mail.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/shipping/ups.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/shipping/usps.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/shipping/weight.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/tool/backup.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/tool/error_log.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/tool/upload.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/total/coupon.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/total/credit.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/total/handling.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/total/klarna_fee.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/total/low_order_fee.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/total/reward.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/total/shipping.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/total/sub_total.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/total/tax.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/total/total.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/total/voucher.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/user/api_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/user/api_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/user/user_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/user/user_group_form.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/user/user_group_list.tpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/view/template/user/user_list.tpl" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/js/common.js" afterPath="$PROJECT_DIR$/catalog/view/theme/default/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/js/demo.js" afterPath="$PROJECT_DIR$/catalog/view/theme/default/js/demo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/error.log" afterPath="$PROJECT_DIR$/system/logs/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/common/header.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/common/header.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/app/search.php" afterPath="$PROJECT_DIR$/catalog/controller/app/search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/app/search.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/app/search.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/common/home.php" afterPath="$PROJECT_DIR$/catalog/controller/common/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/app/home.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/app/home.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/css/stylesheet.css" afterPath="$PROJECT_DIR$/catalog/view/theme/default/css/stylesheet.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -1424,17 +30,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="search.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/search.tpl">
+      <file leaf-file-name="home.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/home.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="105" selection-start="1927" selection-end="1927" vertical-scroll-proportion="-7.111111" vertical-offset="366" max-vertical-offset="2034">
+            <state line="5" column="0" selection-start="92" selection-end="92" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="198">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/home.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="30" selection-start="3469" selection-end="3482" vertical-scroll-proportion="-9.333333" vertical-offset="810" max-vertical-offset="3582">
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#h2#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#h2#0;n#section#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#h3#0;n#div#1;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#h3#0;n#div#1;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stylesheet.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/stylesheet.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1095" column="1" selection-start="20647" selection-end="20647" vertical-scroll-proportion="-11.55" vertical-offset="19017" max-vertical-offset="19818">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/controller/common/home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="947" selection-end="947" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="648">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1442,79 +72,7 @@
       <file leaf-file-name="demo.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/demo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="7" selection-start="847" selection-end="847" vertical-scroll-proportion="0.4390244" vertical-offset="0" max-vertical-offset="6030">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/header.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="98" selection-start="423" selection-end="423" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="1944">
-              <folding>
-                <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#li#1;n#ul#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#span#0;n#a#0;n#li#2;n#ul#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#li#2;n#ul#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="71" selection-start="501" selection-end="501" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="1422">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#2;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/home.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="77" selection-start="798" selection-end="798" vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="9270">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="column_left.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="38" selection-start="845" selection-end="845" vertical-scroll-proportion="-10.666667" vertical-offset="0" max-vertical-offset="738">
-              <folding>
-                <element signature="n#style#0;n#a#0;n#span#0;n#li#2;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#footer#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#span#0;n#a#0;n#div#0;n#footer#0;n#nav#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/controller/app/search.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="936" selection-end="936" vertical-scroll-proportion="-18.666666" vertical-offset="0" max-vertical-offset="720">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="7" selection-start="105" selection-end="105" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="666">
+            <state line="75" column="7" selection-start="2616" selection-end="2616" vertical-scroll-proportion="0.60278744" vertical-offset="831" max-vertical-offset="6660">
               <folding />
             </state>
           </provider>
@@ -1559,17 +117,18 @@
         <option value="$PROJECT_DIR$/catalog/view/theme/default/js/app_2.js" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/app/music.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/app/video.tpl" />
-        <option value="$PROJECT_DIR$/catalog/controller/common/home.php" />
         <option value="$PROJECT_DIR$/system/helper/quickTool.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/home.tpl" />
         <option value="$PROJECT_DIR$/catalog/controller/tool/image.php" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/css/stylesheet.css" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/js/common.js" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/catalog/controller/app/search.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/app/search.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/header.tpl" />
+        <option value="$PROJECT_DIR$/catalog/controller/common/home.php" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/app/home.tpl" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/css/stylesheet.css" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/js/demo.js" />
       </list>
     </option>
@@ -1595,7 +154,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -1606,29 +165,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quickmusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quickmusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quickmusic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="LayoutCode.rearrangeEntriesSmarty" value="false" />
@@ -1678,7 +215,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1215" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1737,6 +274,25 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="38" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="738" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/app/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="925" selection-end="925" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1188">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="7" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/controller/common/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="33" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="1620">
@@ -1765,9 +321,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/music.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="656" column="53" selection-start="40126" selection-end="40126" vertical-scroll-proportion="0.0" vertical-offset="11688" max-vertical-offset="12672">
-          <folding />
-        </state>
+        <state line="656" column="53" selection-start="40126" selection-end="40126" vertical-scroll-proportion="0.0" vertical-offset="11688" max-vertical-offset="12672" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/video.tpl">
@@ -1865,16 +419,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/music.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="656" column="53" selection-start="40126" selection-end="40126" vertical-scroll-proportion="0.0" vertical-offset="11688" max-vertical-offset="12672">
-          <folding />
-        </state>
+        <state line="656" column="53" selection-start="40126" selection-end="40126" vertical-scroll-proportion="0.0" vertical-offset="11688" max-vertical-offset="12672" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="499" column="0" selection-start="15108" selection-end="15108" vertical-scroll-proportion="0.36570743" vertical-offset="8677" max-vertical-offset="19062">
-          <folding />
-        </state>
+        <state line="499" column="0" selection-start="15108" selection-end="15108" vertical-scroll-proportion="0.36570743" vertical-offset="8677" max-vertical-offset="19062" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/controller/app/music.php">
@@ -1909,9 +459,7 @@
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/dom_c.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2095" column="20" selection-start="63934" selection-end="63934" vertical-scroll-proportion="0.3441247" vertical-offset="37423" max-vertical-offset="39042">
-          <folding />
-        </state>
+        <state line="2095" column="20" selection-start="63934" selection-end="63934" vertical-scroll-proportion="0.3441247" vertical-offset="37423" max-vertical-offset="39042" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/search.tpl">
@@ -1921,69 +469,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/controller/tool/upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1494">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/common/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="42" selection-start="0" selection-end="730" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="396">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1494" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="37" selection-start="249" selection-end="249" vertical-scroll-proportion="0.1291866" vertical-offset="90" max-vertical-offset="6462">
-          <folding />
-        </state>
+        <state line="11" column="37" selection-start="249" selection-end="249" vertical-scroll-proportion="0.1291866" vertical-offset="90" max-vertical-offset="6462" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="715" column="9" selection-start="21191" selection-end="21191" vertical-scroll-proportion="-10.481482" vertical-offset="12587" max-vertical-offset="20268">
-          <folding />
-        </state>
+        <state line="715" column="9" selection-start="21191" selection-end="21191" vertical-scroll-proportion="-10.481482" vertical-offset="12587" max-vertical-offset="20268" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/helper/quickTool.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="31" selection-start="2731" selection-end="2731" vertical-scroll-proportion="-9.962963" vertical-offset="1117" max-vertical-offset="2700">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="851" column="13" selection-start="16591" selection-end="16591" vertical-scroll-proportion="0.0" vertical-offset="15130" max-vertical-offset="16848">
-          <folding />
-        </state>
+        <state line="77" column="31" selection-start="2731" selection-end="2731" vertical-scroll-proportion="-9.962963" vertical-offset="1117" max-vertical-offset="2700" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="7" selection-start="105" selection-end="105" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/app/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="936" selection-end="936" vertical-scroll-proportion="-18.666666" vertical-offset="0" max-vertical-offset="720">
+        <state line="4" column="7" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="666">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/footer.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="71" selection-start="501" selection-end="501" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="1422">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#2;n#div#0;n#div#1;n#footer#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="12" column="71" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1422" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/opencart.css">
@@ -1995,55 +508,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/search.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="105" selection-start="1927" selection-end="1927" vertical-scroll-proportion="-7.111111" vertical-offset="366" max-vertical-offset="2034">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h2#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h2#0;n#section#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/home.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="77" selection-start="798" selection-end="798" vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="9270">
+        <state line="31" column="105" selection-start="1927" selection-end="1927" vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="2178">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="38" selection-start="845" selection-end="845" vertical-scroll-proportion="-10.666667" vertical-offset="0" max-vertical-offset="738">
-          <folding>
-            <element signature="n#style#0;n#a#0;n#span#0;n#li#2;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#footer#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#span#0;n#a#0;n#div#0;n#footer#0;n#nav#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="16" column="38" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="738" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/header.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="98" selection-start="423" selection-end="423" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="1944">
+        <state line="9" column="98" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1944">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/app/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="49" selection-start="6" selection-end="55" vertical-scroll-proportion="0.021251475" vertical-offset="0" max-vertical-offset="1188">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/home.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="92" selection-end="92" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="198">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/common/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="947" selection-end="947" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="648">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/home.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="30" selection-start="3469" selection-end="3482" vertical-scroll-proportion="-9.333333" vertical-offset="810" max-vertical-offset="3582">
           <folding>
-            <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#li#1;n#ul#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#span#0;n#a#0;n#li#2;n#ul#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#li#2;n#ul#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#h3#0;n#div#1;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#h3#0;n#div#1;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1095" column="1" selection-start="20647" selection-end="20647" vertical-scroll-proportion="-11.55" vertical-offset="19017" max-vertical-offset="19818">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/demo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="7" selection-start="847" selection-end="847" vertical-scroll-proportion="0.4390244" vertical-offset="0" max-vertical-offset="6030">
+        <state line="75" column="7" selection-start="2616" selection-end="2616" vertical-scroll-proportion="0.60278744" vertical-offset="831" max-vertical-offset="6660">
           <folding />
         </state>
       </provider>
