@@ -31,7 +31,11 @@
                             <a href="javascript:void(0);"><i class="fa fa-star-o text-muted"></i></a>
                         </div>
                         <div class="center text-center m-t-n">
-                            <a href="javascript:void(0);" class="play-icon-a"><i class="fa fa-play fa-2x"></i></a>
+                            <a onclick="playSong('<?php echo base64_encode($songVN['href'])?>', $(this));" href="javascript:void(0);" href="javascript:void(0);" class="play-icon-a"><i class="fa fa-play fa-2x"></i></a>
+                        </div>
+                        <div class="bottom_2 padder m-b-sm">
+                            <a href="javascript:void(0);" style="color: #9badb9;" id="plus_<?=$index;?>" onclick="plusSong('<?= base64_encode($songVN['href'])?>','<?= $songVN['title']?>', '<?= $songVN['artis']?>', <?= $index ?>)" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
+                            <a href="javascript:void(0);" style="color: #9badb9;" id="plused_<?=$index;?>" class="hidden pull-right"><i class="fa fa-check"></i></a>
                         </div>
                         <div class="bottom padder m-b-sm">
                             <a class="pull-right" href="#"> <i class="fa fa-heart-o"></i> </a>

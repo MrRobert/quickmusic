@@ -20,7 +20,7 @@
             <div class="clearfix visible-xs"></div>
         <?php }else{ ?>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                <div class="item">
+                <div class="item-song">
                     <div class="pos-relative">
                         <div class="bottom"><!-- <span class="badge m-l-sm m-b-sm" style="background-color: #4cb6cb; color: #eaf6f9">03:20</span> --></div>
                         <div class="item-overlay opacity r r-2x bg-black">
@@ -80,7 +80,7 @@
             <div class="clearfix visible-xs"></div>
         <?php }else{ ?>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                <div class="item">
+                <div class="item-song">
                     <div class="pos-relative">
                         <div class="bottom"></div>
                         <div class="item-overlay opacity r r-2x bg-black">
