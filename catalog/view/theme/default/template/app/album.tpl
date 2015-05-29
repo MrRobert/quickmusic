@@ -9,7 +9,7 @@
 <aside class="col-sm-5 no-padder" id="sidebar">
     <div class="vbox animated fadeInUp">
         <div class="scrollable" style="width: 100%">
-            <div class="m-t-n-xxs item pos-rlt">
+            <div class="m-t-n-xxs item-song pos-rlt">
                 <div class="top text-right">
                                 <span class="musicbar animate bg-success bg-empty inline m-r-lg m-t" style="width:25px;height:30px">
                                     <span class="bar1 a3 lter"></span>
@@ -40,91 +40,11 @@
                         <span class="text-muted"> -- 04:35</span>
                     </div>
                 </li>
-                <li class="list-group-item">
-                    <div class="pull-right m-l">
-                        <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                        <a href="#"><i class="icon-plus"></i></a>
-                    </div>
-                    <a href="#" class="jp-play-me m-r-sm pull-left">
-                        <i class="icon-control-play text"></i>
-                        <i class="icon-control-pause text-active"></i> </a>
-
-                    <div class="clear text-ellipsis">
-                        <span>Vestibulum id ligula porta</span>
-                        <span class="text-muted"> -- 04:15</span>
-                    </div>
+                <li>
+                    <span>DIV noi dung bai hat</span>
                 </li>
-                <li class="list-group-item">
-                    <div class="pull-right m-l">
-                        <a href="#" class="m-r-sm">
-                            <i class="icon-cloud-download"></i></a> <a href="#">
-                            <i class="icon-plus"></i>
-                        </a>
-                    </div>
-                    <a href="#" class="jp-play-me m-r-sm pull-left">
-                        <i class="icon-control-play text"></i>
-                        <i class="icon-control-pause text-active"></i>
-                    </a>
-                    <div class="clear text-ellipsis">
-                        <span>Praesent commodo cursus magna</span>
-                        <span class="text-muted"> -- 02:25</span>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="pull-right m-l">
-                        <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                        <a href="#"><i class="icon-plus"></i></a>
-                    </div>
-                    <a href="#" class="jp-play-me m-r-sm pull-left">
-                        <i class="icon-control-play text"></i>
-                        <i class="icon-control-pause text-active"></i>
-                    </a>
-                    <div class="clear text-ellipsis">
-                        <span>Curabitur blandit tempus</span>
-                        <span class="text-muted"> -- 05:00</span>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="pull-right m-l">
-                        <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                        <a href="#"><i class="icon-plus"></i></a>
-                    </div>
-                    <a href="#" class="jp-play-me m-r-sm pull-left">
-                        <i class="icon-control-play text"></i>
-                        <i class="icon-control-pause text-active"></i>
-                    </a>
-
-                    <div class="clear text-ellipsis">
-                        <span>Faucibus dolor auctor</span>
-                        <span class="text-muted"> -- 03:50</span>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="pull-right m-l">
-                        <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                        <a href="#"><i class="icon-plus"></i></a>
-                    </div>
-                    <a href="#" class="jp-play-me m-r-sm pull-left">
-                        <i class="icon-control-play text"></i>
-                        <i class="icon-control-pause text-active"></i>
-                    </a>
-                    <div class="clear text-ellipsis">
-                        <span>Get lacinia odio sem nec elit cibus dolor auctor sed odio dui mollis ornare</span>
-                        <span class="text-muted"> -- 04:05</span>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="pull-right m-l">
-                        <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                        <a href="#"><i class="icon-plus"></i></a>
-                    </div>
-                    <a href="#" class="jp-play-me m-r-sm pull-left">
-                        <i class="icon-control-play text"></i>
-                        <i class="icon-control-pause text-active"></i>
-                    </a>
-                    <div class="clear text-ellipsis">
-                        <span>Faucibus dolor auctor</span>
-                        <span class="text-muted"> -- 02:55</span>
+                <li>
+                    <div class="fb-comments" data-width="400" data-href="http://localhost/quickmusic/?route=app/album" data-numposts="10" data-colorscheme="light">
                     </div>
                 </li>
             </ul>

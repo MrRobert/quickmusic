@@ -104,7 +104,11 @@ function listenCommonRequest(hash){
         }
     }
     if (hash.length > 0){
-        fetchDATA(hash, $('#content'), data);
+        if(hash == 'music' || hash == 'video' || hash == 'search'){
+            fetchDATA(hash, $('#content'), data);
+        }else if (hash == 'song'){
+            // TODO: refactor code here
+        }
     }
 }
 
@@ -160,12 +164,6 @@ function searchSubmit(){
     var searchName = $("input[name='search_name']").val().trim();
     window.location.hash = "#search/singer/" + searchName.split(' ').join('+').toString();
     $('#searchIndicator').show();
-    /*
-    var data = {
-      'search_name': searchName
-    };
-    fetchDATA('search', $('#content'), data);
-    */
 }
 
 function fetchDATA(controllerPath, divTagert, data){
@@ -189,32 +187,45 @@ function fetchDATA(controllerPath, divTagert, data){
     });
 }
 
-function playSong(link, divSong){
-    if(link.indexOf('video') > 0){
-        alert('Handle video link');
-        return;
-    }
+function gotoSong(link, index, prefix){
+    window.location.hash = "#song/" + window.btoa(index);
     var data = {
-        'link' : link
+        'link' : link,
+        'title' :  $('#title_'+ prefix + index).html(),
+        'img_src' : window.btoa($('#img_'+ prefix + index).attr('src')),
+        'artist' : $('#artis_'+ prefix + index).html()
     };
     $.ajax({
-        url: 'index.php?route=app/search/getsong',
-        type: 'get',
+        url: 'index.php?route=app/song',
+        type: 'post',
         data: data,
-        dataType: 'json',
-        success: function(json) {
-            var mp3file = json[0].linkSong; //already encode
-            var song = {
-             title: "",
-             artist: "",
-             mp3: "index.php?route=app/search/playsong&src=" + mp3file
-            };
-            secondPlaylist.playlist=[];
-            secondPlaylist.add(song);
-            secondPlaylist.play(0);
-            bindCommonPlaySong(link, divSong);
+        dataType: 'html',
+        success: function(html) {
+            $('#content').html(html);
         }
     });
+}
+
+function playSong(link, ePlay){
+    var song = {
+        title: "",
+        artist: "",
+        mp3: "index.php?route=app/search/playsong&src=" + link
+    };
+    bindPlayFunction();
+    function bindPlayFunction(){
+        $('#play_icon').hide();
+        $('#pause_icon').removeClass('hidden');
+        $(ePlay).bind('click', function(){
+            $('#play_icon').show();
+            $('#pause_icon').addClass('hidden');
+            secondPlaylist.pause();
+        });
+    }
+    secondPlaylist.playlist.splice(0,1);
+    secondPlaylist.add(song);
+    secondPlaylist.play(0);
+    mainPlayList.pause();
 }
 
 function loadSongForMainPlaylist(song, index){

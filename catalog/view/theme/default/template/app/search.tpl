@@ -32,7 +32,7 @@
                                 <a href="javascript:void(0);"><i class="fa fa-star-o text-muted"></i></a>
                             </div>
                             <div class="center text-center m-t-n">
-                                <a onclick="playSong('<?php echo base64_encode($song['href'])?>', $(this));" href="javascript:void(0);" class="play-icon-a"><i class="fa fa-play fa-2x"></i></a>
+                                <a onclick="gotoSong('<?php echo base64_encode($song['href'])?>', '<?= $index?>', '');" href="javascript:void(0);" class="play-icon-a"><i class="fa fa-play fa-2x"></i></a>
                             </div>
                             <div class="bottom_2 padder m-b-sm">
                                 <a href="javascript:void(0);" style="color: #9badb9;" id="plus_<?=$index;?>" onclick="plusSong('<?= base64_encode($song['href'])?>','<?= $song['title']?>', '<?= $song['artis']?>', <?= $index ?>)" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
@@ -43,13 +43,13 @@
                             </div>
                         </div>
                         <a href="javascript:void(0);">
-                            <img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($song['img_src']));?>">
+                            <img class="r r-2x img-full" alt="" id="img_<?=$index;?>" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($song['img_src']));?>">
                             <img class="looseless-img" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents(STATIC_PATH. 'image/looseless.jpg'));?>">
                         </a>
                         <input type="hidden" id="song_<?php echo $index;?>" value="<?php echo $index; ?>">
                     </div>
-                    <div class="padder-v"><a class="text-ellipsis" href="#"><?php echo $song['title']; ?></a>
-                        <a class="text-ellipsis text-xs text-muted" href="#"><?php echo $song['artis']; ?></a>
+                    <div class="padder-v"><a class="text-ellipsis" href="#" id="title_<?=$index;?>"><?php echo $song['title']; ?></a>
+                        <a class="text-ellipsis text-xs text-muted" href="#" id="artis_<?=$index;?>"><?php echo $song['artis']; ?></a>
                     </div>
                 </div>
             </div>
