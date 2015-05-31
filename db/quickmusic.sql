@@ -4,3 +4,9 @@ CREATE TABLE IF NOT EXISTS `home` (
   `date` datetime NOT NULL,
   PRIMARY KEY (`home_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+ALTER TABLE `url_alias` ADD (
+   `title` varchar(11) NOT NULL DEFAULT  '',
+   `img_src` TEXT,
+   `artis` varchar(11)
+);

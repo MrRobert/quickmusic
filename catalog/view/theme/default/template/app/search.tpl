@@ -114,3 +114,8 @@
 </div>
 <div class="container-fluid text-center">
 </div>
+<script type="text/javascript">
+    $('#content').css('padding-top', '');
+    $('#container').css('height','');
+    isLoadHas = false;
+</script>

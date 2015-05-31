@@ -4,6 +4,8 @@ class QuickTool {
     private $musicDomain = "http://chiasenhac.com";
     private $hotSongVN = "http://chiasenhac.com/mp3/vietnam/";
     private $hotSongUK = "http://chiasenhac.com/mp3/us-uk/";
+    private $hostName = "ChiaSeNhac.com";
+    private $myDomain = "QuickMusic.com";
 
     private $hotSongVNPreDomain = "http://chiasenhac.com/mp3/vietnam/v-pop";
     private $hotSongUKPreDomain = "http://chiasenhac.com/mp3/us-uk/u-pop";
@@ -106,6 +108,39 @@ class QuickTool {
         $result['song'] = array(
             'link' => $link
         );
+        return $result;
+    }
+
+    function crawl_single_songv2($link){
+        $href = $this->musicDomain . "/" . $link;
+
+        $dom = new DOMDocument('1.0');
+        @$dom->loadHTMLFile($href);
+        $finder = new DomXPath($dom);
+        $nodeScript = $finder->query("//div[contains(@class,'pl-cl')]//script");
+        $textScript = null;
+        foreach($nodeScript as $script){
+            $attr = $script->getAttribute('src');
+            if(isset($attr) || empty($attr)){
+                $textScript = $script->nodeValue;
+            }
+        }
+        $link = null;
+        if($textScript != null){
+            $index1 = strpos($textScript, 'decodeURIComponent');
+            $index2 = strpos($textScript, '"provider":') - 1;
+            $link = substr($textScript, $index1, $index2 - $index1);
+            $lastComma = strrpos($link, ",");
+            $link = substr($link, 0, $lastComma);
+        }
+        $nodeLyrics = $finder->query("//div[@id='fulllyric']//p[@class='genmed']");
+        foreach($nodeLyrics as $lyric){
+            $val = $lyric->nodeValue;
+            $val = str_replace($this->hostName, $this->myDomain, $val);
+            $result['lyric'] = $val;
+            break;
+        }
+        $result['linkSong'] = $link;
         return $result;
     }
 
@@ -331,4 +366,63 @@ class QuickTool {
             exit();
         }
     }
+
+    public function loadAnotherPartSong($link){
+        $result = array();
+        // load the same singer
+        $href = $this->musicDomain . "/" . $link;
+        $dom = new DOMDocument('1.0');
+        @$dom->loadHTMLFile($href);
+        $finder = new DomXPath($dom);
+        $divSongs = $finder->query("//div[contains(@class,'page-dsms')]//div[@class='bod']//tr//td//div[contains(@class,'musicinfo')]");
+        $index = 0;
+        foreach($divSongs as $divSong){
+            $infoA = $divSong->getElementsByTagName('a')->item(0);
+            $infoP = $divSong->getElementsByTagName('p')->item(0);
+            $imgSrc = ''; $songLink ='';
+            if($index < 10 || $index >= 20){
+                // fetch images ...
+                $songLink = $infoA->getAttribute('href');
+                $img_url = $this->musicDomain. "/". $songLink;
+                $img_dom = new DOMDocument('1.0');
+                @$img_dom->loadHTMLFile($img_url);
+                $img_finder = new DOMXPath($img_dom);
+                $lyric_Object = $img_finder->query("//div[@id='fulllyric']//img");
+                $imgSrc = STATIC_PATH . '/image/default-song.jpg';
+
+                foreach($lyric_Object as $lyric){
+                    if($lyric->getAttribute('align') == 'right'){
+                        $imgSrc = $lyric->getAttribute('src');
+                    }
+                    break;
+                }
+            }
+            if($index < 10){ // the same singer
+                $result['sameSinger'][] = array(
+                    'title' => $infoA->nodeValue,
+                    'href' => base64_encode($songLink),
+                    'artis'=> $infoP->nodeValue,
+                    'imgSrc' => $imgSrc
+                );
+            }elseif($index >= 20){
+                $result['sameType'][] = array(
+                    'title' => $infoA->nodeValue,
+                    'href' => base64_encode($songLink),
+                    'artis'=> $infoP->nodeValue,
+                    'imgSrc' => $imgSrc
+                );
+            }
+            $index ++;
+        }
+        // load lyrics
+        $nodeLyrics = $finder->query("//div[@id='fulllyric']//p[@class='genmed']");
+        foreach($nodeLyrics as $lyric){
+            $val = $lyric->nodeValue;
+            $val = str_replace($this->hostName, $this->myDomain, $val);
+            $result['lyric'] = $val;
+            break;
+        }
+        return $result;
+    }
+
 }

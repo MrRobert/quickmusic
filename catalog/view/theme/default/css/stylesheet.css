@@ -60,7 +60,7 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 #container {
 	min-height: 100%;
 	width: 100%;
-	position: relative;
+	position: absolute;
 }
 
 .container-fluid {
@@ -73,6 +73,9 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 	border-bottom: 1px solid #E5E5E5;
 	margin: 0;
 	padding: 0;
+    position: fixed;
+    width: 100%;
+    top:0;
 }
 #header .nav > li {
 	float: left;
@@ -362,13 +365,12 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 /* footer */
 .footer {
     bottom: 0;
-    width: 85%;
-    position: absolute;
+    position: fixed;
 }
 
 nav .footer{
     bottom: 0;
-    position: absolute;
+    position: fixed;
 }
 
 .bg-dark{
@@ -1017,7 +1019,7 @@ img{
 }
 .bg-black.auto .list-group-item, .bg-black .auto .list-group-item {
     background-color: transparent;
-    border-color: #191f23 !important;
+    border-color: #ddd !important;
 }
 .list-group.no-bg .list-group-item {
     background-color: transparent;
@@ -1093,4 +1095,8 @@ img{
 }
 .uk-top-song a.inline{
     display: inline;
+}
+.my-indicator{
+    text-align: center;
+    margin-top: 10%;
 }

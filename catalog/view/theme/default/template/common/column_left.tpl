@@ -17,7 +17,7 @@
                 <span>R & B</span></a>
         </li>
     </ul>
-    <footer id="footer" class="footer bg-dark" style="background-color: #232c32;">
+    <footer id="nav-footer" class="footer bg-dark" style="background-color: #232c32;">
         <div class="hidden-xs">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <span class="thumb-sm avatar pull-left m-l-xs">

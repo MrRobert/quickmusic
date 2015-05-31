@@ -46,7 +46,7 @@ class ControllerAppSearch extends Controller {
         $src = base64_decode($src);
         $src = urldecode($src);
 
-        header('Content-Type: audio/m4a');
+        header('Content-Type: audio/m4a, audio/mp3');
         $this->response->setOutput(readfile($src));
     }
 

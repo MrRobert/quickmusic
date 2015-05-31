@@ -13,13 +13,7 @@ $(document).ready(function(){
         var index = mainPlayList.current;
         if(index != null && index >= 0){
             var song = mainPlayList.playlist[index];
-            if(playingIndex == false){
-                notifyMusic(song.title, song.artist);
-                if(song.isFirstPlaying != undefined && song.isFirstPlaying){
-                    loadSongForMainPlaylist(song, index);
-                }
-            }
-            playingIndex = false;
+            notifyMusic(song.title, song.artist);
         }
     });
 
@@ -66,7 +60,7 @@ $(document).ready(function(){
     });
 
     var currentHash = location.hash.replace("#", "");
-    if (currentHash.length > 0){
+    if (currentHash.length > 0 && isHasLoad){
         listenCommonRequest(currentHash);
     }
     // One page application
@@ -93,6 +87,7 @@ $(document).ready(function(){
 function listenCommonRequest(hash){
     hash = hash.replace("#", "");
     var temp = hash.split('/');
+    hash = temp[0];
     var data = {};
     if(temp.length > 2){
         data.search_name = temp[2];
@@ -107,9 +102,13 @@ function listenCommonRequest(hash){
         if(hash == 'music' || hash == 'video' || hash == 'search'){
             fetchDATA(hash, $('#content'), data);
         }else if (hash == 'song'){
-            // TODO: refactor code here
+            if(isHasLoad){
+                var keyword = temp[1].substring(temp[1].lastIndexOf('_')+1);
+                gotoSongGET(keyword);
+            }
         }
     }
+    isHasLoad = true;
 }
 
 function initMyPlayList(){
@@ -187,13 +186,29 @@ function fetchDATA(controllerPath, divTagert, data){
     });
 }
 
+function gotoSongGET(keyword){
+    var data = {
+        'keyword' : keyword,
+    };
+    $.ajax({
+        url: 'index.php?route=app/song',
+        type: 'get',
+        data: data,
+        dataType: 'html',
+        success: function(html) {
+            $('#content').html(html);
+        }
+    });
+}
+
 function gotoSong(link, index, prefix){
-    window.location.hash = "#song/" + window.btoa(index);
+    var title= $('#title_'+ prefix + index).html();
+    var artis = $('#artis_'+ prefix + index).html();
     var data = {
         'link' : link,
-        'title' :  $('#title_'+ prefix + index).html(),
+        'title' :  title,
         'img_src' : window.btoa($('#img_'+ prefix + index).attr('src')),
-        'artist' : $('#artis_'+ prefix + index).html()
+        'artist' : artis
     };
     $.ajax({
         url: 'index.php?route=app/song',
@@ -202,8 +217,61 @@ function gotoSong(link, index, prefix){
         dataType: 'html',
         success: function(html) {
             $('#content').html(html);
+            isHasLoad = false;
+            window.location.hash = "#song/" + foldToAssci(title+artis) + "_" + $('#keyword').val();
         }
     });
+}
+
+function foldToAssci(input){
+    var orgin = [
+        'à','á','ả','ã','ạ','â',
+        'À','Á','Ả','Ã','Ạ','Â',
+        'ằ','ắ','ẳ','ẵ','ặ',
+        'Ằ','Ắ','Ẳ','Ẵ','Ặ',
+        'đ', 'Đ',
+        'è','é','ẻ','ẽ','ẹ','ê','ề','ế','ể','ễ','ệ',
+        'È','É','Ẻ','Ẽ','Ẹ','Ê','Ề','Ế','Ể','Ễ','Ệ',
+        'ì','í','ỉ','ị',
+        'Ì','Í','Ỉ','Ị',
+        'ò','ó','ỏ','õ','ọ','ô','ồ','ố','ổ','ỗ','ộ','ơ','ờ','ớ','ở','ỡ','ợ',
+        'Ò','Ó','Ỏ','Õ','Ọ','Ô','Ồ','Ố','Ổ','Ỗ','Ộ','Ơ','Ờ','Ớ','Ở','Ỡ','Ợ',
+        'ù','ú','ủ','ũ','ụ','ừ','ứ','ử','ữ','ự',
+        'Ù','Ú','Ủ','Ũ','Ụ','Ừ','Ứ','Ử','Ữ','Ự',
+        'ỳ','ý','ỷ','ỵ',
+        'Ỳ','Ý','Ỷ','Ỵ',
+        ';',',','`','?','~','/'
+    ];
+    var transalte = [
+        'a','a','a','a','a','a',
+        'A','A','A','A','A','A',
+        'a','a','a','a','a',
+        'A','A','A','A','A',
+        'd','D',
+        'e','e','e','e','e','e','e','e','e','e','e',
+        'E','E','E','E','E','E','E','E','E','E','E',
+        'i','i','i','i',
+        'I','I','I','I',
+        'o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o',
+        'O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O',
+        'u','u','u','u','u','u','u','u','u','u',
+        'U','U','U','U','U','U','U','U','U','U',
+        'y','y','y','y',
+        'Y','Y','Y','Y',
+        '','','','','',''
+    ];
+    var output='';
+    for(var i=0; i<input.length; i++){
+        var char = input[i];
+        var index = orgin.indexOf(char);
+        if( index >= 0){
+            char = transalte[index];
+        }else if(char == ' '){
+            char = '-';
+        }
+        output+= char;
+    }
+    return output;
 }
 
 function playSong(link, ePlay){
@@ -244,30 +312,6 @@ function loadSongForMainPlaylist(song, index){
             playingIndex = true;
             mainPlayList.play(index);
         }
-    });
-}
-
-
-function bindCommonPlaySong(link, divSong){
-    mainPlayList.pause();
-    $('.play-icon-a').closest('.item-overlay').removeClass('active');
-    $('.play-icon-a').children('.fa-pause').addClass('fa-play');
-    $('.play-icon-a').children('.fa-pause').removeClass('fa-pause');
-
-    // this
-    $(divSong).closest('.item-overlay').addClass('active');
-    $(divSong).children('.fa-play').addClass('fa-pause');
-    $(divSong).children('.fa-play').removeClass('fa-play');
-
-    $(divSong).bind('click', function(){
-        $(divSong).closest('.item-overlay').removeClass('active');
-        $(divSong).children('.fa-play').removeClass('fa-pause');
-        $(divSong).children('.fa-play').addClass('fa-play');
-        secondPlaylist.pause();
-
-        $(divSong).bind('click', function(){
-            playSong(link, divSong);
-        });
     });
 }
 
@@ -373,4 +417,47 @@ function notifyMusic(title, artist){
         // We can fallback to a regular modal alert
         alert("Hi!");
     }
+}
+
+function loadSongInfo(link){
+    var data = {
+      'link' : link
+    };
+    $.ajax({
+        url: 'index.php?route=app/song/infosong',
+        type: 'get',
+        data: data,
+        dataType: 'json',
+        success: function(json) {
+            $('#noidungBh').replaceWith(json.lyric);
+            $('#relatedSong').replaceWith(json.related);
+            $('#container').css('height', $('#mainHeight').height() + 150);
+        }
+    });
+}
+
+function gotoSongV2(link, index, prefix){
+    var title= $('#title_'+ prefix + index).html();
+    var artis = $('#artis_'+ prefix + index).html();
+    var imgsrc = $('#imgSrc_'+ prefix + index).val();
+    $('#noidungBh').replaceWith('<p class="my-indicator" id="noidungBh"><i class="fa fa-circle-o-notch fa-spin fa-4x"></i></p>');
+    var data = {
+        'link' : link,
+        'title' :  title,
+        'img_src' : window.btoa(imgsrc),
+        'artist' : artis
+    };
+    $.ajax({
+        url: 'index.php?route=app/song/getsongv2',
+        type: 'post',
+        data: data,
+        dataType: 'json',
+        success: function(json) {
+            isHasLoad = false;
+            $('#firstSongLi').replaceWith(json.tileSong);
+            $('#mainImg').replaceWith(json.tileImg);
+            $('#noidungBh').replaceWith(json.lyric);
+            window.location.hash = "#song/" + foldToAssci(title+artis) + "_" + json.keyword;
+        }
+    });
 }
