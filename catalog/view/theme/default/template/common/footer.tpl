@@ -64,6 +64,13 @@
     </div>
 </footer>
 </div>
+<div>
+    <ul class='custom-menu'>
+        <li data-action = "first">First thing</li>
+        <li data-action = "second">Second thing</li>
+        <li data-action = "third">Third thing</li>
+    </ul>
+</div>
 </body>
 <script type="text/javascript">
     $(document).ready(function(){
