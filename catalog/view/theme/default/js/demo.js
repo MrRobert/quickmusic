@@ -225,10 +225,10 @@ function gotoSong(link, index, prefix){
 
 function foldToAssci(input){
     var orgin = [
-        'à','á','ả','ã','ạ','â',
-        'À','Á','Ả','Ã','Ạ','Â',
-        'ằ','ắ','ẳ','ẵ','ặ',
-        'Ằ','Ắ','Ẳ','Ẵ','Ặ',
+        'à','á','ả','ã','ạ','â','ầ','ấ','ẩ','ẫ','ậ',
+        'À','Á','Ả','Ã','Ạ','Â','Ầ','Ấ','Ẩ','Ẫ','Ậ',
+        'ằ','ắ','ẳ','ẵ','ặ','ă',
+        'Ằ','Ắ','Ẳ','Ẵ','Ặ','Ă',
         'đ', 'Đ',
         'è','é','ẻ','ẽ','ẹ','ê','ề','ế','ể','ễ','ệ',
         'È','É','Ẻ','Ẽ','Ẹ','Ê','Ề','Ế','Ể','Ễ','Ệ',
@@ -236,15 +236,15 @@ function foldToAssci(input){
         'Ì','Í','Ỉ','Ị',
         'ò','ó','ỏ','õ','ọ','ô','ồ','ố','ổ','ỗ','ộ','ơ','ờ','ớ','ở','ỡ','ợ',
         'Ò','Ó','Ỏ','Õ','Ọ','Ô','Ồ','Ố','Ổ','Ỗ','Ộ','Ơ','Ờ','Ớ','Ở','Ỡ','Ợ',
-        'ù','ú','ủ','ũ','ụ','ừ','ứ','ử','ữ','ự',
-        'Ù','Ú','Ủ','Ũ','Ụ','Ừ','Ứ','Ử','Ữ','Ự',
+        'ù','ú','ủ','ũ','ụ','ừ','ứ','ử','ữ','ự','ư',
+        'Ù','Ú','Ủ','Ũ','Ụ','Ừ','Ứ','Ử','Ữ','Ự','Ư',
         'ỳ','ý','ỷ','ỵ',
         'Ỳ','Ý','Ỷ','Ỵ',
         ';',',','`','?','~','/'
     ];
     var transalte = [
-        'a','a','a','a','a','a',
-        'A','A','A','A','A','A',
+        'a','a','a','a','a','a','a','a','a','a','a',
+        'A','A','A','A','A','A','A','A','A','A','A',
         'a','a','a','a','a',
         'A','A','A','A','A',
         'd','D',
@@ -254,8 +254,8 @@ function foldToAssci(input){
         'I','I','I','I',
         'o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o',
         'O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O',
-        'u','u','u','u','u','u','u','u','u','u',
-        'U','U','U','U','U','U','U','U','U','U',
+        'u','u','u','u','u','u','u','u','u','u','u',
+        'U','U','U','U','U','U','U','U','U','U','U',
         'y','y','y','y',
         'Y','Y','Y','Y',
         '','','','','',''
@@ -431,6 +431,7 @@ function loadSongInfo(link){
         success: function(json) {
             $('#noidungBh').replaceWith(json.lyric);
             $('#relatedSong').replaceWith(json.related);
+            $('#interestedAlbum').replaceWith(json.relatedAlbums);
             $('#container').css('height', $('#mainHeight').height() + 150);
         }
     });
@@ -441,6 +442,7 @@ function gotoSongV2(link, index, prefix){
     var artis = $('#artis_'+ prefix + index).html();
     var imgsrc = $('#imgSrc_'+ prefix + index).val();
     $('#noidungBh').replaceWith('<p class="my-indicator" id="noidungBh"><i class="fa fa-circle-o-notch fa-spin fa-4x"></i></p>');
+    $('#interestedAlbum').replaceWith('<div style="margin-left: 3%" id="interestedAlbum"></div>');
     var data = {
         'link' : link,
         'title' :  title,
@@ -457,6 +459,7 @@ function gotoSongV2(link, index, prefix){
             $('#firstSongLi').replaceWith(json.tileSong);
             $('#mainImg').replaceWith(json.tileImg);
             $('#noidungBh').replaceWith(json.lyric);
+            $('#interestedAlbum').replaceWith(json.relatedAlbums);
             window.location.hash = "#song/" + foldToAssci(title+artis) + "_" + json.keyword;
         }
     });

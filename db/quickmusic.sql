@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `home` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 ALTER TABLE `url_alias` ADD (
-   `title` varchar(11) NOT NULL DEFAULT  '',
+   `title` varchar(200) NOT NULL DEFAULT  '',
    `img_src` TEXT,
-   `artis` varchar(11)
+   `artis` varchar(200)
 );

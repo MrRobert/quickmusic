@@ -44,6 +44,10 @@
                                 </p>
                             </li>
                             <li>
+                                <div style="margin-left: 3%" id="interestedAlbum">
+                                </div>
+                            </li>
+                            <li>
                                 <div class="fb-comments" data-width="400" data-href="<?= $currentLink; ?>" data-numposts="10" data-colorscheme="light">
                                 </div>
                             </li>
@@ -108,5 +112,16 @@
     $('#content').css('padding-top', '9%');
     $('#container').css('height', '927px');
     loadSongInfo('<?= $orginLink; ?>');
+    /*$(document).ready(function() {
+        $.ajaxSetup({ cache: true });
+        $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
+            FB.init({
+                appId: '651313361641726',
+                version: 'v2.3' // or v2.0, v2.1, v2.0
+            });
+            $('#loginbutton,#feedbutton').removeAttr('disabled');
+            FB.getLoginStatus(updateStatusCallback);
+        });
+    });*/
 </script>
 <input type="hidden" id="keyword" value="<?php echo $key;?>">

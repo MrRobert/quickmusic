@@ -92,6 +92,7 @@ class ControllerAppSong extends Controller {
 
         $data['lyric'] = $this->load->view('default/template/app/lyric.tpl', $result);
         $data['related'] = $this->load->view('default/template/app/related.tpl', $result);
+        $data['relatedAlbums'] = $this->load->view('default/template/app/tileInterestedAlbum.tpl', $result);
         header('Content-Type: application/json');
         $this->response->setOutput(json_encode($data));
     }
@@ -151,6 +152,7 @@ class ControllerAppSong extends Controller {
         $data['lyric'] = $this->load->view('default/template/app/lyric.tpl', $result);
         $data['tileSong'] = $this->load->view('default/template/app/tileSong.tpl', $inputData);
         $data['tileImg'] = $this->load->view('default/template/app/tileImg.tpl', $inputData);
+        $data['relatedAlbums'] = $this->load->view('default/template/app/tileInterestedAlbum.tpl', $result);
 
         header('Content-Type: application/json');
         $this->response->setOutput(json_encode($data));

@@ -141,6 +141,39 @@ class QuickTool {
             break;
         }
         $result['linkSong'] = $link;
+
+        // fetch albums image;
+        $albumImgs = $finder->query("//div[contains(@class,'page-dsms')]//table[@class='tbtable']//div//img");
+        $nodeImg1 = $albumImgs->item(0); $nodeImg2 = $albumImgs->item(1);
+        if(isset($nodeImg1)){
+            $img1 = $nodeImg1->getAttribute('src');
+        }else{
+            $img1 = STATIC_PATH . 'image/default-album.png';
+        }
+        if(isset($nodeImg2)){
+            $img2 = $nodeImg2->getAttribute('src');
+        }else{
+            $img2 = STATIC_PATH . 'image/default-album.png';
+        }
+        // load related albums
+        $divAlbums = $finder->query("//div[contains(@class,'page-dsms')]//span[@class='genmed']");
+        $albumIndex = 0;
+        foreach($divAlbums as $album){
+            $nodeA = $album->getElementsByTagName('a')->item(0);
+            $title = $nodeA->nodeValue;
+            $href = $nodeA->getAttribute('href');
+            $imgSrc = ($albumIndex == 0)? $img1 : $img2;
+            $artis = $this->getAlbumArtis($album->nodeValue);
+
+            $result['relatedAlbums'][] = array(
+                'title' => $title,
+                'href' => base64_encode($href),
+                'artis'=> $artis,
+                'imgSrc' => $imgSrc
+            );
+            $albumIndex++;
+        }
+
         return $result;
     }
 
@@ -414,6 +447,38 @@ class QuickTool {
             }
             $index ++;
         }
+        // fetch albums image;
+        $albumImgs = $finder->query("//div[contains(@class,'page-dsms')]//table[@class='tbtable']//div//img");
+        $imgDiv1 = $albumImgs->item(0);
+        $imgDiv2 = $albumImgs->item(1);
+        if(isset($imgDiv1)){
+            $img1 = $imgDiv1->getAttribute('src');
+        }else{
+            $img1 = STATIC_PATH. 'image/default-album.png';
+        }
+        if(isset($imgDiv2)){
+            $img2 = $imgDiv2->getAttribute('src');
+        }else{
+            $img2 = STATIC_PATH. 'image/default-album.png';
+        }
+        // load related albums
+        $divAlbums = $finder->query("//div[contains(@class,'page-dsms')]//span[@class='genmed']");
+        $albumIndex = 0;
+        foreach($divAlbums as $album){
+            $nodeA = $album->getElementsByTagName('a')->item(0);
+            $title = $nodeA->nodeValue;
+            $href = $nodeA->getAttribute('href');
+            $imgSrc = ($albumIndex == 0)? $img1 : $img2;
+            $artis = $this->getAlbumArtis($album->nodeValue);
+
+            $result['relatedAlbums'][] = array(
+                'title' => $title,
+                'href' => base64_encode($href),
+                'artis'=> $artis,
+                'imgSrc' => $imgSrc
+            );
+            $albumIndex++;
+        }
         // load lyrics
         $nodeLyrics = $finder->query("//div[@id='fulllyric']//p[@class='genmed']");
         foreach($nodeLyrics as $lyric){
@@ -425,4 +490,9 @@ class QuickTool {
         return $result;
     }
 
+    private function getAlbumArtis($input){
+        $input = substr($input, strrpos($input, '</a>') + 5);
+        $artis = substr($input, strpos($input, '<br>')+ 5, strrpos($input, '<br>'));
+        return $artis;
+    }
 }

@@ -1091,6 +1091,7 @@ img{
     width: 100%;
 }
 .img-with-small{
+    height: 46px;
     width: 46px;
 }
 .uk-top-song a.inline{
