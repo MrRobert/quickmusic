@@ -69,6 +69,43 @@ class ControllerAppSong extends Controller {
         $this->response->setOutput($this->load->view('default/template/app/song.tpl', $data));
     }
 
+    public function gotosong(){
+        $link = ""; $key = ''; $title = ''; $img_src = ''; $artis = '';
+        $this->load->model('app/url');
+
+        if(isset($this->request->post['title'])){
+            $title = $this->request->post['title'];
+        }
+        if(isset($this->request->post['img_src'])){
+            $img_src = base64_decode($this->request->post['img_src']);
+        }
+        if(isset($this->request->post['artis'])){
+            $artis = $this->request->post['artis'];
+        }
+        if(isset($this->request->post['link'])){
+            $link = $this->request->post['link'];
+            if(is_array($link)){
+                $link = $link['mp3'];
+            }
+            if(strpos($link, HTTP_SERVER) === 0){
+                $link = substr($link, strpos($link, HTTP_SERVER) + strlen(HTTP_SERVER));
+            }
+            $object['query'] = $link;
+            $object['keyword'] = '';
+            $object['title'] = $title;
+            $object['img_src'] = $img_src;
+            $object['artis'] = $artis;
+            $key = $this->model_app_url->insertData($object);
+        }
+        $data['keyword'] = $key;
+        $data['rootUrl'] = HTTP_SERVER;
+        $data['title'] = $title;
+        $data['artis'] = $artis;
+
+        header('Content-Type: application/json');
+        $this->response->setOutput(json_encode($data));
+    }
+
     private function getLink($link){
         $index1 = strpos($link, 'decodeURIComponent') + strlen('decodeURIComponent') + 2;
         $index2 = strrpos($link, ')') - 1;

@@ -8,11 +8,12 @@
                         <a href="javascript:void(0);" onclick="gotoSongV2('<?= $song['href']?>', '<?=$index?>', 'ss');" class="jp-play-me pull-right m-t-sm m-l text-md">
                             <i class="fa fa-play"></i>
                         </a>
-                        <a class="clear" href="javascript:void(0);" onclick="gotoSongV2('<?= $song['href']?>', '<?=$index?>', 'ss');">
+                        <a class="clear mysong" href="javascript:void(0);" onclick="gotoSongV2('<?= $song['href']?>', '<?=$index?>', 'ss');" data-index="ss<?= $index; ?>">
                             <span class="block text-ellipsis" id="title_ss<?=$index;?>"><?php echo $song['title']?></span>
                             <small class="text-muted" id="artis_ss<?=$index;?>"><?php echo $song['artis']?></small>
                         </a>
                         <input type="hidden" id="imgSrc_ss<?=$index;?>" value="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($song['imgSrc']));?>">
+                        <input type="hidden" id="songss<?= $index; ?>" value="<?= $song['href'];?>"/>
                     </li>
                 <?php $index++; } ?>
             </ul>
@@ -27,11 +28,12 @@
                     <a href="javascript:void(0);" class="pull-left thumb-sm m-r" onclick="gotoSongV2('<?= $song['href']?>', '<?=$index?>', 'sr');">
                         <img class="img-circle img-with-small" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($song['imgSrc']));?>">
                     </a>
-                    <a class="clear" href="javascript:void(0);" class="pull-left thumb-sm m-r" onclick="gotoSongV2('<?= $song['href']?>', '<?=$index?>', 'sr');">
+                    <a class="clear mysong" href="javascript:void(0);" class="pull-left thumb-sm m-r" onclick="gotoSongV2('<?= $song['href']?>', '<?=$index?>', 'sr');" data-index="sr<?=$index;?>">
                         <span class="block text-ellipsis" id="title_sr<?=$index;?>"><?php echo $song['title']?></span>
                         <small class="text-muted" id="artis_sr<?=$index;?>"><?php echo $song['artis']?></small>
                     </a>
                     <input type="hidden" id="imgSrc_sr<?=$index;?>" value="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($song['imgSrc']));?>">
+                    <input type="hidden" id="songsr<?= $index; ?>" value="<?= $song['href'];?>"/>
                 </li>
                 <?php $index++; } ?>
             </ul>

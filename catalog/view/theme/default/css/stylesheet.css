@@ -1114,6 +1114,8 @@ img{
     background: #FFF;
     color: #333;
     border-radius: 5px;
+    list-style-type: none;
+    padding-left: 0;
 }
 
 .custom-menu li {

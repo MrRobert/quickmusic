@@ -7,6 +7,6 @@ CREATE TABLE IF NOT EXISTS `home` (
 
 ALTER TABLE `url_alias` ADD (
    `title` varchar(200) NOT NULL DEFAULT  '',
-   `img_src` TEXT,
+   `img_src` LONGTEXT,
    `artis` varchar(200)
 );

@@ -433,6 +433,7 @@ function loadSongInfo(link){
             $('#relatedSong').replaceWith(json.related);
             $('#interestedAlbum').replaceWith(json.relatedAlbums);
             $('#container').css('height', $('#mainHeight').height() + 150);
+            bindRightClickAction();
         }
     });
 }
@@ -466,11 +467,12 @@ function gotoSongV2(link, index, prefix){
 }
 
 function bindRightClickAction(){
-    $(document).bind("contextmenu", function (event) {
-        event.preventDefault();
+    $('.mysong').on('contextmenu', function(e){
+        e.preventDefault();
+        window.currentLi = $(this);
         $(".custom-menu").finish().toggle(100).
-            css({ top: event.pageY + "px",
-                left: event.pageX + "px"
+            css({ top: e.pageY + "px",
+                left: e.pageX + "px"
             });
     });
     $(document).bind("mousedown", function (e) {
@@ -478,12 +480,48 @@ function bindRightClickAction(){
             $(".custom-menu").hide(100);
         }
     });
-    $(".custom-menu li").click(function(){
+    $(".custom-menu li").click(function(e){
+        console.log(e);
         switch($(this).attr("data-action")) {
-            case "first": alert("first"); break;
-            case "second": alert("second"); break;
-            case "third": alert("third"); break;
+            case "1": handleOpenWindow(1, window.currentLi); break;
+            case "2": handleOpenWindow(2, window.currentLi); break;
+            case "3": addToPlaylist(); break;
         }
         $(".custom-menu").hide(100);
     });
+
+    function handleOpenWindow(action, divLi){
+        if(divLi != undefined && divLi != null){
+            var index = $(divLi).attr("data-index");
+            var srcSong = $('#song'+ index).val();
+            var title = $('#title_'+index).html();
+            var artis = $('#artis_'+index).html();
+            var imgSrc = $('#imgSrc_'+index).val();
+            if(action == 1){ // open in new tab
+                var data = {
+                    'link' : srcSong,
+                    'title' :  title,
+                    'img_src' : window.btoa(imgSrc),
+                    'artist' : artis
+                };
+                $.ajax({
+                    url: 'index.php?route=app/song/gotosong',
+                    type: 'post',
+                    data: data,
+                    dataType: 'json',
+                    success: function(json) {
+                        console.log(json);
+                        var finalUrl = json.rootUrl + "#song/" + foldToAssci(json.title + json.artis) + "_" + json.keyword;
+                        window.open(finalUrl, '_blank');
+                    }
+                });
+            }else if(action == 2){ // open in new window
+
+            }
+        }
+    }
+
+    function addToPlaylist(){
+
+    }
 }

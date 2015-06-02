@@ -66,9 +66,9 @@
 </div>
 <div>
     <ul class='custom-menu'>
-        <li data-action = "first">First thing</li>
-        <li data-action = "second">Second thing</li>
-        <li data-action = "third">Third thing</li>
+        <li data-action = "1">Open Song in New Tab</li>
+        <li data-action = "2">Open Song in New Window</li>
+        <li data-action = "3">Add This Song to playlist</li>
     </ul>
 </div>
 </body>
