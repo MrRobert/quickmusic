@@ -122,6 +122,5 @@
             $('#loginbutton,#feedbutton').removeAttr('disabled');
         });
     });
-    bindRightClickAction();
 </script>
 <input type="hidden" id="keyword" value="<?php echo $key;?>">

@@ -122,7 +122,6 @@ function initMyPlayList(){
         jPlayer: "#jplayer_N",
         cssSelectorAncestor: "#jp_container_N"
     },[
-        song_CamGiacBenAnh
     ], {
         playlistOptions: {
             enableRemoveControls: true,
@@ -212,6 +211,7 @@ function gotoSong(link, index, prefix){
     };
     $.ajax({
         url: 'index.php?route=app/song',
+        async: false,
         type: 'post',
         data: data,
         dataType: 'html',
@@ -316,7 +316,7 @@ function loadSongForMainPlaylist(song, index){
 }
 
 function isExisted(playlist, link){
-    if(playlist.playlist.length <= 0) return true;
+    if(playlist.playlist.length < 0) return true;
     for(var i=0; i< playlist.playlist.length; i++){
         if(playlist.playlist[i].mp3 == link){
             return true;
@@ -426,6 +426,7 @@ function loadSongInfo(link){
     $.ajax({
         url: 'index.php?route=app/song/infosong',
         type: 'get',
+        async: false,
         data: data,
         dataType: 'json',
         success: function(json) {
@@ -452,6 +453,7 @@ function gotoSongV2(link, index, prefix){
     };
     $.ajax({
         url: 'index.php?route=app/song/getsongv2',
+        async: false,
         type: 'post',
         data: data,
         dataType: 'json',
@@ -481,7 +483,6 @@ function bindRightClickAction(){
         }
     });
     $(".custom-menu li").click(function(e){
-        console.log(e);
         switch($(this).attr("data-action")) {
             case "1": handleOpenWindow(1, window.currentLi); break;
             case "2": handleOpenWindow(2, window.currentLi); break;
@@ -506,6 +507,7 @@ function bindRightClickAction(){
                 };
                 $.ajax({
                     url: 'index.php?route=app/song/gotosong',
+                    async: false,
                     type: 'post',
                     data: data,
                     dataType: 'json',
