@@ -45,6 +45,9 @@ class ControllerAppSong extends Controller {
                     $link = $alias['query'];
                     $title = $alias['title'];
                     $img_src = $alias['img_src'];
+                    if(isset($img_src) || empty($img_src)){
+                        $img_src = STATIC_PATH . 'image/default-song.jpg';
+                    }
                     $artis = $alias['artis'];
                 }
             }
@@ -67,6 +70,31 @@ class ControllerAppSong extends Controller {
         $data['currentLink'] = HTTP_SERVER . '?route=app/song';
 
         $this->response->setOutput($this->load->view('default/template/app/song.tpl', $data));
+    }
+
+    public function fetchsong(){
+        $link = '';
+        if(isset($this->request->post['link'])){
+            $link = $this->request->post['link'];
+            if(is_array($link)){
+                $link = $link['mp3'];
+            }
+            if(strpos($link, HTTP_SERVER) === 0){
+                $link = substr($link, strpos($link, HTTP_SERVER) + strlen(HTTP_SERVER));
+            }
+        }
+        $link = base64_decode($link);
+        $quickTool = new QuickTool();
+        $result = $quickTool->crawl_single_song($link);
+        $songs = array();
+        foreach($result as $song){
+            $songs[] = array(
+                'linkSong' => base64_encode($this->getLink($song['link']))
+            );
+        }
+        $data['linkSong'] = $songs[0]['linkSong'];
+        header('Content-Type: application/json');
+        $this->response->setOutput(json_encode($data));
     }
 
     public function gotosong(){

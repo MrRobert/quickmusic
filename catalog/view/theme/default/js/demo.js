@@ -211,7 +211,6 @@ function gotoSong(link, index, prefix){
     };
     $.ajax({
         url: 'index.php?route=app/song',
-        async: false,
         type: 'post',
         data: data,
         dataType: 'html',
@@ -426,7 +425,6 @@ function loadSongInfo(link){
     $.ajax({
         url: 'index.php?route=app/song/infosong',
         type: 'get',
-        async: false,
         data: data,
         dataType: 'json',
         success: function(json) {
@@ -453,7 +451,6 @@ function gotoSongV2(link, index, prefix){
     };
     $.ajax({
         url: 'index.php?route=app/song/getsongv2',
-        async: false,
         type: 'post',
         data: data,
         dataType: 'json',
@@ -486,7 +483,7 @@ function bindRightClickAction(){
         switch($(this).attr("data-action")) {
             case "1": handleOpenWindow(1, window.currentLi); break;
             case "2": handleOpenWindow(2, window.currentLi); break;
-            case "3": addToPlaylist(); break;
+            case "3": handleOpenWindow(3, window.currentLi); break;
         }
         $(".custom-menu").hide(100);
     });
@@ -512,18 +509,54 @@ function bindRightClickAction(){
                     data: data,
                     dataType: 'json',
                     success: function(json) {
-                        console.log(json);
                         var finalUrl = json.rootUrl + "#song/" + foldToAssci(json.title + json.artis) + "_" + json.keyword;
                         window.open(finalUrl, '_blank');
                     }
                 });
             }else if(action == 2){ // open in new window
-
+                var data2 = {
+                    'link' : srcSong,
+                    'title' :  title,
+                    'img_src' : window.btoa(imgSrc),
+                    'artist' : artis
+                };
+                $.ajax({
+                    url: 'index.php?route=app/song/gotosong',
+                    async: false,
+                    type: 'post',
+                    data: data2,
+                    dataType: 'json',
+                    success: function(json) {
+                        var strWindowFeatures = "height=" + window.height + ",width= " + window.width;
+                        var finalUrl = json.rootUrl + "#song/" + foldToAssci(json.title + json.artis) + "_" + json.keyword;
+                        window.open(finalUrl, title, strWindowFeatures);
+                    }
+                });
+            }else if(action == 3){
+                var data3 = {
+                    'link' : srcSong,
+                    'title' :  title,
+                    'img_src' : window.btoa(imgSrc),
+                    'artist' : artis
+                };
+                $.ajax({
+                    url: 'index.php?route=app/song/fetchsong',
+                    async: false,
+                    type: 'post',
+                    data: data3,
+                    dataType: 'json',
+                    success: function(json) {
+                        if(json.linkSong != undefined && json.linkSong != ''){
+                            plusSong('index.php?route=app/search/playsong&src='+ json.linkSong, title, artis, '-1');
+                        }
+                    }
+                });
             }
         }
     }
+}
 
-    function addToPlaylist(){
-
-    }
+function favorite(){
+    // right click or click on
+    CookieHandler.setCookie("favorite");
 }

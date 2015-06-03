@@ -1,7 +1,7 @@
 <?php
 // HTTP
 define('APP_NAME' , 'quickmusic');
-define('DIR_APP' , 'D:/xampp/htdocs/' . APP_NAME);
+define('DIR_APP' , '/var/www/html/' . APP_NAME);
 define('DOMAIN', 'localhost');
 
 define('HTTP_SERVER', 'http://'. DOMAIN .'/'. APP_NAME . '/');

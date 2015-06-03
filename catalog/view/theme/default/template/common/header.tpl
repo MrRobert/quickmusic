@@ -24,6 +24,7 @@
         var playingIndex = false;
         var isHasLoad = true;
     </script>
+    <script src="<?php echo STATIC_PATH ?>js/cookie-handler.js" type="text/javascript"></script>
     <script src="<?php echo STATIC_PATH ?>js/demo.js" type="text/javascript"></script>
     <script src="<?php echo STATIC_PATH ?>js/common.js" type="text/javascript"></script>
 </head>
