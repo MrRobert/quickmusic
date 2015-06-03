@@ -2,13 +2,13 @@ $(document).ready(function(){
     secondPlaylist = initSecondPlayList();
     mainPlayList  = initMyPlayList();
 
-    $(document).on($.jPlayer.event.pause, mainPlayList.cssSelector.jPlayer,  function(){
+    $('#jp_container_N').on($.jPlayer.event.pause, mainPlayList.cssSelector.jPlayer,  function(){
         $('.musicbar').removeClass('animate');
         $('.jp-play-me').removeClass('active');
         $('.jp-play-me').parent('li').removeClass('active');
     });
 
-    $(document).on($.jPlayer.event.play, mainPlayList.cssSelector.jPlayer,  function(e){
+    $('#jp_container_N').on($.jPlayer.event.play, mainPlayList.cssSelector.jPlayer,  function(e){
         $('.musicbar').addClass('animate');
         var index = mainPlayList.current;
         if(index != null && index >= 0){
@@ -17,7 +17,21 @@ $(document).ready(function(){
         }
     });
 
-    $(document).on('click', '.jp-play-me', function(e){
+    $('#jp_container_N').on($.jPlayer.event.playing , mainPlayList.cssSelector.jPlayer,  function(e){
+        isMainPlaying = true;
+    });
+    $('#jp_container_N').on($.jPlayer.event.ended , mainPlayList.cssSelector.jPlayer,  function(e){
+        isMainPlaying = false;
+    });
+
+    $('#jp_second').bind($.jPlayer.event.playing, function(event) {
+        isSecondPlaying = true;
+    });
+    $('#jp_second').bind($.jPlayer.event.ended, function(event) {
+        isSecondPlaying = false;
+    });
+
+    $('#jp_container_N').on('click', '.jp-play-me', function(e){
         e && e.preventDefault();
         var $this = $(e.target);
         if (!$this.is('a')) $this = $this.closest('a');
@@ -274,6 +288,7 @@ function foldToAssci(input){
 }
 
 function playSong(link, ePlay){
+    $('#second-jplayer').jPlayer("stop");
     var song = {
         title: "",
         artist: "",
@@ -496,6 +511,12 @@ function bindRightClickAction(){
             var artis = $('#artis_'+index).html();
             var imgSrc = $('#imgSrc_'+index).val();
             if(action == 1){ // open in new tab
+                mainPlayList.pause();
+                secondPlaylist.pause();
+                setTimeout(function(){
+                    resumePlaying();
+                }, 100);
+
                 var data = {
                     'link' : srcSong,
                     'title' :  title,
@@ -504,7 +525,6 @@ function bindRightClickAction(){
                 };
                 $.ajax({
                     url: 'index.php?route=app/song/gotosong',
-                    async: false,
                     type: 'post',
                     data: data,
                     dataType: 'json',
@@ -514,6 +534,12 @@ function bindRightClickAction(){
                     }
                 });
             }else if(action == 2){ // open in new window
+                mainPlayList.pause();
+                secondPlaylist.pause();
+                setTimeout(function(){
+                    resumePlaying();
+                }, 100);
+
                 var data2 = {
                     'link' : srcSong,
                     'title' :  title,
@@ -522,7 +548,6 @@ function bindRightClickAction(){
                 };
                 $.ajax({
                     url: 'index.php?route=app/song/gotosong',
-                    async: false,
                     type: 'post',
                     data: data2,
                     dataType: 'json',
@@ -533,6 +558,11 @@ function bindRightClickAction(){
                     }
                 });
             }else if(action == 3){
+                mainPlayList.pause();
+                secondPlaylist.pause();
+                setTimeout(function(){
+                    resumePlaying();
+                }, 100);
                 var data3 = {
                     'link' : srcSong,
                     'title' :  title,
@@ -541,7 +571,6 @@ function bindRightClickAction(){
                 };
                 $.ajax({
                     url: 'index.php?route=app/song/fetchsong',
-                    async: false,
                     type: 'post',
                     data: data3,
                     dataType: 'json',
@@ -555,6 +584,17 @@ function bindRightClickAction(){
         }
     }
 }
+
+function resumePlaying(){
+    if(isMainPlaying){
+        mainPlayList.play();
+        isMainPlaying = false;
+    }else if(isSecondPlaying){
+        secondPlaylist.play();
+        isSecondPlaying = false;
+    }
+}
+
 
 function favorite(){
     // right click or click on

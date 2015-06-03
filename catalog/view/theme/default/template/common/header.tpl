@@ -21,6 +21,8 @@
     <script type="text/javascript">
         var mainPlayList = null;
         var secondPlaylist = null;
+        var isMainPlaying = false;
+        var isSecondPlaying = false;
         var playingIndex = false;
         var isHasLoad = true;
     </script>

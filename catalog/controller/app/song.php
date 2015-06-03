@@ -45,7 +45,7 @@ class ControllerAppSong extends Controller {
                     $link = $alias['query'];
                     $title = $alias['title'];
                     $img_src = $alias['img_src'];
-                    if(isset($img_src) || empty($img_src)){
+                    if(!isset($img_src) || empty($img_src)){
                         $img_src = STATIC_PATH . 'image/default-song.jpg';
                     }
                     $artis = $alias['artis'];
