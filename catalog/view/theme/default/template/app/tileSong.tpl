@@ -1,7 +1,7 @@
 <li class="list-group-item active" id="firstSongLi">
     <div class="pull-right m-l">
-        <a href="#" class="m-r-sm"><i class="fa fa-repeat"></i></a>
-        <a href="#" class="m-r-sm"><i class="fa fa-heart-o"></i></i></a>
+        <a href="javascript:void(0);" class="m-r-sm"><i class="fa fa-repeat"></i></a>
+        <a href="javascript:void(0);" onclick="addToFavoriteSingle($(this));" class="m-r-sm"><i class="fa fa-heart-o"></i></i></a>
         <a href="javascript:void(0);" style="color: #9badb9;" id="plus_0" onclick="plusSong('index.php?route=app/search/playsong&src=\'<?php echo $link;?>\'', '<?=$title;?>','<?= $artis; ?>', 0)" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
         <a href="javascript:void(0);" style="color: #9badb9;" id="plused_0" class="hidden pull-right"><i class="fa fa-check"></i></a>
     </div>

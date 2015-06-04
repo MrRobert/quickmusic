@@ -500,7 +500,7 @@ class QuickTool {
         // $ipAddress=$_SERVER['REMOTE_ADDR'];
         $macAddr=false;
         $arp=`arp -a $ipAddress`;
-        if(strpos($arp, 'no match') > 0){
+        if(strpos($arp, 'no match') > 0 || strpos($arp, 'No ARP') >= 0){
             return 'localhost';
         }
         $index = strpos($arp, ') at ') + 5;

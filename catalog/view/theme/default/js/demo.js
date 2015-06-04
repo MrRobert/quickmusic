@@ -599,9 +599,10 @@ function favorite(){
     CookieHandler.setCookie("favorite");
 }
 
-function addToFavoriteSingle(){
+function addToFavoriteSingle(div){
     var keyword = $('#keyword').val();
     $.getJSON('index.php?route=app/song/addfavorite&keyword=' + keyword, function(data){
-        console.log(data);
+        $(div).find('i').addClass('fa-heart');
+        $(div).find('i').removeClass('fa-heart-o');
     });
 }
