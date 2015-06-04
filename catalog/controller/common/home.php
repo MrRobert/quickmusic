@@ -18,14 +18,6 @@ class ControllerCommonHome extends Controller {
         if(!isset($data['main']) || empty($data['main'])){
             $data['main'] = "Review your model !!!";
         }
-
-        /*
-        $ipAddress=$_SERVER['REMOTE_ADDR'];
-        $arp=`netstat -ie`;
-        $index = strpos($arp, 'HWaddr');
-        $marAddress = substr($arp, $index + 7, 17);
-        var_dump($marAddress);*/
-
         $this->response->setOutput($this->load->view('default/template/common/home.tpl', $data));
 	}
 }

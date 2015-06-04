@@ -66,9 +66,9 @@
 </div>
 <div>
     <ul class='custom-menu'>
-        <li data-action = "1">Open Song in New Tab</li>
-        <li data-action = "2">Open Song in New Window</li>
-        <li data-action = "3">Add This Song to playlist</li>
+        <li data-action = "1"><i class="fa fa-link"></i>Open Song in New Tab</li>
+        <li data-action = "2"><i class="fa fa-link"></i>Open Song in New Window</li>
+        <li data-action = "3"><i class="fa fa-plus-circle"></i>Add This Song to playlist</li>
     </ul>
 </div>
 </body>

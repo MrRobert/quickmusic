@@ -15,6 +15,6 @@ ALTER TABLE `url_alias` ADD (
 CREATE TABLE IF NOT EXISTS `favorite` (
   `favorite_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11),
-  `mac_address` varchar(22),
+  `mac_address` varchar(100),
   PRIMARY KEY (`favorite_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

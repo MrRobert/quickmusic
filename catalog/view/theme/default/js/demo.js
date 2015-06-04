@@ -595,8 +595,13 @@ function resumePlaying(){
     }
 }
 
-
 function favorite(){
-    // right click or click on
     CookieHandler.setCookie("favorite");
+}
+
+function addToFavoriteSingle(){
+    var keyword = $('#keyword').val();
+    $.getJSON('index.php?route=app/song/addfavorite&keyword=' + keyword, function(data){
+        console.log(data);
+    });
 }

@@ -30,3 +30,25 @@ CookieHandler.getCookie = function(cname){
     }
     return "";
 }
+
+var FavoriteHandler = {};
+FavoriteHandler.isNeedUpdate = false;
+FavoriteHandler.lstSong = [];
+FavoriteHandler.addSong = function(song){
+    FavoriteHandler.lstSong.push(song);
+}
+FavoriteHandler.getSong = function(index){
+    if(FavoriteHandler.lstSong.length <= index) return null;
+    return FavoriteHandler.lstSong[index];
+}
+FavoriteHandler.checkExisted = function(song){
+    var index = FavoriteHandler.lstSong.indexOf(song);
+    if(index < 0) return null;
+    return FavoriteHandler.lstSong[index];
+}
+FavoriteHandler.removeSong = function(song){
+    var index = FavoriteHandler.lstSong.indexOf(song);
+    if(index < 0) return false;
+    FavoriteHandler.lstSong.splice(index,1);
+    return true;
+}

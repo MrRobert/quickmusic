@@ -495,4 +495,16 @@ class QuickTool {
         $artis = substr($input, strpos($input, '<br>')+ 5, strrpos($input, '<br>'));
         return $artis;
     }
+
+    public static function getMacAddressClient($ipAddress){
+        // $ipAddress=$_SERVER['REMOTE_ADDR'];
+        $macAddr=false;
+        $arp=`arp -a $ipAddress`;
+        if(strpos($arp, 'no match') > 0){
+            return 'localhost';
+        }
+        $index = strpos($arp, ') at ') + 5;
+        $macAddr = substr($arp, $index, 17);
+        return $macAddr;
+    }
 }

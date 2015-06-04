@@ -10,7 +10,7 @@ class ControllerAppSong extends Controller {
         if (isset($this->request->get['route'])) {
             $this->document->addLink(HTTP_SERVER, 'canonical');
         }
-        $link = ""; $key = ''; $title = ''; $img_src = ''; $artis = '';
+        $link = ""; $keyword = ''; $title = ''; $img_src = ''; $artis = '';
         $this->load->model('app/url');
 
         if(isset($this->request->post['title'])){
@@ -35,7 +35,7 @@ class ControllerAppSong extends Controller {
             $object['title'] = $title;
             $object['img_src'] = $img_src;
             $object['artis'] = $artis;
-            $key = $this->model_app_url->insertData($object);
+            $keyword = $this->model_app_url->insertData($object);
         }
         if(empty($link)){
             if(isset($this->request->get['keyword'])){
@@ -66,7 +66,7 @@ class ControllerAppSong extends Controller {
         $data['img_src'] = $img_src;
         $data['artis'] = $artis;
         $data['link'] = $songs[0]['linkSong'];
-        $data['key'] = $key;
+        $data['key'] = $keyword;
         $data['currentLink'] = HTTP_SERVER . '?route=app/song';
 
         $this->response->setOutput($this->load->view('default/template/app/song.tpl', $data));
@@ -221,5 +221,23 @@ class ControllerAppSong extends Controller {
 
         header('Content-Type: application/json');
         $this->response->setOutput(json_encode($data));
+    }
+
+    public function addfavorite(){
+        $keyword ='';
+        if(isset($this->request->get['keyword'])){
+            $keyword = $this->request->get['keyword'];
+        }
+        if(!empty($keyword)){
+            $this->load->model('app/favorite');
+
+            $ipAddress=$_SERVER['REMOTE_ADDR'];
+            $data['mac_address'] = QuickTool::getMacAddressClient($ipAddress);
+            $data['keyword'] = $keyword;
+            $this->model_app_favorite->insertData($data);
+
+            header('Content-Type: application/json');
+            $this->response->setOutput(json_encode("OK"));
+        }
     }
 }
