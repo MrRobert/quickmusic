@@ -2,6 +2,7 @@
     <ul id="menu">
         <li class="li-menu"><a href="#music" ><i class="fa fa-music"></i><span>Music</span></a></li>
         <li class="li-menu"><a href="#video"><i class="fa fa-youtube-play"></i><span>Video</span></a></li>
+        <li class="li-menu"><a href="#favorite"><i class="fa fa-heart"></i><span>Favorite</span></a></li>
 
         <li class="hidden-li li-menu text-xs text-muted" style="padding: 10px 0px 0px 14px; line-height: 4;">
             Playlist

@@ -83,6 +83,12 @@ class QuickTool {
         return $result;
     }
 
+
+    /**
+     * Get only source of song
+     * @param $link
+     * @return mixed
+     */
     function crawl_single_song($link){
         $href = $this->musicDomain . "/" . $link;
 
@@ -110,6 +116,15 @@ class QuickTool {
         );
         return $result;
     }
+
+    /**
+     * GET link source song
+     * GET lyrics of song
+     * GET Album image
+     * GET Album related infos
+     * @param $link
+     * @return mixed
+     */
 
     function crawl_single_songv2($link){
         $href = $this->musicDomain . "/" . $link;
@@ -400,6 +415,14 @@ class QuickTool {
         }
     }
 
+    /**
+     * GET same singer
+     * GET same type song
+     * GET related Album infos
+     * GET LYRIC
+     * @param $link
+     * @return array
+     */
     public function loadAnotherPartSong($link){
         $result = array();
         // load the same singer
