@@ -14,20 +14,21 @@ class ControllerAppFavorite extends Controller {
         $this->load->model('app/favorite');
         $quickTool = new QuickTool();
         $aliasSong = $this->model_app_favorite->getFavoriteSongsByMacAddress($quickTool->getMacAddressClient($_SERVER['REMOTE_ADDR']), 0, 5);
-        var_dump($aliasSong);
         if(isset($aliasSong) && sizeof($aliasSong) > 0){
             foreach($aliasSong as $song){
-                $link = $song['query'];
+                $link = base64_decode($song['query']);
                 $title = $song['title'];
                 $artis = $song['artis'];
                 $img_src = $song['img_src'];
 
-                $result = $quickTool->crawl_single_song($link);
+                $result = $quickTool->crawl_single_songv2_withlyric($link);
                 $data['songs'][] = array(
-                    'linkSong' => base64_encode($this->getLink($result['song'][0]['link'])),
+                    'linkSong' => base64_encode($this->getLink($result['linkSong'])),
                     'title' => $title,
                     'artis' => $artis,
-                    'img_src' => $img_src
+                    'img_src' => $img_src,
+                    'fs_id' => $song['song_favorite_id'],
+                    'lyric' => mb_convert_encoding($result['lyric'], 'html-entities', 'utf-8')
                 );
             }
         }
@@ -45,5 +46,19 @@ class ControllerAppFavorite extends Controller {
             return substr($link, $index1, $index2 - $index1);
         }
         return $link;
+    }
+
+    public function remove(){
+        $song_favorite_id = 0;
+        if(isset($this->request->get['fs_id'])){
+            $song_favorite_id = (int)$this->request->get['fs_id'];
+        }
+        $quickTool = new QuickTool();
+        $macAddress = $quickTool->getMacAddressClient($_SERVER['REMOTE_ADDR']);
+
+        $this->load->model('app/favorite');
+        $message = $this->model_app_favorite->removeSongFavorite($song_favorite_id, $macAddress);
+        header('Content-Type: application/json');
+        $this->response->setOutput(json_encode($message));
     }
 }

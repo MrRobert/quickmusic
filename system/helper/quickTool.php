@@ -192,6 +192,49 @@ class QuickTool {
         return $result;
     }
 
+    function crawl_single_songv2_withlyric($link){
+        $href = $this->musicDomain . "/" . $link;
+
+        $dom = new DOMDocument('1.0');
+        @$dom->loadHTMLFile($href);
+        $finder = new DomXPath($dom);
+        $nodeScript = $finder->query("//div[contains(@class,'pl-cl')]//script");
+        $textScript = null;
+        foreach($nodeScript as $script){
+            $attr = $script->getAttribute('src');
+            if(isset($attr) || empty($attr)){
+                $textScript = $script->nodeValue;
+            }
+        }
+        $link = null;
+        if($textScript != null){
+            $index1 = strpos($textScript, 'decodeURIComponent');
+            $index2 = strpos($textScript, '"provider":') - 1;
+            $link = substr($textScript, $index1, $index2 - $index1);
+            $lastComma = strrpos($link, ",");
+            $link = substr($link, 0, $lastComma);
+        }
+        $nodeLyrics = $finder->query("//div[@id='fulllyric']//p[@class='genmed']");
+        foreach($nodeLyrics as $lyric){
+            $val = $lyric->nodeValue;
+            $val = str_replace($this->hostName, $this->myDomain, $val);
+            $result['lyric'] = $val;
+            break;
+        }
+        $result['linkSong'] = $link;
+
+        // load lyrics
+        $nodeLyrics = $finder->query("//div[@id='fulllyric']//p[@class='genmed']");
+        foreach($nodeLyrics as $lyric){
+            $val = $lyric->nodeValue;
+            $val = str_replace($this->hostName, $this->myDomain, $val);
+            $result['lyric'] = $val;
+            break;
+        }
+
+        return $result;
+    }
+
     function crawl_song_album($search_name){
         $search_name = str_replace(" ", "+", $search_name);
         $url = $this->musicSources. $search_name;

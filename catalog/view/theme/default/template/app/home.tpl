@@ -34,12 +34,11 @@
                             <a onclick="gotoSong('<?php echo base64_encode($songVN['href'])?>', '<?= $index; ?>', '');" href="javascript:void(0);" href="javascript:void(0);" class="play-icon-a"><i class="fa fa-play fa-2x"></i></a>
                         </div>
                         <div class="bottom_2 padder m-b-sm">
-                            <a href="javascript:void(0);" style="color: #9badb9;" id="plus_<?=$index;?>" onclick="plusSong('<?= base64_encode($songVN['href'])?>','<?= $songVN['title']?>', '<?= $songVN['artis']?>', <?= $index ?>)" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
+                            <a href="javascript:void(0);" style="color: #9badb9;" id="plus_<?=$index;?>" onclick="plusSong('index.php?route=app/search/playsong&src=\'<?= base64_encode($songVN['href'])?>\'','<?= $songVN['title']?>', '<?= $songVN['artis']?>', <?= $index ?>)" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
                             <a href="javascript:void(0);" style="color: #9badb9;" id="plused_<?=$index;?>" class="hidden pull-right"><i class="fa fa-check"></i></a>
                         </div>
                         <div class="bottom padder m-b-sm">
                             <a class="pull-right" href="#"> <i class="fa fa-heart-o"></i> </a>
-                            <a href="javascript:void(0);" class="plus-song"> <i class="fa fa-plus-circle"></i> </a>
                         </div>
                     </div>
                     <a href="javascript:void(0);">

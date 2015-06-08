@@ -10,7 +10,7 @@ class ModelAppUrl extends Model {
         return $this->db->getLastId();
     }
     public function update($data){
-        $title = ''; $img_src = ''; $artis = ''; $favorite_id = '';
+        $title = ''; $img_src = ''; $artis = '';
         if(isset($data['title'])){
             $title = $data['title'];
         }
@@ -19,9 +19,6 @@ class ModelAppUrl extends Model {
         }
         if(isset($data['artis'])){
             $artis = $data['artis'];
-        }
-        if(isset($data['favorite_id'])){
-            $favorite_id = (int)$data['favorite_id'];
         }
         $sql = "UPDATE ". DB_PREFIX . "url_alias SET ";
         if(isset($data['keyword']) && !empty($data['keyword'])){
@@ -39,13 +36,7 @@ class ModelAppUrl extends Model {
         if(!empty($artis)){
             $sql .= ",artis = '". $artis . "' ";
         }
-        if(!empty($favorite_id)){
-            $sql .= ",favorite_id = ". (int)$favorite_id ." ";
-        }
         $sql .= "WHERE url_alias_id = " . (int)$data['id'];
-
-        $logger = new Log('favorite.log');
-        $logger->write('sql statement ====== ' . $sql);
 
         $this->db->query($sql);
     }
@@ -56,7 +47,7 @@ class ModelAppUrl extends Model {
     }
 
     public function getAliasById($id){
-        $query = $this->db->query("SELECT query FROM " . DB_PREFIX . "url_alias WHERE url_alias_id = ". $id);
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "url_alias WHERE url_alias_id = ". $id);
         return $query->row;
     }
 

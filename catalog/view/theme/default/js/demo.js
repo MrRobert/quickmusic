@@ -113,7 +113,7 @@ function listenCommonRequest(hash){
         }
     }
     if (hash.length > 0){
-        if(hash == 'music' || hash == 'video' || hash == 'search'){
+        if(hash == 'music' || hash == 'video' || hash == 'search' || hash == 'favorite'){
             fetchDATA(hash, $('#content'), data);
         }else if (hash == 'song'){
             if(isHasLoad){
@@ -245,8 +245,8 @@ function foldToAssci(input){
         'đ', 'Đ',
         'è','é','ẻ','ẽ','ẹ','ê','ề','ế','ể','ễ','ệ',
         'È','É','Ẻ','Ẽ','Ẹ','Ê','Ề','Ế','Ể','Ễ','Ệ',
-        'ì','í','ỉ','ị',
-        'Ì','Í','Ỉ','Ị',
+        'ì','í','ỉ','ị','ĩ',
+        'Ì','Í','Ỉ','Ị','Ĩ',
         'ò','ó','ỏ','õ','ọ','ô','ồ','ố','ổ','ỗ','ộ','ơ','ờ','ớ','ở','ỡ','ợ',
         'Ò','Ó','Ỏ','Õ','Ọ','Ô','Ồ','Ố','Ổ','Ỗ','Ộ','Ơ','Ờ','Ớ','Ở','Ỡ','Ợ',
         'ù','ú','ủ','ũ','ụ','ừ','ứ','ử','ữ','ự','ư',
@@ -263,8 +263,8 @@ function foldToAssci(input){
         'd','D',
         'e','e','e','e','e','e','e','e','e','e','e',
         'E','E','E','E','E','E','E','E','E','E','E',
-        'i','i','i','i',
-        'I','I','I','I',
+        'i','i','i','i','i',
+        'I','I','I','I','I',
         'o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o',
         'O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O',
         'u','u','u','u','u','u','u','u','u','u','u',
@@ -289,25 +289,36 @@ function foldToAssci(input){
 
 function playSong(link, ePlay){
     $('#second-jplayer').jPlayer("stop");
-    var song = {
-        title: "",
-        artist: "",
-        mp3: "index.php?route=app/search/playsong&src=" + link
-    };
     bindPlayFunction();
     function bindPlayFunction(){
-        $('#play_icon').hide();
-        $('#pause_icon').removeClass('hidden');
+        var song = {
+            title: "",
+            artist: "",
+            mp3: "index.php?route=app/search/playsong&src=" + link
+        };
+
+        secondPlaylist.pause();
+        secondPlaylist.playlist.splice(0,1);
+        secondPlaylist.add(song);
+        secondPlaylist.play(0);
+        mainPlayList.pause();
+
+        $(ePlay).find('#play_icon').hide();
+        $(ePlay).find('#pause_icon').removeClass('hidden');
+        $(ePlay).unbind('click');
         $(ePlay).bind('click', function(){
-            $('#play_icon').show();
-            $('#pause_icon').addClass('hidden');
-            secondPlaylist.pause();
+            pauseSong(link, ePlay);
         });
     }
-    secondPlaylist.playlist.splice(0,1);
-    secondPlaylist.add(song);
-    secondPlaylist.play(0);
-    mainPlayList.pause();
+}
+
+function pauseSong(link, ePlay){
+    $(ePlay).find('#play_icon').show();
+    $(ePlay).find('#pause_icon').addClass('hidden');
+    secondPlaylist.pause();
+    $(ePlay).bind('click', function(){
+        playSong(link, ePlay);
+    });
 }
 
 function loadSongForMainPlaylist(song, index){
@@ -598,11 +609,27 @@ function resumePlaying(){
 function favorite(){
     CookieHandler.setCookie("favorite");
 }
-
 function addToFavoriteSingle(div){
     var keyword = $('#keyword').val();
     $.getJSON('index.php?route=app/song/addfavorite&keyword=' + keyword, function(data){
         $(div).find('i').addClass('fa-heart');
         $(div).find('i').removeClass('fa-heart-o');
+    });
+}
+function openConfirmModal(song_favorite_id){
+    $('#confirmModalOKbutton').bind('click',function(){
+        removeFavoriteSong(song_favorite_id);
+    });
+    $('#confirmModal').modal('show');
+}
+
+function removeFavoriteSong(song_favorite_id){
+    $.getJSON('index.php?route=app/favorite/remove&fs_id=' + song_favorite_id, function(data){
+        if(data != 'OK'){
+            alert(data);
+        }else if(data == 'OK'){
+            $('#' + song_favorite_id).remove();
+        }
+        $('#confirmModal').modal('hide');
     });
 }

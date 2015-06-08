@@ -25,10 +25,11 @@
                         <ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">
                             <?php $index = 0; ?>
                             <?php foreach($songs as $song){ ?>
-                                <li class="list-group-item active" id="firstSongLi">
+                                <li class="list-group-item active" id="<?=$song['fs_id']?>">
                                     <div class="pull-right m-l">
+                                        <a data-toggle="collapse" href="#liCollapse<?=$index;?>" aria-expanded="false" aria-controls="liCollapse<?=$index;?>" class="m-r-sm"><i class="fa fa-file-text"></i></a>
                                         <a href="javascript:void(0);" class="m-r-sm"><i class="fa fa-repeat"></i></a>
-                                        <a href="javascript:void(0);" onclick="addToFavoriteSingle($(this));" class="m-r-sm"><i class="fa fa-heart-o"></i></i></a>
+                                        <a href="javascript:void(0);" onclick="openConfirmModal('<?=$song['fs_id'];?>');" class="m-r-sm"><i class="fa fa-trash-o"></i></a>
                                         <a href="javascript:void(0);" style="color: #9badb9;" id="plus_<?=$index;?>" onclick="plusSong('index.php?route=app/search/playsong&src=\'<?php echo $song['linkSong'];?>\'', '<?=$song['title'];?>','<?= $song['artis']; ?>', '<?=$index;?>')" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
                                         <a href="javascript:void(0);" style="color: #9badb9;" id="plused_<?=$index;?>" class="hidden pull-right"><i class="fa fa-check"></i></a>
                                     </div>
@@ -40,9 +41,15 @@
                                         <span class="text-muted"> -- 04:35</span>
                                     </div>
                                 </li>
+                                <li class="collapse" id="liCollapse<?=$index;?>">
+                                    <div style="margin-left: 3%">
+                                        <?=$song['lyric']?>
+                                    </div>
+                                </li>
                             <?php $index++;} ?>
                             <li>
                                 <div style="margin-left: 3%" id="interestedAlbum">
+                                    DIV promotion albums // load from certain DB
                                 </div>
                             </li>
                             <li>
@@ -57,7 +64,7 @@
             <div class="col-sm-4 no-padder bg my-indicator" id="relatedSong">
                 <div class="vbox">
                     <div style="margin:45%">
-                        <i class="fa fa-circle-o-notch fa-spin fa-4x"></i>
+                        DIV promotion related musics// load from certain DB
                     </div>
                 </div>
             </div>
@@ -109,15 +116,4 @@
 <script type="text/javascript">
     $('#content').css('padding-top', '9%');
     $('#container').css('height', '927px');
-    loadSongInfo('<?= $orginLink; ?>');
-    $(document).ready(function() {
-        $.ajaxSetup({ cache: true });
-        $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
-            FB.init({
-                appId: '651313361641726',
-                version: 'v2.3' // or v2.0, v2.1, v2.0
-            });
-            $('#loginbutton,#feedbutton').removeAttr('disabled');
-        });
-    });
 </script>
