@@ -13,7 +13,7 @@ class ControllerAppFavorite extends Controller {
 
         $this->load->model('app/favorite');
         $quickTool = new QuickTool();
-        $aliasSong = $this->model_app_favorite->getFavoriteSongsByMacAddress($quickTool->getMacAddressClient($_SERVER['REMOTE_ADDR']), 0, 5);
+        $aliasSong = $this->model_app_favorite->getFavoriteSongsByMacAddress($quickTool->getMacAddressClient($_SERVER['REMOTE_ADDR']), 0, 50);
         if(isset($aliasSong) && sizeof($aliasSong) > 0){
             foreach($aliasSong as $song){
                 $link = base64_decode($song['query']);

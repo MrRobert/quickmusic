@@ -26,6 +26,11 @@ $(document).ready(function(){
 
     $('#jp_second').bind($.jPlayer.event.playing, function(event) {
         isSecondPlaying = true;
+        var index = secondPlaylist.current;
+        $('.playIcon').show();
+        $('.pauseIcon').addClass('hidden');
+        $('.play'+index).hide();
+        $('.pause'+index).removeClass('hidden');
     });
     $('#jp_second').bind($.jPlayer.event.ended, function(event) {
         isSecondPlaying = false;
@@ -285,6 +290,12 @@ function foldToAssci(input){
         output+= char;
     }
     return output;
+}
+
+function playSongFavorite(link, ePlay, index){
+    var src = $('#songImg'+index).val();
+    $('#mainImg').attr('src', src);
+    playSong(link, ePlay);
 }
 
 function playSong(link, ePlay){
@@ -632,4 +643,19 @@ function removeFavoriteSong(song_favorite_id){
         }
         $('#confirmModal').modal('hide');
     });
+}
+
+function bindSecondPlaylist(songs){
+    mainPlayList.pause();
+    secondPlaylist.pause();
+    secondPlaylist.playlist = [];
+    for(var i = 0 ; i< songs.length ; i++){
+        var song = {
+            title: songs[i].title,
+            artist: songs[i].artist,
+            mp3: "index.php?route=app/search/playsong&src=" + songs[i].linkSong
+        };
+        secondPlaylist.add(song);
+    }
+    secondPlaylist.play(0);
 }

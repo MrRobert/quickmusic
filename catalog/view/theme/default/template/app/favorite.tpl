@@ -33,13 +33,14 @@
                                         <a href="javascript:void(0);" style="color: #9badb9;" id="plus_<?=$index;?>" onclick="plusSong('index.php?route=app/search/playsong&src=\'<?php echo $song['linkSong'];?>\'', '<?=$song['title'];?>','<?= $song['artis']; ?>', '<?=$index;?>')" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
                                         <a href="javascript:void(0);" style="color: #9badb9;" id="plused_<?=$index;?>" class="hidden pull-right"><i class="fa fa-check"></i></a>
                                     </div>
-                                    <a href="javascript:void(0);" class="jp-play-me m-r-sm pull-left active" onclick="playSong('<?php echo $song['linkSong'];?>', $(this))">
-                                        <i class="fa fa-play text" id="play_icon"></i>
-                                        <i class="fa fa-pause text-active hidden" id="pause_icon"></i>
+                                    <a href="javascript:void(0);" class="jp-play-me m-r-sm pull-left active" onclick="playSongFavorite('<?php echo $song['linkSong'];?>', $(this), '<?=$index;?>')">
+                                        <i class="fa fa-play text play<?=$index;?> playIcon" id="play_icon"></i>
+                                        <i class="fa fa-pause text-active hidden pause<?=$index;?> pauseIcon" id="pause_icon"></i>
                                     </a>
                                     <div class="clear text-ellipsis"><span style="color: #666666"><?= $song['title'];?></span>
                                         <span class="text-muted"> -- 04:35</span>
                                     </div>
+                                    <input type="hidden" id="songImg<?=$index;?>" value="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($song['img_src']));?>" />
                                 </li>
                                 <li class="collapse" id="liCollapse<?=$index;?>">
                                     <div style="margin-left: 3%">
@@ -116,4 +117,5 @@
 <script type="text/javascript">
     $('#content').css('padding-top', '9%');
     $('#container').css('height', '927px');
+    bindSecondPlaylist(<?php echo json_encode($songs); ?>);
 </script>
