@@ -99,7 +99,7 @@
                             </div>
                         </div>
                         <a href="javascript:void(0);">
-                            <img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($album['imgSrc']));?>">
+                            <img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($album['img_src']));?>">
                             <img class="looseless-img" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents(STATIC_PATH. 'image/looseless.jpg'));?>">
                         </a>
                     </div>

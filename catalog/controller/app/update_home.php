@@ -6,8 +6,7 @@ class ControllerAppUpdateHome extends Controller {
         $this->load->model('app/home');
         try{
             $quickTool = new QuickTool();
-            $data = array();
-            $data['content'] = $quickTool->constructHomePage();
+            $data = $quickTool->constructHomePage();
             $this->model_app_home->insertOrUpdate($data);
             $status = 'OK';
         }catch(Exception $e){

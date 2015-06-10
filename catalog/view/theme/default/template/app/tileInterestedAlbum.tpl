@@ -1,3 +1,7 @@
+<?php if(!isset($relatedAlbums)){ ?>
+<?php $relatedAlbums = $albumUKs; ?>
+<?php } ?>
+
 <div style="margin-left: 3%" id="interestedAlbum">
     <?php if(isset($relatedAlbums) && sizeof($relatedAlbums) > 0){ ?>
         <h4 class="font-thin">Interested albums</h4>
@@ -13,7 +17,7 @@
                             </div>
                         </div>
                         <a href="javascript:void(0);">
-                            <img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($album['imgSrc']));?>">
+                            <img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($album['img_src']));?>">
                             <img class="looseless-img" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents(STATIC_PATH. 'image/looseless.jpg'));?>">
                         </a>
                     </div>

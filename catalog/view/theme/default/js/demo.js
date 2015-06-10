@@ -31,9 +31,15 @@ $(document).ready(function(){
         $('.pauseIcon').addClass('hidden');
         $('.play'+index).hide();
         $('.pause'+index).removeClass('hidden');
+        $('#liCollapse' + index).collapse('show');
     });
     $('#jp_second').bind($.jPlayer.event.ended, function(event) {
         isSecondPlaying = false;
+        var index = secondPlaylist.current;
+        if(index == secondPlaylist.playlist.length - 1){
+            $('.playIcon').show();
+            $('.pauseIcon').addClass('hidden');
+        }
     });
 
     $('#jp_container_N').on('click', '.jp-play-me', function(e){
@@ -292,10 +298,30 @@ function foldToAssci(input){
     return output;
 }
 
-function playSongFavorite(link, ePlay, index){
+function playSongFavorite(index){
     var src = $('#songImg'+index).val();
     $('#mainImg').attr('src', src);
-    playSong(link, ePlay);
+
+    $('.playIcon').show();
+    $('.pauseIcon').addClass('hidden');
+    secondPlaylist.pause();
+    secondPlaylist.play(index);
+    $('.play' + index).hide();
+    $('.pause'+ index).removeClass('hidden');
+    $('#liCollapse' + index).collapse('show');
+
+    updateHeight();
+    $('#jp_second').bind($.jPlayer.event.ended, function(e) {
+        var index = parseInt(secondPlaylist.current);
+        $('#liCollapse' + index).collapse('hide');
+        if(index == secondPlaylist.playlist.length - 1){
+            $('.playIcon').show();
+            $('.pauseIcon').addClass('hidden');
+        }else{
+            secondPlaylist.play(index + 1);
+        }
+        updateHeight();
+    });
 }
 
 function playSong(link, ePlay){
@@ -657,5 +683,24 @@ function bindSecondPlaylist(songs){
         };
         secondPlaylist.add(song);
     }
-    secondPlaylist.play(0);
+    //secondPlaylist.play(0);
+}
+
+function updateHeight(){
+    var height1 = $('#columnHeight1').height();
+    var mainHeight = $('#mainHeight').height();
+    if(height1 > mainHeight){
+        $('#container').height(height1 + 150);
+    }else{
+        $('#container').height(mainHeight + 150);
+    }
+}
+
+function updateLyricsCollapse(){
+    $('.lyricCollapse').bind('hidden.bs.collapse', function () {
+        updateHeight();
+    });
+    $('.lyricCollapse').bind('shown.bs.collapse', function () {
+        updateHeight();
+    });
 }

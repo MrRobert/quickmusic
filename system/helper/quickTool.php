@@ -74,7 +74,7 @@ class QuickTool {
             $result['lstAlbums'][] = array(
               'title'  => $title,
               'href' => $href,
-              'imgSrc' => $imgSrc
+              'img_src' => $imgSrc
             );
             $albumIndex ++;
         }
@@ -184,7 +184,7 @@ class QuickTool {
                 'title' => $title,
                 'href' => base64_encode($href),
                 'artis'=> $artis,
-                'imgSrc' => $imgSrc
+                'img_src' => $imgSrc
             );
             $albumIndex++;
         }
@@ -444,6 +444,9 @@ class QuickTool {
             $index++;
         }
 
+        $response = array();
+
+        // Init content all home page ==================
         $file = DIR_TEMPLATE . 'default/template/app/home.tpl';
         if (file_exists($file)) {
             extract($result);
@@ -451,11 +454,39 @@ class QuickTool {
             require($file);
             $output = ob_get_contents();
             ob_end_clean();
-            return $output;
+            $response['content'] = $output;
         } else {
             trigger_error('Error: Could not load template ' . $file . '!');
             exit();
         }
+        // Init content of promotion content
+        $file = DIR_TEMPLATE . 'default/template/app/related.tpl';
+        if (file_exists($file)) {
+            extract($result);
+            ob_start();
+            require($file);
+            $output = ob_get_contents();
+            ob_end_clean();
+            $response['promotion_song'] = $output;
+        } else {
+            trigger_error('Error: Could not load template ' . $file . '!');
+            exit();
+        }
+        // Init promotion album content
+        $file = DIR_TEMPLATE . 'default/template/app/tileInterestedAlbum.tpl';
+        if (file_exists($file)) {
+            extract($result);
+            ob_start();
+            require($file);
+            $output = ob_get_contents();
+            ob_end_clean();
+            $response['promotion_albums'] = $output;
+        } else {
+            trigger_error('Error: Could not load template ' . $file . '!');
+            exit();
+        }
+
+        return $response;
     }
 
     /**
@@ -501,14 +532,14 @@ class QuickTool {
                     'title' => $infoA->nodeValue,
                     'href' => base64_encode($songLink),
                     'artis'=> $infoP->nodeValue,
-                    'imgSrc' => $imgSrc
+                    'img_src' => $imgSrc
                 );
             }elseif($index >= 20){
                 $result['sameType'][] = array(
                     'title' => $infoA->nodeValue,
                     'href' => base64_encode($songLink),
                     'artis'=> $infoP->nodeValue,
-                    'imgSrc' => $imgSrc
+                    'img_src' => $imgSrc
                 );
             }
             $index ++;
@@ -541,7 +572,7 @@ class QuickTool {
                 'title' => $title,
                 'href' => base64_encode($href),
                 'artis'=> $artis,
-                'imgSrc' => $imgSrc
+                'img_src' => $imgSrc
             );
             $albumIndex++;
         }

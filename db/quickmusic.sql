@@ -25,3 +25,8 @@ CREATE TABLE IF NOT EXISTS `song_favorite` (
   `favorite_id` int(11) NOT NULL,
   PRIMARY KEY (`song_favorite_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+ALTER TABLE `home` ADD (
+   `promotion_albums` LONGTEXT NOT NULL,
+   `promotion_song` LONGTEXT NOT NULL
+);

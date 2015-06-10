@@ -4,7 +4,7 @@
             <!-- side content -->
             <aside class="col-sm-5 no-padder" id="sidebar">
                 <div class="vbox animated fadeInUp">
-                    <div class="scrollable" style="width: 100%">
+                    <div class="scrollable" style="width: 100%" id="columnHeight1">
                         <div class="m-t-n-xxs item-song pos-rlt">
                             <div class="top text-right">
                                 <span class="musicbar animate bg-success bg-empty inline m-r-lg m-t" style="width:25px;height:30px">
@@ -27,13 +27,13 @@
                             <?php foreach($songs as $song){ ?>
                                 <li class="list-group-item active" id="<?=$song['fs_id']?>">
                                     <div class="pull-right m-l">
-                                        <a data-toggle="collapse" href="#liCollapse<?=$index;?>" aria-expanded="false" aria-controls="liCollapse<?=$index;?>" class="m-r-sm"><i class="fa fa-file-text"></i></a>
+                                        <a data-toggle="collapse" href="#liCollapse<?=$index;?>" aria-expanded="false" aria-controls="liCollapse<?=$index;?>" class="m-r-sm lyricCollapse"><i class="fa fa-file-text"></i></a>
                                         <a href="javascript:void(0);" class="m-r-sm"><i class="fa fa-repeat"></i></a>
                                         <a href="javascript:void(0);" onclick="openConfirmModal('<?=$song['fs_id'];?>');" class="m-r-sm"><i class="fa fa-trash-o"></i></a>
                                         <a href="javascript:void(0);" style="color: #9badb9;" id="plus_<?=$index;?>" onclick="plusSong('index.php?route=app/search/playsong&src=\'<?php echo $song['linkSong'];?>\'', '<?=$song['title'];?>','<?= $song['artis']; ?>', '<?=$index;?>')" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
                                         <a href="javascript:void(0);" style="color: #9badb9;" id="plused_<?=$index;?>" class="hidden pull-right"><i class="fa fa-check"></i></a>
                                     </div>
-                                    <a href="javascript:void(0);" class="jp-play-me m-r-sm pull-left active" onclick="playSongFavorite('<?php echo $song['linkSong'];?>', $(this), '<?=$index;?>')">
+                                    <a href="javascript:void(0);" class="jp-play-me m-r-sm pull-left active" onclick="playSongFavorite('<?=$index;?>')">
                                         <i class="fa fa-play text play<?=$index;?> playIcon" id="play_icon"></i>
                                         <i class="fa fa-pause text-active hidden pause<?=$index;?> pauseIcon" id="pause_icon"></i>
                                     </a>
@@ -49,9 +49,7 @@
                                 </li>
                             <?php $index++;} ?>
                             <li>
-                                <div style="margin-left: 3%" id="interestedAlbum">
-                                    DIV promotion albums // load from certain DB
-                                </div>
+                                <?= $promotion_albums; ?>
                             </li>
                             <li>
                                 <div class="fb-comments" data-width="400" data-href="<?= $currentLink; ?>" data-numposts="10" data-colorscheme="light">
@@ -62,13 +60,8 @@
                 </div>
             </aside>
             <!-- / side content -->
-            <div class="col-sm-4 no-padder bg my-indicator" id="relatedSong">
-                <div class="vbox">
-                    <div style="margin:45%">
-                        DIV promotion related musics// load from certain DB
-                    </div>
-                </div>
-            </div>
+            <?= $promotion_song; ?>
+
             <div class="col-sm-3 no-padder lt">
                 <div class="vbox">
                     <div id="divHeight" class="scrollable hover" style="width: 100%">
@@ -118,4 +111,6 @@
     $('#content').css('padding-top', '9%');
     $('#container').css('height', '927px');
     bindSecondPlaylist(<?php echo json_encode($songs); ?>);
+    updateHeight();
+    updateLyricsCollapse();
 </script>

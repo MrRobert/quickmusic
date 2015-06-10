@@ -32,6 +32,14 @@ class ControllerAppFavorite extends Controller {
                 );
             }
         }
+
+        $this->load->model('app/home');
+        $promotionData = $this->model_app_home->getPromotionContent();
+        if(isset($promotionData['promotion_albums']) && isset($promotionData['promotion_song'])){
+            $data['promotion_albums'] = html_entity_decode($promotionData['promotion_albums']);
+            $data['promotion_song'] = html_entity_decode($promotionData['promotion_song']);
+        }
+
         $this->response->setOutput($this->load->view('default/template/app/favorite.tpl', $data));
     }
 
