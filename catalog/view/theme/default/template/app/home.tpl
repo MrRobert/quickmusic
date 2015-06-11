@@ -31,10 +31,10 @@
                             <a href="javascript:void(0);"><i class="fa fa-star-o text-muted"></i></a>
                         </div>
                         <div class="center text-center m-t-n">
-                            <a onclick="gotoSong('<?php echo base64_encode($songVN['href'])?>', '<?= $index; ?>', '');" href="javascript:void(0);" href="javascript:void(0);" class="play-icon-a"><i class="fa fa-play fa-2x"></i></a>
+                            <a onclick="gotoSong('<?php echo $songVN['href']?>', '<?= $index; ?>', '');" href="javascript:void(0);" href="javascript:void(0);" class="play-icon-a"><i class="fa fa-play fa-2x"></i></a>
                         </div>
                         <div class="bottom_2 padder m-b-sm">
-                            <a href="javascript:void(0);" style="color: #9badb9;" id="plus_<?=$index;?>" onclick="plusSong('index.php?route=app/search/playsong&src=\'<?= base64_encode($songVN['href'])?>\'','<?= $songVN['title']?>', '<?= $songVN['artis']?>', <?= $index ?>)" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
+                            <a href="javascript:void(0);" style="color: #9badb9;" id="plus_<?=$index;?>" onclick="plusSong('index.php?route=app/search/playsong&src=\'<?=$songVN['href']?>\'','<?= $songVN['title']?>', '<?= $songVN['artis']?>', <?= $index ?>)" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
                             <a href="javascript:void(0);" style="color: #9badb9;" id="plused_<?=$index;?>" class="hidden pull-right"><i class="fa fa-check"></i></a>
                         </div>
                         <div class="bottom padder m-b-sm">
@@ -127,7 +127,7 @@
                         <?php $index = 0;?>
                         <?php foreach($hotSongUK as $songUK){ ?>
                         <?php if($index < 7){ ?>
-                        <a class="list-group-item clearfix" href="javascript:void(0);" onclick="gotoSong('<?php echo base64_encode($songUK['href']);?>', '<?= $index; ?>', 'uk')">
+                        <a class="list-group-item clearfix" href="javascript:void(0);" onclick="gotoSong('<?php echo $songUK['href'];?>', '<?= $index; ?>', 'uk')">
                             <span class="pull-right h2 text-muted m-l"><?php echo $index+1;?></span>
                             <span class="pull-left thumb-sm avatar m-r">
                                 <img alt="" id="img_uk<?=$index;?>" class="img-circle img-with-small" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($songUK['img_src']));?>">
@@ -145,7 +145,7 @@
                         <?php $index = 0;?>
                         <?php foreach($hotSongUK as $songUK){ ?>
                         <?php if($index >= 7 && $index < 14){ ?>
-                        <a class="list-group-item clearfix" href="javascript:void(0);" onclick="gotoSong('<?php echo base64_encode($songUK['href']);?>', '<?= $index; ?>', 'uk')">
+                        <a class="list-group-item clearfix" href="javascript:void(0);" onclick="gotoSong('<?php echo $songUK['href'];?>', '<?= $index; ?>', 'uk')">
                             <span class="pull-right h2 text-muted m-l"><?php echo $index+1;?></span>
                             <span class="pull-left thumb-sm avatar m-r">
                                 <img alt="" id="img_uk<?=$index;?>" class="img-circle img-with-small" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($songUK['img_src']));?>">
@@ -163,7 +163,7 @@
                         <?php $index = 0;?>
                         <?php foreach($hotSongUK as $songUK){ ?>
                         <?php if($index >= 14 && $index < 21){ ?>
-                        <a class="list-group-item clearfix" href="javascript:void(0);" onclick="gotoSong('<?php echo base64_encode($songUK['href']);?>', '<?= $index; ?>', 'uk')">
+                        <a class="list-group-item clearfix" href="javascript:void(0);" onclick="gotoSong('<?php echo $songUK['href'];?>', '<?= $index; ?>', 'uk')">
                             <span class="pull-right h2 text-muted m-l"><?php echo $index+1;?></span>
                             <span class="pull-left thumb-sm avatar m-r">
                                 <img alt="" id="img_uk<?=$index;?>" class="img-circle img-with-small" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($songUK['img_src']));?>">

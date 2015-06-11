@@ -310,7 +310,7 @@ class QuickTool {
             $result['hotSongVN'][] = array(
                 'title' => $title,
                 'artis' => $artis,
-                'href' => $href,
+                'href' => base64_encode($href),
                 'img_src' => $imgSrc
             );
         }
@@ -346,7 +346,7 @@ class QuickTool {
             $result['hotSongUK'][] = array(
                 'title' => $title,
                 'artis' => $artis,
-                'href' => $href,
+                'href' => base64_encode($href),
                 'img_src' => $imgSrc
             );
         }
@@ -385,13 +385,13 @@ class QuickTool {
                 $result['albumVNs'][] = array(
                     'title' => $title1,
                     'artis' => $artis1,
-                    'href'=> $href1,
+                    'href'=> base64_encode($href1),
                     'img_src' => $imgSrc1
                 );
                 $result['albumVNs'][] = array(
                     'title' => $title2,
                     'artis' => $artis2,
-                    'href'=> $href2,
+                    'href'=> base64_encode($href2),
                     'img_src' => $imgSrc2
                 );
             }
@@ -431,13 +431,13 @@ class QuickTool {
                 $result['albumUKs'][] = array(
                     'title' => $title1,
                     'artis' => $artis1,
-                    'href'=> $href1,
+                    'href'=> base64_encode($href1),
                     'img_src' => $imgSrc1
                 );
                 $result['albumUKs'][] = array(
                     'title' => $title2,
                     'artis' => $artis2,
-                    'href'=> $href2,
+                    'href'=> base64_encode($href2),
                     'img_src' => $imgSrc2
                 );
             }
@@ -485,6 +485,32 @@ class QuickTool {
             trigger_error('Error: Could not load template ' . $file . '!');
             exit();
         }
+        // Init music promotion vn content
+        $file = DIR_TEMPLATE . 'default/template/app/music_vn.tpl';
+        if (file_exists($file)) {
+            extract($result);
+            ob_start();
+            require($file);
+            $output = ob_get_contents();
+            ob_end_clean();
+            $response['music_vn'] = $output;
+        } else {
+            trigger_error('Error: Could not load template ' . $file . '!');
+            exit();
+        }
+        $file = DIR_TEMPLATE . 'default/template/app/music_uk.tpl';
+        if (file_exists($file)) {
+            extract($result);
+            ob_start();
+            require($file);
+            $output = ob_get_contents();
+            ob_end_clean();
+            $response['music_uk'] = $output;
+        } else {
+            trigger_error('Error: Could not load template ' . $file . '!');
+            exit();
+        }
+
 
         return $response;
     }

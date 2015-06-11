@@ -30,3 +30,8 @@ ALTER TABLE `home` ADD (
    `promotion_albums` LONGTEXT NOT NULL,
    `promotion_song` LONGTEXT NOT NULL
 );
+
+ALTER TABLE `home` ADD (
+   `music_vn` LONGTEXT NOT NULL,
+   `music_uk` LONGTEXT NOT NULL
+)

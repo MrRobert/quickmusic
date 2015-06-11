@@ -113,4 +113,5 @@
     bindSecondPlaylist(<?php echo json_encode($songs); ?>);
     updateHeight();
     updateLyricsCollapse();
+    bindRightClickAction();
 </script>

@@ -8,8 +8,9 @@ class ControllerAppMusic extends Controller {
         if (isset($this->request->get['route'])) {
             $this->document->addLink(HTTP_SERVER, 'canonical');
         }
+        $this->load->model('app/home');
+        $data = $this->model_app_home->getMusicTabContent();
 
-        $data = array();
         $this->response->setOutput($this->load->view('default/template/app/music.tpl', $data));
     }
 }

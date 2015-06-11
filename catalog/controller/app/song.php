@@ -75,7 +75,7 @@ class ControllerAppSong extends Controller {
     public function fetchsong(){
         $link = '';
         if(isset($this->request->post['link'])){
-            $link = $this->request->post['link'];
+            $link = base64_decode($this->request->post['link']);
             if(is_array($link)){
                 $link = $link['mp3'];
             }
@@ -83,7 +83,6 @@ class ControllerAppSong extends Controller {
                 $link = substr($link, strpos($link, HTTP_SERVER) + strlen(HTTP_SERVER));
             }
         }
-        $link = base64_decode($link);
         $quickTool = new QuickTool();
         $result = $quickTool->crawl_single_song($link);
         $songs = array();
