@@ -1126,3 +1126,118 @@ img{
 .custom-menu li:hover {
     background-color: #DEF;
 }
+
+/* VIDEO SESCTION */
+.main-video {
+    background-position: center center;
+    background-size: cover;
+    height: auto;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    width: auto;
+}
+#video_background {
+    position: fixed;
+    min-width: 100%;
+    min-height: 96%;
+    top: 44px;
+    left: -157px;
+    margin: auto;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    overflow: hidden;
+    background-image: url('http://demos.creative-tim.com/coming-sssoon-pages/images/video_bg.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+.cover {
+    position: fixed;
+    opacity: 1;
+    background-color: rgba(0,0,0,.6);
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.cover.black {
+    background-color: rgba(0,0,0,.6);
+}
+
+@media (min-width: 1200px)
+.main-video .container {
+    width: 1170px;
+}
+.main-video .subscribe .form-group {
+    width: 250px;
+}
+
+@media (min-width: 992px)
+.main-video .container {
+    width: 970px;
+}
+
+@media (min-width: 768px)
+.main-video .container {
+    width: 750px;
+}
+.main-video .container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.main-video .logo{
+    color: #FFFFFF;
+    font-size: 56px;
+    font-weight: 300;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
+    margin-top: 150px;
+    z-index: 3;
+}
+.main-video .content {
+    position: relative;
+    z-index: 4;
+}
+.main-video .motto{
+    font-size: 28px;
+    color: #FFFFFF;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.33);
+    text-align: center;
+    margin-top: 35px;
+    min-height:140px;
+}
+.main-video .subscribe .info-text{
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.33);
+    text-align: center;
+}
+
+.main-video .form-control.transparent{
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(238, 238, 238, 0.27);
+    color: #FFFFFF;
+}
+.main-video .btn-warning.btn-fill {
+    background-color: #FF9500;
+    border-color: #FF9500;
+}
+.main-video .btn-fill {
+    color: #FFFFFF;
+    opacity: 1;
+    margin-top: 2px;
+    height: 45px;
+    width: 90px;
+}
+
+.main-video .form-control{
+    width: 250px;
+}

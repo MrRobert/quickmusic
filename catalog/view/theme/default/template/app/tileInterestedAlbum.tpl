@@ -1,4 +1,4 @@
-<?php if(!isset($relatedAlbums)){ ?>
+<?php if(!isset($relatedAlbums) && isset($albumUKs)){ ?>
 <?php $relatedAlbums = $albumUKs; ?>
 <?php } ?>
 
