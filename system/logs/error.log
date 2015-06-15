@@ -518,3 +518,5 @@
 2015-06-09 9:39:22 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/favorite.tpl on line 57
 2015-06-09 9:50:04 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/favorite.tpl on line 57
 2015-06-09 9:51:50 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/favorite.tpl on line 57
+2015-06-15 3:47:13 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/favorite.tpl on line 55
+2015-06-15 3:57:12 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/favorite.tpl on line 55

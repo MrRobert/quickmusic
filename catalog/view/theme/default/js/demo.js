@@ -131,6 +131,11 @@ function listenCommonRequest(hash){
                 var keyword = temp[1].substring(temp[1].lastIndexOf('_')+1);
                 gotoSongGET(keyword);
             }
+        }else if(hash == 'playlist'){
+            if(isHasLoad){
+
+                fetchDATA(hash, $('#content'), data);
+            }
         }
     }
     isHasLoad = true;
@@ -140,7 +145,7 @@ function initMyPlayList(){
     var song_CamGiacBenAnh = {
         title:"Cảm Giác Bên Anh",
         artist:"Hải Băng",
-        mp3: decodeURIComponent("http%3A%2F%2Fdata16.chiasenhac.com%2Fdownloads%2F1007%2F2%2F1006440-f14c07f8%2F320%2FDa%2520Khuc%2520-%2520Le%2520Quyen.mp3")
+        mp3: ''
     };
 
     var myPlaylist = new jPlayerPlaylist({
@@ -702,5 +707,25 @@ function updateLyricsCollapse(){
     });
     $('.lyricCollapse').bind('shown.bs.collapse', function () {
         updateHeight();
+    });
+}
+
+function gotoPlaylist(index, name){
+    $('#LoadingDiv').show();
+    $('#main-content').css('opacity', '0.6');
+    var data = {
+        pl_id: $('#playlist_'+index).val()
+    };
+    $.ajax({
+        url: 'index.php?route=app/playlist',
+        type: 'get',
+        data: data,
+        dataType: 'html',
+        success: function(html) {
+            $('#searchIndicator').hide();
+            $('#content').html(html);
+            isHasLoad = false;
+            window.location.hash = "#playlist/" + foldToAssci(name) + "-" + window.atob(data.pl_id);
+        }
     });
 }

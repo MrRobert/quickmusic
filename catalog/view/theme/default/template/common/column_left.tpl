@@ -6,17 +6,30 @@
 
         <li class="hidden-li li-menu text-xs text-muted" style="padding: 10px 0px 0px 14px; line-height: 4;">
             Playlist
-            <span class="pull-right"><a style="padding-top: 0;" href="javascript:void(0);"><i class="fa fa-plus-circle"></i></a></span>
+            <span class="pull-right">
+                <a style="padding-top: 0;" href="javascript:void(0);">
+                    <!-- <i class="fa fa-plus-circle"></i> -->
+                </a>
+            </span>
         </li>
-
-        <li class="li-menu"><a><i class="fa fa-list-ul"></i>
-                <b class="badge pull-right">9</b>
-                <span>Pop</span></a>
-        </li>
-        <li class="li-menu"><a><i class="fa fa-list-ul"></i>
-                <b class="badge pull-right">10</b>
-                <span>R & B</span></a>
-        </li>
+        <?php $index = 0; ?>
+        <?php if(isset($playlist) && sizeof($playlist) > 0) { ?>
+            <?php foreach($playlist as $collection){ ?>
+            <li class="li-menu">
+                <a href="javascript:void(0);" onclick="gotoPlaylist('<?= $index; ?>', '<?= $collection['name']?>')"><i class="fa fa-list-ul"></i>
+                    <b class="badge pull-right"><?= $collection['count'];?></b>
+                    <span><?= $collection['name']?></span>
+                </a>
+                <input type="hidden" id="playlist_<?=$index?>" value="<?= $collection['playlist_id']; ?>"/>
+            </li>
+            <?php $index++;}?>
+        <?php }else { ?>
+            <li class="li-menu">
+                <a href="javascript:void(0);" onclick="createNewPlayList();">
+                    <span><i class="fa fa-plus-circle"></i> Add new</span>
+                </a>
+            </li>
+        <?php } ?>
     </ul>
     <footer id="nav-footer" class="footer bg-dark" style="background-color: #232c32;">
         <div class="hidden-xs">

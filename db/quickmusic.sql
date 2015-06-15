@@ -35,3 +35,20 @@ ALTER TABLE `home` ADD (
    `music_vn` LONGTEXT NOT NULL,
    `music_uk` LONGTEXT NOT NULL
 )
+
+CREATE TABLE IF NOT EXISTS `playlist` (
+  `playlist_id` int(11) NOT NULL AUTO_INCREMENT,
+  `playlist_name` varchar(100) NOT NULL,
+  `user_id` int(11),
+  `mac_address` varchar(100),
+  `createDate` date,
+  PRIMARY KEY (`playlist_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `song_playlist` (
+  `song_playlist_id` int(11) NOT NULL AUTO_INCREMENT,
+  `url_alias_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `playlist_id` int(11) NOT NULL,
+  PRIMARY KEY (`song_playlist_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
