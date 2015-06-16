@@ -520,3 +520,140 @@
 2015-06-09 9:51:50 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/favorite.tpl on line 57
 2015-06-15 3:47:13 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/favorite.tpl on line 55
 2015-06-15 3:57:12 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/favorite.tpl on line 55
+2015-06-16 4:24:46 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/favorite.tpl on line 55
+2015-06-16 5:10:08 - PHP Notice:  Undefined index: keyword in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 162
+2015-06-16 5:10:08 - PHP Notice:  Undefined index: keyword in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 150
+2015-06-16 5:10:08 - PHP Notice:  Undefined index: keyword in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 150
+2015-06-16 5:10:08 - PHP Notice:  Undefined index: keyword in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 150
+2015-06-16 5:10:08 - PHP Notice:  Undefined index: keyword in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 150
+2015-06-16 5:10:08 - PHP Notice:  Undefined index: keyword in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 150
+2015-06-16 5:10:08 - PHP Notice:  Undefined index: keyword in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 150
+2015-06-16 5:41:17 - PHP Notice:  Undefined index: keyword in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 164
+2015-06-16 5:41:17 - PHP Notice:  Undefined index: keyword in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 164
+2015-06-16 5:43:46 - PHP Notice:  Undefined index: name in /var/www/html/quickmusic/catalog/view/theme/default/template/common/column_left.tpl on line 19
+2015-06-16 5:43:46 - PHP Notice:  Undefined index: name in /var/www/html/quickmusic/catalog/view/theme/default/template/common/column_left.tpl on line 21
+2015-06-16 5:43:46 - PHP Notice:  Undefined index: name in /var/www/html/quickmusic/catalog/view/theme/default/template/common/column_left.tpl on line 19
+2015-06-16 5:43:46 - PHP Notice:  Undefined index: name in /var/www/html/quickmusic/catalog/view/theme/default/template/common/column_left.tpl on line 21
+2015-06-16 5:44:22 - PHP Notice:  Undefined index: name in /var/www/html/quickmusic/catalog/view/theme/default/template/common/column_left.tpl on line 21
+2015-06-16 5:44:22 - PHP Notice:  Undefined index: name in /var/www/html/quickmusic/catalog/view/theme/default/template/common/column_left.tpl on line 21
+2015-06-16 7:53:41 - PHP Warning:  Missing argument 2 for ModelAppPlaylist::getPlaylistSongsByPlaylistId(), called in /var/www/html/quickmusic/catalog/controller/app/playlist.php on line 20 and defined in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 107
+2015-06-16 7:53:41 - PHP Warning:  Missing argument 3 for ModelAppPlaylist::getPlaylistSongsByPlaylistId(), called in /var/www/html/quickmusic/catalog/controller/app/playlist.php on line 20 and defined in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 107
+2015-06-16 7:53:41 - PHP Notice:  Undefined variable: limit in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 108
+2015-06-16 7:53:41 - PHP Notice:  Undefined variable: page in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 108
+2015-06-16 7:53:41 - PHP Notice:  Undefined variable: limit in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 109
+2015-06-16 7:53:41 - PHP Notice:  Undefined variable: songs in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 20
+2015-06-16 7:53:41 - PHP Notice:  Undefined variable: songs in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 22
+2015-06-16 7:53:41 - PHP Warning:  file_get_contents(): Filename cannot be empty in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 22
+2015-06-16 7:53:41 - PHP Notice:  Undefined variable: songs in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 27
+2015-06-16 7:53:41 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 27
+2015-06-16 7:53:41 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 55
+2015-06-16 7:53:41 - PHP Notice:  Undefined variable: songs in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 113
+2015-06-16 8:34:44 - PHP Notice:  Undefined index: lyric in /var/www/html/quickmusic/catalog/controller/app/favorite.php on line 31
+2015-06-16 8:34:44 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/favorite.tpl on line 55
+2015-06-16 8:37:24 - PHP Warning:  Missing argument 2 for ModelAppPlaylist::getPlaylistSongsByPlaylistId(), called in /var/www/html/quickmusic/catalog/controller/app/playlist.php on line 20 and defined in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 107
+2015-06-16 8:37:24 - PHP Warning:  Missing argument 3 for ModelAppPlaylist::getPlaylistSongsByPlaylistId(), called in /var/www/html/quickmusic/catalog/controller/app/playlist.php on line 20 and defined in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 107
+2015-06-16 8:37:24 - PHP Notice:  Undefined variable: limit in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 108
+2015-06-16 8:37:24 - PHP Notice:  Undefined variable: page in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 108
+2015-06-16 8:37:24 - PHP Notice:  Undefined variable: limit in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 109
+2015-06-16 8:37:25 - PHP Notice:  Undefined variable: songs in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 20
+2015-06-16 8:37:25 - PHP Notice:  Undefined variable: songs in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 22
+2015-06-16 8:37:25 - PHP Warning:  file_get_contents(): Filename cannot be empty in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 22
+2015-06-16 8:37:25 - PHP Notice:  Undefined variable: songs in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 27
+2015-06-16 8:37:25 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 27
+2015-06-16 8:37:25 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 55
+2015-06-16 8:37:25 - PHP Notice:  Undefined variable: songs in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 113
+2015-06-16 9:07:20 - PHP Notice:  Undefined index: lyric in /var/www/html/quickmusic/catalog/controller/app/favorite.php on line 31
+2015-06-16 9:07:21 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/favorite.tpl on line 55
+2015-06-16 9:07:24 - PHP Warning:  Missing argument 2 for ModelAppPlaylist::getPlaylistSongsByPlaylistId(), called in /var/www/html/quickmusic/catalog/controller/app/playlist.php on line 20 and defined in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 107
+2015-06-16 9:07:24 - PHP Warning:  Missing argument 3 for ModelAppPlaylist::getPlaylistSongsByPlaylistId(), called in /var/www/html/quickmusic/catalog/controller/app/playlist.php on line 20 and defined in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 107
+2015-06-16 9:07:24 - PHP Notice:  Undefined variable: limit in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 108
+2015-06-16 9:07:24 - PHP Notice:  Undefined variable: page in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 108
+2015-06-16 9:07:24 - PHP Notice:  Undefined variable: limit in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 109
+2015-06-16 9:07:24 - PHP Notice:  Undefined variable: songs in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 31
+2015-06-16 9:07:24 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 31
+2015-06-16 9:07:24 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 59
+2015-06-16 9:07:24 - PHP Notice:  Undefined variable: songs in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 117
+2015-06-16 9:09:01 - PHP Warning:  Missing argument 2 for ModelAppPlaylist::getPlaylistSongsByPlaylistId(), called in /var/www/html/quickmusic/catalog/controller/app/playlist.php on line 20 and defined in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 107
+2015-06-16 9:09:01 - PHP Warning:  Missing argument 3 for ModelAppPlaylist::getPlaylistSongsByPlaylistId(), called in /var/www/html/quickmusic/catalog/controller/app/playlist.php on line 20 and defined in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 107
+2015-06-16 9:09:01 - PHP Notice:  Undefined variable: limit in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 108
+2015-06-16 9:09:01 - PHP Notice:  Undefined variable: page in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 108
+2015-06-16 9:09:01 - PHP Notice:  Undefined variable: limit in /var/www/html/quickmusic/catalog/model/app/playlist.php on line 109
+2015-06-16 9:09:01 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 61
+2015-06-16 9:09:01 - PHP Notice:  Undefined variable: songs in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 119
+2015-06-16 9:10:27 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 61
+2015-06-16 9:10:27 - PHP Notice:  Undefined variable: songs in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 119
+2015-06-16 9:11:52 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 61
+2015-06-16 9:12:35 - PHP Notice:  Undefined index: lyric in /var/www/html/quickmusic/catalog/controller/app/favorite.php on line 31
+2015-06-16 9:12:36 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/favorite.tpl on line 55
+2015-06-16 9:17:40 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:17:46 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:18:11 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:18:20 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:18:44 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:20:25 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:20:49 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:20:55 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:25:18 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:25:24 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:25:32 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:25:34 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:25:38 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:25:41 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:25:46 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:25:56 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:26:08 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 9:26:12 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 10:13:05 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 10:13:19 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 10:13:41 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 10:15:08 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 10:15:29 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 10:22:43 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 10:24:03 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 10:24:38 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/playlist.tpl on line 66
+2015-06-16 10:26:27 - PHP Notice:  Undefined index: lyric in /var/www/html/quickmusic/catalog/controller/app/favorite.php on line 31
+2015-06-16 10:26:29 - PHP Notice:  Undefined variable: currentLink in /var/www/html/quickmusic/catalog/view/theme/default/template/app/favorite.tpl on line 55
+2015-06-16 10:30:35 - PHP Notice:  Undefined variable: hotSongVN in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 2
+2015-06-16 10:30:35 - PHP Notice:  Undefined variable: hotSongUK in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 6
+2015-06-16 10:30:35 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 14
+2015-06-16 10:30:35 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 31
+2015-06-16 10:30:41 - PHP Notice:  Undefined variable: hotSongVN in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 2
+2015-06-16 10:30:41 - PHP Notice:  Undefined variable: hotSongUK in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 6
+2015-06-16 10:30:41 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 14
+2015-06-16 10:30:41 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 31
+2015-06-16 10:30:48 - PHP Notice:  Undefined variable: hotSongVN in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 2
+2015-06-16 10:30:48 - PHP Notice:  Undefined variable: hotSongUK in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 6
+2015-06-16 10:30:48 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 14
+2015-06-16 10:30:48 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 31
+2015-06-16 10:31:18 - PHP Notice:  Undefined variable: hotSongVN in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 2
+2015-06-16 10:31:18 - PHP Notice:  Undefined variable: hotSongUK in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 6
+2015-06-16 10:31:18 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 14
+2015-06-16 10:31:18 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 31
+2015-06-16 10:32:04 - PHP Notice:  Undefined variable: hotSongVN in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 2
+2015-06-16 10:32:04 - PHP Notice:  Undefined variable: hotSongUK in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 6
+2015-06-16 10:32:04 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 14
+2015-06-16 10:32:04 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 31
+2015-06-16 10:39:09 - PHP Notice:  Undefined variable: hotSongVN in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 2
+2015-06-16 10:39:09 - PHP Notice:  Undefined variable: hotSongUK in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 6
+2015-06-16 10:39:09 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 14
+2015-06-16 10:39:09 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 31
+2015-06-16 11:04:30 - PHP Notice:  Undefined variable: hotSongVN in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 2
+2015-06-16 11:04:30 - PHP Notice:  Undefined variable: hotSongUK in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 6
+2015-06-16 11:04:30 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 14
+2015-06-16 11:04:30 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 31
+2015-06-16 11:09:28 - PHP Notice:  Undefined variable: hotSongVN in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 2
+2015-06-16 11:09:28 - PHP Notice:  Undefined variable: hotSongUK in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 6
+2015-06-16 11:09:28 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 14
+2015-06-16 11:09:28 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 31
+2015-06-16 11:09:41 - PHP Notice:  Undefined variable: hotSongVN in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 2
+2015-06-16 11:09:41 - PHP Notice:  Undefined variable: hotSongUK in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 6
+2015-06-16 11:09:41 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 14
+2015-06-16 11:09:41 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 31
+2015-06-16 11:09:49 - PHP Notice:  Undefined variable: hotSongVN in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 2
+2015-06-16 11:09:49 - PHP Notice:  Undefined variable: hotSongUK in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 6
+2015-06-16 11:09:49 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 14
+2015-06-16 11:09:49 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 31
+2015-06-16 11:10:06 - PHP Notice:  Undefined variable: hotSongVN in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 2
+2015-06-16 11:10:06 - PHP Notice:  Undefined variable: hotSongUK in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 6
+2015-06-16 11:10:06 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 14
+2015-06-16 11:10:06 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/quickmusic/catalog/view/theme/default/template/app/related.tpl on line 31

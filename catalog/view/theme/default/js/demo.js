@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $('.playlist-menu').removeClass('active open');
+
     secondPlaylist = initSecondPlayList();
     mainPlayList  = initMyPlayList();
 
@@ -58,7 +60,6 @@ $(document).ready(function(){
             var i = Math.floor(Math.random() * (1 + 7 - 1));
             mainPlayList.play(i);
         }
-
     });
 
     // video
@@ -133,8 +134,11 @@ function listenCommonRequest(hash){
             }
         }else if(hash == 'playlist'){
             if(isHasLoad){
-
-                fetchDATA(hash, $('#content'), data);
+                var arrPath = temp[1].split('-');
+                if(arrPath.length > 1){
+                    data.pl_id = arrPath[1];
+                    fetchDATA(hash, $('#content'), data);
+                }
             }
         }
     }
@@ -725,7 +729,68 @@ function gotoPlaylist(index, name){
             $('#searchIndicator').hide();
             $('#content').html(html);
             isHasLoad = false;
-            window.location.hash = "#playlist/" + foldToAssci(name) + "-" + window.atob(data.pl_id);
+            window.location.hash = "#playlist/" + foldToAssci(name) + "-" + window.btoa(data.pl_id);
         }
+    });
+}
+
+function gotoPlaylistByID(id, name){
+    $('#LoadingDiv').show();
+    $('#main-content').css('opacity', '0.6');
+    var data = {
+        pl_id: id
+    };
+    $.ajax({
+        url: 'index.php?route=app/playlist',
+        type: 'get',
+        data: data,
+        dataType: 'html',
+        success: function(html) {
+            $('#searchIndicator').hide();
+            $('#content').html(html);
+            isHasLoad = false;
+            window.location.hash = "#playlist/" + foldToAssci(name) + "-" + window.btoa(data.pl_id);
+        }
+    });
+}
+
+function createNewPlayList(divA, parentDiv){
+    var html = '<a href="javascript:void(0);"><input class="form-control" id="curInput" type="text" style="width: 130px"/>';
+        html += '<span style="display: none;"><i class="fa fa-spinner"></i></span></a>';
+    $(divA).replaceWith(html);
+    $('#curInput').focusout(function(){
+        var tmp = $("<div />").append($(divA).clone()).html();
+        $(parentDiv).html(tmp);
+    });
+
+    $('#curInput').focus();
+    $('#curInput').bind('keypress', function(e){
+       if(e.keyCode == 13){
+           var data = {
+               playlist_name : $(this).val()
+           };
+           $.ajax({
+               url: 'index.php?route=app/playlist/insert',
+               type: 'post',
+               data: data,
+               dataType: 'json',
+               success: function(json) {
+                   if(json.status == "OK"){
+                       var tmpHtml = '<a href="javascript:void(0);" onclick="gotoPlaylistByID('+ json.playlist_id +','+ json.playlist_name +');">';
+                       tmpHtml += '<b class="badge pull-right">0</b>'
+                       tmpHtml+= '<span><i class="fa fa-list-ul"></i>'+ json.playlist_name + '</span></a>';
+                       $(parentDiv).html(tmpHtml);
+                       $(parentDiv).attr('id', '');
+
+                       var html = '<li class="li-menu" id="addNewParentLi">';
+                       html += '<a href="javascript:void(0);" onclick="createNewPlayList($(this), $(\'#addNewParentLi\'));">';
+                       html += '<span class="pull-right" id="spinnerHidden" style="display: none;"><i class="fa fa-spinner"></i></span>';
+                       html += '<span id="spanAddNew"><i class="fa fa-plus-circle"></i> Add new</span>';
+                       html += '<input id="inputAddNew" style="display: none;" type="text"/></a></li>';
+                       $('#menu').append(html);
+                   }
+               }
+           });
+       }
     });
 }

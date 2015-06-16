@@ -15,21 +15,22 @@
         <?php $index = 0; ?>
         <?php if(isset($playlist) && sizeof($playlist) > 0) { ?>
             <?php foreach($playlist as $collection){ ?>
-            <li class="li-menu">
-                <a href="javascript:void(0);" onclick="gotoPlaylist('<?= $index; ?>', '<?= $collection['name']?>')"><i class="fa fa-list-ul"></i>
+            <li class="li-menu playlist-menu">
+                <a href="javascript:void(0);" onclick="gotoPlaylist('<?= $index; ?>', '<?= $collection['playlist_name']?>')"><i class="fa fa-list-ul"></i>
                     <b class="badge pull-right"><?= $collection['count'];?></b>
-                    <span><?= $collection['name']?></span>
+                    <span><?= $collection['playlist_name']?></span>
                 </a>
                 <input type="hidden" id="playlist_<?=$index?>" value="<?= $collection['playlist_id']; ?>"/>
             </li>
             <?php $index++;}?>
-        <?php }else { ?>
-            <li class="li-menu">
-                <a href="javascript:void(0);" onclick="createNewPlayList();">
-                    <span><i class="fa fa-plus-circle"></i> Add new</span>
-                </a>
-            </li>
         <?php } ?>
+        <li class="li-menu" id="addNewParentLi">
+            <a href="javascript:void(0);" onclick="createNewPlayList($(this), $('#addNewParentLi'));">
+                <span class="pull-right" id="spinnerHidden" style="display: none;"><i class="fa fa-spinner"></i></span>
+                <span id="spanAddNew"><i class="fa fa-plus-circle"></i> Add new</span>
+                <input id="inputAddNew" style="display: none; width: 130px;" type="text" class="form-control"/>
+            </a>
+        </li>
     </ul>
     <footer id="nav-footer" class="footer bg-dark" style="background-color: #232c32;">
         <div class="hidden-xs">

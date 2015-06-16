@@ -28,7 +28,7 @@ class ControllerAppFavorite extends Controller {
                     'artis' => $artis,
                     'img_src' => $img_src,
                     'fs_id' => $song['song_favorite_id'],
-                    'lyric' => mb_convert_encoding($result['lyric'], 'html-entities', 'utf-8')
+                    'lyric' => (isset($result['lyric']))? mb_convert_encoding($result['lyric'], 'html-entities', 'utf-8') : ''
                 );
             }
         }
@@ -41,10 +41,6 @@ class ControllerAppFavorite extends Controller {
         }
 
         $this->response->setOutput($this->load->view('default/template/app/favorite.tpl', $data));
-    }
-
-    public function loadsong(){
-
     }
 
     private function getLink($link){

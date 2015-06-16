@@ -6,18 +6,18 @@ class ControllerAppPlaylist extends Controller {
         $this->document->setDescription($this->config->get('config_meta_description'));
         $this->document->setKeywords($this->config->get('config_meta_keyword'));
 
-        if (isset($this->request->et['route'])) {
+        if (isset($this->request->get['route'])) {
             $this->document->addLink(HTTP_SERVER, 'canonical');
         }
         $playlist_id = 0;
         if(isset($this->request->get['pl_id'])){
-            $playlist_id = (int)$this->request->get['pl_id'];
+            $playlist_id = (int) base64_decode($this->request->get['pl_id']);
         }
         $data = array();
         $this->load->model('app/playlist');
         $quickTool = new QuickTool();
 
-        $playlist = $this->model_app_playlist->getPlaylistSongsByPlaylistId($playlist_id);
+        $playlist = $this->model_app_playlist->getPlaylistSongsByPlaylistId($playlist_id, 1 , 100);
         if(isset($playlist) && sizeof($playlist) > 0){
             foreach($playlist as $song){
                 $link = base64_decode($song['query']);
@@ -31,10 +31,12 @@ class ControllerAppPlaylist extends Controller {
                     'title' => $title,
                     'artis' => $artis,
                     'img_src' => $img_src,
-                    'fs_id' => $song['song_favorite_id'],
+                    'spl_id' => $song['song_playlist_id'],
                     'lyric' => mb_convert_encoding($result['lyric'], 'html-entities', 'utf-8')
                 );
             }
+        }else{
+            $data['playlist_theme'] = STATIC_PATH . 'image/playlist/playlist_'. rand(1, 5) .'.jpg';
         }
 
         $this->load->model('app/home');
@@ -56,20 +58,24 @@ class ControllerAppPlaylist extends Controller {
         return $link;
     }
 
-    public function remove(){
-        $song_playlist_id = 0; $playlist_id = 0;
-        if(isset($this->request->get['spl_id'])){
-            $song_playlist_id = (int)$this->request->get['spl_id'];
-        }
-        if(isset($this->request->get['pl_id'])){
-            $playlist_id = (int)$this->request->get['pl_id'];
-        }
+    public function insert(){
+        header('Content-Type: application/json');
+        $this->load->model('app/playlist');
+        $result = array();
 
         $quickTool = new QuickTool();
-        $macAddress = $quickTool->getMacAddressClient($_SERVER['REMOTE_ADDR']);
-        $this->load->model('app/playlist');
-        $message = $this->model_app_playlist->removeSongPlaylist($song_playlist_id, $macAddress, $playlist_id);
-        header('Content-Type: application/json');
-        $this->response->setOutput(json_encode($message));
+        $data['mac_address'] = $quickTool->getMacAddressClient($_SERVER['REMOTE_ADDR']);
+        if(isset($this->request->post['playlist_name'])){
+            $data['playlist_name'] = $this->request->post['playlist_name'];
+        }else{
+            $result['status'] = 'Error no playlist name';
+            $this->response->setOutput(json_encode($result));
+            return;
+        }
+
+        $result['status'] = "OK";
+        $result['playlist_id'] = $this->model_app_playlist->insertData($data);
+        $result['playlist_name'] = $data['playlist_name'];
+        $this->response->setOutput(json_encode($result));
     }
 }

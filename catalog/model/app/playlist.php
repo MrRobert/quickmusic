@@ -123,8 +123,8 @@ class ModelAppPlaylist extends Model {
 
     public function getPlaylistByMacAddressPlusCount($mac_address){
         $query = $this->db->query("SELECT *,
-                                    (select count(*) from playlist p LEFT JOIN song_playlist f ON p.playlist_id = f.playlist_id
-                                        WHERE p.mac_address = '". $this->db->escape($mac_address) ."') as count
+                                    (select count(*) from song_playlist p LEFT JOIN playlist f ON p.playlist_id = f.playlist_id
+                                        WHERE f.mac_address = '". $this->db->escape($mac_address) ."') as count
                                     FROM " . DB_PREFIX . "playlist
                                     WHERE mac_address = '". $this->db->escape($mac_address) . "'");
         return $query->rows;
@@ -142,27 +142,31 @@ class ModelAppPlaylist extends Model {
             $playlist_name = $data['playlist_name'];
         }
         $playlists = $this->getPlaylistByMacAddress($data['mac_address']);
-        if(isset($playlists) && sizeof($playlists)){
+        if(isset($playlists) && sizeof($playlists) > 0){
             foreach($playlists as $playlist){
                 if(isset($playlist)){
                     if($playlist['playlist_name'] === $playlist_name){
                         // UPDATE SECTION =============================================
-                        $songId = base64_decode($data['keyword']);
-                        $playlistId = $playlist['playlist_id'];
-                        // TODO : NOT HANDLE LOGIN YET
-                        $user_id = null;
-                        $this->insertSongToPlaylist($songId,$playlistId, $user_id);
-                        return $playlist['playlist_id'];
+                        if(isset($data['keyword'])){
+                            $songId = base64_decode($data['keyword']);
+                            $playlistId = $playlist['playlist_id'];
+                            // TODO : NOT HANDLE LOGIN YET
+                            $user_id = null;
+                            $this->insertSongToPlaylist($songId,$playlistId, $user_id);
+                            return $playlist['playlist_id'];
+                        }
                     }
                 }
             }
         }
         // INSERT SESCTION ======== if update not run
         $playlistId = $this->insert($data);
-        $songId = base64_decode($data['keyword']);
-        // TODO : NOT HANDLE LOGIN YET
-        $user_id = null;
-        $this->insertSongToPlaylist($songId, $playlistId, $user_id);
+        if(isset($data['keyword'])){
+            $songId = base64_decode($data['keyword']);
+            // TODO : NOT HANDLE LOGIN YET
+            $user_id = null;
+            $this->insertSongToPlaylist($songId, $playlistId, $user_id);
+        }
         return $playlistId;
     }
 }

@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eac47c3f-6fa3-4609-a68c-2c021e15b7cf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/controller/app/playlist.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/model/app/playlist.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/app/playlist.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/common/column_left.php" afterPath="$PROJECT_DIR$/catalog/controller/common/column_left.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/playlist/playlist_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/playlist/playlist_2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/playlist/playlist_3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/playlist/playlist_4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/view/theme/default/image/playlist/playlist_5.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/js/demo.js" afterPath="$PROJECT_DIR$/catalog/view/theme/default/js/demo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/error.log" afterPath="$PROJECT_DIR$/system/logs/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helper/quickTool.php" afterPath="$PROJECT_DIR$/system/helper/quickTool.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/quickmusic.sql" afterPath="$PROJECT_DIR$/db/quickmusic.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/app/favorite.php" afterPath="$PROJECT_DIR$/catalog/controller/app/favorite.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/app/playlist.php" afterPath="$PROJECT_DIR$/catalog/controller/app/playlist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/model/app/playlist.php" afterPath="$PROJECT_DIR$/catalog/model/app/playlist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/default/template/app/playlist.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/default/template/app/playlist.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="quickmusic.iws" />
@@ -34,15 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="column_left.tpl" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="column_left.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="13" selection-start="714" selection-end="714" vertical-scroll-proportion="0.28057554" vertical-offset="0" max-vertical-offset="990">
-              <folding>
-                <element signature="n#style#0;n#a#0;n#span#0;n#li#3;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#footer#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#span#0;n#a#0;n#div#0;n#footer#0;n#nav#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="23" column="17" selection-start="1361" selection-end="1361" vertical-scroll-proportion="-15.333333" vertical-offset="0" max-vertical-offset="1008">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,10 +49,68 @@
       <file leaf-file-name="demo.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/demo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="725" column="0" selection-start="23200" selection-end="23200" vertical-scroll-proportion="0.0" vertical-offset="12374" max-vertical-offset="13248">
+            <state line="236" column="39" selection-start="7145" selection-end="7145" vertical-scroll-proportion="0.0" vertical-offset="6675" max-vertical-offset="14418">
               <folding>
-                <marker date="1434365873210" expanded="false" signature="16023:16038" placeholder="..." />
+                <marker date="1434450127061" expanded="false" signature="16231:16246" placeholder="..." />
+                <marker date="1434450127061" expanded="false" signature="24297:24309" placeholder="..." />
+                <marker date="1434450127061" expanded="false" signature="24345:24359" placeholder="..." />
+                <marker date="1434450127061" expanded="true" signature="25738:25752" placeholder="..." />
+                <marker date="1434450127061" expanded="false" signature="25961:25975" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="song.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/catalog/controller/app/song.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="144" column="6" selection-start="5542" selection-end="5542" vertical-scroll-proportion="0.32846716" vertical-offset="2322" max-vertical-offset="4446">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="quickTool.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/helper/quickTool.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="590" column="64" selection-start="23465" selection-end="23465" vertical-scroll-proportion="-13.62963" vertical-offset="10252" max-vertical-offset="11484">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playlist.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/controller/app/playlist.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="54" selection-start="1210" selection-end="1210" vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="1548">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favorite.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/model/app/favorite.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="51" selection-start="1527" selection-end="1527" vertical-scroll-proportion="-9.333333" vertical-offset="342" max-vertical-offset="2178">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favorite.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/controller/app/favorite.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="36" selection-start="2142" selection-end="2142" vertical-scroll-proportion="-20.222221" vertical-offset="264" max-vertical-offset="1314">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="related.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/related.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="91" selection-start="1473" selection-end="1473" vertical-scroll-proportion="-15.333333" vertical-offset="0" max-vertical-offset="990">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,7 +145,6 @@
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/app/song.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/app/tileSong.tpl" />
         <option value="$PROJECT_DIR$/catalog/controller/app/update_home.php" />
-        <option value="$PROJECT_DIR$/catalog/controller/app/favorite.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/app/search.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/app/tileInterestedAlbum.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/app/lyric.tpl" />
@@ -104,12 +160,13 @@
         <option value="$PROJECT_DIR$/system/helper/quickTool.php" />
         <option value="$PROJECT_DIR$/db/quickmusic.sql" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/app/playlist.tpl.php" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/app/playlist.tpl" />
-        <option value="$PROJECT_DIR$/catalog/controller/app/playlist.php" />
-        <option value="$PROJECT_DIR$/catalog/model/app/playlist.php" />
         <option value="$PROJECT_DIR$/catalog/controller/common/column_left.php" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/default/js/demo.js" />
+        <option value="$PROJECT_DIR$/catalog/model/app/playlist.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.tpl" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/template/app/playlist.tpl" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/default/js/demo.js" />
+        <option value="$PROJECT_DIR$/catalog/controller/app/playlist.php" />
+        <option value="$PROJECT_DIR$/catalog/controller/app/favorite.php" />
       </list>
     </option>
   </component>
@@ -283,6 +340,70 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="image" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="image" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="playlist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quickmusic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -386,11 +507,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\quickmusic\catalog\view\theme\default\js" />
+      <recent name="$PROJECT_DIR$/catalog/view/theme/default/image/playlist" />
       <recent name="$PROJECT_DIR$/catalog/view/theme/default/image" />
+      <recent name="D:\xampp\htdocs\quickmusic\catalog\view\theme\default\js" />
       <recent name="$PROJECT_DIR$/catalog/view/theme/default/template/app" />
       <recent name="$PROJECT_DIR$/catalog/view/theme/default/template/apptheme" />
-      <recent name="$PROJECT_DIR$/catalog/controller/apptheme" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/catalog/controller/app" />
@@ -422,8 +543,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1215" height="1000" extended-state="7" />
-    <editor active="true" />
+    <frame x="65" y="24" width="1215" height="1000" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -438,19 +559,19 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -460,8 +581,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24893071" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -488,7 +609,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="703" column="23" selection-start="22818" selection-end="22818" vertical-scroll-proportion="0.0" vertical-offset="11901" max-vertical-offset="12798">
           <folding>
-            <marker date="1434365873210" expanded="false" signature="16023:16038" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="16231:16246" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="24297:24309" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="24345:24359" placeholder="..." />
+            <marker date="1434450127061" expanded="true" signature="25738:25752" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="25961:25975" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -528,7 +653,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="67" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="12006">
           <folding>
-            <marker date="1434365873210" expanded="false" signature="16023:16038" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="16231:16246" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="24297:24309" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="24345:24359" placeholder="..." />
+            <marker date="1434450127061" expanded="true" signature="25738:25752" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="25961:25975" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -556,7 +685,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="595" column="1" selection-start="19578" selection-end="19578" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11520">
           <folding>
-            <marker date="1434365873210" expanded="false" signature="16023:16038" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="16231:16246" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="24297:24309" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="24345:24359" placeholder="..." />
+            <marker date="1434450127061" expanded="true" signature="25738:25752" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="25961:25975" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -659,21 +792,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/app/song.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="43" selection-start="5823" selection-end="5842" vertical-scroll-proportion="-13.777778" vertical-offset="2382" max-vertical-offset="4446" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/tileInterestedAlbum.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="6" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.6897404" vertical-offset="0" max-vertical-offset="809" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/related.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="74" selection-start="366" selection-end="366" vertical-scroll-proportion="0.23741007" vertical-offset="0" max-vertical-offset="990">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/home.tpl">
@@ -685,9 +806,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/controller/app/update_home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="41" selection-start="323" selection-end="323" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="396">
-          <folding />
-        </state>
+        <state line="8" column="41" selection-start="323" selection-end="323" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="396" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
@@ -699,9 +818,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/video.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="55" selection-start="645" selection-end="645" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="792">
-          <folding />
-        </state>
+        <state line="12" column="55" selection-start="645" selection-end="645" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/css/stylesheet.css">
@@ -713,39 +830,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/model/app/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1548">
-          <folding>
-            <marker date="1434008746854" expanded="true" signature="-1:-1" placeholder="SELECT music..home..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/helper/quickTool.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="402" column="46" selection-start="15873" selection-end="15873" vertical-scroll-proportion="-2.2222223" vertical-offset="7176" max-vertical-offset="11484">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/model/app/favorite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="54" selection-start="797" selection-end="797" vertical-scroll-proportion="-13.333333" vertical-offset="0" max-vertical-offset="2178">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/favorite.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="32" selection-start="4670" selection-end="4670" vertical-scroll-proportion="0.62589926" vertical-offset="432" max-vertical-offset="2196">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/playlist.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="30" selection-start="1800" selection-end="1800" vertical-scroll-proportion="-15.333333" vertical-offset="0" max-vertical-offset="2196">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1548" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/controller/app/search.php">
@@ -755,68 +840,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/app/favorite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="8" selection-start="2696" selection-end="2767" vertical-scroll-proportion="0.7194245" vertical-offset="552" max-vertical-offset="1386">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/app/playlist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="44" selection-start="1128" selection-end="1128" vertical-scroll-proportion="-10.666667" vertical-offset="162" max-vertical-offset="1440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/quickmusic.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="874">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="874" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/quickmusic.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="14" selection-start="1222" selection-end="1233" vertical-scroll-proportion="-11.36" vertical-offset="188" max-vertical-offset="1062">
-          <folding />
-        </state>
+        <state line="42" column="14" selection-start="1222" selection-end="1233" vertical-scroll-proportion="-11.36" vertical-offset="188" max-vertical-offset="1062" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/controller/common/column_left.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="62" selection-start="625" selection-end="625" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="486">
+        <state line="9" column="78" selection-start="374" selection-end="406" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="486">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/model/app/playlist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="28" selection-start="6029" selection-end="6029" vertical-scroll-proportion="-21.555555" vertical-offset="1740" max-vertical-offset="3114">
-          <folding>
-            <marker date="1434363675598" expanded="true" signature="-1:-1" placeholder="SELECT *, (s..." />
-            <marker date="1434363675598" expanded="true" signature="-1:-1" placeholder="select count..playlist..." />
-          </folding>
+        <state line="106" column="48" selection-start="4723" selection-end="4751" vertical-scroll-proportion="-8.962963" vertical-offset="1666" max-vertical-offset="3186">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/demo.js">
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/favorite.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="725" column="0" selection-start="23200" selection-end="23200" vertical-scroll-proportion="0.0" vertical-offset="12374" max-vertical-offset="13248">
-          <folding>
-            <marker date="1434365873210" expanded="false" signature="16023:16038" placeholder="..." />
-          </folding>
+        <state line="14" column="70" selection-start="928" selection-end="928" vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="2196">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/playlist.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="68" selection-start="1540" selection-end="1540" vertical-scroll-proportion="-2.6666667" vertical-offset="324" max-vertical-offset="2430">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/app/playlist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="54" selection-start="1210" selection-end="1210" vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="1548">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/model/app/favorite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="51" selection-start="1527" selection-end="1527" vertical-scroll-proportion="-9.333333" vertical-offset="342" max-vertical-offset="2178">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/app/favorite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="36" selection-start="2142" selection-end="2142" vertical-scroll-proportion="-20.222221" vertical-offset="264" max-vertical-offset="1314">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/app/related.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="91" selection-start="1473" selection-end="1473" vertical-scroll-proportion="-15.333333" vertical-offset="0" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/helper/quickTool.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="590" column="64" selection-start="23465" selection-end="23465" vertical-scroll-proportion="-13.62963" vertical-offset="10252" max-vertical-offset="11484">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/template/common/column_left.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="714" selection-end="714" vertical-scroll-proportion="0.28057554" vertical-offset="0" max-vertical-offset="990">
+        <state line="23" column="17" selection-start="1361" selection-end="1361" vertical-scroll-proportion="-15.333333" vertical-offset="0" max-vertical-offset="1008">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/default/js/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="236" column="39" selection-start="7145" selection-end="7145" vertical-scroll-proportion="0.0" vertical-offset="6675" max-vertical-offset="14418">
           <folding>
-            <element signature="n#style#0;n#a#0;n#span#0;n#li#3;n#ul#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#footer#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#span#0;n#a#0;n#div#0;n#footer#0;n#nav#0;n#!!top" expanded="true" />
+            <marker date="1434450127061" expanded="false" signature="16231:16246" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="24297:24309" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="24345:24359" placeholder="..." />
+            <marker date="1434450127061" expanded="true" signature="25738:25752" placeholder="..." />
+            <marker date="1434450127061" expanded="false" signature="25961:25975" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/app/song.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="144" column="6" selection-start="5542" selection-end="5542" vertical-scroll-proportion="0.32846716" vertical-offset="2322" max-vertical-offset="4446">
+          <folding />
         </state>
       </provider>
     </entry>
