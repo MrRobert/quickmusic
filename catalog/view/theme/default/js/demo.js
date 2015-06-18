@@ -795,7 +795,97 @@ function createNewPlayList(divA, parentDiv){
     });
 }
 
-function searchVideoSubmit(){
-    var search = $('#searchVideo').val().trim();
+function bindSearchVideo(){
+    var OAUTH2_CLIENT_ID = '342664911171-agh70veafu20p3j7i41b7q7ru3qvr9aj.apps.googleusercontent.com';
+    var OAUTH2_SCOPES = [
+        'https://www.googleapis.com/auth/youtube'
+    ];
 
+    // Upon loading, the Google APIs JS client automatically invokes this callback.
+    googleApiClientReady = function() {
+        gapi.auth.init(function() {
+            window.setTimeout(checkAuth, 1);
+        });
+    }
+
+    // Attempt the immediate OAuth 2.0 client flow as soon as the page loads.
+    // If the currently logged-in Google Account has previously authorized
+    // the client specified as the OAUTH2_CLIENT_ID, then the authorization
+    // succeeds with no user intervention. Otherwise, it fails and the
+    // user interface that prompts for authorization needs to display.
+    function checkAuth() {
+        gapi.auth.authorize({
+            client_id: OAUTH2_CLIENT_ID,
+            scope: OAUTH2_SCOPES,
+            immediate: true
+        }, handleAuthResult);
+    }
+
+    // Handle the result of a gapi.auth.authorize() call.
+    function handleAuthResult(authResult) {
+        if (authResult && !authResult.error) {
+            // Authorization was successful. Hide authorization prompts and show
+            // content that should be visible after authorization succeeds.
+            $('.pre-auth').hide();
+            $('.post-auth').show();
+            loadAPIClientInterfaces();
+        } else {
+            // Make the #login-link clickable. Attempt a non-immediate OAuth 2.0
+            // client flow. The current function is called when that flow completes.
+            $('#login-link').click(function() {
+                gapi.auth.authorize({
+                    client_id: OAUTH2_CLIENT_ID,
+                    scope: OAUTH2_SCOPES,
+                    immediate: false
+                }, handleAuthResult);
+            });
+        }
+    }
+
+    // Load the client interfaces for the YouTube Analytics and Data APIs, which
+    // are required to use the Google APIs JS client. More info is available at
+    // http://code.google.com/p/google-api-javascript-client/wiki/GettingStarted#Loading_the_Client
+    function loadAPIClientInterfaces() {
+        gapi.client.load('youtube', 'v3');
+    }
+
+    googleApiClientReady();
+
+    $('#searchVideoBtn').bind('click', function(){
+        var q = $('#searchVideoInput').val();
+        var request = gapi.client.youtube.search.list({
+            q: q,
+            part: 'snippet',
+            maxResults : 5
+        });
+
+        request.execute(function(response) {
+            console.log(response);
+            $('#ulSearchResult').html('');
+            for(var i= 0; i < response.items.length; i++){
+                var html = '<li class="list-group-item active">';
+                html += '<div class="row">' ;
+                html += '<div class="col-sm-4">';
+                html += '<img class="img-full" src="'+ response.items[i].snippet.thumbnails.default.url +'" />';
+                html += '</div>';
+                html += '<div class="col-sm-8">';
+                html += '<div class="yt-lockup-content">';
+                html += '<h3 class="yt-lockup-title">';
+                html += '<a href="/watch?v='+ response.items[i].id.videoId +'" class="yt-uix-tile-link yt-ui-ellipsis yt-ui-ellipsis-2 yt-uix-sessionlink  spf-link" data-sessionlink="itct=CBgQ3DAYACITCKKH656FmcYCFQeGWAod6RwA9ij0JFIMc29uIHR1bmcgbXRw" title="'+ response.items[i].snippet.title +'" rel="spf-prefetch" aria-describedby="description-id-22668" dir="ltr">'+ response.items[i].snippet.title +'</a>';
+                html += '</h3>';
+                html += '<div class="yt-lockup-byline">bởi <a href="/channel/'+ response.items[i].snippet.channelId +'" class=" yt-uix-sessionlink   spf-link  g-hovercard" data-name="" data-ytid="'+ response.items[i].snippet.channelId +'">'+response.items[i].snippet.channelTitle +'</a>';
+                html += '</div>';
+                html += '<div class="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2" dir="ltr">'+ response.items[i].snippet.description;
+                html += '</div>';
+                html += '</div></div></div></li>';
+                $('#ulSearchResult').append(html);
+            }
+            $('#rootDivSearchResult').show();
+            updateVideoHeight();
+        });
+    });
+
+    function updateVideoHeight(){
+        $('#container').height($(document).height() + 100);
+    }
 }
