@@ -794,3 +794,8 @@ function createNewPlayList(divA, parentDiv){
        }
     });
 }
+
+function searchVideoSubmit(){
+    var search = $('#searchVideo').val().trim();
+
+}
