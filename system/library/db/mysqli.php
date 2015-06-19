@@ -1,5 +1,6 @@
 <?php
 namespace DB;
+require_once DIR_SYSTEM . 'library/log.php';
 final class MySQLi {
 	private $link;
 
@@ -38,7 +39,8 @@ final class MySQLi {
 				return true;
 			}
 		} else {
-			trigger_error('Error: ' . $this->link->error  . '<br />Error No: ' . $this->link->errno . '<br />' . $sql);
+            $logger = new Log('queryDB.log');
+            $logger->write('Error: ' . $this->link->error  . '<br />Error No: ' . $this->link->errno . '<br />' . $sql);
 		}
 	}
 

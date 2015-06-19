@@ -5,12 +5,7 @@
 </head>
 <body>
 <div id="buttons">
-    <label> <input id="query" value='cats' type="text"/><button id="search-button" disabled onclick="search()">Search</button></label>
-</div>
-
-<div id="login-container" class="pre-auth">
-    This application requires access to your YouTube account.
-    Please <a href="#" id="login-link">authorize</a> to continue.
+    <label> <input id="query" value='cats' type="text"/><button id="search-button" onclick="search()">Search</button></label>
 </div>
 
 <div id="search-container">
@@ -18,6 +13,7 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>
+    /*
     // The client ID is obtained from the Google Developers Console
     // at https://console.developers.google.com/.
     // If you run this code from a server other than http://localhost,
@@ -78,9 +74,15 @@
     // After the API loads, call a function to enable the search box.
     function handleAPILoaded() {
         $('#search-button').attr('disabled', false);
-    }
+    } */
 
     // Search for a specified string.
+
+    function googleApiClientReady(){
+        gapi.client.setApiKey('AIzaSyDZ2T3KC0hRrpl_PetdSxNd2k2Jz8YWEQ4');
+        gapi.client.load('youtube', 'v3');
+    }
+
     function search() {
         var q = $('#query').val();
         var request = gapi.client.youtube.search.list({
@@ -90,6 +92,7 @@
         });
 
         request.execute(function(response) {
+            console.log(response);
             var str = JSON.stringify(response.result);
             for(var i= 0; i < response.items.length; i++){
                 $('#search-container').append('<div><iframe width="420" height="315" src="https://www.youtube.com/embed/'+ response.items[i].id.videoId +'" frameborder="0" allowfullscreen></iframe></div>');
