@@ -1,5 +1,13 @@
 $(document).ready(function(){
     $('.playlist-menu').removeClass('active open');
+    $.ajaxSetup({ cache: true });
+    $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
+        FB.init({
+            appId: '651313361641726',
+            version: 'v2.3' // or v2.0, v2.1, v2.0
+        });
+        $('#loginbutton,#feedbutton').removeAttr('disabled');
+    });
 
     secondPlaylist = initSecondPlayList();
     mainPlayList  = initMyPlayList();
@@ -125,7 +133,7 @@ function listenCommonRequest(hash){
         }
     }
     if (hash.length > 0){
-        if(hash == 'music' || hash == 'video' || hash == 'search' || hash == 'favorite'){
+        if(hash == 'music' || hash == 'search' || hash == 'favorite'){
             fetchDATA(hash, $('#content'), data);
         }else if (hash == 'song'){
             if(isHasLoad){
@@ -139,6 +147,13 @@ function listenCommonRequest(hash){
                     data.pl_id = arrPath[1];
                     fetchDATA(hash, $('#content'), data);
                 }
+            }
+        }else if(hash == 'video'){
+            if(temp[1] != null && temp[1].length > 0){
+                data.videoId = temp[1];
+                fetchDATA('video/playlist', $('#content'), data);
+            }else{
+                fetchDATA(hash, $('#content'), data);
             }
         }
     }
@@ -796,96 +811,132 @@ function createNewPlayList(divA, parentDiv){
 }
 
 function bindSearchVideo(){
-    var OAUTH2_CLIENT_ID = '342664911171-agh70veafu20p3j7i41b7q7ru3qvr9aj.apps.googleusercontent.com';
-    var OAUTH2_SCOPES = [
-        'https://www.googleapis.com/auth/youtube'
-    ];
-
-    // Upon loading, the Google APIs JS client automatically invokes this callback.
-    googleApiClientReady = function() {
-        gapi.auth.init(function() {
-            window.setTimeout(checkAuth, 1);
-        });
-    }
-
-    // Attempt the immediate OAuth 2.0 client flow as soon as the page loads.
-    // If the currently logged-in Google Account has previously authorized
-    // the client specified as the OAUTH2_CLIENT_ID, then the authorization
-    // succeeds with no user intervention. Otherwise, it fails and the
-    // user interface that prompts for authorization needs to display.
-    function checkAuth() {
-        gapi.auth.authorize({
-            client_id: OAUTH2_CLIENT_ID,
-            scope: OAUTH2_SCOPES,
-            immediate: true
-        }, handleAuthResult);
-    }
-
-    // Handle the result of a gapi.auth.authorize() call.
-    function handleAuthResult(authResult) {
-        if (authResult && !authResult.error) {
-            // Authorization was successful. Hide authorization prompts and show
-            // content that should be visible after authorization succeeds.
-            $('.pre-auth').hide();
-            $('.post-auth').show();
-            loadAPIClientInterfaces();
-        } else {
-            // Make the #login-link clickable. Attempt a non-immediate OAuth 2.0
-            // client flow. The current function is called when that flow completes.
-            $('#login-link').click(function() {
-                gapi.auth.authorize({
-                    client_id: OAUTH2_CLIENT_ID,
-                    scope: OAUTH2_SCOPES,
-                    immediate: false
-                }, handleAuthResult);
-            });
-        }
-    }
-
-    // Load the client interfaces for the YouTube Analytics and Data APIs, which
-    // are required to use the Google APIs JS client. More info is available at
-    // http://code.google.com/p/google-api-javascript-client/wiki/GettingStarted#Loading_the_Client
-    function loadAPIClientInterfaces() {
-        gapi.client.load('youtube', 'v3');
-    }
-
-    googleApiClientReady();
-
     $('#searchVideoBtn').bind('click', function(){
         var q = $('#searchVideoInput').val();
-        var request = gapi.client.youtube.search.list({
-            q: q,
-            part: 'snippet',
-            maxResults : 5
-        });
-
-        request.execute(function(response) {
-            console.log(response);
-            $('#ulSearchResult').html('');
-            for(var i= 0; i < response.items.length; i++){
-                var html = '<li class="list-group-item active">';
-                html += '<div class="row">' ;
-                html += '<div class="col-sm-4">';
-                html += '<img class="img-full" src="'+ response.items[i].snippet.thumbnails.default.url +'" />';
-                html += '</div>';
-                html += '<div class="col-sm-8">';
-                html += '<div class="yt-lockup-content">';
-                html += '<h3 class="yt-lockup-title">';
-                html += '<a href="/watch?v='+ response.items[i].id.videoId +'" class="yt-uix-tile-link yt-ui-ellipsis yt-ui-ellipsis-2 yt-uix-sessionlink  spf-link" data-sessionlink="itct=CBgQ3DAYACITCKKH656FmcYCFQeGWAod6RwA9ij0JFIMc29uIHR1bmcgbXRw" title="'+ response.items[i].snippet.title +'" rel="spf-prefetch" aria-describedby="description-id-22668" dir="ltr">'+ response.items[i].snippet.title +'</a>';
-                html += '</h3>';
-                html += '<div class="yt-lockup-byline">bởi <a href="/channel/'+ response.items[i].snippet.channelId +'" class=" yt-uix-sessionlink   spf-link  g-hovercard" data-name="" data-ytid="'+ response.items[i].snippet.channelId +'">'+response.items[i].snippet.channelTitle +'</a>';
-                html += '</div>';
-                html += '<div class="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2" dir="ltr">'+ response.items[i].snippet.description;
-                html += '</div>';
-                html += '</div></div></div></li>';
-                $('#ulSearchResult').append(html);
+        $.get("https://www.googleapis.com/youtube/v3/search",{
+                q: q,
+                part: 'snippet',
+                key : 'AIzaSyDiAj-zEn_yqElnlvpwlGIanJGVZ5lhJII'
+            }, function(response){
+                window.currentListVideoSearch = (response != undefined)? response.items : '';
+                $('#ulSearchResult').html('');
+                for(var i= 0; i < response.items.length; i++){
+                    var html = '<li class="list-group-item active">';
+                    html += '<div class="row">' ;
+                    html += '<div class="col-sm-4">';
+                    html += '<img class="img-full" src="'+ response.items[i].snippet.thumbnails.default.url +'" />';
+                    html += '</div>';
+                    html += '<div class="col-sm-8">';
+                    html += '<div class="yt-lockup-content">';
+                    html += '<h3 class="yt-lockup-title">';
+                    html += '<a href="javascript:;" onclick="gotoVideoItem(\''+ response.items[i].id.videoId + '\', \'gotoVideoItem\')" class="yt-uix-tile-link yt-ui-ellipsis yt-ui-ellipsis-2 yt-uix-sessionlink  spf-link" data-sessionlink="itct=CBgQ3DAYACITCKKH656FmcYCFQeGWAod6RwA9ij0JFIMc29uIHR1bmcgbXRw" title="'+ response.items[i].snippet.title +'" rel="spf-prefetch" aria-describedby="description-id-22668" dir="ltr">'+ response.items[i].snippet.title +'</a>';
+                    html += '</h3>';
+                    html += '<div class="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2" dir="ltr">'+ response.items[i].snippet.description;
+                    html += '</div>';
+                    html += '</div></div></div></li>';
+                    $('#ulSearchResult').append(html);
+                }
+                $('#rootDivSearchResult').show();
+                updateVideoHeight();
             }
-            $('#rootDivSearchResult').show();
-            updateVideoHeight();
-        });
+        );
     });
+}
+function updateVideoHeight(){
+    $('#container').height($(document).height() + 100);
+}
 
-    function updateVideoHeight(){
-        $('#container').height($(document).height() + 100);
+function htmlVideoItem(video, videoStateToGo){
+    var html = '<div class="row">' ;
+    html += '<div class="col-sm-4">';
+    if(videoStateToGo == 'gotoVideoItem'){
+        html += '<a href="javascript:;" onclick="gotoVideoItem(\''+ video.id.videoId + '\')">'
+        html += '<img class="img-full" src="'+ video.snippet.thumbnails.default.url +'" /></a>';
+    }else if(videoStateToGo == 'loadVideoFromList'){
+        html += '<a href="javascript:;" onclick="loadVideoFromList(\''+ video.id.videoId + '\')">'
+        html += '<img class="img-full" src="'+ video.snippet.thumbnails.default.url +'" /></a>';
     }
+    html += '</div>';
+    html += '<div class="col-sm-8">';
+    html += '<div class="yt-lockup-content">';
+    html += '<h3 class="yt-lockup-title">';
+    if(videoStateToGo == 'gotoVideoItem'){
+        html += '<a href="javascript:;" onclick="gotoVideoItem(\''+ video.id.videoId + '\')" class="yt-uix-tile-link yt-ui-ellipsis yt-ui-ellipsis-2 yt-uix-sessionlink  spf-link" data-sessionlink="itct=CBgQ3DAYACITCKKH656FmcYCFQeGWAod6RwA9ij0JFIMc29uIHR1bmcgbXRw" title="'+ video.snippet.title +'" rel="spf-prefetch" aria-describedby="description-id-22668" dir="ltr">'+ video.snippet.title +'</a>';
+    }else if(videoStateToGo == 'loadVideoFromList'){
+        html += '<a href="javascript:;" onclick="loadVideoFromList(\''+ video.id.videoId + '\')" class="yt-uix-tile-link yt-ui-ellipsis yt-ui-ellipsis-2 yt-uix-sessionlink  spf-link" data-sessionlink="itct=CBgQ3DAYACITCKKH656FmcYCFQeGWAod6RwA9ij0JFIMc29uIHR1bmcgbXRw" title="'+ video.snippet.title +'" rel="spf-prefetch" aria-describedby="description-id-22668" dir="ltr">'+ video.snippet.title +'</a>';
+    }
+    html += '</h3>';
+    html += '<div class="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2" dir="ltr">'+ video.snippet.description;
+    html += '</div>';
+    html += '</div></div></div>';
+    return html;
+}
+
+function gotoVideoItem(videoId){
+    var data = {
+        videoId : videoId
+    };
+    $.ajax({
+        url: 'index.php?route=app/video/playlist',
+        type: 'get',
+        data: data,
+        dataType: 'html',
+        success: function(html) {
+            $('#content').html(html);
+            var htmlSrcVideo = '<iframe width="100%" height="580px" src="https://www.youtube.com/embed/'+ videoId+ '" frameborder="0" allowfullscreen style="max-width: 800px;"></iframe>';
+            $('#videoContainer').html(htmlSrcVideo);
+
+            var listVideoHtml = '';
+            if(window.currentListVideoSearch == undefined || window.currentListVideoSearch.length == 0){
+                for(var i=0; i < window.currentListVideoSearch.length; i++){
+                    var videoObjectJson = window.currentListVideoSearch[i];
+                    listVideoHtml += htmlVideoItem(videoObjectJson, 'loadVideoFromList');
+                }
+            }
+            $('#videoListContainer').html(listVideoHtml);
+            isHasLoad = false;
+            window.location.hash = "#video/" + videoId;
+            updateVideoHeight();
+        }
+    });
+}
+function loadVideoFromList(videoId){
+    var htmlSrcVideo = '<iframe width="100%" height="580px" src="https://www.youtube.com/embed/'+ videoId+ '" frameborder="0" allowfullscreen style="max-width: 800px;"></iframe>';
+    $('#videoContainer').html(htmlSrcVideo);
+    isHasLoad = false;
+    window.location.hash = "#video/" + videoId;
+}
+
+function loadRelatedVideoById(videoId){
+    $.get("https://www.googleapis.com/youtube/v3/search",{
+            part: 'snippet',
+            relatedToVideoId : videoId,
+            type : 'video',
+            videoType: 'any',
+            key : 'AIzaSyDiAj-zEn_yqElnlvpwlGIanJGVZ5lhJII'
+        }, function(response){
+            var listVideoHtml = '';
+            for(var i=0; i < response.items.length; i++){
+                var videoObjectJson = response.items[i];
+                listVideoHtml += htmlVideoItem(videoObjectJson, 'loadVideoFromList');
+            }
+            $('#videoListContainer').html(listVideoHtml);
+            updateVideoHeight();
+        }
+    );
+}
+
+function loadDetailVideo(videoId){
+    $.get("https://www.googleapis.com/youtube/v3/videos",{
+            part: 'snippet',
+            id : videoId,
+            key : 'AIzaSyDiAj-zEn_yqElnlvpwlGIanJGVZ5lhJII'
+        }, function(response){
+            if(response != null && response.items.length == 1){
+                var videoObjectJson = response.items[0];
+                $('#videoTitle').html(videoObjectJson.snippet.title);
+            }
+        }
+    );
+
 }

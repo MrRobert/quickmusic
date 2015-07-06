@@ -12,4 +12,14 @@ class ControllerAppVideo extends Controller {
         $data = array();
         $this->response->setOutput($this->load->view('default/template/app/video.tpl', $data));
     }
+
+    public function playlist(){
+        $videoId = '';
+        if(isset($this->request->get['videoId'])){
+            $videoId = $this->request->get['videoId'];
+        }
+        $data = array();
+        $data['videoId'] = $videoId;
+        $this->response->setOutput($this->load->view('default/template/app/video_playlist.tpl', $data));
+    }
 }
