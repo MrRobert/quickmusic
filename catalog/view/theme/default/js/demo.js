@@ -866,7 +866,12 @@ function htmlVideoItem(video, videoStateToGo){
         html += '<a href="javascript:;" onclick="loadVideoFromList(\''+ video.id.videoId + '\')" class="yt-uix-tile-link yt-ui-ellipsis yt-ui-ellipsis-2 yt-uix-sessionlink  spf-link" data-sessionlink="itct=CBgQ3DAYACITCKKH656FmcYCFQeGWAod6RwA9ij0JFIMc29uIHR1bmcgbXRw" title="'+ video.snippet.title +'" rel="spf-prefetch" aria-describedby="description-id-22668" dir="ltr">'+ video.snippet.title +'</a>';
     }
     html += '</h3>';
-    html += '<div class="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2" dir="ltr">'+ video.snippet.description;
+    var des = (video.snippet.description.length > 290) ? video.snippet.description.substring(0, 290) : video.snippet.description;
+    html += '<div class="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2" dir="ltr">'+ des;
+    if(video.snippet.description.length > 290){
+        html+= '<a data-toggle="collapse" href="#collapse'+ video.id.videoId +'" aria-expanded="false" aria-controls="collapseExample">Show more</a>';
+        html+= '<span class="collapse" id="collapse'+ video.id.videoId +'">'+ video.snippet.description.substring(290, video.snippet.description.length)+'</span>';
+    }
     html += '</div>';
     html += '</div></div></div>';
     return html;

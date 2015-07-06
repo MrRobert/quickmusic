@@ -12,7 +12,7 @@
                             <li class="list-group-item active" id="firstSongLi">
                                 <div class="row" style="color: #666666">
                                     <h1>
-                                        <span class="pull-left" id="videoTitle">Dogs Who Lost The Fight Against Sleep</span>
+                                        <span class="pull-left" id="videoTitle"></span>
                                         <!--<span class="pull-right">10.000</span> -->
                                     </h1>
                                 </div>
