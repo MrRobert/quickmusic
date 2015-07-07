@@ -20,6 +20,12 @@ class ControllerAppVideo extends Controller {
         }
         $data = array();
         $data['videoId'] = $videoId;
+        $data['currentLink'] = HTTP_SERVER . '?route=app/video/' . $videoId;
         $this->response->setOutput($this->load->view('default/template/app/video_playlist.tpl', $data));
+    }
+
+    public function searchlist(){
+        $data = array();
+        $this->response->setOutput($this->load->view('default/template/app/video_list.tpl', $data));
     }
 }

@@ -11,15 +11,15 @@
                         <ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">
                             <li class="list-group-item active" id="firstSongLi">
                                 <div class="row" style="color: #666666">
-                                    <h1>
+                                    <h2>
                                         <span class="pull-left" id="videoTitle"></span>
                                         <!--<span class="pull-right">10.000</span> -->
-                                    </h1>
+                                    </h2>
                                 </div>
                             </li>
                         </ul>
                         <div>
-                            <div class="fb-comments" data-width="400" data-href="<?= $currentLink; ?>" data-numposts="10" data-colorscheme="light"></div>
+                            <div class="fb-comments" data-width="100%" data-href="<?= $currentLink; ?>" data-numposts="10" data-colorscheme="light"></div>
                         </div>
                     </div>
                 </div>
@@ -41,5 +41,6 @@
     <?php if(isset($videoId)) { ?>
         loadRelatedVideoById('<?= $videoId; ?>');
         loadDetailVideo('<?= $videoId;?>');
+        FB.XFBML.parse();
     <?php } ?>
 </script>

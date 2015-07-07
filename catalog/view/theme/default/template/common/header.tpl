@@ -56,8 +56,11 @@
                 <div class="form-group" style="padding-top: 10px;">
                     <div class="input-group">
                         <span class="input-group-btn">
-                            <button onclick="searchSubmit();" class="btn btn-sm bg-white" style="background-color: #ffffff; border-radius: 7px;"><i class="fa fa-search"></i></button> </span>
-                            <input name="search_name" type="text" placeholder="Search songs, albums..." class="form-control input-sm" style="border-radius: 0px 7px 7px 0px;">
+                            <button onclick="changeSearchType();" class="btn btn-sm bg-white" style="background-color: #ffffff; border-radius: 7px;">
+                                <i class="fa fa-music" id="headerSearchIcon"></i>
+                            </button>
+                        </span>
+                        <input name="search_name" type="text" placeholder="Search songs, albums..." class="form-control input-sm" style="border-radius: 0px 7px 7px 0px;">
                     </div>
                     <i id="searchIndicator" style="display: none;" class="fa fa-spinner fa-spin"></i>
                 </div>
@@ -68,6 +71,15 @@
                         searchSubmit();
                     }
                 });
+                function changeSearchType(){
+                    if($('#headerSearchIcon').hasClass('fa-music')){
+                        $('#headerSearchIcon').removeClass('fa-music');
+                        $('#headerSearchIcon').addClass('fa-youtube');
+                    }else{
+                        $('#headerSearchIcon').removeClass('fa-youtube');
+                        $('#headerSearchIcon').addClass('fa-music');
+                    }
+                }
             </script>
         </div>
         <ul class="nav pull-right">

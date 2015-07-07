@@ -124,17 +124,26 @@ function listenCommonRequest(hash){
     hash = temp[0];
     var data = {};
     if(temp.length > 2){
-        data.search_name = temp[2];
-        hash = temp[0];
         if(hash == 'search'){
+            data.search_name = temp[2];
             $("#header input[name='search_name']").val(temp[2].split('+').join(' ').toString());
             $("#header input[name='search_name']").focus();
             $('#searchIndicator').show();
         }
     }
     if (hash.length > 0){
-        if(hash == 'music' || hash == 'search' || hash == 'favorite'){
+        if(hash == 'music' || hash == 'favorite'){
             fetchDATA(hash, $('#content'), data);
+        }else if(hash == 'search' && isHasLoad){
+            if(temp[1] == 'singer'){
+                $('#headerSearchIcon').removeClass('fa-youtube');
+                $('#headerSearchIcon').addClass('fa-music');
+                fetchDATA(hash, $('#content'), data);
+            }else if(temp[1] == 'video'){
+                $('#headerSearchIcon').removeClass('fa-music');
+                $('#headerSearchIcon').addClass('fa-youtube');
+                searchSubmit();
+            }
         }else if (hash == 'song'){
             if(isHasLoad){
                 var keyword = temp[1].substring(temp[1].lastIndexOf('_')+1);
@@ -208,9 +217,51 @@ function initSecondPlayList(){
 }
 
 function searchSubmit(){
+    var searchType = ($('#headerSearchIcon').hasClass('fa-music'))? 'music' : 'video';
     var searchName = $("input[name='search_name']").val().trim();
-    window.location.hash = "#search/singer/" + searchName.split(' ').join('+').toString();
+    if(searchType == 'music'){
+        window.location.hash = "#search/singer/" + searchName.split(' ').join('+').toString();
+    }else if(searchType == 'video'){
+        $.get('index.php?route=app/video/searchlist', function(html){
+            $.get("https://www.googleapis.com/youtube/v3/search",{
+                    q: searchName,
+                    part: 'snippet',
+                    maxResults : 30,
+                    key : 'AIzaSyDiAj-zEn_yqElnlvpwlGIanJGVZ5lhJII'
+                }, function(response){
+                    window.currentListVideoSearch = (response != undefined)? response.items : '';
+                    $('#content').html(html);
+                    bindDataToSearchVideo(response.items);
+                    updateVideoHeight();
+                    $('#searchIndicator').hide();
+                }
+            );
+        });
+        window.location.hash = "#search/video/"+ searchName;
+        isHasLoad = false;
+    }
     $('#searchIndicator').show();
+}
+
+function bindDataToSearchVideo(json){
+    var html = '';
+    for(var i= 0; i < json.length; i++){
+        html+= '<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">';
+        html+= '<div class="item-song">';
+        html+= '<div class="pos-relative">';
+        html+= '<div class="bottom"></div>';
+        html+= '<div class="item-overlay opacity r r-2x bg-black">';
+        html+= '<div class="center text-center m-t-n">';
+        html+= '<a onclick="gotoVideoItem(\''+ json[i].id.videoId + '\', \'gotoVideoItem\')" href="javascript:;" class="play-icon-a"><i class="fa fa-play fa-2x"></i></a>';
+        html+= '</div></div>';
+        html+= '<a href="javascript:void(0);">';
+        html+= '<img class="r r-2x img-full" alt="" src="'+ json[i].snippet.thumbnails.default.url +'">';
+        html+= '</a>';
+        html+= '</div>';
+        html+= '<div class="padder-v"><a class="text-ellipsis" href="javascript:;">'+ json[i].snippet.title +'</a>';
+        html+= '</div></div></div>';
+    }
+    $('#videoContainer').html(html);
 }
 
 function fetchDATA(controllerPath, divTagert, data){
@@ -906,9 +957,6 @@ function gotoVideoItem(videoId){
     });
 }
 function loadVideoFromList(videoId){
-    var htmlSrcVideo = '<iframe width="100%" height="580px" src="https://www.youtube.com/embed/'+ videoId+ '" frameborder="0" allowfullscreen style="max-width: 800px;"></iframe>';
-    $('#videoContainer').html(htmlSrcVideo);
-    isHasLoad = false;
     window.location.hash = "#video/" + videoId;
 }
 
@@ -917,6 +965,7 @@ function loadRelatedVideoById(videoId){
             part: 'snippet',
             relatedToVideoId : videoId,
             type : 'video',
+            maxResults : 7,
             videoType: 'any',
             key : 'AIzaSyDiAj-zEn_yqElnlvpwlGIanJGVZ5lhJII'
         }, function(response){
