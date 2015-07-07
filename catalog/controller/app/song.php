@@ -67,7 +67,7 @@ class ControllerAppSong extends Controller {
         $data['artis'] = $artis;
         $data['link'] = $songs[0]['linkSong'];
         $data['key'] = $keyword;
-        $data['currentLink'] = HTTP_SERVER . '?route=app/song';
+        $data['currentLink'] = HTTP_SERVER . '?route=app/song/'. $keyword;
 
         $this->response->setOutput($this->load->view('default/template/app/song.tpl', $data));
     }
@@ -128,6 +128,7 @@ class ControllerAppSong extends Controller {
         $data['rootUrl'] = HTTP_SERVER;
         $data['title'] = $title;
         $data['artis'] = $artis;
+        $data['currentLink'] = HTTP_SERVER . '?route=app/song/'. $key;
 
         header('Content-Type: application/json');
         $this->response->setOutput(json_encode($data));
@@ -212,7 +213,7 @@ class ControllerAppSong extends Controller {
         $inputData['link'] = base64_encode($this->getLink($result['linkSong']));
 
         $data['keyword'] = $key;
-        $data['currentLink'] = HTTP_SERVER . '?route=app/song';
+        $data['currentLink'] = HTTP_SERVER . '?route=app/song/' . $key;
         $data['lyric'] = $this->load->view('default/template/app/lyric.tpl', $result);
         $data['tileSong'] = $this->load->view('default/template/app/tileSong.tpl', $inputData);
         $data['tileImg'] = $this->load->view('default/template/app/tileImg.tpl', $inputData);

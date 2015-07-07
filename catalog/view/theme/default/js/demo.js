@@ -296,6 +296,7 @@ function gotoSongGET(keyword){
         dataType: 'html',
         success: function(html) {
             $('#content').html(html);
+            FB.XFBML.parse();
         }
     });
 }
@@ -318,6 +319,7 @@ function gotoSong(link, index, prefix){
             $('#content').html(html);
             isHasLoad = false;
             window.location.hash = "#song/" + foldToAssci(title+artis) + "_" + $('#keyword').val();
+            FB.XFBML.parse();
         }
     });
 }
@@ -599,6 +601,9 @@ function gotoSongV2(link, index, prefix){
             $('#noidungBh').replaceWith(json.lyric);
             $('#interestedAlbum').replaceWith(json.relatedAlbums);
             window.location.hash = "#song/" + foldToAssci(title+artis) + "_" + json.keyword;
+            var html = '<div class="fb-comments" data-width="400" data-href="'+ json.currentLink + '" data-numposts="10" data-colorscheme="light"></div>';
+            $('#liFacebookComment').html(html);
+            FB.XFBML.parse();
         }
     });
 }

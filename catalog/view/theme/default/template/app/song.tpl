@@ -47,7 +47,7 @@
                                 <div style="margin-left: 3%" id="interestedAlbum">
                                 </div>
                             </li>
-                            <li>
+                            <li id="liFacebookComment">
                                 <div class="fb-comments" data-width="400" data-href="<?= $currentLink; ?>" data-numposts="10" data-colorscheme="light">
                                 </div>
                             </li>

@@ -37,8 +37,8 @@
                         <div class="pre-controls hidden-xs hidden-sm jp-current-time text-xs text-muted">00:00</div>
                         <div class="pre-controls hidden-xs hidden-sm jp-duration text-xs text-muted">03:29</div>
                         <div class="pre-controls hidden-xs hidden-sm">
-                            <a title="mute" class="jp-mute"><i class="fa fa-volume-up fa-2x"></i></a>
-                            <a title="unmute" class="jp-unmute hid" style="display: none;"><i class="fa fa-volume-off fa-2x"></i></a>
+                            <a title="mute" class="jp-mute"><i class="fa fa-volume-up fa-2x text-highlight"></i></a>
+                            <a title="unmute" class="jp-unmute hid" style="display: none;"><i class="fa fa-volume-off fa-2x text-muted"></i></a>
                         </div>
                         <div class="pre-controls hidden-xs hidden-sm jp-volume">
                             <div class="jp-volume-bar" style="background-color: #4d5d6e">
@@ -46,12 +46,12 @@
                             </div>
                         </div>
                         <div class="pre-controls">
-                            <a title="shuffle" class="jp-shuffle"><i class="fa fa-random fa-2x"></i></a>
-                            <a title="shuffle off" class="jp-shuffle-off hid" style="display: none;"><i class="icon-shuffle text-lt"></i></a>
+                            <a title="shuffle" class="jp-shuffle"><i class="fa fa-random fa-2x text-highlight"></i></a>
+                            <a title="shuffle off" class="jp-shuffle-off hid" style="display: none;"><i class="fa fa-random fa-2x text-muted"></i></a>
                         </div>
                         <div class="pre-controls">
-                            <a title="repeat" class="jp-repeat"><i class="fa fa-repeat fa-2x text-muted"></i></a>
-                            <a title="repeat off" class="jp-repeat-off hid" style="display: none;"><i class="icon-loop text-lt"></i></a>
+                            <a title="repeat" class="jp-repeat"><i class="fa fa-repeat fa-2x text-highlight"></i></a>
+                            <a title="repeat off" class="jp-repeat-off hid" style="display: none;"><i class="fa fa-repeat fa-2x text-muted"></i></a>
                         </div>
                     </div>
                 </div>
