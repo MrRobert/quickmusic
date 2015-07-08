@@ -43,15 +43,20 @@ $(document).ready(function(){
         $('.pause'+index).removeClass('hidden');
         $('#liCollapse' + index).collapse('show');
     });
-    $('#jp_second').bind($.jPlayer.event.ended, function(event) {
+    $('#jp_second').bind($.jPlayer.event.ended, function(e) {
         isSecondPlaying = false;
-        var index = secondPlaylist.current;
+        var index = parseInt(secondPlaylist.current);
+        $('#liCollapse' + index).collapse('hide');
         if(index == secondPlaylist.playlist.length - 1){
             $('.playIcon').show();
             $('.pauseIcon').addClass('hidden');
+        }else{
+            var src = $('#songImg'+index).val();
+            $('#mainImg').attr('src', src);
+            secondPlaylist.play(index + 1);
         }
+        updateHeight();
     });
-
     $('#jp_container_N').on('click', '.jp-play-me', function(e){
         e && e.preventDefault();
         var $this = $(e.target);
@@ -378,61 +383,57 @@ function foldToAssci(input){
 function playSongFavorite(index){
     var src = $('#songImg'+index).val();
     $('#mainImg').attr('src', src);
+    var currentIndex = secondPlaylist.current;
 
-    $('.playIcon').show();
-    $('.pauseIcon').addClass('hidden');
-    secondPlaylist.pause();
-    secondPlaylist.play(index);
-    $('.play' + index).hide();
-    $('.pause'+ index).removeClass('hidden');
-    $('#liCollapse' + index).collapse('show');
-
-    updateHeight();
-    $('#jp_second').bind($.jPlayer.event.ended, function(e) {
-        var index = parseInt(secondPlaylist.current);
-        $('#liCollapse' + index).collapse('hide');
-        if(index == secondPlaylist.playlist.length - 1){
-            $('.playIcon').show();
-            $('.pauseIcon').addClass('hidden');
+    if($('.pause'+index).hasClass('hidden')){
+        if(currentIndex + '' == index + ''){
+            secondPlaylist.play();
         }else{
-            secondPlaylist.play(index + 1);
+            secondPlaylist.play(index);
         }
-        updateHeight();
-    });
+        $('.playIcon').show();
+        $('.pauseIcon').addClass('hidden');
+        $('.play'+index).hide();
+        $('.pause'+index).removeClass('hidden');
+    }else{
+        secondPlaylist.pause();
+        $('.playIcon').show();
+        $('.pauseIcon').addClass('hidden');
+        $('.play'+index).show();
+        $('.pause'+index).addClass('hidden');
+    }
+    $('#liCollapse' + index).collapse('show');
+    updateHeight();
 }
 
 function playSong(link, ePlay){
     $('#second-jplayer').jPlayer("stop");
-    bindPlayFunction();
-    function bindPlayFunction(){
-        var song = {
-            title: "",
-            artist: "",
-            mp3: "index.php?route=app/search/playsong&src=" + link
-        };
-
-        secondPlaylist.pause();
-        secondPlaylist.playlist.splice(0,1);
-        secondPlaylist.add(song);
-        secondPlaylist.play(0);
-        mainPlayList.pause();
-
+    if($(ePlay).find('#pause_icon').hasClass('hidden')){
+        if(secondPlaylist.playlist.length > 0){
+            secondPlaylist.play();
+        }else{
+            var song = {
+                title: "",
+                artist: "",
+                mp3: "index.php?route=app/search/playsong&src=" + link
+            };
+            secondPlaylist.pause();
+            secondPlaylist.playlist.splice(0,1);
+            secondPlaylist.add(song);
+            secondPlaylist.play(0);
+            mainPlayList.pause();
+        }
         $(ePlay).find('#play_icon').hide();
         $(ePlay).find('#pause_icon').removeClass('hidden');
-        $(ePlay).unbind('click');
-        $(ePlay).bind('click', function(){
-            pauseSong(link, ePlay);
-        });
+    }else{
+        pauseSong(ePlay);
     }
 }
 
-function pauseSong(link, ePlay){
+function pauseSong(ePlay){
     $(ePlay).find('#play_icon').show();
     $(ePlay).find('#pause_icon').addClass('hidden');
     secondPlaylist.pause();
-    $(ePlay).bind('click', function(){
-        playSong(link, ePlay);
-    });
 }
 
 function loadSongForMainPlaylist(song, index){
@@ -578,6 +579,10 @@ function loadSongInfo(link){
 }
 
 function gotoSongV2(link, index, prefix){
+    // make playlist empty
+    secondPlaylist.pause();
+    secondPlaylist.playlist.splice(0, secondPlaylist.playlist.length);
+
     var title= $('#title_'+ prefix + index).html();
     var artis = $('#artis_'+ prefix + index).html();
     var imgsrc = $('#imgSrc_'+ prefix + index).val();
@@ -596,6 +601,12 @@ function gotoSongV2(link, index, prefix){
         dataType: 'json',
         success: function(json) {
             isHasLoad = false;
+            var prepairHtmlUlElement = '<li class="list-group-item active" id="firstSongLi"></li>'
+            prepairHtmlUlElement+= '<li><p class="my-indicator" id="noidungBh"><i class="fa fa-circle-o-notch fa-spin fa-4x"></i></p></li>';
+            prepairHtmlUlElement+= '<li><div style="margin-left: 3%" id="interestedAlbum"></div></li>';
+            prepairHtmlUlElement+= '<li id="liFacebookComment"></li>';
+            $('#ulListSongParent').html(prepairHtmlUlElement);
+
             $('#firstSongLi').replaceWith(json.tileSong);
             $('#mainImg').replaceWith(json.tileImg);
             $('#noidungBh').replaceWith(json.lyric);

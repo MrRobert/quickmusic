@@ -22,7 +22,7 @@
                             <img style="height: 320px;" id="mainImg" class="img-full" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($songs[0]['img_src']));?>" alt="">
                             <img style="height: 10%; width: 24%;" class="looseless-img" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents(STATIC_PATH. 'image/looseless.jpg'));?>">
                         </div>
-                        <ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">
+                        <ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto" id="ulListSongParent">
                             <?php $index = 0; ?>
                             <?php foreach($songs as $song){ ?>
                                 <li class="list-group-item active" id="<?=$song['fs_id']?>">
