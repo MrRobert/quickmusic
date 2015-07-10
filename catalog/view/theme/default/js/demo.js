@@ -137,7 +137,7 @@ function listenCommonRequest(hash){
         }
     }
     if (hash.length > 0){
-        if(hash == 'music' || hash == 'favorite'){
+        if(hash == 'music' || hash == 'favorite' || hash == 'film'){
             fetchDATA(hash, $('#content'), data);
         }else if(hash == 'search' && isHasLoad){
             if(temp[1] == 'singer'){
@@ -955,7 +955,7 @@ function gotoVideoItem(videoId){
         dataType: 'html',
         success: function(html) {
             $('#content').html(html);
-            var htmlSrcVideo = '<iframe width="100%" height="580px" src="https://www.youtube.com/embed/'+ videoId+ '" frameborder="0" allowfullscreen style="max-width: 800px;"></iframe>';
+            var htmlSrcVideo = '<iframe width="100%" height="580px" src="https://www.youtube.com/embed/'+ videoId+ '?autoplay=0&loop=1" frameborder="0" allowfullscreen style="max-width: 800px;"></iframe>';
             $('#videoContainer').html(htmlSrcVideo);
 
             var listVideoHtml = '';

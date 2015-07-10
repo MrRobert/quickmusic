@@ -1,0 +1,13 @@
+<playlist>
+	<items>
+		<item>
+			<source>http://115.146.127.204/hdz03/Get%20Hard.mp4</source>
+			<sourceType>direct</sourceType>
+			<startFromThis>false</startFromThis>
+			<title><![CDATA[Title for video 2]]></title>
+			<description><![CDATA[This would be a short description of video 2]]></description>			
+			<duration>210</duration>
+			<image>http://www.mydomain.com/player/images/coverImage_2.jpg</image>			
+		</item>	
+	</items>
+</playlist>

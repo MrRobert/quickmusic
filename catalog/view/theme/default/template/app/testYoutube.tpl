@@ -13,7 +13,6 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>
-    /*
     // The client ID is obtained from the Google Developers Console
     // at https://console.developers.google.com/.
     // If you run this code from a server other than http://localhost,
@@ -74,7 +73,7 @@
     // After the API loads, call a function to enable the search box.
     function handleAPILoaded() {
         $('#search-button').attr('disabled', false);
-    } */
+    }
 
     // Search for a specified string.
 

@@ -6,7 +6,7 @@
                 <div class="vbox animated fadeInUp">
                     <div class="scrollable" style="width: 100%; text-align: center; color: #000000" id="videoContainer">
                         <div class="m-t-n-xxs item-song pos-rlt">
-                           <iframe width="100%" height="580px" src="https://www.youtube.com/embed/<?= $videoId; ?>" frameborder="0" allowfullscreen></iframe>
+                           <iframe width="100%" height="580px" src="https://www.youtube.com/embed/<?= $videoId; ?>?autoplay=0&loop=1&playlist=<?= $videoId; ?>" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">
                             <li class="list-group-item active" id="firstSongLi">
@@ -41,6 +41,5 @@
     <?php if(isset($videoId)) { ?>
         loadRelatedVideoById('<?= $videoId; ?>');
         loadDetailVideo('<?= $videoId;?>');
-        FB.XFBML.parse();
     <?php } ?>
 </script>
