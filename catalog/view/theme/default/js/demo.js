@@ -51,7 +51,7 @@ $(document).ready(function(){
             $('.playIcon').show();
             $('.pauseIcon').addClass('hidden');
         }else{
-            var src = $('#songImg'+index).val();
+            var src = $('#songImg'+ index + 1).val();
             $('#mainImg').attr('src', src);
             secondPlaylist.play(index + 1);
         }
