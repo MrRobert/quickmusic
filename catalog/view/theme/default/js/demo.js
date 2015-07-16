@@ -623,23 +623,24 @@ function bindRightClickAction(){
     $('.mysong').on('contextmenu', function(e){
         e.preventDefault();
         window.currentLi = $(this);
-        $(".custom-menu").finish().toggle(100).
+        $("#custom-menu").finish().toggle(100).
             css({ top: e.pageY + "px",
                 left: e.pageX + "px"
             });
     });
     $(document).bind("mousedown", function (e) {
-        if (!$(e.target).parents(".custom-menu").length > 0) {
-            $(".custom-menu").hide(100);
+        if (!$(e.target).parents("#custom-menu").length > 0) {
+            $("#custom-menu").hide(100);
         }
     });
-    $(".custom-menu li").click(function(e){
+    $("#custom-menu li").click(function(e){
         switch($(this).attr("data-action")) {
             case "1": handleOpenWindow(1, window.currentLi); break;
             case "2": handleOpenWindow(2, window.currentLi); break;
             case "3": handleOpenWindow(3, window.currentLi); break;
+            case "subMenu_" : handleOpenWindow($(this).attr("data-action-val"), window.currentLi); break;
         }
-        $(".custom-menu").hide(100);
+        $("#custom-menu").hide(100);
     });
 
     function handleOpenWindow(action, divLi){
@@ -719,6 +720,27 @@ function bindRightClickAction(){
                         }
                     }
                 });
+            }else if(action.indexOf('subMenu_')){
+                var playlist_id = parseInt(action.substring(action.indexOf('subMenu_')), 10);
+                var dataPlaylist = {
+                    'playlist_id': playlist_id,
+                    'song_title': title,
+                    'link' : srcSong,
+                    'title' :  title,
+                    'img_src' : window.btoa(imgSrc),
+                    'artist' : artis
+                };
+                $.ajax({
+                    url: 'index.php?route=app/playlist/insert_song_playlist',
+                    type: 'post',
+                    data: dataPlaylist,
+                    dataType: 'json',
+                    success: function(json) {
+                        if(json.status == "OK"){
+                            console.log("Added");
+                        }
+                    }
+                });
             }
         }
     }
@@ -744,14 +766,18 @@ function addToFavoriteSingle(div){
         $(div).find('i').removeClass('fa-heart-o');
     });
 }
-function openConfirmModal(song_favorite_id){
+
+function openConfirmModal(object_id, body, callBack, index){
+    var defaulBody = (body != undefined && body !=null && body.length > 0) ? body: '<h4>Are you sure to remove this song from favorite collection?</h4>';
+    var defaultCallBack = (callBack!=undefined && callBack!=null)? callBack: removeFavoriteSong;
+    $('#confirmBody').html(defaulBody);
     $('#confirmModalOKbutton').bind('click',function(){
-        removeFavoriteSong(song_favorite_id);
+        defaultCallBack(object_id, index);
     });
     $('#confirmModal').modal('show');
 }
 
-function removeFavoriteSong(song_favorite_id){
+function removeFavoriteSong(song_favorite_id, index){
     $.getJSON('index.php?route=app/favorite/remove&fs_id=' + song_favorite_id, function(data){
         if(data != 'OK'){
             alert(data);
@@ -858,11 +884,14 @@ function createNewPlayList(divA, parentDiv){
                dataType: 'json',
                success: function(json) {
                    if(json.status == "OK"){
-                       var tmpHtml = '<a href="javascript:void(0);" onclick="gotoPlaylistByID('+ json.playlist_id +','+ json.playlist_name +');">';
-                       tmpHtml += '<b class="badge pull-right">0</b>'
-                       tmpHtml+= '<span><i class="fa fa-list-ul"></i>'+ json.playlist_name + '</span></a>';
+                       var tmpHtml = '<a href="javascript:void(0);" style="display: inline-block" onclick="gotoPlaylistByID('+ json.playlist_id +','+ json.playlist_name +');">';
+                       tmpHtml += '<b class="badge pull-left">0</b>';
+                       tmpHtml += '<span><i class="fa fa-list-ul"></i>'+ json.playlist_name + '</span></a>';
+                       tmpHtml += '<a style="display: inline" class="pull-right" onclick="openConfirmModal(' + json.playlist_id + ', \'<h4>Are you sure to delete this playlist?</h4>\', removePlaylist, '+ json.currentIndex + ');">';
+                       tmpHtml += '<span><i class="fa fa-trash pull-right hidden-sm" style="padding:5px"></i></span>';
+                       tmpHtml += '</a>';
                        $(parentDiv).html(tmpHtml);
-                       $(parentDiv).attr('id', '');
+                       $(parentDiv).attr('id', 'liPlaylist'+ json.currentIndex);
 
                        var html = '<li class="li-menu" id="addNewParentLi">';
                        html += '<a href="javascript:void(0);" onclick="createNewPlayList($(this), $(\'#addNewParentLi\'));">';
@@ -870,10 +899,32 @@ function createNewPlayList(divA, parentDiv){
                        html += '<span id="spanAddNew"><i class="fa fa-plus-circle"></i> Add new</span>';
                        html += '<input id="inputAddNew" style="display: none;" type="text"/></a></li>';
                        $('#menu').append(html);
+
+                       // update context-menu
+                       $('#userPlaylist-subMenu').append('<li id="liContextMenu'+ json.currentIndex +'" data-action="4"><a tabindex="-1" href="#"><i class="fa fa-link"></i>'+ json.playlist_name +'</a></li>');
                    }
                }
            });
        }
+    });
+}
+
+function removePlaylist(playlist_id, index){
+    var data = {
+        'playlist_id' : playlist_id
+    };
+    $.ajax({
+        url: 'index.php?route=app/playlist/delete',
+        type: 'post',
+        data: data,
+        dataType: 'json',
+        success: function(json) {
+            if(json.status == "OK"){
+                $('#liPlaylist' + index).remove();
+                $('#liContextMenu'+index).remove();
+                $('#confirmModal').modal('hide');
+            }
+        }
     });
 }
 

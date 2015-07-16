@@ -12,6 +12,12 @@ class ModelAppPlaylist extends Model {
                 createDate = NOW()");
         return $this->db->getLastId();
     }
+
+    public function count($data){
+        $query = $this->db->query("SELECT count(*) FROM playlist WHERE mac_address='" . $this->db->escape($data['mac_address']) . "'");
+        return $query->row['count(*)'];
+    }
+
     public function update($data){
         $user_id = 0;
         if(isset($data['user_id'])){
@@ -31,7 +37,7 @@ class ModelAppPlaylist extends Model {
 
     public function removePlaylist($data){
         if(isset($data['playlist_id'])){
-            $this->db->query("DELETE FROM playlist WHERE playlist_id = ". (int) $data['playlist_id']);
+            $this->db->query("DELETE FROM playlist WHERE mac_address = '". $this->db->escape($data['mac_address']) ."' AND playlist_id = ". (int) $data['playlist_id']);
         }
     }
 

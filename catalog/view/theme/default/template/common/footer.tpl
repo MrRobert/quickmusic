@@ -65,10 +65,21 @@
 </footer>
 </div>
 <div>
-    <ul class='custom-menu'>
-        <li data-action = "1"><i class="fa fa-link"></i>Open Song in New Tab</li>
-        <li data-action = "2"><i class="fa fa-link"></i>Open Song in New Window</li>
-        <li data-action = "3"><i class="fa fa-plus-circle"></i>Add This Song to playlist</li>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="custom-menu">
+        <li data-action="1"><a tabindex="-1" href="#"><i class="fa fa-link"></i>Open Song in New Tab</a></li>
+        <li data-action="2"><a tabindex="-1" href="#"><i class="fa fa-link"></i>Open Song in New Window</a></li>
+        <li data-action="3"><a tabindex="-1" href="#"><i class="fa fa-plus-circle"></i>Add This Song to playlist</a></li>
+        <?php if(isset($playlist) && sizeof($playlist) > 0 ){ ?>
+        <li class="dropdown-submenu">
+            <a tabindex="-1" href="#"><i class="fa fa-plus-circle"></i>Add Song to</a>
+            <ul class="dropdown-menu" id="userPlaylist-subMenu">
+                <?php $index = 0;?>
+                <?php foreach($playlist as $userPlaylist){ ?>
+                    <li id="liContextMenu<?=$index;?>" data-action="subMenu_" data-action-val="subMenu_<?=$userPlaylist['playlist_id'];?>"><a tabindex="-1" href="#"><i class="fa fa-link"></i><?= $userPlaylist['playlist_name'];?></a></li>
+                <?php $index++; }?>
+            </ul>
+        </li>
+        <?php } ?>
     </ul>
 </div>
 <div id="confirmModal" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
@@ -80,7 +91,7 @@
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="row" id="confirmBody">
                         <h4>Are you sure to remove this song from favorite collection?</h4>
                     </div>
                 </div>
