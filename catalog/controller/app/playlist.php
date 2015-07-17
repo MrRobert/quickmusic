@@ -11,13 +11,13 @@ class ControllerAppPlaylist extends Controller {
         }
         $playlist_id = 0;
         if(isset($this->request->get['pl_id'])){
-            $playlist_id = (int) base64_decode($this->request->get['pl_id']);
+            $playlist_id = (int) $this->request->get['pl_id'];
         }
         $data = array();
         $this->load->model('app/playlist');
         $quickTool = new QuickTool();
 
-        $playlist = $this->model_app_playlist->getPlaylistSongsByPlaylistId($playlist_id, 1 , 100);
+        $playlist = $this->model_app_playlist->getPlaylistSongsByPlaylistId($playlist_id, 0 , 100);
         if(isset($playlist) && sizeof($playlist) > 0){
             foreach($playlist as $song){
                 $link = base64_decode($song['query']);
@@ -103,11 +103,12 @@ class ControllerAppPlaylist extends Controller {
     public function insert_song_playlist(){
         header('Content-Type: application/json');
         $this->load->model('app/playlist');
+        $this->load->model('app/url');
 
         $result = array();
         $quickTool = new QuickTool();
         $data['mac_address'] = $quickTool->getMacAddressClient($_SERVER['REMOTE_ADDR']);
-        $playlistId = 0; $songId = 0; $user_id = 0;
+        $playlistId = 0; $user_id = 0;
         $link=''; $title=''; $img_src=''; $artis='';
         if(isset($this->request->post['playlist_id'])){
             $playlistId = (int) $this->request->post['playlist_id'];
@@ -122,7 +123,7 @@ class ControllerAppPlaylist extends Controller {
             $title = $this->request->post['title'];
         }
         if(isset($this->request->post['img_src'])){
-            $img_src = $this->request->post['img_src'];
+            $img_src = base64_decode($this->request->post['img_src']);
         }
         if(isset($this->request->post['artis'])){
             $artis = $this->request->post['artis'];
@@ -132,7 +133,8 @@ class ControllerAppPlaylist extends Controller {
         $object['title'] = $title;
         $object['img_src'] = $img_src;
         $object['artis'] = $artis;
-        $songId = $this->model_app_url->insertData($object);
+        $songId = base64_decode($this->model_app_url->insertData($object));
+        $result['songId'] = $songId;
         $result['playlist_id'] = $this->model_app_playlist->insertSongToPlaylist($songId ,$playlistId, $user_id);
         $result['status'] = "OK";
         $this->response->setOutput(json_encode($result));

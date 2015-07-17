@@ -38,6 +38,7 @@ class ModelAppPlaylist extends Model {
     public function removePlaylist($data){
         if(isset($data['playlist_id'])){
             $this->db->query("DELETE FROM playlist WHERE mac_address = '". $this->db->escape($data['mac_address']) ."' AND playlist_id = ". (int) $data['playlist_id']);
+            $this->db->query("DELETE FROM song_playlist WHERE playlist_id = ". (int) $data['playlist_id']);
         }
     }
 
@@ -116,7 +117,7 @@ class ModelAppPlaylist extends Model {
         $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "url_alias p
                 LEFT JOIN ". DB_PREFIX ."song_playlist f ON p.url_alias_id = f.url_alias_id
                 WHERE f.playlist_id = ". (int)$playlist_id ." LIMIT ". (int)$start .",". (int)$end);
-        return $query->row;
+        return $query->rows;
     }
 
 
@@ -130,9 +131,9 @@ class ModelAppPlaylist extends Model {
     public function getPlaylistByMacAddressPlusCount($mac_address){
         $query = $this->db->query("SELECT *,
                                     (select count(*) from song_playlist p LEFT JOIN playlist f ON p.playlist_id = f.playlist_id
-                                        WHERE f.mac_address = '". $this->db->escape($mac_address) ."') as count
-                                    FROM " . DB_PREFIX . "playlist
-                                    WHERE mac_address = '". $this->db->escape($mac_address) . "'");
+                                        WHERE f.mac_address = '". $this->db->escape($mac_address) ."' AND f.playlist_id = pl.playlist_id) as count
+                                    FROM " . DB_PREFIX . "playlist pl
+                                    WHERE pl.mac_address = '". $this->db->escape($mac_address) . "'");
         return $query->rows;
     }
 

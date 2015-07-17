@@ -70,6 +70,11 @@ $(document).ready(function() {
 	$('#button-menu').on('click', function() {
 		// Checks if the left column is active or not.
 		startPage();
+        if ($('#column-left').hasClass('active')) {
+            $('.col-hide').css('display','inline');
+        }else{
+            $('.col-hide').css('display','none');
+        }
 	});
 
 	// Menu
@@ -190,6 +195,11 @@ $(document).ready(function() {
 	});
 
     $('.li-menu').removeClass('active');
+    if ($('#column-left').hasClass('active')) {
+        $('.col-hide').css('display', 'inline');
+    }else{
+        $('.col-hide').css('display','none');
+    }
 });
 
 function startPage(){

@@ -158,7 +158,7 @@ function listenCommonRequest(hash){
             if(isHasLoad){
                 var arrPath = temp[1].split('-');
                 if(arrPath.length > 1){
-                    data.pl_id = arrPath[1];
+                    data.pl_id = window.atob(arrPath[1]);
                     fetchDATA(hash, $('#content'), data);
                 }
             }
@@ -720,8 +720,8 @@ function bindRightClickAction(){
                         }
                     }
                 });
-            }else if(action.indexOf('subMenu_')){
-                var playlist_id = parseInt(action.substring(action.indexOf('subMenu_')), 10);
+            }else if(action.indexOf('subMenu_') >= 0){
+                var playlist_id = parseInt(action.substring(action.indexOf('_')+1), 10);
                 var dataPlaylist = {
                     'playlist_id': playlist_id,
                     'song_title': title,
@@ -737,7 +737,8 @@ function bindRightClickAction(){
                     dataType: 'json',
                     success: function(json) {
                         if(json.status == "OK"){
-                            console.log("Added");
+                            var currentNumb = $('#numb'+ playlist_id).html().trim();
+                            $('#numb'+playlist_id).html(parseInt(currentNumb) + 1);
                         }
                     }
                 });
@@ -887,7 +888,7 @@ function createNewPlayList(divA, parentDiv){
                        var tmpHtml = '<a href="javascript:void(0);" style="display: inline-block" onclick="gotoPlaylistByID('+ json.playlist_id +','+ json.playlist_name +');">';
                        tmpHtml += '<b class="badge pull-left">0</b>';
                        tmpHtml += '<span><i class="fa fa-list-ul"></i>'+ json.playlist_name + '</span></a>';
-                       tmpHtml += '<a style="display: inline" class="pull-right" onclick="openConfirmModal(' + json.playlist_id + ', \'<h4>Are you sure to delete this playlist?</h4>\', removePlaylist, '+ json.currentIndex + ');">';
+                       tmpHtml += '<a style="display: inline" class="pull-right col-hide" onclick="openConfirmModal(' + json.playlist_id + ', \'<h4>Are you sure to delete this playlist?</h4>\', removePlaylist, '+ json.currentIndex + ');">';
                        tmpHtml += '<span><i class="fa fa-trash pull-right hidden-sm" style="padding:5px"></i></span>';
                        tmpHtml += '</a>';
                        $(parentDiv).html(tmpHtml);
@@ -1060,4 +1061,27 @@ function loadDetailVideo(videoId){
         }
     );
 
+}
+
+function moveUp(song_id){
+    var index = $('#'+song_id).attr('data-index');
+    if(index > 0){
+        // switch playlist index
+        var currentSong = secondPlaylist.playlist[index];
+        var previousSong = secondPlaylist.playlist[index-1];
+        secondPlaylist.playlist[index] = previousSong;
+        secondPlaylist.playlist[index-1] = currentSong;
+        // switch li element
+        var currentLiHTML = $("<div />").append($('#'+song_id).clone()).html();
+        var previousLiHtml = $("<div />").append($($("li[data-index=\'"+ (index-1) + "\']")[0]).clone()).html();
+        $('#'+song_id).replaceWith(previousLiHtml);
+        $($("li[data-index=\'"+ (index-1) + "\']")[0]).replaceWith(currentLiHTML);
+        $($("li[data-index=\'"+ (index-1) + "\']")[0]).attr('data-index', index);
+        $('#'+song_id).attr('data-index', index - 1);
+
+        var currentLiLyricHTML = $("<div />").append($('#liCollapse'+ index).clone()).html();
+        var previousLiLyricHTML = $("<div />").append($('#liCollapse'+ index - 1).clone()).html();
+        $('#liCollapse'+ index).replaceWith(previousLiLyricHTML);
+        $('#liCollapse'+ index - 1).replaceWith(currentLiLyricHTML);
+    }
 }

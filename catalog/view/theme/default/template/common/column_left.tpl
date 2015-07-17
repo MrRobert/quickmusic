@@ -18,10 +18,10 @@
             <?php foreach($playlist as $collection){ ?>
             <li class="li-menu playlist-menu" id="liPlaylist<?=$index;?>">
                 <a style="display: inline-block" href="javascript:void(0);" onclick="gotoPlaylist('<?= $index; ?>', '<?= $collection['playlist_name']?>')"><i class="fa fa-list-ul"></i>
-                    <b class="badge pull-left"><?= $collection['count'];?></b>
+                    <b class="badge pull-left" id="numb<?= $collection['playlist_id'];?>"><?= $collection['count'];?></b>
                     <span><?= $collection['playlist_name']?></span>
                 </a>
-                <a style="display: inline" class="pull-right" onclick="openConfirmModal('<?=$collection['playlist_id'];?>', '<h4>Are you sure to delete this playlist?</h4>', removePlaylist, '<?=$index;?>');">
+                <a style="display: inline" class="pull-right col-hide" onclick="openConfirmModal('<?=$collection['playlist_id'];?>', '<h4>Are you sure to delete this playlist?</h4>', removePlaylist, '<?=$index;?>');">
                     <span><i class="fa fa-trash pull-right hidden-sm" style="padding:5px"></i></span>
                 </a>
                 <input type="hidden" id="playlist_<?=$index?>" value="<?= $collection['playlist_id']; ?>"/>

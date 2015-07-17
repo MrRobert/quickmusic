@@ -66,16 +66,16 @@
 </div>
 <div>
     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="custom-menu">
-        <li data-action="1"><a tabindex="-1" href="#"><i class="fa fa-link"></i>Open Song in New Tab</a></li>
-        <li data-action="2"><a tabindex="-1" href="#"><i class="fa fa-link"></i>Open Song in New Window</a></li>
-        <li data-action="3"><a tabindex="-1" href="#"><i class="fa fa-plus-circle"></i>Add This Song to playlist</a></li>
+        <li data-action="1"><a tabindex="-1" href="javascript:;"><i class="fa fa-link"></i>Open Song in New Tab</a></li>
+        <li data-action="2"><a tabindex="-1" href="javascript:;"><i class="fa fa-link"></i>Open Song in New Window</a></li>
+        <li data-action="3"><a tabindex="-1" href="javascript:;"><i class="fa fa-plus-circle"></i>Add This Song to playlist</a></li>
         <?php if(isset($playlist) && sizeof($playlist) > 0 ){ ?>
         <li class="dropdown-submenu">
-            <a tabindex="-1" href="#"><i class="fa fa-plus-circle"></i>Add Song to</a>
+            <a tabindex="-1" href="javascript:;"><i class="fa fa-plus-circle"></i>Add Song to</a>
             <ul class="dropdown-menu" id="userPlaylist-subMenu">
                 <?php $index = 0;?>
                 <?php foreach($playlist as $userPlaylist){ ?>
-                    <li id="liContextMenu<?=$index;?>" data-action="subMenu_" data-action-val="subMenu_<?=$userPlaylist['playlist_id'];?>"><a tabindex="-1" href="#"><i class="fa fa-link"></i><?= $userPlaylist['playlist_name'];?></a></li>
+                    <li id="liContextMenu<?=$index;?>" data-action="subMenu_" data-action-val="subMenu_<?=$userPlaylist['playlist_id'];?>"><a tabindex="-1" href="javascript:;"><i class="fa fa-link"></i><?= $userPlaylist['playlist_name'];?></a></li>
                 <?php $index++; }?>
             </ul>
         </li>
