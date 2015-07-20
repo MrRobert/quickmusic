@@ -227,13 +227,21 @@ function searchSubmit(){
     if(searchType == 'music'){
         window.location.hash = "#search/singer/" + searchName.split(' ').join('+').toString();
     }else if(searchType == 'video'){
+        var searchObject = {
+            q : searchName,
+            part: 'snippet',
+            maxResults: 30,
+            key : 'AIzaSyDiAj-zEn_yqElnlvpwlGIanJGVZ5lhJII'
+        };
+        if(searchName == 'DuaLeo'){
+            searchObject.channelId = 'UCpdQX3whRd61cgzjBXISFRQ';
+        }else if(searchName == 'VitaminK'){
+            searchObject.channelId = 'UCY6w7yucQDnJJ40x6_urpkg';
+        }
+        // TODO: more here
+
         $.get('index.php?route=app/video/searchlist', function(html){
-            $.get("https://www.googleapis.com/youtube/v3/search",{
-                    q: searchName,
-                    part: 'snippet',
-                    maxResults : 30,
-                    key : 'AIzaSyDiAj-zEn_yqElnlvpwlGIanJGVZ5lhJII'
-                }, function(response){
+            $.get("https://www.googleapis.com/youtube/v3/search", searchObject , function(response){
                     window.currentListVideoSearch = (response != undefined)? response.items : '';
                     $('#content').html(html);
                     bindDataToSearchVideo(response.items);
@@ -601,7 +609,7 @@ function gotoSongV2(link, index, prefix){
         dataType: 'json',
         success: function(json) {
             isHasLoad = false;
-            var prepairHtmlUlElement = '<li class="list-group-item active" id="firstSongLi"></li>'
+            var prepairHtmlUlElement = '<li class="list-group-item active" id="firstSongLi"></li>';
             prepairHtmlUlElement+= '<li><p class="my-indicator" id="noidungBh"><i class="fa fa-circle-o-notch fa-spin fa-4x"></i></p></li>';
             prepairHtmlUlElement+= '<li><div style="margin-left: 3%" id="interestedAlbum"></div></li>';
             prepairHtmlUlElement+= '<li id="liFacebookComment"></li>';
@@ -619,6 +627,7 @@ function gotoSongV2(link, index, prefix){
     });
 }
 
+// ------------- Do Action Right Click -------------------------------
 function bindRightClickAction(){
     $('.mysong').on('contextmenu', function(e){
         e.preventDefault();
@@ -633,6 +642,10 @@ function bindRightClickAction(){
             $("#custom-menu").hide(100);
         }
     });
+    bindClickOnContextMenu();
+}
+
+function bindClickOnContextMenu(){
     $("#custom-menu li").click(function(e){
         switch($(this).attr("data-action")) {
             case "1": handleOpenWindow(1, window.currentLi); break;
@@ -642,110 +655,111 @@ function bindRightClickAction(){
         }
         $("#custom-menu").hide(100);
     });
+}
 
-    function handleOpenWindow(action, divLi){
-        if(divLi != undefined && divLi != null){
-            var index = $(divLi).attr("data-index");
-            var srcSong = $('#song'+ index).val();
-            var title = $('#title_'+index).html();
-            var artis = $('#artis_'+index).html();
-            var imgSrc = $('#imgSrc_'+index).val();
-            if(action == 1){ // open in new tab
-                mainPlayList.pause();
-                secondPlaylist.pause();
-                setTimeout(function(){
-                    resumePlaying();
-                }, 100);
+function handleOpenWindow(action, divLi){
+    if(divLi != undefined && divLi != null){
+        var index = $(divLi).attr("data-index");
+        var srcSong = $('#song'+ index).val();
+        var title = $('#title_'+index).html();
+        var artis = $('#artis_'+index).html();
+        var imgSrc = $('#imgSrc_'+index).val();
+        if(action == 1){ // open in new tab
+            mainPlayList.pause();
+            secondPlaylist.pause();
+            setTimeout(function(){
+                resumePlaying();
+            }, 100);
 
-                var data = {
-                    'link' : srcSong,
-                    'title' :  title,
-                    'img_src' : window.btoa(imgSrc),
-                    'artist' : artis
-                };
-                $.ajax({
-                    url: 'index.php?route=app/song/gotosong',
-                    type: 'post',
-                    data: data,
-                    dataType: 'json',
-                    success: function(json) {
-                        var finalUrl = json.rootUrl + "#song/" + foldToAssci(json.title + json.artis) + "_" + json.keyword;
-                        window.open(finalUrl, '_blank');
-                    }
-                });
-            }else if(action == 2){ // open in new window
-                mainPlayList.pause();
-                secondPlaylist.pause();
-                setTimeout(function(){
-                    resumePlaying();
-                }, 100);
+            var data = {
+                'link' : srcSong,
+                'title' :  title,
+                'img_src' : window.btoa(imgSrc),
+                'artist' : artis
+            };
+            $.ajax({
+                url: 'index.php?route=app/song/gotosong',
+                type: 'post',
+                data: data,
+                dataType: 'json',
+                success: function(json) {
+                    var finalUrl = json.rootUrl + "#song/" + foldToAssci(json.title + json.artis) + "_" + json.keyword;
+                    window.open(finalUrl, '_blank');
+                }
+            });
+        }else if(action == 2){ // open in new window
+            mainPlayList.pause();
+            secondPlaylist.pause();
+            setTimeout(function(){
+                resumePlaying();
+            }, 100);
 
-                var data2 = {
-                    'link' : srcSong,
-                    'title' :  title,
-                    'img_src' : window.btoa(imgSrc),
-                    'artist' : artis
-                };
-                $.ajax({
-                    url: 'index.php?route=app/song/gotosong',
-                    type: 'post',
-                    data: data2,
-                    dataType: 'json',
-                    success: function(json) {
-                        var strWindowFeatures = "height=" + window.height + ",width= " + window.width;
-                        var finalUrl = json.rootUrl + "#song/" + foldToAssci(json.title + json.artis) + "_" + json.keyword;
-                        window.open(finalUrl, title, strWindowFeatures);
+            var data2 = {
+                'link' : srcSong,
+                'title' :  title,
+                'img_src' : window.btoa(imgSrc),
+                'artist' : artis
+            };
+            $.ajax({
+                url: 'index.php?route=app/song/gotosong',
+                type: 'post',
+                data: data2,
+                dataType: 'json',
+                success: function(json) {
+                    var strWindowFeatures = "height=" + window.height + ",width= " + window.width;
+                    var finalUrl = json.rootUrl + "#song/" + foldToAssci(json.title + json.artis) + "_" + json.keyword;
+                    window.open(finalUrl, title, strWindowFeatures);
+                }
+            });
+        }else if(action == 3){
+            mainPlayList.pause();
+            secondPlaylist.pause();
+            setTimeout(function(){
+                resumePlaying();
+            }, 100);
+            var data3 = {
+                'link' : srcSong,
+                'title' :  title,
+                'img_src' : window.btoa(imgSrc),
+                'artist' : artis
+            };
+            $.ajax({
+                url: 'index.php?route=app/song/fetchsong',
+                type: 'post',
+                data: data3,
+                dataType: 'json',
+                success: function(json) {
+                    if(json.linkSong != undefined && json.linkSong != ''){
+                        plusSong('index.php?route=app/search/playsong&src='+ json.linkSong, title, artis, '-1');
                     }
-                });
-            }else if(action == 3){
-                mainPlayList.pause();
-                secondPlaylist.pause();
-                setTimeout(function(){
-                    resumePlaying();
-                }, 100);
-                var data3 = {
-                    'link' : srcSong,
-                    'title' :  title,
-                    'img_src' : window.btoa(imgSrc),
-                    'artist' : artis
-                };
-                $.ajax({
-                    url: 'index.php?route=app/song/fetchsong',
-                    type: 'post',
-                    data: data3,
-                    dataType: 'json',
-                    success: function(json) {
-                        if(json.linkSong != undefined && json.linkSong != ''){
-                            plusSong('index.php?route=app/search/playsong&src='+ json.linkSong, title, artis, '-1');
-                        }
+                }
+            });
+        }else if(action.indexOf('subMenu_') >= 0){
+            var playlist_id = parseInt(action.substring(action.indexOf('_')+1), 10);
+            var dataPlaylist = {
+                'playlist_id': playlist_id,
+                'song_title': title,
+                'link' : srcSong,
+                'title' :  title,
+                'img_src' : window.btoa(imgSrc),
+                'artist' : artis
+            };
+            $.ajax({
+                url: 'index.php?route=app/playlist/insert_song_playlist',
+                type: 'post',
+                data: dataPlaylist,
+                dataType: 'json',
+                success: function(json) {
+                    if(json.status == "OK"){
+                        var currentNumb = $('#numb'+ playlist_id).html().trim();
+                        $('#numb'+playlist_id).html(parseInt(currentNumb) + 1);
                     }
-                });
-            }else if(action.indexOf('subMenu_') >= 0){
-                var playlist_id = parseInt(action.substring(action.indexOf('_')+1), 10);
-                var dataPlaylist = {
-                    'playlist_id': playlist_id,
-                    'song_title': title,
-                    'link' : srcSong,
-                    'title' :  title,
-                    'img_src' : window.btoa(imgSrc),
-                    'artist' : artis
-                };
-                $.ajax({
-                    url: 'index.php?route=app/playlist/insert_song_playlist',
-                    type: 'post',
-                    data: dataPlaylist,
-                    dataType: 'json',
-                    success: function(json) {
-                        if(json.status == "OK"){
-                            var currentNumb = $('#numb'+ playlist_id).html().trim();
-                            $('#numb'+playlist_id).html(parseInt(currentNumb) + 1);
-                        }
-                    }
-                });
-            }
+                }
+            });
         }
     }
 }
+// -------------- End Handle Right Click Action -----------
 
 function resumePlaying(){
     if(isMainPlaying){
@@ -885,8 +899,8 @@ function createNewPlayList(divA, parentDiv){
                dataType: 'json',
                success: function(json) {
                    if(json.status == "OK"){
-                       var tmpHtml = '<a href="javascript:void(0);" style="display: inline-block" onclick="gotoPlaylistByID('+ json.playlist_id +','+ json.playlist_name +');">';
-                       tmpHtml += '<b class="badge pull-left">0</b>';
+                       var tmpHtml = '<a href="javascript:void(0);" style="display: inline-block" onclick="gotoPlaylistByID('+ json.playlist_id +',\''+ json.playlist_name +'\');">';
+                       tmpHtml += '<b class="badge pull-left" id="numb'+ json.playlist_id +'">0</b>';
                        tmpHtml += '<span><i class="fa fa-list-ul"></i>'+ json.playlist_name + '</span></a>';
                        tmpHtml += '<a style="display: inline" class="pull-right col-hide" onclick="openConfirmModal(' + json.playlist_id + ', \'<h4>Are you sure to delete this playlist?</h4>\', removePlaylist, '+ json.currentIndex + ');">';
                        tmpHtml += '<span><i class="fa fa-trash pull-right hidden-sm" style="padding:5px"></i></span>';
@@ -902,7 +916,9 @@ function createNewPlayList(divA, parentDiv){
                        $('#menu').append(html);
 
                        // update context-menu
-                       $('#userPlaylist-subMenu').append('<li id="liContextMenu'+ json.currentIndex +'" data-action="4"><a tabindex="-1" href="#"><i class="fa fa-link"></i>'+ json.playlist_name +'</a></li>');
+                       var liAddHtml = '<li id="liContextMenu'+ json.currentIndex +'" data-action="subMenu_" data-action-val="subMenu_'+ json.playlist_id +'"><a tabindex="-1" href="javascript:;"><i class="fa fa-link"></i>'+ json.playlist_name +'</a></li>';
+                       $('#userPlaylist-subMenu').append(liAddHtml);
+                       bindClickOnContextMenu();
                    }
                }
            });
@@ -1061,27 +1077,4 @@ function loadDetailVideo(videoId){
         }
     );
 
-}
-
-function moveUp(song_id){
-    var index = $('#'+song_id).attr('data-index');
-    if(index > 0){
-        // switch playlist index
-        var currentSong = secondPlaylist.playlist[index];
-        var previousSong = secondPlaylist.playlist[index-1];
-        secondPlaylist.playlist[index] = previousSong;
-        secondPlaylist.playlist[index-1] = currentSong;
-        // switch li element
-        var currentLiHTML = $("<div />").append($('#'+song_id).clone()).html();
-        var previousLiHtml = $("<div />").append($($("li[data-index=\'"+ (index-1) + "\']")[0]).clone()).html();
-        $('#'+song_id).replaceWith(previousLiHtml);
-        $($("li[data-index=\'"+ (index-1) + "\']")[0]).replaceWith(currentLiHTML);
-        $($("li[data-index=\'"+ (index-1) + "\']")[0]).attr('data-index', index);
-        $('#'+song_id).attr('data-index', index - 1);
-
-        var currentLiLyricHTML = $("<div />").append($('#liCollapse'+ index).clone()).html();
-        var previousLiLyricHTML = $("<div />").append($('#liCollapse'+ index - 1).clone()).html();
-        $('#liCollapse'+ index).replaceWith(previousLiLyricHTML);
-        $('#liCollapse'+ index - 1).replaceWith(currentLiLyricHTML);
-    }
 }

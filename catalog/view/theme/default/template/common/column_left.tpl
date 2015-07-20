@@ -1,7 +1,24 @@
 <nav id="column-left">
     <ul id="menu">
         <li class="li-menu"><a href="#music" ><i class="fa fa-music"></i><span>Music</span></a></li>
-        <li class="li-menu"><a href="#video"><i class="fa fa-youtube-play"></i><span>Video</span></a></li>
+        <li class="li-menu">
+            <a href="#video" class="parent">
+                <i class="fa fa-youtube-play"></i><span>Video</span>
+            </a>
+            <ul class="collapse">
+                <li><a href="#search/video/DuaLeo">
+                        <img style="width:35px;" class="img-circle" src="https://lh3.googleusercontent.com/-GdM-VboFuwA/AAAAAAAAAAI/AAAAAAAAAAA/-OUPTkEO1i4/photo.jpg" />
+                        DuaLeo
+                    </a>
+                </li>
+                <li>
+                    <a href="#search/video/VitaminK">
+                        <img style="width:35px;" class="img-circle" src="<?php echo STATIC_PATH ?>image/vitamink.jpg"/>
+                        Vitamin K
+                    </a>
+                </li>
+            </ul>
+        </li>
         <li class="li-menu"><a href="#film"><i class="fa fa-film"></i><span>Movie</span></a></li>
         <li class="li-menu"><a href="#favorite"><i class="fa fa-heart"></i><span>Favorite</span></a></li>
 
