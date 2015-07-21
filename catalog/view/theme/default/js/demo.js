@@ -1078,3 +1078,17 @@ function loadDetailVideo(videoId){
     );
 
 }
+
+function openChannelDialog(){
+    $('#channelDialog').modal('show');
+}
+
+function addCustomChannel(){
+    var channelInput = $('#channelInput').val().trim();
+    var html = '<li>';
+    html += '<a href="#search/video/'+ channelInput +'">';
+    html += '#' + channelInput;
+    html += '</a></li>';
+    html += '<li id="customChannelAddLi" style="display: none"></li>'
+    $('#customChannelAddLi').replaceWith(html);
+}

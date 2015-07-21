@@ -6,15 +6,25 @@
                 <i class="fa fa-youtube-play"></i><span>Video</span>
             </a>
             <ul class="collapse">
-                <li><a href="#search/video/DuaLeo">
+                <li>
+                    <a href="#search/video/DuaLeo" style="display: inline-block">
                         <img style="width:35px;" class="img-circle" src="https://lh3.googleusercontent.com/-GdM-VboFuwA/AAAAAAAAAAI/AAAAAAAAAAA/-OUPTkEO1i4/photo.jpg" />
                         DuaLeo
                     </a>
+                    <a href="javascript:;" class="pull-right" style="display: inline"><i class="fa fa-remove"></i></a>
                 </li>
                 <li>
-                    <a href="#search/video/VitaminK">
+                    <a href="#search/video/VitaminK" style="display: inline-block">
                         <img style="width:35px;" class="img-circle" src="<?php echo STATIC_PATH ?>image/vitamink.jpg"/>
                         Vitamin K
+                    </a>
+                    <a href="javascript:;" class="pull-right" style="display: inline-block"><i class="fa fa-remove"></i></a>
+                </li>
+                <li id="customChannelAddLi" style="display: none;"></li>
+                <li>
+                    <a href="javascript:;" onclick="openChannelDialog();">
+                        <i class="fa fa-plus-circle"></i>
+                        Add Channel
                     </a>
                 </li>
             </ul>

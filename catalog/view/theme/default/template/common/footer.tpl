@@ -103,6 +103,31 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<div id="channelDialog" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel"><i class="fa fa-apple"></i>iChannel</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="channelInput"/>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" onclick="addCustomChannel();" class="btn btn-primary">Add Channel</button>
+                        </div>
+                    </div>
+                    <div class="row" style="margin: auto; padding-top:10px;">
+                        <h4>Synchronize with your <i class="fa fa-youtube-square"></i> youtube <a href="javascript:;" onclick="">account</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 </body>
 <script type="text/javascript">

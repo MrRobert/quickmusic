@@ -17,10 +17,10 @@
                             <a href="javascript:void(0);"><i class="fa fa-star-o text-muted"></i></a>
                         </div>
                         <div class="center text-center m-t-n">
-                            <a onclick="gotoSong('<?php echo base64_encode($song['href'])?>', '<?= $index?>', 'vn');" href="javascript:void(0);" class="play-icon-a"><i class="fa fa-play fa-2x"></i></a>
+                            <a onclick="gotoSong('<?php echo $song['href']; ?>', '<?= $index?>', 'vn');" href="javascript:void(0);" class="play-icon-a"><i class="fa fa-play fa-2x"></i></a>
                         </div>
                         <div class="bottom_2 padder m-b-sm">
-                            <a href="javascript:void(0);" style="color: #9badb9;" id="plus_vn<?=$index;?>" onclick="plusSong('<?= base64_encode($song['href'])?>','<?= $song['title']?>', '<?= $song['artis']?>', 'vn'<?= $index ?>)" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
+                            <a href="javascript:void(0);" style="color: #9badb9;" id="plus_vn<?=$index;?>" onclick="plusSong('<?= $song['href']; ?>','<?= $song['title']?>', '<?= $song['artis']?>', 'vn'<?= $index ?>)" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
                             <a href="javascript:void(0);" style="color: #9badb9;" id="plused_vn<?=$index;?>" class="hidden pull-right"><i class="fa fa-check"></i></a>
                         </div>
                         <div class="bottom padder m-b-sm">
