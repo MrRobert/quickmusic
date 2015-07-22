@@ -9,6 +9,22 @@ class ControllerCommonHome extends Controller {
 		if (isset($this->request->get['route'])) {
 			$this->document->addLink(HTTP_SERVER, 'canonical');
 		}
+        $quickTool = new QuickTool();
+        $this->load->model('app/video_channel');
+        $mac_address = $quickTool->getMacAddressClient($_SERVER['REMOTE_ADDR']);
+        $channels = $this->model_app_video_channel->getListChannel($mac_address);
+        if(!isset($channels) || sizeof($channels) <= 0){
+            $dataChannel['channel_name'] = 'DuaLeo';
+            $dataChannel['mac_address'] = $mac_address;
+            $dataChannel['image'] = 'https://lh3.googleusercontent.com/-GdM-VboFuwA/AAAAAAAAAAI/AAAAAAAAAAA/-OUPTkEO1i4/photo.jpg';
+            $this->model_app_video_channel->insert($dataChannel);
+
+            $dataChannel['channel_name'] = 'Vitamin K';
+            $dataChannel['mac_address'] = $mac_address;
+            $dataChannel['image'] = STATIC_PATH . 'image/vitamink.jpg';
+            $this->model_app_video_channel->insert($dataChannel);
+        }
+
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');

@@ -52,3 +52,12 @@ CREATE TABLE IF NOT EXISTS `song_playlist` (
   `playlist_id` int(11) NOT NULL,
   PRIMARY KEY (`song_playlist_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `video_channel` (
+  `video_channel_id` int(11) NOT NULL AUTO_INCREMENT,
+  `image` varchar(255),
+  `channel_name` varchar(100) NOT NULL,
+  `mac_address` text NOT NULL,
+  `date` date NOT NULL,
+  PRIMARY KEY (`video_channel_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

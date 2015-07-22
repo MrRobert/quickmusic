@@ -17,6 +17,18 @@ class ControllerCommonColumnLeft extends Controller {
                 );
             }
         }
+        // VIdeo Channel
+        $this->load->model('app/video_channel');
+        $tmpData = $this->model_app_video_channel->getListChannel($macAddress);
+        if(isset($tmpData) && sizeof($tmpData) > 0){
+            foreach($tmpData as $channel){
+                $data['video_channel'][] = array(
+                    'video_channel_id' => $channel['video_channel_id'],
+                    'channel_name' => $channel['channel_name'],
+                    'image' => $channel['image']
+                );
+            }
+        }
         return $this->load->view('default/template/common/column_left.tpl', $data);
     }
 }

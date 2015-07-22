@@ -1,5 +1,5 @@
 <div class="main-video">
-    <video id="video_background" preload="auto" autoplay="false" loop="loop" volume="100">
+    <video id="video_background" preload="auto" autoplay="false" volume="80">
         <source src="<?= STATIC_PATH . 'video/Daleri-Bonjour[Tasty].webm' ?>" type="video/webm">
         <source src="<?= STATIC_PATH . 'video/Daleri-Bonjour[Tasty].mp4' ?>" type="video/mp4">
         Video not supported

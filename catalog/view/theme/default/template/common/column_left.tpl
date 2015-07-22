@@ -1,25 +1,19 @@
 <nav id="column-left">
     <ul id="menu">
         <li class="li-menu"><a href="#music" ><i class="fa fa-music"></i><span>Music</span></a></li>
-        <li class="li-menu">
+        <li class="li-menu li-hover">
             <a href="#video" class="parent">
                 <i class="fa fa-youtube-play"></i><span>Video</span>
             </a>
             <ul class="collapse">
-                <li>
-                    <a href="#search/video/DuaLeo" style="display: inline-block">
-                        <img style="width:35px;" class="img-circle" src="https://lh3.googleusercontent.com/-GdM-VboFuwA/AAAAAAAAAAI/AAAAAAAAAAA/-OUPTkEO1i4/photo.jpg" />
-                        DuaLeo
+                <?php foreach($video_channel as $channel){ ?>
+                <li id="liChannel<?= $channel['video_channel_id'];?>">
+                    <a href="#search/video/<?= $channel['channel_name']?>" class="col-left-context" data-channel="<?= $channel['video_channel_id']?>">
+                        <img style="width:35px;" class="img-circle" src="<?= $channel['image']?>" />
+                        <span id="channelName<?= $channel['channel_name']; ?>"><?= $channel['channel_name']?></span>
                     </a>
-                    <a href="javascript:;" class="pull-right" style="display: inline"><i class="fa fa-remove"></i></a>
                 </li>
-                <li>
-                    <a href="#search/video/VitaminK" style="display: inline-block">
-                        <img style="width:35px;" class="img-circle" src="<?php echo STATIC_PATH ?>image/vitamink.jpg"/>
-                        Vitamin K
-                    </a>
-                    <a href="javascript:;" class="pull-right" style="display: inline-block"><i class="fa fa-remove"></i></a>
-                </li>
+                <?php } ?>
                 <li id="customChannelAddLi" style="display: none;"></li>
                 <li>
                     <a href="javascript:;" onclick="openChannelDialog();">

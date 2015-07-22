@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $('.playlist-menu').removeClass('active open');
+    bindRightClickLeftColumn();
     $.ajaxSetup({ cache: true });
     $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
         FB.init({
@@ -638,11 +639,39 @@ function bindRightClickAction(){
             });
     });
     $(document).bind("mousedown", function (e) {
-        if (!$(e.target).parents("#custom-menu").length > 0) {
+        if (!$(e.target).parents("#custom-menu").length > 0 && !$(e.target).parents("#left-custom-menu").length > 0) {
             $("#custom-menu").hide(100);
+            $("#left-custom-menu").hide(100);
+        }else if(!$(e.target).parents("#custom-menu").length > 0){
+            $("#custom-menu").hide(100);
+        }else if(!$(e.target).parents("#left-custom-menu").length > 0){
+            $("#left-custom-menu").hide(100);
         }
     });
     bindClickOnContextMenu();
+}
+
+function bindRightClickLeftColumn(){
+    $('.col-left-context').on('contextmenu', function(e){
+        e.preventDefault();
+        $("#left-custom-menu").finish().toggle(100).
+            css({ top: e.pageY + "px",
+                left: e.pageX + "px"
+        });
+        window.curLeftMenuData = {
+            video_channel_id : $(this).attr('data-channel')
+        };
+    });
+    $(document).bind("mousedown", function (e) {
+        if (!$(e.target).parents("#custom-menu").length > 0 && !$(e.target).parents("#left-custom-menu").length > 0) {
+            $("#custom-menu").hide(100);
+            $("#left-custom-menu").hide(100);
+        }else if(!$(e.target).parents("#custom-menu").length > 0){
+            $("#custom-menu").hide(100);
+        }else if(!$(e.target).parents("#left-custom-menu").length > 0){
+            $("#left-custom-menu").hide(100);
+        }
+    });
 }
 
 function bindClickOnContextMenu(){
@@ -1085,10 +1114,69 @@ function openChannelDialog(){
 
 function addCustomChannel(){
     var channelInput = $('#channelInput').val().trim();
-    var html = '<li>';
-    html += '<a href="#search/video/'+ channelInput +'">';
-    html += '#' + channelInput;
-    html += '</a></li>';
-    html += '<li id="customChannelAddLi" style="display: none"></li>'
-    $('#customChannelAddLi').replaceWith(html);
+    var data = {
+        channel_name: channelInput
+    };
+    $.ajax({
+        url: 'index.php?route=app/video_channel/insert',
+        type: 'post',
+        data: data,
+        dataType: 'json',
+        success: function(json) {
+            if(json.status == "OK"){
+                var html = '<li id="liChannel'+ json.channelId +'">';
+                html += '<a href="#search/video/'+ channelInput +'" class="col-left-context" data-channel="'+ json.channelId +'">';
+                html += '<img style="width:35px;" class="img-circle" src="'+ json.imageLink +'" />' + channelInput;
+                html += '</a></li>';
+                html += '<li id="customChannelAddLi" style="display: none"></li>'
+                $('#customChannelAddLi').replaceWith(html);
+                bindRightClickLeftColumn();
+            }
+        }
+    });
+}
+
+function openDialogEditChannel(){
+    $('#channelDialogAction').modal('show');
+}
+
+function editChannelName(){
+    var data = {
+        video_channel_id : window.curLeftMenuData.video_channel_id,
+        channel_name: $('#channelDlActionInput').val().trim()
+    };
+    $.ajax({
+        url: 'index.php?route=app/video_channel/update',
+        type: 'post',
+        data: data,
+        dataType: 'json',
+        success: function(json) {
+            if(json == "OK"){
+                $('#channelDialogAction').modal('hide');
+                $('#channelName'+ data.video_channel_id).html(data.channel_name);
+            }
+        }
+    });
+}
+
+function openDialogConfirm(){
+    $('#confirmBody').html('<h4>Are you sure to delete this channel?</h4>');
+    $('#confirmModalOKbutton').bind('click',function(){
+        var data = {
+          video_channel_id: window.curLeftMenuData.video_channel_id
+        };
+        $.ajax({
+            url: 'index.php?route=app/video_channel/delete',
+            type: 'post',
+            data: data,
+            dataType: 'json',
+            success: function(json) {
+                if(json == "OK"){
+                    $('#confirmModal').modal('hide');
+                    $('#liChannel'+ data.video_channel_id).remove();
+                }
+            }
+        });
+    });
+    $('#confirmModal').modal('show');
 }

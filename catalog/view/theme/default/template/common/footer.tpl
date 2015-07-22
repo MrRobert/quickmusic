@@ -82,6 +82,12 @@
         <?php } ?>
     </ul>
 </div>
+<div>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" id="left-custom-menu">
+        <li><a tabindex="-1" href="javascript:;" onclick="openDialogEditChannel();"><i class="fa fa-edit"></i>Edit Channel</a></li>
+        <li><a tabindex="-1" href="javascript:;" onclick="openDialogConfirm();"><i class="fa fa-remove"></i>Remove Channel</a></li>
+    </ul>
+</div>
 <div id="confirmModal" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -127,6 +133,31 @@
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="channelDialogAction" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="channelDlActionTitle">
+                    <i class="fa fa-edit"></i>Channel Edit
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid" id="channelDlActionBody">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="channelDlActionInput"/>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" onclick="editChannelName();" class="btn btn-primary">Edit Channel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+    <input type="hidden" id="currChannelId" value="0" />
 </div><!-- /.modal -->
 
 </body>
