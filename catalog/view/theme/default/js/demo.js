@@ -525,7 +525,7 @@ function notifyMusic(title, artist){
     if (window.Notification && Notification.permission === "granted") {
         notification = new Notification("QuickMusic",{
             body : title + ' by ' + artist,
-            icon : 'https://graph.facebook.com/819276394825557/picture?width=30'
+            icon : 'http://www.micro-solve.net/images/clients/user.png'
         });
         notification.onshow = function(){
             setTimeout(function(){

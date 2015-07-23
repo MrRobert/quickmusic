@@ -20,7 +20,7 @@ class ModelAppVideoChannel extends Model {
         return $this->db->getLastId();
     }
     public function update($data){
-        $channelImage = '';
+        $channelImage = STATIC_PATH . 'image/youtube-channel.png';
         if(isset($data['channel_name'])){
             $channelName = $data['channel_name'];
         }else return;

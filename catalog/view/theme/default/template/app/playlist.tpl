@@ -124,6 +124,7 @@
     <?php if(isset($songs) && sizeof($songs) > 0){ ?>
         bindSecondPlaylist(<?php echo json_encode($songs); ?>);
     <?php } ?>
+    FB.XFBML.parse();
     updateHeight();
     updateLyricsCollapse();
     bindRightClickAction();

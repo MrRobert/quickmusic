@@ -84,10 +84,11 @@
         </div>
         <ul class="nav pull-right">
             <li class="dropdown hidden-xs">
-                <a title="Send invitation">
+                <a title="Send invitation" href="javascript:;">
                     <i class="fa fa-paper-plane"></i>
                 </a>
             </li>
+            <!--
             <li class="dropdown hidden-xs">
                 <a class="dropdown-toggle" data-toggle="dropdown">
                     <span class="label label-danger pull-left">5</span>
@@ -110,20 +111,23 @@
                     <li class="dropdown-header">text_affiliate</li>
                     <li><a href=""><span class="label label-danger pull-right">affiliate_total</span>text_approval</a></li>
                 </ul>
-            </li>
+            </li> -->
             <li>
-                <a data-toggle="dropdown" class="dropdown-toggle bg clear" href="#">
+                <a data-toggle="dropdown" class="dropdown-toggle bg clear" href="javascript:;">
                     <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-                        <img style="height: 47px; width: 50px;" alt="John.Smith" class="img-circle" src="https://graph.facebook.com/819276394825557/picture?width=47">
-                    </span> Robert Duy &nbsp;
+                        <img style="height: 47px; width: 50px;" alt="John.Smith" class="img-circle"
+                             src="<?php echo STATIC_PATH . 'image/user.png'?>">
+                    </span> I'm &nbsp;
                 </a>
+                <!--
                 <ul class="dropdown-menu dropdown-menu-right alerts-dropdown">
-                    <li><a href="" style="display: block; overflow: auto;">Setting</a></li>
+                    <li><a href="" style="display: block; overflow: auto;">Login</a></li>
                     <li><a href="">Profile</a></li>
                     <li><a href="">Notifications</a></li>
                     <li class="divider"></li>
                     <li><a href="">Logout</a></li>
                 </ul>
+                -->
             </li>
         </ul>
     </header>

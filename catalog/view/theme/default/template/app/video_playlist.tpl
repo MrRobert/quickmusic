@@ -41,5 +41,6 @@
     <?php if(isset($videoId)) { ?>
         loadRelatedVideoById('<?= $videoId; ?>');
         loadDetailVideo('<?= $videoId;?>');
+        FB.XFBML.parse();
     <?php } ?>
 </script>

@@ -111,6 +111,7 @@
     $('#content').css('padding-top', '9%');
     $('#container').css('height', '927px');
     bindSecondPlaylist(<?php echo json_encode($songs); ?>);
+    FB.XFBML.parse();
     updateHeight();
     updateLyricsCollapse();
     bindRightClickAction();

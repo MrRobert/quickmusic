@@ -10,7 +10,7 @@
                 <li id="liChannel<?= $channel['video_channel_id'];?>">
                     <a href="#search/video/<?= $channel['channel_name']?>" class="col-left-context" data-channel="<?= $channel['video_channel_id']?>">
                         <img style="width:35px;" class="img-circle" src="<?= $channel['image']?>" />
-                        <span id="channelName<?= $channel['channel_name']; ?>"><?= $channel['channel_name']?></span>
+                        <span id="channelName<?= $channel['video_channel_id']; ?>"><?= $channel['channel_name']?></span>
                     </a>
                 </li>
                 <?php } ?>
@@ -59,16 +59,17 @@
     </ul>
     <footer id="nav-footer" class="footer bg-dark" style="background-color: #232c32;">
         <div class="hidden-xs">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:;">
                 <span class="thumb-sm avatar pull-left m-l-xs">
-                    <img style="height: 47px; width: 50px;" alt="John.Smith" class="img-circle" src="https://graph.facebook.com/819276394825557/picture?width=47">
+                    <img style="height: 47px; width: 50px;" alt="John.Smith" class="img-circle"
+                         src="<?php echo STATIC_PATH . 'image/user.png'?>">
                     <i class="on b-black"></i>
                 </span>
                 <span class="hidden-span clear">
                     <span>
-                        <strong class="font-bold text-lt">Robert Duy</strong>
+                        <strong class="font-bold text-lt">Anonymous</strong>
                     </span><br>
-                    <span class="text-muted text-xs">Developer</span>
+                    <span class="text-muted text-xs">Standard user</span>
                 </span>
             </a>
         </div>

@@ -38,6 +38,7 @@ class ControllerAppPlaylist extends Controller {
         }else{
             $data['playlist_theme'] = STATIC_PATH . 'image/playlist/playlist_'. rand(1, 5) .'.jpg';
         }
+        $data['currentLink'] = HTTP_SERVER . '?route=app/playlist/'. base64_encode($playlist_id);
 
         $this->load->model('app/home');
         $promotionData = $this->model_app_home->getPromotionContent();
