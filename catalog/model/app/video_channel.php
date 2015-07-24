@@ -29,7 +29,7 @@ class ModelAppVideoChannel extends Model {
         }
         if(isset($data['video_channel_id'])){
             $this->db->query("UPDATE ". DB_PREFIX . "video_channel SET
-            channel_name = '". $this->db->escape($channelName) . "',
+            channel_name = '". $this->db->escape($chane) . "',
             image = '". $this->db->escape($channelImage) . "'
             WHERE video_channel_id = ". (int) $data['video_channel_id'] ." AND mac_address ='". $this->db->escape($data['mac_address']) . "'");
         }

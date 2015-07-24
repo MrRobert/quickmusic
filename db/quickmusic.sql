@@ -61,3 +61,12 @@ CREATE TABLE IF NOT EXISTS `video_channel` (
   `date` date NOT NULL,
   PRIMARY KEY (`video_channel_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `album` (
+  `album_id` int(11) NOT NULL AUTO_INCREMENT,
+  `img_src` LONGTEXT NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `artis` varchar(255) NOT NULL,
+  `query` TEXT NOT NULL,
+  PRIMARY KEY (`album_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

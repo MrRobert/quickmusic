@@ -295,6 +295,10 @@ function fetchDATA(controllerPath, divTagert, data){
         success: function(html) {
             $('#searchIndicator').hide();
             $(divTagert).html(html);
+            if(controllerPath == 'album'){
+                isHasLoad = false;
+                window.location.hash = "#album/" + $('#albumQuery').val();
+            }
         }
     });
 }
@@ -1158,7 +1162,6 @@ function editChannelName(){
         }
     });
 }
-
 function openDialogConfirm(){
     $('#confirmBody').html('<h4>Are you sure to delete this channel?</h4>');
     $('#confirmModalOKbutton').bind('click',function(){
@@ -1179,4 +1182,17 @@ function openDialogConfirm(){
         });
     });
     $('#confirmModal').modal('show');
+}
+function gotoAlbum(link, index, suffix){
+    var artis = $('#album_artis'+ suffix + index).html();
+    var title = $('#album_title'+ suffix + index).html();
+    var data = {
+        link: link,
+        artis : artis,
+        title : title
+    }
+    fetchDATA('album', $('#content'), data);
+}
+function gotoAlbumGET(albumId){
+    fetchDATA('album/get', $('#content'), {albumId : albumId});
 }

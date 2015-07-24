@@ -2,8 +2,11 @@
 class QuickTool {
     private $musicSources = "http://search.chiasenhac.com/search.php?s=";
     private $musicDomain = "http://chiasenhac.com";
+    private $albumDomain = "http://playlist.chiasenhac.com";
     private $hotSongVN = "http://chiasenhac.com/mp3/vietnam/";
     private $hotSongUK = "http://chiasenhac.com/mp3/us-uk/";
+    private $prefixVnSong = "mp3/vietnam/";
+    private $prefixUkSong = "mp3/us-uk/";
     private $hostName = "ChiaSeNhac.com";
     private $myDomain = "QuickMusic.com";
 
@@ -74,7 +77,8 @@ class QuickTool {
             $result['lstAlbums'][] = array(
               'title'  => $title,
               'href' => $href,
-              'img_src' => $imgSrc
+              'img_src' => $imgSrc,
+              'artis' => substr($title, strrpos($title, '-') + 1)
             );
             $albumIndex ++;
         }
@@ -125,7 +129,6 @@ class QuickTool {
      * @param $link
      * @return mixed
      */
-
     function crawl_single_songv2($link){
         $href = $this->musicDomain . "/" . $link;
 
@@ -191,6 +194,108 @@ class QuickTool {
 
         return $result;
     }
+
+    /**
+     * GET source of song
+     * GET title of song
+     * GET image of song
+     * GET lyric of song
+     * GET artis of song
+     * GET Album detail of Song
+     * @param $link
+     * @return mixed
+     */
+    function crawl_single_song_detail($link){
+        $href = $this->musicDomain . "/" . $link;
+
+        $dom = new DOMDocument('1.0');
+        @$dom->loadHTMLFile($href);
+        $finder = new DomXPath($dom);
+        $nodeScript = $finder->query("//div[contains(@class,'pl-cl')]//script");
+        $textScript = null;
+        foreach($nodeScript as $script){
+            $attr = $script->getAttribute('src');
+            if(isset($attr) || empty($attr)){
+                $textScript = $script->nodeValue;
+            }
+        }
+        $link = null;
+        if($textScript != null){
+            $index1 = strpos($textScript, 'decodeURIComponent');
+            $index2 = strpos($textScript, '"provider":') - 1;
+            $link = substr($textScript, $index1, $index2 - $index1);
+            $lastComma = strrpos($link, ",");
+            $link = substr($link, 0, $lastComma);
+        }
+        $nodeLyrics = $finder->query("//div[@id='fulllyric']//p[@class='genmed']");
+        foreach($nodeLyrics as $lyric){
+            $val = $lyric->nodeValue;
+            $val = str_replace($this->hostName, $this->myDomain, $val);
+            $result['lyric'] = $val;
+            break;
+        }
+        $result['linkSong'] = $link;
+
+        // Load title of song
+        $nodeATittle = $finder->query("//div[@id='fulllyric']//span[@class='maintitle']//a")->item(0);
+        $result['title'] = $nodeATittle->nodeValue;
+        // Load image of song
+        $lyric_Object = $finder->query("//div[@id='fulllyric']//img");
+        $result['img_src'] = STATIC_PATH . '/image/default-song.jpg';
+        foreach($lyric_Object as $lyric){
+            if($lyric->getAttribute('align') == 'right'){
+                $result['img_src'] = $lyric->getAttribute('src');
+            }
+            break;
+        }
+        // Load artis of song
+        $bObject = $finder->query("//div[@id]='fulllyric']//b");
+        var_dump($bObject);
+        $aArtisObject = $bObject->getElementsByTagName('a')->item(0);
+        if(isset($aArtisObject)){
+            $result['artis'] = $aArtisObject->nodeValue;
+        }
+        // fetch albums image;
+        $albumImgs = $finder->query("//div[contains(@class,'page-dsms')]//table[@class='tbtable']//div//img");
+        $nodeImg1 = $albumImgs->item(0); $nodeImg2 = $albumImgs->item(1);
+        if(isset($nodeImg1)){
+            $img1 = $nodeImg1->getAttribute('src');
+        }else{
+            $img1 = STATIC_PATH . 'image/default-album.png';
+        }
+        if(isset($nodeImg2)){
+            $img2 = $nodeImg2->getAttribute('src');
+        }else{
+            $img2 = STATIC_PATH . 'image/default-album.png';
+        }
+        // load related albums
+        $divAlbums = $finder->query("//div[contains(@class,'page-dsms')]//span[@class='genmed']");
+        $albumIndex = 0;
+        foreach($divAlbums as $album){
+            $nodeA = $album->getElementsByTagName('a')->item(0);
+            $title = $nodeA->nodeValue;
+            $href = $nodeA->getAttribute('href');
+            $imgSrc = ($albumIndex == 0)? $img1 : $img2;
+            $artis = $this->getAlbumArtis($album->nodeValue);
+
+            $result['relatedAlbums'][] = array(
+                'title' => $title,
+                'href' => base64_encode($href),
+                'artis'=> $artis,
+                'img_src' => $imgSrc
+            );
+            $albumIndex++;
+        }
+
+        return $result;
+    }
+
+    /**
+     * GET link source song
+     * GET lyric of the song
+     * @param $link
+     * @return mixed
+     */
 
     function crawl_single_songv2_withlyric($link){
         $href = $this->musicDomain . "/" . $link;
@@ -608,6 +713,33 @@ class QuickTool {
             $val = $lyric->nodeValue;
             $val = str_replace($this->hostName, $this->myDomain, $val);
             $result['lyric'] = $val;
+            break;
+        }
+        return $result;
+    }
+
+    public function getImageAndLinkAlbumSongs($link){
+        $dom = new DOMDocument('1.0');
+        $href = $link;
+        @$dom->loadHTMLFile($href);
+        $finder = new DomXPath($dom);
+        $nodes = $finder->query("//div[@id='playlist']//tr//a");
+        $result = array();
+        foreach($nodes as $node){
+            $linkHref = $node->getAttribute('href');
+            $posVn = strpos($linkHref, $this->prefixVnSong);
+            $posUk = strpos($linkHref, $this->prefixUkSong);
+            if(($posVn !== false && $posVn == 0) || ($posUk !== false && $posUk == 0)){
+                $result['links'][] = $linkHref;
+            }
+        }
+        // load image albums
+        $lyric_Object = $finder->query("//div[@id='fulllyric']//img");
+        $result['img_src'] = STATIC_PATH . '/image/default-album.jpg';
+        foreach($lyric_Object as $lyric){
+            if($lyric->getAttribute('align') == 'right'){
+                $result['img_src'] = $lyric->getAttribute('src');
+            }
             break;
         }
         return $result;

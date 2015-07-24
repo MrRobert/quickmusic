@@ -13,16 +13,17 @@
                     <div class="pos-relative">
                         <div class="item-overlay opacity r r-2x bg-black">
                             <div class="center text-center m-t-n">
-                                <a href="javascript:void(0);"><i class="fa fa-play-circle fa-2x"></i></a>
+                                <a href="javascript:void(0);" onclick="gotoAlbum('<?= $album['href']; ?>', '<?= $index;?>', '');"><i class="fa fa-play-circle fa-2x"></i></a>
                             </div>
                         </div>
-                        <a href="javascript:void(0);">
+                        <a href="javascript:void(0);" onclick="gotoAlbum('<?= $album['href']; ?>', '<?= $index;?>', '');">
                             <img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($album['img_src']));?>">
                             <img class="looseless-img" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents(STATIC_PATH. 'image/looseless.jpg'));?>">
                         </a>
                     </div>
-                    <div class="padder-v"><a class="text-ellipsis" href="#"><?= $album['title']?></a>
-                        <a class="text-ellipsis text-xs text-muted" href="#"><?= $album['artis'];?></a>
+                    <div class="padder-v">
+                        <a class="text-ellipsis" href="javascript:;" id="album_title<?=$index;?>"><?= $album['title']?></a>
+                        <a class="text-ellipsis text-xs text-muted" href="javascript:;" id="album_artis<?=$index;?>"><?= $album['artis'];?></a>
                     </div>
                 </div>
             </div>
