@@ -15,8 +15,8 @@ class ModelAppAlbum extends Model {
             $query = $data['query'];
         }else return 0;
         $checkData = $this->getAlbumByQuery($query);
-        if(isset($checkData) && $checkData['album_id'] > 0){
-           return;   // already exited !!!
+        if(isset($checkData) && sizeof($checkData)> 0 && $checkData['album_id'] > 0){
+           return $checkData['album_id'];   // already exited !!!
         }
         $this->db->query("INSERT INTO ". DB_PREFIX ."album SET
                 title ='". $this->db->escape($title) . "',

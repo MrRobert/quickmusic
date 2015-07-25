@@ -35,11 +35,11 @@
                             <?php $index = 0; ?>
                             <?php if(isset($songs) && sizeof($songs) > 0) { ?>
                                 <?php foreach($songs as $song){ ?>
-                                <li class="list-group-item active" data-index="<?=$index;?>" id="<?=$song['fs_id']?>">
+                                <li class="list-group-item active" data-index="<?=$index;?>" id="<?=$song['spl_id']?>">
                                     <div class="pull-right m-l">
                                         <a data-toggle="collapse" href="#liCollapse<?=$index;?>" aria-expanded="false" aria-controls="liCollapse<?=$index;?>" class="m-r-sm lyricCollapse"><i class="fa fa-file-text"></i></a>
                                         <a href="javascript:void(0);" class="m-r-sm"><i class="fa fa-repeat"></i></a>
-                                        <a href="javascript:void(0);" onclick="openConfirmModal('<?=$song['fs_id'];?>');" class="m-r-sm"><i class="fa fa-trash-o"></i></a>
+                                        <a href="javascript:void(0);" onclick="openConfirmModal('<?=$song['spl_id'];?>');" class="m-r-sm"><i class="fa fa-trash-o"></i></a>
                                         <a href="javascript:void(0);" style="color: #9badb9;" id="plus_<?=$index;?>" onclick="plusSong('index.php?route=app/search/playsong&src=\'<?php echo $song['linkSong'];?>\'', '<?=$song['title'];?>','<?= $song['artis']; ?>', '<?=$index;?>')" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
                                         <a href="javascript:void(0);" style="color: #9badb9;" id="plused_<?=$index;?>" class="hidden pull-right"><i class="fa fa-check"></i></a>
                                     </div>

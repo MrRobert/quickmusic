@@ -39,8 +39,8 @@ final class MySQLi {
 				return true;
 			}
 		} else {
-            $logger = new Log('queryDB.log');
-            $logger->write('Error: ' . $this->link->error  . '<br />Error No: ' . $this->link->errno . '<br />' . $sql);
+            //$logger = new Log('queryDB.log');
+           // $logger->write('Error: ' . $this->link->error  . '<br />Error No: ' . $this->link->errno . '<br />' . $sql);
 		}
 	}
 

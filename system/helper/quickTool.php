@@ -249,8 +249,7 @@ class QuickTool {
             break;
         }
         // Load artis of song
-        $bObject = $finder->query("//div[@id]='fulllyric']//b");
-        var_dump($bObject);
+        $bObject = $finder->query("//div[@id='fulllyric']//b")->item(0);
         $aArtisObject = $bObject->getElementsByTagName('a')->item(0);
         if(isset($aArtisObject)){
             $result['artis'] = $aArtisObject->nodeValue;
@@ -718,6 +717,12 @@ class QuickTool {
         return $result;
     }
 
+    private function getAlbumArtis($input){
+        $input = substr($input, strrpos($input, '</a>') + 5);
+        $artis = substr($input, strpos($input, '<br>')+ 5, strrpos($input, '<br>'));
+        return $artis;
+    }
+
     public function getImageAndLinkAlbumSongs($link){
         $dom = new DOMDocument('1.0');
         $href = $link;
@@ -743,12 +748,6 @@ class QuickTool {
             break;
         }
         return $result;
-    }
-
-    private function getAlbumArtis($input){
-        $input = substr($input, strrpos($input, '</a>') + 5);
-        $artis = substr($input, strpos($input, '<br>')+ 5, strrpos($input, '<br>'));
-        return $artis;
     }
 
     public static function getMacAddressClient($ipAddress){

@@ -26,7 +26,7 @@ class ControllerAppAlbum extends Controller {
             foreach($listLinkSong['links'] as $linkSong){
                 $dataTmp = $quickTool->crawl_single_song_detail($linkSong);
                 $data['songs'][] = array(
-                    'link'  => $dataTmp['linkSong'],
+                    'linkSong'  => base64_encode($this->getLink($dataTmp['linkSong'])),
                     'lyric' => $dataTmp['lyric'],
                     'title' => $dataTmp['title'],
                     'img_src' => $dataTmp['img_src'],
@@ -41,13 +41,22 @@ class ControllerAppAlbum extends Controller {
             $dataInsert['img_src'] = $listLinkSong['img_src'];
             $dataInsert['artis'] = $artis;
             $dataInsert['title'] = $title;
-            $data['$albumId'] = $this->model_app_album->insertData($dataInsert);
+            $data['albumId'] = $this->model_app_album->insertData($dataInsert);
 
-            $dataTmp = $quickTool->loadAnotherPartSong($listLinkSong[0]);
+            $dataTmp = $quickTool->loadAnotherPartSong($listLinkSong['links'][0]);
             $data['promotion_song'] = $this->load->view('default/template/app/related.tpl', $dataTmp);
             $data['promotion_albums'] = $this->load->view('default/template/app/tileInterestedAlbum.tpl', $dataTmp);
         }
         $data['currentLink'] = HTTP_SERVER ."?route=app/album/" . $albumLink;
         $this->response->setOutput($this->load->view('default/template/app/album.tpl', $data));
+    }
+
+    private function getLink($link){
+        $index1 = strpos($link, 'decodeURIComponent') + strlen('decodeURIComponent') + 2;
+        $index2 = strrpos($link, ')') - 1;
+        if(!empty($index1) && $index1 > 0 && !empty($index2) && $index2 > 0){
+            return substr($link, $index1, $index2 - $index1);
+        }
+        return $link;
     }
 }

@@ -25,11 +25,10 @@
                         <ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto" id="ulListSongParent">
                             <?php $index = 0; ?>
                             <?php foreach($songs as $song){ ?>
-                            <li class="list-group-item active" id="<?=$song['fs_id']?>" data-index="<?=$index;?>">
+                            <li class="list-group-item active">
                                 <div class="pull-right m-l">
                                     <a data-toggle="collapse" href="#liCollapse<?=$index;?>" aria-expanded="false" aria-controls="liCollapse<?=$index;?>" class="m-r-sm lyricCollapse"><i class="fa fa-file-text"></i></a>
                                     <a href="javascript:void(0);" class="m-r-sm"><i class="fa fa-repeat"></i></a>
-                                    <a href="javascript:void(0);" onclick="openConfirmModal('<?=$song['fs_id'];?>');" class="m-r-sm"><i class="fa fa-trash-o"></i></a>
                                     <a href="javascript:void(0);" style="color: #9badb9;" id="plus_<?=$index;?>" onclick="plusSong('index.php?route=app/search/playsong&src=\'<?php echo $song['linkSong'];?>\'', '<?=$song['title'];?>','<?= $song['artis']; ?>', '<?=$index;?>')" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
                                     <a href="javascript:void(0);" style="color: #9badb9;" id="plused_<?=$index;?>" class="hidden pull-right"><i class="fa fa-check"></i></a>
                                 </div>

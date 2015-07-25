@@ -297,7 +297,7 @@ function fetchDATA(controllerPath, divTagert, data){
             $(divTagert).html(html);
             if(controllerPath == 'album'){
                 isHasLoad = false;
-                window.location.hash = "#album/" + $('#albumQuery').val();
+                window.location.hash = "#album/" + window.btoa($('#albumQuery').val());
             }
         }
     });
