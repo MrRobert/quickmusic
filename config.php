@@ -2,7 +2,7 @@
 // HTTP
 define('APP_NAME' , 'quickmusic');
 define('DIR_APP' , 'D:/xampp/htdocs/' . APP_NAME);
-define('DOMAIN', 'localhost');
+define('DOMAIN', '192.168.1.14');
 
 define('HTTP_SERVER', 'http://'. DOMAIN .'/'. APP_NAME . '/');
 define('STATIC_PATH' , HTTP_SERVER . 'catalog/view/theme/default/');

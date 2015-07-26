@@ -170,6 +170,9 @@ function listenCommonRequest(hash){
             }else{
                 fetchDATA(hash, $('#content'), data);
             }
+        }else if(hash == 'albummmmm'){
+            var albumId = window.atob(temp[1]);
+            gotoAlbumGET(albumId);
         }
     }
     isHasLoad = true;
@@ -430,6 +433,8 @@ function playSong(link, ePlay){
                 artist: "",
                 mp3: "index.php?route=app/search/playsong&src=" + link
             };
+            //mp3: "index.php?route=app/search/playsong&src=" + link
+            //mp3: decodeURIComponent(window.atob(link))
             secondPlaylist.pause();
             secondPlaylist.playlist.splice(0,1);
             secondPlaylist.add(song);
@@ -1194,5 +1199,5 @@ function gotoAlbum(link, index, suffix){
     fetchDATA('album', $('#content'), data);
 }
 function gotoAlbumGET(albumId){
-    fetchDATA('album/get', $('#content'), {albumId : albumId});
+    fetchDATA('album/getAlbum', $('#content'), {albumId : albumId});
 }

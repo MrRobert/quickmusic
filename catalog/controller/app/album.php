@@ -51,6 +51,40 @@ class ControllerAppAlbum extends Controller {
         $this->response->setOutput($this->load->view('default/template/app/album.tpl', $data));
     }
 
+    public function getAlbum(){
+        if(isset($this->request->get['albumId'])){
+            $album_id = base64_decode($this->request->get['albumId']);
+        }else return;
+
+        $this->load->model('app/album');
+        $albumObject = $this->model_app_album->getAlbumById($album_id);
+        if(isset($albumObject)){
+            $quickTool = new QuickTool();
+            $listLinkSong = $quickTool->getImageAndLinkAlbumSongs($albumObject['query']);
+            $data = array();
+            if(isset($listLinkSong) && sizeof($listLinkSong) > 0){
+                foreach($listLinkSong['links'] as $linkSong){
+                    $dataTmp = $quickTool->crawl_single_song_detail($linkSong);
+                    $data['songs'][] = array(
+                        'linkSong'  => base64_encode($this->getLink($dataTmp['linkSong'])),
+                        'lyric' => $dataTmp['lyric'],
+                        'title' => $dataTmp['title'],
+                        'img_src' => $dataTmp['img_src'],
+                        'artis' => $dataTmp['artis'],
+                        'albums' => $dataTmp['relatedAlbums']
+                    );
+                }
+            }
+            if(sizeof($data) > 0){
+                $dataTmp = $quickTool->loadAnotherPartSong($listLinkSong['links'][0]);
+                $data['promotion_song'] = $this->load->view('default/template/app/related.tpl', $dataTmp);
+                $data['promotion_albums'] = $this->load->view('default/template/app/tileInterestedAlbum.tpl', $dataTmp);
+            }
+            $data['currentLink'] = HTTP_SERVER ."?route=app/album/" . $albumObject['query'];
+            $this->response->setOutput($this->load->view('default/template/app/album.tpl', $data));
+        }
+    }
+
     private function getLink($link){
         $index1 = strpos($link, 'decodeURIComponent') + strlen('decodeURIComponent') + 2;
         $index2 = strrpos($link, ')') - 1;
