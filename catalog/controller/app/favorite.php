@@ -25,6 +25,7 @@ class ControllerAppFavorite extends Controller {
                 $result = $quickTool->crawl_single_songv2_withlyric($link);
                 $data['songs'][] = array(
                     'linkSong' => base64_encode($this->getLink($result['linkSong'])),
+                    'href' => $song['query'],
                     'title' => $title,
                     'artis' => $artis,
                     'img_src' => $img_src,

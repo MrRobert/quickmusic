@@ -1,7 +1,7 @@
 <?php
 class QuickTool {
     private $musicSources = "http://search.chiasenhac.com/search.php?s=";
-    private $musicDomain = "http://chiasenhac.com";
+    public $musicDomain = "http://chiasenhac.com";
     private $albumDomain = "http://playlist.chiasenhac.com";
     private $hotSongVN = "http://chiasenhac.com/mp3/vietnam/";
     private $hotSongUK = "http://chiasenhac.com/mp3/us-uk/";

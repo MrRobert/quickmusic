@@ -170,9 +170,12 @@ function listenCommonRequest(hash){
             }else{
                 fetchDATA(hash, $('#content'), data);
             }
-        }else if(hash == 'albummmmm'){
-            var albumId = window.atob(temp[1]);
-            gotoAlbumGET(albumId);
+        }else if(hash == 'album' && isHasLoad){
+            var tempArr = temp[1].split('_');
+            if(tempArr.length == 2){
+                var albumId = window.atob(tempArr[1]);
+                gotoAlbumGET(albumId);
+            }
         }
     }
     isHasLoad = true;
@@ -284,6 +287,7 @@ function bindDataToSearchVideo(json){
 function fetchDATA(controllerPath, divTagert, data){
     $('#LoadingDiv').show();
     $('#main-content').css('opacity', '0.6');
+    $('#searchIndicator').show();
     $.ajax({
         url: 'index.php?route=app/'+ controllerPath,
         type: 'get',
@@ -300,7 +304,7 @@ function fetchDATA(controllerPath, divTagert, data){
             $(divTagert).html(html);
             if(controllerPath == 'album'){
                 isHasLoad = false;
-                window.location.hash = "#album/" + window.btoa($('#albumQuery').val());
+                window.location.hash = "#album/" + foldToAssci(data.title + data.artis) + "_" + window.btoa($('#albumQuery').val());
             }
         }
     });
@@ -308,7 +312,7 @@ function fetchDATA(controllerPath, divTagert, data){
 
 function gotoSongGET(keyword){
     var data = {
-        'keyword' : keyword,
+        keyword : keyword
     };
     $.ajax({
         url: 'index.php?route=app/song',
@@ -322,14 +326,20 @@ function gotoSongGET(keyword){
     });
 }
 
-function gotoSong(link, index, prefix){
+function gotoSong(link, index, prefix, albumImage){
     var title= $('#title_'+ prefix + index).html();
     var artis = $('#artis_'+ prefix + index).html();
+    var imageSrc = $('#img_'+ prefix + index).attr('src');
+    if(albumImage != undefined && albumImage){
+        title = $('#title_'+ prefix + index).val();
+        artis = $('#artis_'+ prefix + index).val();
+        imageSrc = $('#songImg' + index).val();
+    }
     var data = {
-        'link' : link,
-        'title' :  title,
-        'img_src' : window.btoa($('#img_'+ prefix + index).attr('src')),
-        'artist' : artis
+        link : link,
+        title :  title,
+        img_src : window.btoa(imageSrc),
+        artist : artis
     };
     $.ajax({
         url: 'index.php?route=app/song',
@@ -456,7 +466,7 @@ function pauseSong(ePlay){
 
 function loadSongForMainPlaylist(song, index){
     var data = {
-        'link' : song.mp3
+        link : song.mp3
     };
     $.ajax({
         url: 'index.php?route=app/search/getsong',
@@ -579,7 +589,7 @@ function notifyMusic(title, artist){
 
 function loadSongInfo(link){
     var data = {
-      'link' : link
+      link : link
     };
     $.ajax({
         url: 'index.php?route=app/song/infosong',
@@ -587,6 +597,7 @@ function loadSongInfo(link){
         data: data,
         dataType: 'json',
         success: function(json) {
+            clearSecondPlaylist();
             $('#noidungBh').replaceWith(json.lyric);
             $('#relatedSong').replaceWith(json.related);
             $('#interestedAlbum').replaceWith(json.relatedAlbums);
@@ -607,10 +618,10 @@ function gotoSongV2(link, index, prefix){
     $('#noidungBh').replaceWith('<p class="my-indicator" id="noidungBh"><i class="fa fa-circle-o-notch fa-spin fa-4x"></i></p>');
     $('#interestedAlbum').replaceWith('<div style="margin-left: 3%" id="interestedAlbum"></div>');
     var data = {
-        'link' : link,
-        'title' :  title,
-        'img_src' : window.btoa(imgsrc),
-        'artist' : artis
+        link : link,
+        title :  title,
+        img_src : window.btoa(imgsrc),
+        artist : artis
     };
     $.ajax({
         url: 'index.php?route=app/song/getsongv2',
@@ -710,10 +721,10 @@ function handleOpenWindow(action, divLi){
             }, 100);
 
             var data = {
-                'link' : srcSong,
-                'title' :  title,
-                'img_src' : window.btoa(imgSrc),
-                'artist' : artis
+                link : srcSong,
+                title :  title,
+                img_src : window.btoa(imgSrc),
+                artist : artis
             };
             $.ajax({
                 url: 'index.php?route=app/song/gotosong',
@@ -733,10 +744,10 @@ function handleOpenWindow(action, divLi){
             }, 100);
 
             var data2 = {
-                'link' : srcSong,
-                'title' :  title,
-                'img_src' : window.btoa(imgSrc),
-                'artist' : artis
+                link : srcSong,
+                title :  title,
+                img_src : window.btoa(imgSrc),
+                artist : artis
             };
             $.ajax({
                 url: 'index.php?route=app/song/gotosong',
@@ -756,10 +767,10 @@ function handleOpenWindow(action, divLi){
                 resumePlaying();
             }, 100);
             var data3 = {
-                'link' : srcSong,
-                'title' :  title,
-                'img_src' : window.btoa(imgSrc),
-                'artist' : artis
+                link : srcSong,
+                title :  title,
+                img_src : window.btoa(imgSrc),
+                artist : artis
             };
             $.ajax({
                 url: 'index.php?route=app/song/fetchsong',
@@ -775,12 +786,12 @@ function handleOpenWindow(action, divLi){
         }else if(action.indexOf('subMenu_') >= 0){
             var playlist_id = parseInt(action.substring(action.indexOf('_')+1), 10);
             var dataPlaylist = {
-                'playlist_id': playlist_id,
-                'song_title': title,
-                'link' : srcSong,
-                'title' :  title,
-                'img_src' : window.btoa(imgSrc),
-                'artist' : artis
+                playlist_id: playlist_id,
+                song_title: title,
+                link : srcSong,
+                title :  title,
+                img_src : window.btoa(imgSrc),
+                artist : artis
             };
             $.ajax({
                 url: 'index.php?route=app/playlist/insert_song_playlist',
@@ -966,7 +977,7 @@ function createNewPlayList(divA, parentDiv){
 
 function removePlaylist(playlist_id, index){
     var data = {
-        'playlist_id' : playlist_id
+        playlist_id : playlist_id
     };
     $.ajax({
         url: 'index.php?route=app/playlist/delete',
@@ -1200,4 +1211,9 @@ function gotoAlbum(link, index, suffix){
 }
 function gotoAlbumGET(albumId){
     fetchDATA('album/getAlbum', $('#content'), {albumId : albumId});
+}
+
+function clearSecondPlaylist(){
+    window.secondPlaylist.pause();
+    window.secondPlaylist.playlist.slice(0, secondPlaylist.length);
 }

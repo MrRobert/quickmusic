@@ -41,6 +41,12 @@ class ModelAppUrl extends Model {
         $this->db->query($sql);
     }
 
+    public function updateKeyWord($data){
+        if(isset($data['keyword'])){
+            $this->db->query("UPDATE ". DB_PREFIX . "url_alias SET keyword = '" . $this->db->escape($data['keyword']) . "' WHERE url_alias_id = " . (int)$data['id']);
+        }
+    }
+
     public function getQueryById($id){
         $query = $this->db->query("SELECT query FROM " . DB_PREFIX . "url_alias WHERE url_alias_id = ". $id);
         return $query->row['query'];
@@ -63,13 +69,13 @@ class ModelAppUrl extends Model {
 
     public function insertData($data){
         $alias = $this->getAliasByLink($data['query']);
-        if(isset($alias['keyword'])){
+        if(isset($alias['keyword']) && !empty($alias['keyword'])){
             return $alias['keyword'];
         }else{
             $id = $this->insert($data);
             $data['keyword'] = base64_encode($id);
             $data['id'] = $id;
-            $this->update($data);
+            $this->updateKeyWord($data);
             return base64_encode($id);
         }
     }

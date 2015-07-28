@@ -13,10 +13,10 @@ class ControllerAppAlbum extends Controller {
             $albumLink = base64_decode($this->request->get['link']);
         }else return;
         if(isset($this->request->get['artis'])){
-            $artis = base64_decode($this->request->get['link']);
+            $artis = base64_decode($this->request->get['artis']);
         }else return;
         if(isset($this->request->get['title'])){
-            $title = base64_decode($this->request->get['link']);
+            $title = base64_decode($this->request->get['title']);
         }else return;
 
         $quickTool = new QuickTool();
@@ -25,12 +25,17 @@ class ControllerAppAlbum extends Controller {
         if(isset($listLinkSong) && sizeof($listLinkSong) > 0){
             foreach($listLinkSong['links'] as $linkSong){
                 $dataTmp = $quickTool->crawl_single_song_detail($linkSong);
+                $lyric = (isset($dataTmp['lyric']))? $dataTmp['lyric'] : '';
+                $title = (isset($dataTmp['title']))? $dataTmp['title'] : '';
+                $img_src = (isset($dataTmp['img_src']))? $dataTmp['img_src'] : '';
+                $artis = (isset($dataTmp['artis']))? $dataTmp['artis'] : '';
                 $data['songs'][] = array(
                     'linkSong'  => base64_encode($this->getLink($dataTmp['linkSong'])),
-                    'lyric' => $dataTmp['lyric'],
-                    'title' => $dataTmp['title'],
-                    'img_src' => $dataTmp['img_src'],
-                    'artis' => $dataTmp['artis'],
+                    'href' => base64_encode($quickTool->musicDomain. "/" . $linkSong),
+                    'lyric' => $lyric,
+                    'title' => $title,
+                    'img_src' => $img_src,
+                    'artis' => $artis,
                     'albums' => $dataTmp['relatedAlbums']
                 );
             }
@@ -53,24 +58,30 @@ class ControllerAppAlbum extends Controller {
 
     public function getAlbum(){
         if(isset($this->request->get['albumId'])){
-            $album_id = base64_decode($this->request->get['albumId']);
+            $album_id = (int) $this->request->get['albumId'];
         }else return;
 
         $this->load->model('app/album');
         $albumObject = $this->model_app_album->getAlbumById($album_id);
-        if(isset($albumObject)){
+        if(isset($albumObject) && !empty($albumObject['album_id'])){
             $quickTool = new QuickTool();
-            $listLinkSong = $quickTool->getImageAndLinkAlbumSongs($albumObject['query']);
+            $originalLink = base64_decode($albumObject['query']);
+            $listLinkSong = $quickTool->getImageAndLinkAlbumSongs($originalLink);
             $data = array();
             if(isset($listLinkSong) && sizeof($listLinkSong) > 0){
                 foreach($listLinkSong['links'] as $linkSong){
                     $dataTmp = $quickTool->crawl_single_song_detail($linkSong);
+                    $lyric = (isset($dataTmp['lyric']))? $dataTmp['lyric'] : '';
+                    $title = (isset($dataTmp['title']))? $dataTmp['title'] : '';
+                    $img_src = (isset($dataTmp['img_src']))? $dataTmp['img_src'] : '';
+                    $artis = (isset($dataTmp['artis']))? $dataTmp['artis'] : '';
                     $data['songs'][] = array(
                         'linkSong'  => base64_encode($this->getLink($dataTmp['linkSong'])),
-                        'lyric' => $dataTmp['lyric'],
-                        'title' => $dataTmp['title'],
-                        'img_src' => $dataTmp['img_src'],
-                        'artis' => $dataTmp['artis'],
+                        'href' => base64_encode($quickTool->musicDomain. "/" . $linkSong),
+                        'lyric' => $lyric,
+                        'title' => $title,
+                        'img_src' => $img_src,
+                        'artis' => $artis,
                         'albums' => $dataTmp['relatedAlbums']
                     );
                 }
