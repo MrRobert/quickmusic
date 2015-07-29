@@ -54,8 +54,8 @@ class ControllerAppSong extends Controller {
         }
         $data['orginLink'] = $link;
         $link = base64_decode($link);
-        $this->quickTool = new QuickTool();
-        $result = $this->quickTool->crawl_single_song($link);
+        $quickTool = new QuickTool();
+        $result = $quickTool->crawl_single_song($link);
         $songs = array();
         foreach($result as $song){
             $songs[] = array(
@@ -69,6 +69,18 @@ class ControllerAppSong extends Controller {
         $data['key'] = $keyword;
         $data['currentLink'] = HTTP_SERVER . '?route=app/song/'. $keyword;
 
+        $this->load->model('app/playlist');
+        $macAddress = $quickTool->getMacAddressClient($_SERVER['REMOTE_ADDR']);
+        $tmpData = $this->model_app_playlist->getPlaylistByMacAddressPlusCount($macAddress);
+        if(isset($tmpData) && sizeof($tmpData) > 0){
+            foreach($tmpData as $playlist){
+                $data['playlists'][] = array(
+                    'playlist_id' => $playlist['playlist_id'],
+                    'playlist_name' => $playlist['playlist_name'],
+                    'count' => $playlist['count']
+                );
+            }
+        }
         $this->response->setOutput($this->load->view('default/template/app/song.tpl', $data));
     }
 

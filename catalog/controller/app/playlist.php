@@ -137,8 +137,7 @@ class ControllerAppPlaylist extends Controller {
         $object['artis'] = $artis;
         $songId = base64_decode($this->model_app_url->insertData($object));
         $result['songId'] = $songId;
-        $result['playlist_id'] = $this->model_app_playlist->insertSongToPlaylist($songId ,$playlistId, $user_id);
-        $result['status'] = "OK";
+        $result['status'] = $this->model_app_playlist->insertSongToPlaylist($songId ,$playlistId, $user_id);
         $this->response->setOutput(json_encode($result));
     }
 }

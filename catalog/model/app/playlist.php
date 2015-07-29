@@ -61,7 +61,9 @@ class ModelAppPlaylist extends Model {
                             url_alias_id = ". (int)$songId . ",
                             playlist_id = ".(int)$playlistId);
             }
+            return "OK";
         }
+        return "Duplicate";
     }
 
     public function removeSongPlaylist($song_playlist_id, $macAddress, $playlist_id){

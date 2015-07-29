@@ -793,20 +793,23 @@ function handleOpenWindow(action, divLi){
                 img_src : window.btoa(imgSrc),
                 artist : artis
             };
-            $.ajax({
-                url: 'index.php?route=app/playlist/insert_song_playlist',
-                type: 'post',
-                data: dataPlaylist,
-                dataType: 'json',
-                success: function(json) {
-                    if(json.status == "OK"){
-                        var currentNumb = $('#numb'+ playlist_id).html().trim();
-                        $('#numb'+playlist_id).html(parseInt(currentNumb) + 1);
-                    }
-                }
-            });
+            addSongToPlaylist(dataPlaylist);
         }
     }
+}
+function addSongToPlaylist(dataPlaylist){
+    $.ajax({
+        url: 'index.php?route=app/playlist/insert_song_playlist',
+        type: 'post',
+        data: dataPlaylist,
+        dataType: 'json',
+        success: function(json) {
+            if(json.status == "OK"){
+                var currentNumb = $('#numb'+ dataPlaylist.playlist_id).html().trim();
+                $('#numb'+ dataPlaylist.playlist_id).html(parseInt(currentNumb) + 1);
+            }
+        }
+    });
 }
 // -------------- End Handle Right Click Action -----------
 
@@ -1200,6 +1203,7 @@ function openDialogConfirm(){
     $('#confirmModal').modal('show');
 }
 function gotoAlbum(link, index, suffix){
+    clearSecondPlaylist();
     var artis = $('#album_artis'+ suffix + index).html();
     var title = $('#album_title'+ suffix + index).html();
     var data = {
@@ -1210,10 +1214,25 @@ function gotoAlbum(link, index, suffix){
     fetchDATA('album', $('#content'), data);
 }
 function gotoAlbumGET(albumId){
+    clearSecondPlaylist();
     fetchDATA('album/getAlbum', $('#content'), {albumId : albumId});
 }
-
 function clearSecondPlaylist(){
     window.secondPlaylist.pause();
     window.secondPlaylist.playlist.slice(0, secondPlaylist.length);
+}
+function beginAddSongToPlaylist(playlist_id, index, prefix){
+    var title = $('#title_'+prefix + index).val();
+    var srcSong = $('#song_'+ prefix + index).val();
+    var imgSrc = $('#image_' + prefix + index).val();
+    var artis = $('#artis_'+ prefix + index).val();
+    var dataPlaylist = {
+        playlist_id: playlist_id,
+        song_title: title,
+        link : srcSong,
+        title :  title,
+        img_src : window.btoa(imgSrc),
+        artist : artis
+    };
+    addSongToPlaylist(dataPlaylist);
 }
