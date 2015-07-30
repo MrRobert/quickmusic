@@ -12,6 +12,7 @@ $(document).ready(function(){
 
     secondPlaylist = initSecondPlayList();
     mainPlayList  = initMyPlayList();
+    addSongToMainPlaylistFromLocalStorage();
 
     $('#jp_container_N').on($.jPlayer.event.pause, mainPlayList.cssSelector.jPlayer,  function(){
         $('.musicbar').removeClass('animate');
@@ -123,6 +124,17 @@ $(document).ready(function(){
         interval: 10000
     });
 });
+function addSongToMainPlaylistFromLocalStorage(){
+    if(localStorage != undefined && localStorage != null){
+        var mainPlaylistSongs = localStorage.getItem('mainPlaylist');
+        if(mainPlaylistSongs != undefined && mainPlaylistSongs != null && mainPlaylistSongs.length > 0){
+            var arr_mainPlaylist = JSON.parse(mainPlaylistSongs);
+            for(var i=0; i < arr_mainPlaylist.length; i++){
+                mainPlayList.add(arr_mainPlaylist[i]);
+            }
+        }
+    }
+}
 
 function listenCommonRequest(hash){
     hash = hash.replace("#", "");
@@ -376,20 +388,20 @@ function foldToAssci(input){
     ];
     var transalte = [
         'a','a','a','a','a','a','a','a','a','a','a',
-        'A','A','A','A','A','A','A','A','A','A','A',
+        'a','a','a','a','a','a','a','a','a','a','a',
         'a','a','a','a','a',
-        'A','A','A','A','A',
-        'd','D',
+        'a','a','a','a','a',
+        'd','d',
         'e','e','e','e','e','e','e','e','e','e','e',
-        'E','E','E','E','E','E','E','E','E','E','E',
+        'e','e','e','e','e','e','e','e','e','e','e',
         'i','i','i','i','i',
-        'I','I','I','I','I',
+        'i','i','i','i','i',
         'o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o',
-        'O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O',
+        'o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o',
         'u','u','u','u','u','u','u','u','u','u','u',
-        'U','U','U','U','U','U','U','U','U','U','U',
+        'u','u','u','u','u','u','u','u','u','u','u',
         'y','y','y','y',
-        'Y','Y','Y','Y',
+        'y','y','y','y',
         '','','','','',''
     ];
     var output='';
@@ -523,6 +535,7 @@ function plusSong(link, title, artist, index){
             isFirstPlaying : true
         }
         mainPlayList.add(song);
+        localStorage.setItem('mainPlaylist', JSON.stringify(mainPlayList.playlist));
         $('#plused_'+ index).removeClass("hidden");
         $('#plus_'+ index).hide();
     }
@@ -643,6 +656,7 @@ function gotoSongV2(link, index, prefix){
             window.location.hash = "#song/" + foldToAssci(title+artis) + "_" + json.keyword;
             var html = '<div class="fb-comments" data-width="400" data-href="'+ json.currentLink + '" data-numposts="10" data-colorscheme="light"></div>';
             $('#liFacebookComment').html(html);
+            $('#spanArtis').html(artis);
             FB.XFBML.parse();
         }
     });
@@ -952,8 +966,9 @@ function createNewPlayList(divA, parentDiv){
                success: function(json) {
                    if(json.status == "OK"){
                        var tmpHtml = '<a href="javascript:void(0);" style="display: inline-block" onclick="gotoPlaylistByID('+ json.playlist_id +',\''+ json.playlist_name +'\');">';
-                       tmpHtml += '<b class="badge pull-left" id="numb'+ json.playlist_id +'">0</b>';
-                       tmpHtml += '<span><i class="fa fa-list-ul"></i>'+ json.playlist_name + '</span></a>';
+                       tmpHtml += '<i class="fa fa-list-ul"></i>';
+                       tmpHtml += '<b class="badge pull-left" id="numb'+ json.playlist_id +'" style="padding: 3px;">0</b>';
+                       tmpHtml += '<span>'+ json.playlist_name + '</span></a>';
                        tmpHtml += '<a style="display: inline" class="pull-right col-hide" onclick="openConfirmModal(' + json.playlist_id + ', \'<h4>Are you sure to delete this playlist?</h4>\', removePlaylist, '+ json.currentIndex + ');">';
                        tmpHtml += '<span><i class="fa fa-trash pull-right hidden-sm" style="padding:5px"></i></span>';
                        tmpHtml += '</a>';
@@ -1236,3 +1251,4 @@ function beginAddSongToPlaylist(playlist_id, index, prefix){
     };
     addSongToPlaylist(dataPlaylist);
 }
+

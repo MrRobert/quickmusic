@@ -401,8 +401,10 @@
 								self.shuffled = false;
 								self._updateControls();
 							}
-
 							self.removing = false;
+
+                            // cheat code :))
+                            localStorage.setItem('mainPlaylist', JSON.stringify(mainPlayList.playlist));
 						});
 					}
 					return true;

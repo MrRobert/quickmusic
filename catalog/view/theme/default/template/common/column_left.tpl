@@ -49,7 +49,7 @@
             </li>
             <?php $index++;}?>
         <?php } ?>
-        <li class="li-menu" id="addNewParentLi">
+        <li class="li-menu playlist-menu" id="addNewParentLi">
             <a href="javascript:void(0);" onclick="createNewPlayList($(this), $('#addNewParentLi'));">
                 <span class="pull-right" id="spinnerHidden" style="display: none;"><i class="fa fa-spinner"></i></span>
                 <span id="spanAddNew"><i class="fa fa-plus-circle"></i> Add new</span>

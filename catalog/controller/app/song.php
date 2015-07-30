@@ -223,7 +223,19 @@ class ControllerAppSong extends Controller {
         $inputData['img_src'] = $img_src;
         $inputData['artis'] = $artis;
         $inputData['link'] = base64_encode($this->getLink($result['linkSong']));
-
+        $this->load->model('app/playlist');
+        $quickTool = new QuickTool();
+        $macAddress = $quickTool->getMacAddressClient($_SERVER['REMOTE_ADDR']);
+        $tmpData = $this->model_app_playlist->getPlaylistByMacAddressPlusCount($macAddress);
+        if(isset($tmpData) && sizeof($tmpData) > 0){
+            foreach($tmpData as $playlist){
+                $inputData['playlists'][] = array(
+                    'playlist_id' => $playlist['playlist_id'],
+                    'playlist_name' => $playlist['playlist_name'],
+                    'count' => $playlist['count']
+                );
+            }
+        }
         $data['keyword'] = $key;
         $data['currentLink'] = HTTP_SERVER . '?route=app/song/' . $key;
         $data['lyric'] = $this->load->view('default/template/app/lyric.tpl', $result);

@@ -18,6 +18,7 @@
     <link type="text/css" href="<?php echo STATIC_PATH ?>css/jplayer.flat.css" rel="stylesheet" media="screen" />
     <script src="<?php echo STATIC_PATH ?>js/jquery.jplayer.min.js" type="text/javascript"></script>
     <script src="<?php echo STATIC_PATH ?>js/jplayer.playlist.js" type="text/javascript"></script>
+    <script src="<?php echo STATIC_PATH ?>js/json2.js" type="text/javascript"></script>
     <script type="text/javascript">
         var mainPlayList = null;
         var secondPlaylist = null;

@@ -20,7 +20,7 @@
                                     </div>
                                     <div class="bottom gd bg-info wrapper-lg">
                                         <span class="pull-right text-sm" style="margin: 15px; color: #ffffff">101,400 <br>Followers</span>
-                                        <span class="h2 font-thin" style="margin: 15px; color: #ffffff"><?= $artis; ?></span>
+                                        <span class="h2 font-thin" style="margin: 15px; color: #ffffff" id="spanArtis"><?= $artis; ?></span>
                                     </div>
                                     <img style="height: 320px;" id="mainImg" class="img-full" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($img_src));?>" alt="">
                                     <img style="height: 10%; width: 24%;" class="looseless-img" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents(STATIC_PATH. 'image/looseless.jpg'));?>">
