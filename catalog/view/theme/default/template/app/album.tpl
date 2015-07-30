@@ -33,8 +33,25 @@
                                             <a href="javascript:void(0);" class="m-r-sm" onclick="gotoSong('<?= $song['href']?>', '<?= $index; ?>', 'pl', true)"><i class="fa fa-arrow-right"></i></a>
                                             <a data-toggle="collapse" href="#liCollapse<?=$index;?>" aria-expanded="false" aria-controls="liCollapse<?=$index;?>" class="m-r-sm lyricCollapse"><i class="fa fa-file-text"></i></a>
                                             <a href="javascript:void(0);" class="m-r-sm"><i class="fa fa-repeat"></i></a>
-                                            <a href="javascript:void(0);" style="color: #9badb9;" id="plus_<?=$index;?>" onclick="plusSong('index.php?route=app/search/playsong&src=\'<?php echo $song['linkSong'];?>\'', '<?=$song['title'];?>','<?= $song['artis']; ?>', '<?=$index;?>')" class="plus-song pull-right"> <i class="fa fa-plus-circle"></i> </a>
-                                            <a href="javascript:void(0);" style="color: #9badb9;" id="plused_<?=$index;?>" class="hidden pull-right"><i class="fa fa-check"></i></a>
+                                            <a data-toggle="dropdown" class="dropdown-toggle bg clear" href="javascript:;">
+                                                <i class="fa fa-plus-circle"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-menu-right alerts-dropdown">
+                                                <li>
+                                                    <a href="javascript:void(0);" id="plus_<?=$index;?>" onclick="plusSong('index.php?route=app/search/playsong&src=\'<?php echo $song['linkSong'];?>\'', '<?=$song['title'];?>','<?= $song['artis']; ?>', '<?=$index;?>')" class="plus-song pull-right">
+                                                        <i class="fa fa-link"></i>Add song to main player
+                                                    </a>
+                                                    <a href="javascript:void(0);" id="plused_<?=$index;?>" class="hidden pull-right"><i class="fa fa-check"></i>Add to main player</a>
+                                                </li>
+                                                <?php foreach($playlists as $playlist){ ?>
+                                                <li><a href="javascript:;" onclick="beginAddSongToPlaylist('<?= $playlist['playlist_id'];?>', '0', 'ab')"><i class="fa fa-link"></i><?= $playlist['playlist_name']; ?></a></li>
+                                                <?php }?>
+                                                <li style="display: none" id="hiddenSongPlaylistLi"></li>
+                                            </ul>
+                                            <input type="hidden" id="title_ab<?=$index;?>" value="<?= $song['title'];?>" />
+                                            <input type="hidden" id="artis_ab<?=$index;?>" value="<?= $song['artis'];?>" />
+                                            <input type="hidden" id="image_ab<?=$index;?>" value="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($song['img_src']));?>" />
+                                            <input type="hidden" id="song_ab<?=$index;?>" value="<?= $song['href']; ?>" />
                                         </div>
                                         <a href="javascript:void(0);" class="jp-play-me m-r-sm pull-left active" onclick="playSongFavorite('<?=$index;?>')">
                                             <i class="fa fa-play text play<?=$index;?> playIcon" id="play_icon"></i>

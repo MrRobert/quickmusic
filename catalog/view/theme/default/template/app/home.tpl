@@ -65,50 +65,56 @@
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
                     <div class="row row-sm">
+                        <?php $index=0;?>
                         <?php foreach($albumUKs as $albumUK){ ?>
                         <div class="col-xs-6 col-sm-3">
                             <div class="item-song">
                                 <div class="pos-relative">
                                     <div class="item-overlay opacity r r-2x bg-black">
                                         <div class="center text-center m-t-n">
-                                            <a href="javascript:void(0);"><i class="fa fa-play-circle fa-2x"></i></a>
+                                            <a href="javascript:void(0);" onclick="gotoAlbum('<?= $albumUK['href']; ?>', '<?= $index;?>', 'uk');">
+                                                <i class="fa fa-play-circle fa-2x"></i>
+                                            </a>
                                         </div>
                                     </div>
-                                    <a href="javascript:void(0);">
+                                    <a href="javascript:void(0);" onclick="gotoAlbum('<?= $albumUK['href']; ?>', '<?= $index;?>', 'uk');">
                                         <img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($albumUK['img_src']));?>">
                                         <img class="looseless-img" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents(STATIC_PATH. 'image/looseless.jpg'));?>">
                                     </a>
                                 </div>
-                                <div class="padder-v"><a class="text-ellipsis" href="#"><?=$albumUK['title']?></a>
-                                    <a class="text-ellipsis text-xs text-muted" href="#"><?=$albumUK['artis']?></a>
+                                <div class="padder-v"><a class="text-ellipsis" href="javascript:;" id="album_titleuk<?=$index;?>"><?=$albumUK['title']?></a>
+                                    <a class="text-ellipsis text-xs text-muted" href="javascript:;" id="album_artisuk<?=$index;?>"><?=$albumUK['artis']?></a>
                                 </div>
                             </div>
                         </div>
-                        <?php } ?>
+                        <?php $index++; } ?>
                     </div>
                 </div>
                 <div class="item">
                     <div class="row row-sm">
+                        <?php $index=0;?>
                         <?php foreach($albumVNs as $albumVN){ ?>
                         <div class="col-xs-6 col-sm-3">
                             <div class="item-song">
                                 <div class="pos-relative">
                                     <div class="item-overlay opacity r r-2x bg-black">
                                         <div class="center text-center m-t-n">
-                                            <a href="javascript:void(0);"><i class="fa fa-play-circle fa-2x"></i></a>
+                                            <a href="javascript:void(0);" onclick="gotoAlbum('<?= $albumVN['href']; ?>', '<?= $index;?>', 'vn');">
+                                                <i class="fa fa-play-circle fa-2x"></i>
+                                            </a>
                                         </div>
                                     </div>
-                                    <a href="javascript:void(0);">
+                                    <a href="javascript:void(0);" onclick="gotoAlbum('<?= $albumVN['href']; ?>', '<?= $index;?>', 'vn');">
                                         <img class="r r-2x img-full" alt="" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents($albumVN['img_src']));?>">
                                         <img class="looseless-img" src="data:image/<?php echo 'jpg;base64,' .base64_encode(file_get_contents(STATIC_PATH. 'image/looseless.jpg'));?>">
                                     </a>
                                 </div>
-                                <div class="padder-v"><a class="text-ellipsis" href="#"><?=$albumVN['title']?></a>
-                                    <a class="text-ellipsis text-xs text-muted" href="#"><?=$albumVN['artis']?></a>
+                                <div class="padder-v"><a class="text-ellipsis" href="javascript:;" id="album_titlevn<?=$index;?>"><?=$albumVN['title']?></a>
+                                    <a class="text-ellipsis text-xs text-muted" href="javascript:;" id="album_artisvn<?=$index;?>"><?=$albumVN['artis']?></a>
                                 </div>
                             </div>
                         </div>
-                        <?php } ?>
+                        <?php $index++;} ?>
                     </div>
                 </div>
             </div>

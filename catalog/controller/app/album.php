@@ -51,6 +51,21 @@ class ControllerAppAlbum extends Controller {
             $dataTmp = $quickTool->loadAnotherPartSong($listLinkSong['links'][0]);
             $data['promotion_song'] = $this->load->view('default/template/app/related.tpl', $dataTmp);
             $data['promotion_albums'] = $this->load->view('default/template/app/tileInterestedAlbum.tpl', $dataTmp);
+
+            $this->load->model('app/playlist');
+            $macAddress = $quickTool->getMacAddressClient($_SERVER['REMOTE_ADDR']);
+            $tmpData = $this->model_app_playlist->getPlaylistByMacAddressPlusCount($macAddress);
+            if(isset($tmpData) && sizeof($tmpData) > 0){
+                foreach($tmpData as $playlist){
+                    $data['playlists'][] = array(
+                        'playlist_id' => $playlist['playlist_id'],
+                        'playlist_name' => $playlist['playlist_name'],
+                        'count' => $playlist['count']
+                    );
+                }
+            }else{
+                $data['playlists'] = array();
+            }
         }
         $data['currentLink'] = HTTP_SERVER ."?route=app/album/" . $albumLink;
         $this->response->setOutput($this->load->view('default/template/app/album.tpl', $data));
@@ -90,6 +105,20 @@ class ControllerAppAlbum extends Controller {
                 $dataTmp = $quickTool->loadAnotherPartSong($listLinkSong['links'][0]);
                 $data['promotion_song'] = $this->load->view('default/template/app/related.tpl', $dataTmp);
                 $data['promotion_albums'] = $this->load->view('default/template/app/tileInterestedAlbum.tpl', $dataTmp);
+                $this->load->model('app/playlist');
+                $macAddress = $quickTool->getMacAddressClient($_SERVER['REMOTE_ADDR']);
+                $tmpData = $this->model_app_playlist->getPlaylistByMacAddressPlusCount($macAddress);
+                if(isset($tmpData) && sizeof($tmpData) > 0){
+                    foreach($tmpData as $playlist){
+                        $data['playlists'][] = array(
+                            'playlist_id' => $playlist['playlist_id'],
+                            'playlist_name' => $playlist['playlist_name'],
+                            'count' => $playlist['count']
+                        );
+                    }
+                }else{
+                    $data['playlists'] = array();
+                }
             }
             $data['currentLink'] = HTTP_SERVER ."?route=app/album/" . $albumObject['query'];
             $this->response->setOutput($this->load->view('default/template/app/album.tpl', $data));
