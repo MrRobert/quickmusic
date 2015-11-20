@@ -35,6 +35,22 @@ $(document).ready(function(){
     $('#jp_container_N').on($.jPlayer.event.ended , mainPlayList.cssSelector.jPlayer,  function(e){
         isMainPlaying = false;
     });
+    $('#jp_container_N').on('click', '.jp-playlist-item-remove', function(){
+        // Determine song index if necessary
+        var index = $(this).parents('li').index('.jp-playlist li');
+        // Retrieve song information, if necessary
+        var mainPlayListCookie = getCookie('mainPlayList');
+        if(mainPlayListCookie != null && mainPlayListCookie.length > 0){
+            var arr_mainPlaylist = JSON.parse(mainPlayListCookie);
+            arr_mainPlaylist.splice(index,1);
+            mainPlayList.playlist = arr_mainPlaylist;
+            if(arr_mainPlaylist.length == 0){
+                createCookie('mainPlayList', '');
+            }else{
+                createCookie('mainPlayList', JSON.stringify(arr_mainPlaylist));
+            }
+        }
+    });
 
     $('#jp_second').bind($.jPlayer.event.playing, function(event) {
         isSecondPlaying = true;
@@ -49,10 +65,10 @@ $(document).ready(function(){
         isSecondPlaying = false;
         var index = parseInt(secondPlaylist.current);
         $('#liCollapse' + index).collapse('hide');
-        if(index == secondPlaylist.playlist.length - 1){
-            $('.playIcon').show();
-            $('.pauseIcon').addClass('hidden');
-        }else{
+        $('.play'+ index).show();
+        $('.pause'+ index).addClass('hidden');
+
+        if(index < secondPlaylist.playlist.length){
             var src = $('#songImg'+ index + 1).val();
             $('#mainImg').attr('src', src);
             secondPlaylist.play(index + 1);
@@ -125,13 +141,11 @@ $(document).ready(function(){
     });
 });
 function addSongToMainPlaylistFromLocalStorage(){
-    if(localStorage != undefined && localStorage != null){
-        var mainPlaylistSongs = localStorage.getItem('mainPlaylist');
-        if(mainPlaylistSongs != undefined && mainPlaylistSongs != null && mainPlaylistSongs.length > 0){
-            var arr_mainPlaylist = JSON.parse(mainPlaylistSongs);
-            for(var i=0; i < arr_mainPlaylist.length; i++){
-                mainPlayList.add(arr_mainPlaylist[i]);
-            }
+    var mainPlayListCookie = getCookie('mainPlayList');
+    if(mainPlayListCookie != null && mainPlayListCookie.length > 0){
+        var arr_mainPlaylist = JSON.parse(mainPlayListCookie);
+        for(var i=0; i < arr_mainPlaylist.length; i++){
+            mainPlayList.add(arr_mainPlaylist[i]);
         }
     }
 }
@@ -182,6 +196,8 @@ function listenCommonRequest(hash){
             }else{
                 fetchDATA(hash, $('#content'), data);
             }
+            mainPlayList.pause();
+            secondPlaylist.pause();
         }else if(hash == 'album' && isHasLoad){
             var tempArr = temp[1].split('_');
             if(tempArr.length == 2){
@@ -533,13 +549,37 @@ function plusSong(link, title, artist, index){
             artist: artist,
             mp3: link,
             isFirstPlaying : true
-        }
+        };
         mainPlayList.add(song);
-        localStorage.setItem('mainPlaylist', JSON.stringify(mainPlayList.playlist));
+        createCookie('mainPlayList', JSON.stringify(mainPlayList.playlist));
+
         $('#plused_'+ index).removeClass("hidden");
         $('#plus_'+ index).hide();
     }
 }
+
+function deleteCookie(name) {
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+function createCookie(name, value) {
+    var date = new Date();
+    date.setTime(date.getTime()+(24*60*60*1000));
+    var expires = "; expires="+date.toGMTString();
+    document.cookie=name+"="+ value + expires + "; path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+
 window.addEventListener('load', function () {
     // At first, let's check if we have permission for notification
     // If not, let's ask for it
@@ -1013,37 +1053,45 @@ function removePlaylist(playlist_id, index){
 }
 
 function bindSearchVideo(){
-    $('#searchVideoBtn').bind('click', function(){
-        var q = $('#searchVideoInput').val();
-        $.get("https://www.googleapis.com/youtube/v3/search",{
-                q: q,
-                part: 'snippet',
-                key : 'AIzaSyDiAj-zEn_yqElnlvpwlGIanJGVZ5lhJII'
-            }, function(response){
-                window.currentListVideoSearch = (response != undefined)? response.items : '';
-                $('#ulSearchResult').html('');
-                for(var i= 0; i < response.items.length; i++){
-                    var html = '<li class="list-group-item active">';
-                    html += '<div class="row">' ;
-                    html += '<div class="col-sm-4">';
-                    html += '<img class="img-full" src="'+ response.items[i].snippet.thumbnails.default.url +'" />';
-                    html += '</div>';
-                    html += '<div class="col-sm-8">';
-                    html += '<div class="yt-lockup-content">';
-                    html += '<h3 class="yt-lockup-title">';
-                    html += '<a href="javascript:;" onclick="gotoVideoItem(\''+ response.items[i].id.videoId + '\', \'gotoVideoItem\')" class="yt-uix-tile-link yt-ui-ellipsis yt-ui-ellipsis-2 yt-uix-sessionlink  spf-link" data-sessionlink="itct=CBgQ3DAYACITCKKH656FmcYCFQeGWAod6RwA9ij0JFIMc29uIHR1bmcgbXRw" title="'+ response.items[i].snippet.title +'" rel="spf-prefetch" aria-describedby="description-id-22668" dir="ltr">'+ response.items[i].snippet.title +'</a>';
-                    html += '</h3>';
-                    html += '<div class="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2" dir="ltr">'+ response.items[i].snippet.description;
-                    html += '</div>';
-                    html += '</div></div></div></li>';
-                    $('#ulSearchResult').append(html);
-                }
-                $('#rootDivSearchResult').show();
-                updateVideoHeight();
-            }
-        );
+    $('#searchVideoInput').bind('keypress', function(e){
+        if(e.keyCode == 13){
+            submitSearch();
+        }
     });
+    $('#searchVideoBtn').bind('click', submitSearch());
 }
+
+function submitSearch(){
+    var q = $('#searchVideoInput').val();
+    $.get("https://www.googleapis.com/youtube/v3/search",{
+            q: q,
+            part: 'snippet',
+            key : 'AIzaSyDiAj-zEn_yqElnlvpwlGIanJGVZ5lhJII'
+        }, function(response){
+            window.currentListVideoSearch = (response != undefined)? response.items : '';
+            $('#ulSearchResult').html('');
+            for(var i= 0; i < response.items.length; i++){
+                var html = '<li class="list-group-item active">';
+                html += '<div class="row">' ;
+                html += '<div class="col-sm-4">';
+                html += '<img class="img-full" src="'+ response.items[i].snippet.thumbnails.default.url +'" />';
+                html += '</div>';
+                html += '<div class="col-sm-8">';
+                html += '<div class="yt-lockup-content">';
+                html += '<h3 class="yt-lockup-title">';
+                html += '<a href="javascript:;" onclick="gotoVideoItem(\''+ response.items[i].id.videoId + '\', \'gotoVideoItem\')" class="yt-uix-tile-link yt-ui-ellipsis yt-ui-ellipsis-2 yt-uix-sessionlink  spf-link" data-sessionlink="itct=CBgQ3DAYACITCKKH656FmcYCFQeGWAod6RwA9ij0JFIMc29uIHR1bmcgbXRw" title="'+ response.items[i].snippet.title +'" rel="spf-prefetch" aria-describedby="description-id-22668" dir="ltr">'+ response.items[i].snippet.title +'</a>';
+                html += '</h3>';
+                html += '<div class="yt-lockup-description yt-ui-ellipsis yt-ui-ellipsis-2" dir="ltr">'+ response.items[i].snippet.description;
+                html += '</div>';
+                html += '</div></div></div></li>';
+                $('#ulSearchResult').append(html);
+            }
+            $('#rootDivSearchResult').show();
+            updateVideoHeight();
+        }
+    );
+}
+
 function updateVideoHeight(){
     $('#container').height($(document).height() + 100);
 }

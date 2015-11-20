@@ -17,12 +17,12 @@
                 </h5>
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4 col-sm6-6 col-sm-offset-3 ">
-                        <form class="form-inline" role="form">
+                        <div class="form-inline" role="form">
                             <div class="form-group">
                                 <input style="height: 45px;" type="text" id="searchVideoInput" class="form-control transparent" placeholder="Search video...">
                             </div>
-                            <button type="submit" id="searchVideoBtn" class="btn btn-warning btn-fill">Search</button>
-                        </form>
+                            <button id="searchVideoBtn" class="btn btn-warning btn-fill">Search</button>
+                        </div>
                     </div>
                 </div>
             </div>

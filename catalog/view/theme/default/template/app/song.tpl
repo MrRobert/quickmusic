@@ -47,8 +47,8 @@
                                             </ul>
                                         </div>
                                         <a href="javascript:void(0);" class="jp-play-me m-r-sm pull-left active" onclick="playSong('<?php echo $link;?>', $(this))">
-                                            <i class="fa fa-play text" id="play_icon"></i>
-                                            <i class="fa fa-pause text-active hidden" id="pause_icon"></i>
+                                            <i class="fa fa-play text play0" id="play_icon"></i>
+                                            <i class="fa fa-pause text-active hidden pause0" id="pause_icon"></i>
                                         </a>
                                         <div class="clear text-ellipsis"><span style="color: #666666"><?= $title;?></span>
                                             <span class="text-muted"> -- 04:35</span>
